@@ -101,7 +101,6 @@ captureUtm();
 /* ============================= DATA ============================= */
 const NAV_MAIN = [
   {href:'/servicos', label:'Serviços'},
-  {href:'/ecossistema', label:'Ecossistema'},
   {href:'/produtos', label:'Soluções SaaS'},
   {href:'/parceiros', label:'Parceiros'},
   {href:'/radar', label:'Radar de Mercado'},
@@ -687,107 +686,13 @@ PAGES['/parceiros'] = {
       {title:'OMID Smart Cybersecurity®', href:'/contato', desc:'Segurança gerenciada sobre a infraestrutura de nuvem, com monitoramento contínuo — camada que soma à proteção que já oferecemos com Acronis e ManageEngine.'},
       {title:'OMID Cloud Cognitiva®', href:'/contato', desc:'Capacidade de IA e analytics embarcada na própria nuvem, útil para clientes que preferem manter o processamento de dados sensíveis em ambiente nacional.'},
     ]}),
-    `<section class="py-16 md:py-24 bg-background text-foreground"><div class="container-page"><div class="flex items-start gap-4"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-border bg-card text-lg font-display font-bold text-primary shadow-soft">AC</span><div class="max-w-3xl"><p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-foreground/70"><span class="text-primary">Reconhecimento · Arrasta para Cima</span></p><h2 class="font-semibold text-3xl md:text-4xl">Embaixadores do método Arrasta para Cima</h2><div class="mt-4 space-y-4 text-base leading-relaxed text-muted-foreground"><p>O Arrasta para Cima é um programa de consultoria estratégica e educacional que ajuda empresários a estruturar o ecossistema de produto, o método, o posicionamento, a máquina de vendas e o acompanhamento além da primeira venda. A Nexalytix passou pelo programa — e hoje carrega o título de Embaixador, concedido pelo Arrasta para Cima aos clientes que aplicaram o método com resultado.</p><p>Isso não muda o que fazemos: continuamos sendo os únicos responsáveis pela execução, pela equipe e pela operação da Nexalytix no dia a dia. O reconhecimento é sobre a direção estratégica que aplicamos internamente — a mesma disciplina de diagnóstico e priorização que levamos para os projetos dos nossos clientes.</p></div></div></div></div></section>` +
     sFaq({bg:'bg-surface text-surface-foreground', title:'Perguntas sobre nossos parceiros', faqs:[
       {q:'Vocês são revendedores oficiais da Acronis, ManageEngine e Omid Cloud?', a:'Sim. Somos parceiros de revenda das três marcas, o que significa preço, suporte e implantação diretamente com a Nexalytix, com o backbone técnico do fabricante por trás.'},
       {q:'Contratando um produto parceiro, o suporte é com vocês ou com o fabricante?', a:'A Nexalytix é o primeiro ponto de contato para implantação, configuração e suporte do dia a dia. Escalamos para o fabricante quando o problema exige o nível dele.'},
       {q:'Posso contratar só o produto do parceiro, sem outros serviços da Nexalytix?', a:'Sim, mas a maior parte dos clientes combina o produto do parceiro com algum serviço nosso — configuração inicial, integração com os sistemas existentes ou suporte contínuo.'},
       {q:'Por que só Backup e Contingência da Acronis, e não o catálogo completo?', a:'A Acronis tem um catálogo amplo de segurança, mas escolhemos começar pelo ponto onde identificamos a maior lacuna real nos nossos clientes: continuidade de negócio. Outras frentes podem entrar conforme a demanda.'},
-      {q:'Vocês revendem ou representam comercialmente o Arrasta para Cima?', a:'Não. Somos clientes do programa Arrasta para Cima e aplicamos o método internamente; o título de Embaixador é um reconhecimento pelo resultado obtido, não uma revenda ou representação comercial da marca.'},
     ]}),
     sCtaBand({title:'Quer saber qual parceiro faz sentido pra sua operação?', lead:'Em uma conversa curta, avaliamos o que você já tem, onde estão os riscos e qual combinação de Acronis, ManageEngine e Omid Cloud — se alguma — resolve o problema real.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Nexalytix Ecosystem', href:'/produtos', variant:'ghost'}]}),
-  ]
-};
-
-PAGES['/ecossistema'] = {
-  title: 'Ecossistema Nexalytix | Nexalytix',
-  sections: [
-    sHero({eyebrow:'Ecossistema Nexalytix', title:'Muito além de projetos pontuais de tecnologia', lead:'Serviços, produtos próprios e parceiros estratégicos já em operação — e novas frentes em estruturação para acompanhar o cliente da consultoria inicial até a formação de equipes e a inovação contínua.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Business Studios', href:'/business-studios', variant:'outline'}]}),
-    sChallenge({eyebrow:'Como se organiza', title:'Cinco frentes, um mesmo compromisso com resultado', bg:'bg-background text-foreground', paragraphs:[
-      'Serviços, o Nexalytix Ecosystem (produtos próprios) e as parcerias com Acronis, ManageEngine e Omid Cloud já estão em operação — é o que sustenta o dia a dia dos nossos clientes hoje.',
-      'Em paralelo, estamos estruturando três frentes novas: os Business Studios, centros de especialização por segmento; a Nexalytix Academy, centro de treinamento educacional; e a divisão de Inovação & Transformação, dedicada a explorar o que ainda não virou produto.',
-      'A ideia não é anunciar tudo pronto de uma vez, mas deixar claro para onde o ecossistema está indo — e por onde você pode entrar primeiro.',
-    ]}),
-    sCardsGrid({eyebrow:'As frentes do ecossistema', title:'Escolha por onde entrar', bg:'bg-surface text-surface-foreground', cols:'sm:grid-cols-2 lg:grid-cols-3', cards:[
-      {title:'Serviços', href:'/servicos', desc:'Consultoria e tecnologia sob medida, em sete frentes. Já em operação.'},
-      {title:'Nexalytix Ecosystem', href:'/produtos', desc:'ERP, CRM, Financeiro, BG-Check, Transcribe e AgendaBella. Já em operação.'},
-      {title:'Parceiros', href:'/parceiros', desc:'Acronis, ManageEngine e Omid Cloud. Já em operação.'},
-      {title:'Business Studios', href:'/business-studios', desc:'Centros de especialização por segmento. Em estruturação.'},
-      {title:'Nexalytix Academy', href:'/nexalytix-academy', desc:'Centro de treinamento educacional. Em estruturação.'},
-      {title:'Inovação & Transformação', href:'/inovacao-e-transformacao', desc:'Provas de conceito e novos modelos de negócio digital. Em estruturação.'},
-    ]}),
-    `<section class="py-16 md:py-24 bg-background text-foreground"><div class="container-page"><div class="grid gap-10 lg:grid-cols-2 lg:items-center"><div><p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-foreground/70"><span class="text-primary">Grupo Vieira Prime</span></p><h2 class="font-semibold text-3xl md:text-4xl">A Nexalytix faz parte de um grupo maior</h2><p class="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">Além da tecnologia, o Grupo Vieira Prime reúne negócios de limpeza, varejo de proximidade e alimentação — operados com o mesmo compromisso com resultado.</p><div class="mt-6">${btn('Conhecer o Grupo Vieira Prime','/grupo-vieira-prime','outline')}</div></div><div class="rounded-xl border border-border bg-card p-6 shadow-lift"><ul class="space-y-3 text-sm text-muted-foreground">${['Nexalytix — Estratégia, IA e tecnologia','Prime Solutions — limpeza residencial e comercial, franquia da Capricho','Vieira Prime Autônomos — minimercado autônomo','Bolo e Memórias — bolos, café e doces'].map(i=>`<li class="flex gap-2.5">${ICON_CHECK}<span>${i}</span></li>`).join('')}</ul></div></div></div></section>`,
-    sCtaBand({title:'Quer entender por onde começar no ecossistema?', lead:'Em uma conversa curta, mostramos o que já está disponível hoje e o que ainda está em estruturação — sem prometer o que ainda não existe.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Serviços', href:'/servicos', variant:'ghost'}]}),
-  ]
-};
-
-PAGES['/business-studios'] = {
-  title: 'Business Studios | Nexalytix',
-  sections: [
-    sHero({eyebrow:'Business Studios', title:'Especialização por segmento, além da tecnologia genérica', lead:'Inspirados no modelo de centros de excelência por segmento que empresas como a FCamara consolidaram no mercado, estamos estruturando estúdios de negócio dedicados a oito frentes — para entender o contexto de cada operação antes de propor a solução.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Ecossistema completo', href:'/ecossistema', variant:'outline'}]}),
-    sEmptyState({eyebrow:'Status', title:'Frente em estruturação', lead:'Os Business Studios ainda não estão em operação plena — esta página apresenta o desenho inicial dos segmentos priorizados.', bg:'bg-surface text-surface-foreground', heading:'Lançamento em breve', body:'Estamos formando as equipes e o método específico de cada segmento. Fale com o time para saber o estágio atual e ser avisado assim que cada estúdio abrir.', ctaLabel:'Quero ser avisado', ctaHref:'/contato'}),
-    sCardsGrid({eyebrow:'Oito segmentos', title:'Onde estamos estruturando conhecimento especializado', lead:'Cada estúdio vai reunir método, cases e parcerias específicas do segmento, além do que já entregamos hoje de forma transversal em Serviços.', bg:'bg-background text-foreground', cards:[
-      {title:'Financeiro', href:'/contato', desc:'Sistemas, automação e dados para instituições e operações financeiras.'},
-      {title:'Varejo', href:'/contato', desc:'Tecnologia para operação física e digital, do estoque ao pós-venda.'},
-      {title:'Serviços', href:'/contato', desc:'Automação e sistemas para empresas prestadoras de serviço.'},
-      {title:'Indústria', href:'/contato', desc:'Integração de sistemas e dados para operações industriais.'},
-      {title:'Saúde', href:'/contato', desc:'Tecnologia e automação para clínicas e operações de saúde.'},
-      {title:'Alimentos', href:'/contato', desc:'Sistemas e controle para operações de alimentação e produção.'},
-      {title:'Limpeza', href:'/contato', desc:'Gestão e automação para operações de limpeza e facilities, com a experiência prática do Grupo Vieira Prime.'},
-      {title:'ERP', href:'/sistemas/erp', desc:'Implantação e especialização em ERP para empresas de todos os segmentos acima.'},
-    ]}),
-    sCtaBand({title:'Quer que avisemos quando seu segmento abrir?', lead:'Deixe seu contato e falamos assim que o estúdio do seu segmento estiver pronto para os primeiros clientes.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Ecossistema completo', href:'/ecossistema', variant:'ghost'}]}),
-  ]
-};
-
-PAGES['/nexalytix-academy'] = {
-  title: 'Nexalytix Academy | Nexalytix',
-  sections: [
-    sHero({eyebrow:'Nexalytix Academy', title:'Um centro de treinamento para quem usa nossos sistemas todo dia', lead:'Trilhas práticas, no estilo de plataformas como Alura e Udemy, para clientes, parceiros e o próprio time aprenderem a tirar mais proveito do ERP, do CRM e das demais soluções do Nexalytix Ecosystem.', ctas:[{label:'Quero ser avisado do lançamento', href:'/contato', variant:'primary'}]}),
-    sEmptyState({eyebrow:'Status', title:'Em estruturação', lead:'A Nexalytix Academy ainda está sendo desenhada — esta página apresenta o formato planejado.', bg:'bg-surface text-surface-foreground', heading:'Lançamento em breve', body:'Estamos organizando as primeiras trilhas de conteúdo. Fale com o time para saber o estágio atual e garantir acesso antecipado.', ctaLabel:'Quero acesso antecipado', ctaHref:'/contato'}),
-    sPillars({eyebrow:'Como vai funcionar', title:'O formato planejado', bg:'bg-background text-foreground', items:[
-      {title:'Trilhas por produto', desc:'Conteúdo organizado por sistema — ERP, CRM, Financeiro — do básico ao avançado, no seu ritmo.'},
-      {title:'Aulas curtas e práticas', desc:'Vídeos objetivos e exercícios aplicados ao dia a dia de quem opera o sistema, sem enrolação teórica.'},
-      {title:'Certificado de conclusão', desc:'Comprovante ao final de cada trilha, útil para times que precisam formalizar capacitação interna.'},
-    ]}),
-    sCardsGrid({eyebrow:'Primeiras trilhas planejadas', title:'Por onde a Academy deve começar', lead:'Prioridade para os produtos e frentes que já estão em operação hoje.', bg:'bg-surface text-surface-foreground', cards:[
-      {title:'ERP na prática', href:'/sistemas/erp', desc:'Estoque, financeiro e vendas: como configurar e operar o ERP Nexalytix no dia a dia.'},
-      {title:'Fundamentos de automação', href:'/automacao', desc:'Como identificar processos manuais prontos para automatizar, na prática.'},
-      {title:'IA aplicada ao negócio', href:'/inteligencia-artificial', desc:'Onde a inteligência artificial já gera valor real, sem prometer o que não entrega.'},
-    ]}),
-    sCtaBand({title:'Quer ser avisado assim que a Academy abrir?', lead:'Deixe seu contato — priorizamos quem já é cliente Nexalytix para o acesso antecipado.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Ecossistema completo', href:'/ecossistema', variant:'ghost'}]}),
-  ]
-};
-
-PAGES['/inovacao-e-transformacao'] = {
-  title: 'Inovação & Transformação | Nexalytix',
-  sections: [
-    sHero({eyebrow:'Inovação & Transformação', title:'Uma frente dedicada a testar o que ainda não virou produto', lead:'Enquanto Serviços resolve o problema que o cliente já sabe que tem, a Inovação & Transformação existe para explorar o que vem a seguir: provas de conceito, novos modelos de negócio digital e tecnologia emergente aplicada com critério.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'}]}),
-    sEmptyState({eyebrow:'Status', title:'Em estruturação', lead:'Esta frente ainda está sendo montada — esta página apresenta o direcionamento inicial.', bg:'bg-surface text-surface-foreground', heading:'Lançamento em breve', body:'Estamos definindo o formato de atuação e os primeiros temas de exploração. Fale com o time para saber o estágio atual.', ctaLabel:'Falar com o time', ctaHref:'/contato'}),
-    sPillars({eyebrow:'Onde deve atuar', title:'Três frentes de exploração', bg:'bg-background text-foreground', items:[
-      {title:'Provas de conceito', desc:'Testar uma tecnologia ou modelo novo em escala pequena e controlada, antes de qualquer decisão de investir mais.'},
-      {title:'Transformação de modelo de negócio', desc:'Apoio a empresas — incluindo as do Grupo Vieira Prime — que precisam repensar como vendem e operam, não só automatizar o que já existe.'},
-      {title:'Tecnologia emergente com critério', desc:'Avaliação honesta do que já entrega resultado e do que ainda é promessa, antes de recomendar qualquer adoção.'},
-    ]}),
-    sCtaBand({title:'Tem uma ideia que ainda não virou projeto?', lead:'Conte o desafio — ajudamos a validar se faz sentido como prova de conceito antes de qualquer investimento maior.', ctas:[{label:'Falar com um especialista', href:'/contato', variant:'primary'},{label:'Ver Ecossistema completo', href:'/ecossistema', variant:'ghost'}]}),
-  ]
-};
-
-PAGES['/grupo-vieira-prime'] = {
-  title: 'Grupo Vieira Prime | Nexalytix',
-  sections: [
-    sHero({eyebrow:'Grupo Vieira Prime', title:'A Nexalytix faz parte de um grupo maior de negócios', lead:'Além da tecnologia, o Grupo Vieira Prime reúne empresas de limpeza, varejo de proximidade e alimentação — negócios operados com o mesmo compromisso com resultado que aplicamos em projetos de tecnologia.', ctas:[{label:'Falar com a Nexalytix', href:'/contato', variant:'primary'}]}),
-    sChallenge({eyebrow:'Sobre o grupo', title:'Negócios diferentes, mesma forma de operar', bg:'bg-background text-foreground', paragraphs:[
-      'O Grupo Vieira Prime reúne, sob uma mesma direção, negócios que atendem necessidades muito concretas do dia a dia — de tecnologia para empresas a serviços de limpeza, conveniência e alimentação.',
-      'A Nexalytix é a frente de tecnologia, estratégia e IA do grupo; as demais empresas atuam em outras frentes, cada uma com sua própria marca e operação.',
-    ]}),
-    `<section class="py-16 md:py-24 bg-surface text-surface-foreground"><div class="container-page">${header({eyebrow:'As empresas do grupo', title:'Conheça cada negócio'})}<div class="mt-10 grid gap-5 sm:grid-cols-2">
-      <div class="flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-soft"><span class="mb-1 grid size-12 place-items-center rounded-lg bg-primary/10 font-display text-sm font-bold tracking-tight text-primary">N</span><h3 class="mt-2 text-lg font-semibold text-card-foreground">Nexalytix</h3><div class="mt-2 text-sm leading-relaxed text-muted-foreground">Estratégia, IA e tecnologia — consultoria, sistemas e produtos próprios.</div><a href="/servicos" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Conhecer os serviços${ICON_ARROW}</a></div>
-      <div class="flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-soft"><span class="mb-1 grid size-12 place-items-center rounded-lg bg-primary/10 font-display text-sm font-bold tracking-tight text-primary">PS</span><h3 class="mt-2 text-lg font-semibold text-card-foreground">Prime Solutions</h3><div class="mt-2 text-sm leading-relaxed text-muted-foreground">Limpeza residencial e comercial — uma franquia da Capricho.</div><a href="https://www.instagram.com/caprichosantanadeparnaiba/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver no Instagram${ICON_ARROW}</a></div>
-      <div class="flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-soft"><span class="mb-1 grid size-12 place-items-center rounded-lg bg-primary/10 font-display text-sm font-bold tracking-tight text-primary">VP</span><h3 class="mt-2 text-lg font-semibold text-card-foreground">Vieira Prime Autônomos</h3><div class="mt-2 text-sm leading-relaxed text-muted-foreground">Minimercado autônomo, com atendimento de proximidade.</div></div>
-      <div class="flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-soft"><span class="mb-1 grid size-12 place-items-center rounded-lg bg-primary/10 font-display text-sm font-bold tracking-tight text-primary">BM</span><h3 class="mt-2 text-lg font-semibold text-card-foreground">Bolo e Memórias</h3><div class="mt-2 text-sm leading-relaxed text-muted-foreground">Bolos, café e doces feitos para celebrar momentos.</div><a href="https://www.instagram.com/boloememorias.oficial/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver no Instagram${ICON_ARROW}</a></div>
-    </div></div></section>`,
-    sCtaBand({title:'Quer falar com alguma empresa do grupo?', lead:'Para assuntos de tecnologia, estratégia e IA, fale direto com a Nexalytix. Para as demais empresas do grupo, os contatos estão nos respectivos perfis.', ctas:[{label:'Falar com a Nexalytix', href:'/contato', variant:'primary'}]}),
   ]
 };
 
@@ -911,8 +816,7 @@ PAGES['/termos-de-uso'] = {
 /* ============================= HOME (static) ============================= */
 const HOME_HERO = `<section class="relative overflow-hidden border-b border-border bg-background"><div class="container-page grid gap-12 py-16 md:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"><div><p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Estratégia + Tecnologia</p><h1 class="mt-4 text-4xl font-semibold leading-[1.05] md:text-6xl">Tecnologia que resolve o problema certo — não só o mais visível</h1><p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">Diagnóstico, priorização e execução em ciclos curtos: menos retrabalho, sistemas que conversam entre si e decisões apoiadas em dado real — combinando estratégia, IA, automação e tecnologia num único parceiro.</p><div class="mt-8 flex flex-wrap gap-3">${btn('Agendar Diagnóstico Digital','/consultoria/diagnostico-digital','primary')}${btn('Ver Portfólio completo','/portfolio','outline')}</div><p class="mt-4 text-xs text-muted-foreground">Resposta em até 1 dia útil</p></div><div class="rounded-xl border border-border bg-card p-6 shadow-lift"><p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Do desafio ao resultado</p><ol class="mt-5 space-y-4"><li class="flex items-start gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-[0.65rem] font-bold text-primary-foreground">1</span><span class="text-sm font-medium">Problema de negócio</span></li><li class="flex items-start gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-[0.65rem] font-bold text-primary-foreground">2</span><span class="text-sm font-medium">Diagnóstico e estratégia</span></li><li class="flex items-start gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-[0.65rem] font-bold text-primary-foreground">3</span><span class="text-sm font-medium">Solução digital</span></li><li class="flex items-start gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-[0.65rem] font-bold text-primary-foreground">4</span><span class="text-sm font-medium">Resultado mensurável</span></li></ol><p class="mt-6 border-t border-border pt-5 text-sm leading-relaxed text-muted-foreground">Trabalhamos com pequenas e médias empresas que precisam modernizar processos, sistemas e uso de dados sem paralisar a operação.</p></div></div></section>`;
 
-const HOME_TRUST_STRIP = `<section class="border-b border-border bg-surface text-surface-foreground"><div class="container-page flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-6 text-center text-xs font-semibold uppercase tracking-[0.14em]"><a href="/parceiros" class="text-muted-foreground hover:text-primary">Revenda oficial Acronis · ManageEngine · Omid Cloud</a><span class="hidden h-3 w-px bg-border sm:block" aria-hidden="true"></span><span class="text-muted-foreground">Embaixador Arrasta para Cima</span><span class="hidden h-3 w-px bg-border sm:block" aria-hidden="true"></span><a href="/grupo-vieira-prime" class="text-muted-foreground hover:text-primary">Parte do Grupo Vieira Prime</a></div></section>`;
-const HOME_MAIN = HOME_TRUST_STRIP + sCardsGrid({eyebrow:'Problemas que resolvemos', title:'Se algum destes cenários é familiar, existe um caminho', lead:'Antes de falar de tecnologia, olhamos para o que está travando o negócio no dia a dia.', bg:'bg-surface text-surface-foreground', cards:[
+const HOME_MAIN = sCardsGrid({eyebrow:'Problemas que resolvemos', title:'Se algum destes cenários é familiar, existe um caminho', lead:'Antes de falar de tecnologia, olhamos para o que está travando o negócio no dia a dia.', bg:'bg-surface text-surface-foreground', cards:[
     {title:'Processos manuais consomem o time', href:'/automacao', desc:'Planilhas, retrabalho e aprovações informais travam a operação e escondem erros que só aparecem no resultado do mês.'},
     {title:'Sistemas que não conversam', href:'/sistemas', desc:'Cada área usa uma ferramenta diferente, os dados são digitados duas vezes e ninguém confia no número final.'},
     {title:'Falta de visibilidade para decidir', href:'/dados', desc:'A informação existe, mas está espalhada. A decisão acaba baseada em percepção, não em evidência.'},
@@ -942,7 +846,6 @@ const HOME_MAIN = HOME_TRUST_STRIP + sCardsGrid({eyebrow:'Problemas que resolvem
     {title:'Serviços', href:'/servicos', desc:'Consultoria e tecnologia sob medida, em sete frentes — da transformação digital à cloud.'},
     {title:'Soluções SaaS Nexalytix', href:'/produtos', desc:'ERP, CRM, Financeiro, BG-Check, Transcribe e AgendaBella — produtos próprios nascidos de projetos reais.'},
     {title:'Parceiros', href:'/parceiros', desc:'Acronis (Backup e Contingência), ManageEngine e Omid Cloud — produtos que já usamos e por que recomendamos cada um.'},
-    {title:'Ecossistema Nexalytix', href:'/ecossistema', desc:'Business Studios, Nexalytix Academy e Inovação & Transformação — as novas frentes que estamos estruturando.'},
     {title:'Radar de Mercado', href:'/radar', desc:'Cibersegurança, ativos digitais, blockchain, IA, infraestrutura e negócios: o que está mudando e o que fazer com isso.'},
   ]}) +
   sEmptyState({eyebrow:'Cases', title:'Tecnologia aplicada a problemas reais', lead:'Projetos publicados aparecem aqui com desafio, estratégia, solução e resultados.', bg:'bg-background text-foreground', heading:'Cases em publicação', body:'Estamos organizando os cases autorizados para publicação. Enquanto isso, podemos apresentar projetos semelhantes ao seu contexto em uma conversa.', ctaLabel:'Conversar sobre meu desafio', ctaHref:'/contato'}) +
@@ -954,7 +857,6 @@ function headerHtml(){
   return `<header class="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur"><div class="container-page flex h-16 items-center justify-between gap-4"><a aria-label="Nexalytix — página inicial" class="flex items-center gap-2" href="/"><span class="grid size-8 place-items-center rounded-md bg-primary text-sm font-bold text-primary-foreground">N</span><span class="font-display text-lg font-semibold tracking-tight">Nexalytix</span></a>
   <nav aria-label="Navegação principal" class="hidden items-center gap-1 lg:flex">
     <a href="/servicos" class="rounded-md px-3 py-2 text-sm font-medium text-foreground hover:text-primary">Serviços</a>
-    <a href="/ecossistema" class="rounded-md px-3 py-2 text-sm font-medium text-foreground hover:text-primary">Ecossistema</a>
     <a href="/produtos" class="rounded-md px-3 py-2 text-sm font-medium text-foreground hover:text-primary">Soluções SaaS</a>
     <a href="/parceiros" class="rounded-md px-3 py-2 text-sm font-medium text-foreground hover:text-primary">Parceiros</a>
     <a href="/radar" class="rounded-md px-3 py-2 text-sm font-medium text-foreground hover:text-primary">Radar</a>
@@ -971,10 +873,10 @@ function headerHtml(){
 
 function footerHtml(){
   const col = (title, items) => `<div><h3 class="text-xs font-semibold uppercase tracking-[0.16em] text-ink-foreground/60">${title}</h3><ul class="mt-4 space-y-2">${items.map(i=>`<li><a href="${i.href}" class="text-sm text-ink-foreground/85 hover:text-ink-foreground">${i.label}</a></li>`).join('')}</ul></div>`;
-  return `<footer class="bg-ink text-ink-foreground"><div class="container-page grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-5"><div class="lg:col-span-2"><span class="font-display text-xl font-semibold">Nexalytix</span><p class="mt-3 max-w-xs text-sm leading-relaxed text-ink-foreground/70">Estratégia, IA e tecnologia para transformar negócios.</p><p class="mt-2 text-xs text-ink-foreground/50">Parte do <a href="/grupo-vieira-prime" class="underline hover:text-ink-foreground">Grupo Vieira Prime</a>.</p></div>
+  return `<footer class="bg-ink text-ink-foreground"><div class="container-page grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-5"><div class="lg:col-span-2"><span class="font-display text-xl font-semibold">Nexalytix</span><p class="mt-3 max-w-xs text-sm leading-relaxed text-ink-foreground/70">Estratégia, IA e tecnologia para transformar negócios.</p></div>
   ${col('Soluções', [{href:'/transformacao-digital',label:'Transformação Digital'},{href:'/inteligencia-artificial',label:'Inteligência Artificial'},{href:'/sistemas',label:'Sistemas'},{href:'/automacao',label:'Automação'},{href:'/dados',label:'Dados'},{href:'/cloud',label:'Cloud'},{href:'/consultoria',label:'Consultoria'}])}
-  ${col('Empresa', [{href:'/consultoria/diagnostico-digital',label:'Diagnóstico Digital'},{href:'/cases',label:'Cases'},{href:'/insights',label:'Insights'},{href:'/radar',label:'Radar de Mercado'},{href:'/grupo-vieira-prime',label:'Grupo Vieira Prime'},{href:'/contato',label:'Contato'}])}
-  <div class="space-y-8">${col('Oferta', [{href:'/servicos',label:'Serviços'},{href:'/ecossistema',label:'Ecossistema'},{href:'/produtos',label:'Soluções SaaS'},{href:'/parceiros',label:'Parceiros'},{href:'/portfolio',label:'Visão geral'}])}${col('Legal', [{href:'/politica-de-privacidade',label:'Política de Privacidade'},{href:'/cookies',label:'Cookies'},{href:'/termos-de-uso',label:'Termos de Uso'}])}</div>
+  ${col('Empresa', [{href:'/consultoria/diagnostico-digital',label:'Diagnóstico Digital'},{href:'/cases',label:'Cases'},{href:'/insights',label:'Insights'},{href:'/radar',label:'Radar de Mercado'},{href:'/contato',label:'Contato'}])}
+  <div class="space-y-8">${col('Oferta', [{href:'/servicos',label:'Serviços'},{href:'/produtos',label:'Soluções SaaS'},{href:'/parceiros',label:'Parceiros'},{href:'/portfolio',label:'Visão geral'}])}${col('Legal', [{href:'/politica-de-privacidade',label:'Política de Privacidade'},{href:'/cookies',label:'Cookies'},{href:'/termos-de-uso',label:'Termos de Uso'}])}</div>
   </div><div class="border-t border-ink-foreground/10"><div class="container-page flex flex-col gap-2 py-6 text-xs text-ink-foreground/60 md:flex-row md:items-center md:justify-between"><p>© 2026 Nexalytix. Todos os direitos reservados.</p><p>Estratégia, IA e tecnologia para transformar negócios.</p></div></div></footer>`;
 }
 
