@@ -1,0 +1,30 @@
+body{
+  background-color: oklch(99.5% .003 250);
+  color: oklch(23% .032 258);
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3{ font-family: 'Sora', ui-sans-serif, system-ui, sans-serif; }
+.container-page{ max-width: 1216px; margin-left:auto; margin-right:auto; padding-left:20px; padding-right:20px; }
+a{ text-decoration:none; color:inherit; }
+[hidden]{ display:none !important; }
+.faq-icon{ transition: transform .2s ease; }
+.faq-btn[aria-expanded="true"] .faq-icon,
+.nav-trigger[aria-expanded="true"] .faq-icon,
+.mobile-nav-trigger[aria-expanded="true"] .faq-icon,
+.finder-step-icon[aria-expanded="true"] .faq-icon{ transform: rotate(180deg); }
+.menu-panel{ transition: opacity .15s ease; }
+.dropdown-panel{ transition: opacity .15s ease; }
+
+/* ---------- Solution Finder widget ---------- */
+.finder-chip{ transition: border-color .15s ease, background-color .15s ease; }
+.finder-chip[aria-pressed="true"]{
+  border-color: oklch(42% .115 252);
+  background-color: oklch(42% .115 252 / 0.08);
+}
+.finder-step{ transition: opacity .2s ease; }
+.finder-progress-dot{ transition: background-color .2s ease, transform .2s ease; }
+.finder-progress-dot[data-active="true"]{
+  background-color: oklch(42% .115 252);
+  transform: scale(1.15);
+}
