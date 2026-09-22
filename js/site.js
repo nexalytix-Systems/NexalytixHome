@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       parceiros: {
         title: 'Produtos e Parceiros (Acronis · ManageEngine · Omid Cloud)',
-        href: 'app-completo.html#/parceiros',
+        href: 'parceiros.html',
         blurbBySize: {
           pequena: 'Acronis e ManageEngine cobrem bem o essencial de proteção e gestão de TI para pequenas empresas.',
           media: 'O portfólio completo dos três parceiros costuma resolver várias frentes de uma vez, sem somar fornecedores.',
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const out = finderRoot.querySelector('[data-finder-result]');
         if (result && out) {
           const blurb = result.blurbBySize[chosenSize] || '';
-          out.innerHTML = `<p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Recomendamos</p><h3 class="mt-2 text-2xl font-semibold">${result.title}</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">${blurb}</p><div class="mt-6 flex flex-wrap gap-3"><a href="${result.href}" class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Ver ${result.title}</a><a href="app-completo.html#/contato" class="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-background px-5 py-3 text-sm font-semibold text-foreground hover:bg-surface">Falar com um especialista</a></div>`;
+          out.innerHTML = `<p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Recomendamos</p><h3 class="mt-2 text-2xl font-semibold">${result.title}</h3><p class="mt-3 text-sm leading-relaxed text-muted-foreground">${blurb}</p><div class="mt-6 flex flex-wrap gap-3"><a href="${result.href}" class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Ver ${result.title}</a><a href="contato.html" class="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-background px-5 py-3 text-sm font-semibold text-foreground hover:bg-surface">Falar com um especialista</a></div>`;
         }
         step = 3;
         showStep(3);
