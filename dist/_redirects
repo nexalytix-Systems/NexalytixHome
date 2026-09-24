@@ -1,0 +1,55 @@
+# Redirecionamentos do site antigo para as seções do site novo (Cloudflare Pages)
+# Páginas do protótipo anterior
+/academy-e-digital.html            /#academia        301
+/academy-e-digital                 /#academia        301
+/app-completo.html                 /                 301
+/app-completo                      /                 301
+/business-studios.html             /#servicos        301
+/business-studios                  /#servicos        301
+/cases.html                        /#conteudos       301
+/cases                             /#conteudos       301
+/compartilhe-seu-portfolio.html    /#parceiros       301
+/compartilhe-seu-portfolio         /#parceiros       301
+/contato.html                      /#contato         301
+/contato                           /#contato         301
+/ecossistema.html                  /#ecossistema     301
+/ecossistema                       /#ecossistema     301
+/grupo-vieira-prime.html           /#sobre           301
+/grupo-vieira-prime                /#sobre           301
+/infraestrutura-e-ciberseguranca.html  /#seguranca   301
+/infraestrutura-e-ciberseguranca   /#seguranca       301
+/inovacao-e-transformacao.html     /#ia              301
+/inovacao-e-transformacao          /#ia              301
+/insights.html                     /#conteudos       301
+/insights                          /#conteudos       301
+/nexafriends.html                  /#parceiros       301
+/nexafriends                       /#parceiros       301
+/parceiros.html                    /#parceiros       301
+/parceiros                         /#parceiros       301
+/produtos.html                     /#solucoes        301
+/produtos                          /#solucoes        301
+/programa-de-formacao.html         /#academia        301
+/programa-de-formacao              /#academia        301
+/radar.html                        /#conteudos       301
+/radar                             /#conteudos       301
+/servicos.html                     /#servicos        301
+/sobre.html                        /#sobre           301
+/sobre                             /#sobre           301
+
+# Páginas do site atual em nexalytix.com.br
+/servicos/cloud-computing          /#cloud           301
+/servicos/finops                   /#finops          301
+/servicos/seginfo                  /#seguranca       301
+/servicos/infraestrutura           /#cloud           301
+/servicos/observabilidade          /#sustentacao     301
+/servicos/devops                   /#implementacao   301
+/servicos/integracao               /#implementacao   301
+/servicos/arquitetura              /#consultoria     301
+/servicos/cto-as-a-service         /#consultoria     301
+/servicos/inovacao                 /#ia              301
+/servicos/*                        /#servicos        301
+/servicos                          /#servicos        301
+/metodologia                       /#servicos        301
+/blog/*                            /#conteudos       301
+/blog                              /#conteudos       301
+/trabalhe-conosco                  /#sobre           301

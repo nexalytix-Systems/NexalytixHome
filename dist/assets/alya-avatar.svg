@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Alya, assistente da Nexalytix">
+  <defs>
+    <radialGradient id="alyaBg" cx="0.5" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#15295A"/>
+      <stop offset="1" stop-color="#070B16"/>
+    </radialGradient>
+    <linearGradient id="alyaShield" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#4FC3FF"/>
+      <stop offset="0.55" stop-color="#1F6BE0"/>
+      <stop offset="1" stop-color="#0C42B4"/>
+    </linearGradient>
+    <linearGradient id="alyaOrbit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CD0FF" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#7EDBFF"/>
+      <stop offset="1" stop-color="#5CD0FF" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#alyaBg)"/>
+  <!-- órbita (parte de trás) -->
+  <path d="M4.6 39.8 A28 8 -12 0 1 59.4 28.2" fill="none" stroke="url(#alyaOrbit)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- escudo -->
+  <path d="M32 9 L50.5 15.2 V31.5 C50.5 42.6 42.6 49.7 32 54 C21.4 49.7 13.5 42.6 13.5 31.5 V15.2 Z" fill="url(#alyaShield)"/>
+  <path d="M32 15 L45.2 19.4 V31.6 C45.2 39.7 39.8 45 32 48.2 C24.2 45 18.8 39.7 18.8 31.6 V19.4 Z" fill="#081026"/>
+  <!-- olhos -->
+  <rect x="24.2" y="25" width="5" height="8.2" rx="2.5" fill="#7EDBFF"/>
+  <rect x="34.8" y="25" width="5" height="8.2" rx="2.5" fill="#7EDBFF"/>
+  <!-- órbita (parte da frente) -->
+  <path d="M59.4 28.2 A28 8 -12 0 1 4.6 39.8" fill="none" stroke="url(#alyaOrbit)" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="57.6" cy="31.6" r="2.8" fill="#F2650A"/>
+</svg>
