@@ -229,7 +229,32 @@ svg.dom-focus .cycle-arrow{stroke:var(--accent);opacity:1}
 .partner-nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
 .partner-nav button{cursor:pointer;font:inherit}
 .partner{padding-block:56px;border-top:1px solid var(--line)}
-.partner .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.pt-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start;margin-bottom:28px}
+.pt-id{display:grid;gap:12px;justify-items:start}
+.pt-id .logo-chip{height:60px;padding:10px 18px}
+.pt-id .logo-chip img{max-height:38px}
+.pt-id h2{font-size:clamp(1.5rem,2.4vw,2rem)}
+.pt-about{display:grid;gap:12px}
+.pt-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.pt-rows{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.pt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;padding:20px 22px;border-top:1px solid var(--line)}
+.pt-row-h{border-top:0;background:var(--surface-2);padding-block:12px;font:600 .72rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pt-prod{display:grid;gap:8px;align-content:start}
+.pt-prod h3{font-size:1rem}
+.pt-prod .prods{display:flex;flex-wrap:wrap;gap:6px}
+.pt-prod .prods span{font:500 .78rem/1 var(--font-m);padding:6px 8px;border-radius:6px;background:var(--primary-soft);color:var(--primary)}
+.pt-prod p{font-size:.88rem;color:var(--muted)}
+.pt-use{list-style:none;margin:0;padding:0;display:grid;gap:8px;align-content:start}
+.pt-use li{font-size:.9rem;padding-left:18px;position:relative;line-height:1.45}
+.pt-use li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
+.pt-case{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:14px;padding:22px;display:grid;gap:10px;position:sticky;top:130px}
+.pt-case h3{font-size:1.1rem}
+.pt-case .clean{gap:6px}
+.pt-case .clean li{font-size:.88rem}
+.pt-case .rsrc{font-size:.78rem}
+@media (max-width:980px){.pt-head,.pt-grid{grid-template-columns:1fr}.pt-case{position:static}}
+@media (max-width:640px){.pt-row{grid-template-columns:1fr;gap:12px}.pt-row-h{display:none}}
+.partner .wrap{display:block}
 .partner-id{display:grid;gap:16px;position:sticky;top:110px}
 .partner-id .logo-chip{align-self:start;justify-self:start;height:56px;padding:10px 18px}
 .partner-id .logo-chip img{max-height:34px}
@@ -691,7 +716,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div class="grid g3">
       <div class="card"><div class="chips"><span class="pill blue">Produto Nexalytix</span></div><img src="assets/alya-avatar.svg" alt="" width="48" height="48"><h3>Assistente de IA Nexalytix</h3><p class="muted small">O mesmo assistente deste site, treinado com o conteúdo da sua empresa, com captação de leads direto no CRM.</p><button type="button" class="more btn-link" data-nexa>Conversar com a Alya →</button></div>
       <div class="card"><div class="chips"><span class="pill blue">SaaS próprio</span></div><h3>Transcribe</h3><p class="muted small">Transcrição automática de áudios e vídeos com IA, para reuniões, atendimentos e conteúdo.</p><a class="more" href="#contato" data-intent="demo">Agendar demonstração →</a></div>
-      <div class="card"><div class="chips"><span class="pill">Parceiro oficial</span></div><span class="logo-chip logo-text" data-logo="hyland" style="align-self:flex-start">Hyland</span><h3>Hyland: conteúdo e agentes de IA</h3><p class="muted small">Gestão de documentos, captura inteligente (IDP), descoberta de conhecimento e agentes de IA sobre o conteúdo corporativo.</p><a class="more" href="#contato" data-intent="cotacao">Falar sobre Hyland →</a></div>
+      <div class="card"><div class="chips"><span class="pill">Parceiro oficial</span></div><span class="logo-chip"  style="align-self:flex-start"><img src="assets/logo-hyland.png" alt="Hyland"></span><h3>Hyland: conteúdo e agentes de IA</h3><p class="muted small">Gestão de documentos, captura inteligente (IDP), descoberta de conhecimento e agentes de IA sobre o conteúdo corporativo.</p><a class="more" href="#contato" data-intent="cotacao">Falar sobre Hyland →</a></div>
     </div>
   </div></div>
 </section>
@@ -821,7 +846,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     </div>
     <div style="display:grid;gap:14px"><span class="eyebrow">Alianças tecnológicas</span><h2>Parceiros que usamos na nossa própria operação</h2><a href="#aliancas" style="font-weight:600">Ver detalhes de cada parceiro →</a>
       <div class="dl">
-        <div><span class="logo-chip logo-text" style="justify-self:start" data-logo="hyland">Hyland</span><span>Gestão de conteúdo e documentos, automação de processos e IA sobre o conteúdo corporativo (OnBase, Alfresco, Nuxeo).</span></div>
+        <div><span class="logo-chip" style="justify-self:start" ><img src="assets/logo-hyland.png" alt="Hyland"></span><span>Gestão de conteúdo e documentos, automação de processos e IA sobre o conteúdo corporativo (OnBase, Alfresco, Nuxeo).</span></div>
         <div><span class="logo-chip" style="justify-self:start"><img src="assets/logo-acronis.png" alt="Acronis"></span><span>Backup, recuperação de desastres e continuidade de negócios.</span></div>
         <div><span class="logo-chip" style="justify-self:start"><img src="assets/logo-manageengine.png" alt="ManageEngine"></span><span>Cibersegurança e gestão de TI: SIEM e análise de logs (Log360), identidades e acessos privilegiados (AD360, PAM360), segurança de endpoints, patches e vulnerabilidades (Endpoint Central, Vulnerability Manager Plus), além de service desk e monitoramento de rede (ServiceDesk Plus, OpManager).</span></div>
         <div><span class="logo-chip dark" style="justify-self:start"><img src="assets/logo-omid.svg" alt="Omid Cloud"></span><span>Infraestrutura em nuvem.</span></div>
@@ -1175,7 +1200,7 @@ const S=[
  {c:"saas",tag:"SaaS próprio",n:"BG-Check",d:"Consultas e verificação de antecedentes para processos de contratação."},
  {c:"saas",tag:"SaaS próprio",n:"Transcribe",d:"Transcrição automática de áudios e vídeos."},
  {c:"saas",tag:"SaaS próprio",n:"AgendaBella",d:"Agendamento online e gestão de horários de atendimento."},
- {c:"revenda",tag:"Parceiro oficial",n:"Hyland",logoText:"Hyland",d:"Gestão de conteúdo e documentos, automação de processos e agentes de IA sobre o conteúdo corporativo (OnBase, Alfresco, Nuxeo, Perceptive Content)."},
+ {c:"revenda",tag:"Parceiro oficial",n:"Hyland",logo:"assets/logo-hyland.png",d:"Gestão de conteúdo e documentos, automação de processos e agentes de IA sobre o conteúdo corporativo (OnBase, Alfresco, Nuxeo, Perceptive Content)."},
  {c:"revenda",tag:"Revenda oficial",n:"Acronis",logo:"assets/logo-acronis.png",d:"Backup, recuperação de desastres e continuidade de negócios, implementados e operados pelo nosso time."},
  {c:"revenda",tag:"Parceiro oficial",n:"ManageEngine",logo:"assets/logo-manageengine.png",d:"Cibersegurança e gestão de TI: SIEM e análise de logs (Log360), identidades e acessos privilegiados (AD360, PAM360), segurança de endpoints, patches e vulnerabilidades (Endpoint Central, Vulnerability Manager Plus), além de service desk e monitoramento de rede (ServiceDesk Plus, OpManager)."},
  {c:"revenda",tag:"Revenda oficial",n:"Omid Cloud",logo:"assets/logo-omid.svg",dark:1,d:"Infraestrutura em nuvem com suporte e gestão Nexalytix."},
@@ -1191,49 +1216,75 @@ $$("#solFilters button").forEach(b=>b.addEventListener("click",()=>setSol(b.data
 
 /* ---------- Partners ---------- */
 const PARTNERS=[
- {k:"hyland",n:"Hyland",logoText:"Hyland",tag:"Conteúdo, processos e IA",
-  about:"Fabricante norte-americana fundada em 1991, referência mundial em gestão de conteúdo corporativo e automação de processos. Sua Content Innovation Cloud leva IA e agentes para dentro dos documentos e fluxos da empresa.",
-  facts:["Gestão de conteúdo (ECM)","Agentes de IA","Saúde, financeiro, seguros, governo, educação, manufatura"],
-  ideal:"Empresas com grande volume de documentos, processos em papel ou e-mail e exigência de conformidade.",
-  groups:[["Gestão de documentos e processos",["OnBase","Perceptive Content"],"Captura, arquivamento, fluxos de aprovação e trilha de auditoria."],
-          ["Plataformas de conteúdo",["Alfresco","Nuxeo"],"Repositório central de conteúdo e ativos digitais, integrado aos sistemas da empresa."],
-          ["IA sobre o conteúdo",["Processamento inteligente de documentos (IDP)","Agentes de IA","Descoberta de conhecimento"],"Leitura, classificação e extração de dados de documentos e automação com agentes."]],
+ {k:"hyland",n:"Hyland",logo:"assets/logo-hyland.png",tag:"Conteúdo, processos e IA",
+  about:"Fabricante norte-americana fundada em 1991, referência mundial em gestão de conteúdo corporativo e automação de processos. A Content Innovation Cloud leva IA e agentes para dentro dos documentos e fluxos da empresa.",
+  ideal:"Empresas com muito papel, e-mail e planilha nos processos, ou com exigência alta de conformidade: saúde, financeiro, seguros, governo, educação e indústria.",
+  groups:[
+   {t:"Gestão de documentos e processos",p:["OnBase","Perceptive Content"],d:"Captura, arquivamento, fluxos de aprovação e trilha de auditoria.",
+    uses:["Contas a pagar sem papel: nota fiscal capturada, aprovada e arquivada automaticamente","Prontuário e documentação clínica reunidos num só lugar em hospitais","Dossiê de crédito e abertura de contas em bancos e cooperativas"]},
+   {t:"Plataformas de conteúdo",p:["Alfresco","Nuxeo"],d:"Repositório central de conteúdo e ativos digitais, integrado aos sistemas da empresa.",
+    uses:["Contratos e documentos de RH com controle de versão e permissões","Acervo de imagens e vídeos de marketing organizado e pesquisável","Repositório jurídico com histórico completo de alterações"]},
+   {t:"IA sobre o conteúdo",p:["Processamento inteligente de documentos (IDP)","Agentes de IA","Descoberta de conhecimento"],d:"Leitura, classificação e extração de dados de documentos e automação com agentes.",
+    uses:["Leitura automática de notas fiscais, contratos e formulários","Agente que responde dúvidas consultando políticas e manuais internos","Classificação de documentos com dados pessoais para a LGPD"]}],
+  case:{who:"MetroHealth System",where:"Hospital público · Cleveland, EUA",problem:"Imagens e documentos clínicos espalhados em vários sistemas, cada um com login próprio.",solution:"OnBase, Acuo e NilRead integrados ao fluxo clínico.",results:["Mais de 80% de redução em relatórios faltantes","4,7 milhões de imagens acessadas por 8 mil profissionais em três anos","Cerca de 33 mil pacientes viram seus exames no portal nos primeiros sete meses"],src:"Hyland",url:"https://www.hyland.com/en/customers/metrohealth-system"},
   dom:{ia:2,cloud:1,dev:1}},
  {k:"manageengine",n:"ManageEngine",logo:"assets/logo-manageengine.png",tag:"Cibersegurança e gestão de TI",
-  about:"Divisão de TI corporativa da Zoho Corporation, com um dos portfólios mais completos do mercado para segurança, identidades, endpoints e operação de TI, em um custo acessível para empresas de todos os portes.",
-  facts:["SIEM","Identidades e acessos","Endpoints","Service desk"],
-  ideal:"Empresas que precisam de visibilidade de segurança, controle de acessos e uma TI organizada sem multiplicar fornecedores.",
-  groups:[["SIEM e análise de logs",["Log360","EventLog Analyzer","Firewall Analyzer"],"Correlação de eventos, detecção de ameaças e relatórios de conformidade."],
-          ["Identidades e acessos",["AD360","ADAudit Plus","PAM360"],"Gestão e auditoria do Active Directory, contas privilegiadas e senhas."],
-          ["Segurança de endpoints",["Endpoint Central","Vulnerability Manager Plus","Patch Manager Plus","Endpoint DLP Plus","Ransomware Protection Plus"],"Inventário, patches, vulnerabilidades, prevenção de perda de dados e proteção contra ransomware."],
-          ["Gestão de TI",["ServiceDesk Plus","OpManager"],"Service desk, gestão de ativos e monitoramento de rede e servidores."]],
+  about:"Divisão de TI corporativa da Zoho Corporation, com um dos portfólios mais completos do mercado para segurança, identidades, endpoints e operação de TI, a um custo acessível para empresas de todos os portes.",
+  ideal:"Empresas que precisam de visibilidade de segurança, controle de acessos e uma TI organizada, sem multiplicar fornecedores.",
+  groups:[
+   {t:"SIEM e análise de logs",p:["Log360","EventLog Analyzer","Firewall Analyzer"],d:"Correlação de eventos, detecção de ameaças e relatórios de conformidade.",
+    uses:["Centralizar logs de firewall, Active Directory e servidores com alerta de acesso suspeito","Detectar login fora do horário ou de lugares incomuns","Relatórios de auditoria prontos para LGPD e ISO 27001"]},
+   {t:"Identidades e acessos",p:["AD360","ADAudit Plus","PAM360"],d:"Gestão e auditoria do Active Directory, contas privilegiadas e senhas.",
+    uses:["Desligamento de colaborador com bloqueio de todos os acessos de uma vez","Redefinição de senha pelo próprio usuário, sem abrir chamado","Cofre de senhas de administrador com gravação das sessões"]},
+   {t:"Segurança de endpoints",p:["Endpoint Central","Vulnerability Manager Plus","Patch Manager Plus","Endpoint DLP Plus","Ransomware Protection Plus"],d:"Inventário, patches, vulnerabilidades, prevenção de perda de dados e proteção contra ransomware.",
+    uses:["Atualização automática de Windows e aplicativos em todas as filiais","Inventário de hardware e software sempre atualizado","Bloqueio de cópia de dados sensíveis para pendrive ou e-mail pessoal"]},
+   {t:"Gestão de TI",p:["ServiceDesk Plus","OpManager"],d:"Service desk, gestão de ativos e monitoramento de rede e servidores.",
+    uses:["Central de chamados com SLA e base de conhecimento","Alerta de lentidão em links e servidores antes da queda"]}],
+  case:{who:"Mineradora fundada em 1904",where:"Mineração · Austrália",problem:"TI com três pessoas atendendo seis localidades, com patches e instalações feitos à mão, máquina por máquina.",solution:"Endpoint Central integrado ao OpManager e ao ServiceDesk Plus.",results:["70% menos tempo gasto em operações de TI","119 aplicações implantadas sem interromper os usuários","Fim do deslocamento para atualizar máquinas nas unidades"],src:"ManageEngine",url:"https://www.manageengine.com/br/desktop-central/australian-case-study.html"},
   dom:{seguranca:2,cloud:1}},
  {k:"acronis",n:"Acronis",logo:"assets/logo-acronis.png",tag:"Backup e proteção cibernética",
-  about:"Plataforma que une backup, recuperação de desastres e segurança de endpoints em um único console e um único agente, reduzindo ferramentas e pontos de falha.",
-  facts:["Backup","Recuperação de desastres","EDR / XDR / MDR"],
-  ideal:"Empresas que precisam garantir que dados e sistemas voltam a funcionar rápido depois de falhas, erros ou ataques.",
-  groups:[["Proteção de dados",["Backup","Backup para Microsoft 365","Disaster Recovery","Arquivamento de e-mail"],"Backup de servidores, estações, nuvem e Microsoft 365, com recuperação testada."],
-          ["Segurança",["EDR","XDR","MDR 24/7","Email Security","DLP"],"Detecção e resposta a ameaças, proteção de e-mail e prevenção de perda de dados."],
-          ["Pessoas e operação",["Treinamento de conscientização","RMM"],"Conscientização de usuários e gestão remota dos equipamentos."]],
+  about:"Plataforma que une backup, recuperação de desastres e segurança de endpoints num único console e num único agente, reduzindo ferramentas e pontos de falha.",
+  ideal:"Empresas que precisam garantir que dados e sistemas voltem a funcionar rápido depois de falhas, erros ou ataques.",
+  groups:[
+   {t:"Proteção de dados",p:["Backup","Backup para Microsoft 365","Disaster Recovery","Arquivamento de e-mail"],d:"Backup de servidores, estações, nuvem e Microsoft 365, com recuperação testada.",
+    uses:["Backup diário de servidores e estações com cópia fora da empresa","Proteção de e-mails, OneDrive e Teams do Microsoft 365","Servidor crítico funcionando na nuvem em minutos se o local falhar"]},
+   {t:"Segurança",p:["EDR","XDR","MDR 24/7","Email Security","DLP"],d:"Detecção e resposta a ameaças, proteção de e-mail e prevenção de perda de dados.",
+    uses:["Detectar ransomware e reverter os arquivos criptografados","Bloquear phishing antes de chegar à caixa de entrada","Monitoramento 24x7 por especialistas (MDR)"]},
+   {t:"Pessoas e operação",p:["Treinamento de conscientização","RMM"],d:"Conscientização de usuários e gestão remota dos equipamentos.",
+    uses:["Simulações de phishing e trilhas curtas de treinamento","Manutenção remota de equipamentos em filiais e home office"]}],
+  case:{who:"Fabricante de componentes industriais",where:"Manufatura · Índia",problem:"Ataques direcionados e backups espalhados entre NAS e Google Drive, sem visão unificada e com custo alto de armazenamento.",solution:"Acronis Cyber Protect Cloud.",results:["Recuperação completa da infraestrutura sem perda de dados","Backup e segurança gerenciados numa única interface","Licenciamento por armazenamento, mais econômico que por equipamento"],src:"Acronis",url:"https://www.acronis.com/en-gb/resource-center/resource/manufacturer-transformed-backup-security-acronis-cyber-protect-cloud/"},
   dom:{seguranca:2,cloud:2}},
  {k:"omid",n:"Omid Cloud",logo:"assets/logo-omid.svg",dark:1,tag:"Nuvem soberana brasileira",
-  about:"Provedora de cloud pública soberana operada no Brasil, com data centers próprios Tier III. Seus dados ficam no país, sob controle operacional brasileiro, com preço em reais.",
-  facts:["Dados no Brasil","Preço em reais","Suporte 24/7 no Brasil","Sem lock-in"],
+  about:"Provedora de cloud pública soberana operada no Brasil, com data centers próprios Tier III. Os dados ficam no país, sob controle operacional brasileiro, com preço em reais.",
   ideal:"Empresas que querem previsibilidade de custo, dados no Brasil por conformidade e LGPD, ou uma alternativa às nuvens globais.",
-  groups:[["Nuvem e data center",["OMID Smart Cloud","OMID Smart Colocation"],"Infraestrutura como serviço e colocation em data centers Tier III no Brasil."],
-          ["Serviços gerenciados",["OMID Smart IT Services","OMID Smart Cybersecurity","OMID Cloud Cognitiva"],"Gestão de infraestrutura, SOC e observabilidade com IA."]],
+  groups:[
+   {t:"Nuvem e data center",p:["OMID Smart Cloud","OMID Smart Colocation"],d:"Infraestrutura como serviço e colocation em data centers Tier III no Brasil.",
+    uses:["Hospedar ERP e sistemas legados com dados no Brasil","Ambientes de teste e homologação com mensalidade fixa","Colocation de servidores próprios em data center Tier III"]},
+   {t:"Serviços gerenciados",p:["OMID Smart IT Services","OMID Smart Cybersecurity","OMID Cloud Cognitiva"],d:"Gestão de infraestrutura, SOC e observabilidade com IA.",
+    uses:["Operação da infraestrutura com suporte 24x7 no Brasil","Monitoramento de segurança (SOC) do ambiente em nuvem","Observabilidade com IA para antecipar falhas"]}],
+  case:{who:"Praxis Globe",where:"Multinacional · operações no Brasil · set/2026",problem:"Custos de TI imprevisíveis e governança complexa dos ambientes no país.",solution:"Nuvem soberana da Omid em data centers Tier III no Brasil.",results:["Mensalidade fixa, sem cobrança por transferência de dados (egress)","Suporte 24x7 com equipes locais","Expansão para a América Latina em avaliação"],src:"Brasil Inovador",url:"https://brasilinovador.com.br/praxis-globe-contrata-infraestrutura-da-omid-no-brasil-e-estuda-expansao-de-nuvem-soberana-na-america-latina/"},
   dom:{cloud:2,finops:2,seguranca:1}}
 ];
-$(".partner-nav").innerHTML=PARTNERS.map(x=>`<button type="button" class="logo-chip${x.dark?' dark':''}${x.logoText?' logo-text':''}" data-goto="pt-${x.k}" aria-label="Ir para ${x.n}">${x.logo?`<img src="${x.logo}" alt="${x.n}">`:x.logoText}</button>`).join("");
+const chip=x=>`<span class="logo-chip${x.dark?' dark':''}"><img src="${x.logo}" alt="${x.n}"></span>`;
+$(".partner-nav").innerHTML=PARTNERS.map(x=>`<button type="button" class="logo-chip${x.dark?' dark':''}" data-goto="pt-${x.k}" aria-label="Ir para ${x.n}"><img src="${x.logo}" alt="${x.n}"></button>`).join("");
 $("#partnerBlocks").innerHTML=PARTNERS.map(x=>`<section class="partner" id="pt-${x.k}"><div class="wrap">
-  <div class="partner-id"><span class="logo-chip${x.dark?' dark':''}${x.logoText?' logo-text':''}">${x.logo?`<img src="${x.logo}" alt="${x.n}">`:x.logoText}</span>
-    <span class="eyebrow">${x.tag}</span><h2>${x.n}</h2><p class="muted">${x.about}</p>
-    <div class="partner-facts">${x.facts.map(f=>`<span class="pill">${f}</span>`).join("")}</div>
-    <p class="small"><b>Ideal para:</b> ${x.ideal}</p>
-    <div class="btn-row"><a class="btn btn-primary" href="#contato" data-intent="cotacao" data-msg="Tenho interesse em soluções ${x.n}.">Solicitar proposta ${x.n}</a></div></div>
-  <div class="partner-groups">${x.groups.map(([t,ps,d])=>`<div class="pgroup"><h3>${t}</h3><div class="prods">${ps.map(q=>`<span>${q}</span>`).join("")}</div><p>${d}</p></div>`).join("")}
-    <div><p class="trust-label" style="margin-bottom:10px">Domínios do ecossistema</p><div class="partner-doms">${Object.keys(x.dom).map(d=>`<a href="#${DOM[d].route}" ${DOM[d].filter?`data-filter="${DOM[d].filter}"`:''}>${DOM[d].n}</a>`).join("")}</div></div>
-    <p class="small muted">Com a Nexalytix: diagnóstico, licenciamento, implantação, integração e sustentação com suporte em português.</p></div>
+  <div class="pt-head">
+    <div class="pt-id">${chip(x)}<span class="eyebrow">${x.tag}</span><h2>${x.n}</h2></div>
+    <div class="pt-about"><p class="muted">${x.about}</p><p class="small"><b>Ideal para:</b> ${x.ideal}</p>
+      <div class="btn-row"><a class="btn btn-primary" href="#contato" data-intent="cotacao" data-msg="Tenho interesse em soluções ${x.n}.">Solicitar proposta ${x.n}</a></div></div>
+  </div>
+  <div class="pt-grid">
+    <div class="pt-rows">
+      <div class="pt-row pt-row-h"><span>Portfólio</span><span>Onde aplicar</span></div>
+      ${x.groups.map(g=>`<div class="pt-row"><div class="pt-prod"><h3>${g.t}</h3><div class="prods">${g.p.map(q=>`<span>${q}</span>`).join("")}</div><p>${g.d}</p></div><ul class="pt-use">${g.uses.map(u=>`<li>${u}</li>`).join("")}</ul></div>`).join("")}
+    </div>
+    <aside class="pt-case"><span class="pill warn" style="align-self:flex-start">Caso público</span>
+      <h3>${x.case.who}</h3><p class="rdate">${x.case.where}</p>
+      <div class="ract"><span class="rlbl">Desafio</span><p>${x.case.problem}</p><span class="rlbl">Solução</span><p>${x.case.solution}</p><span class="rlbl">Resultados</span><ul class="clean check">${x.case.results.map(r=>`<li>${r}</li>`).join("")}</ul></div>
+      <a class="rsrc" href="${x.case.url}" target="_blank" rel="noopener">Fonte: ${x.case.src} ↗</a>
+      <div class="partner-doms">${Object.keys(x.dom).map(d=>`<a href="#${DOM[d].route}" ${DOM[d].filter?`data-filter="${DOM[d].filter}"`:''}>${DOM[d].n}</a>`).join("")}</div>
+    </aside>
+  </div>
 </div></section>`).join("");
 $("#partnerMatrix").innerHTML=`<table><thead><tr><th scope="col">Parceiro</th>${Object.keys(DOM).map(d=>`<th scope="col">${DOM[d].s}</th>`).join("")}</tr></thead><tbody>${PARTNERS.map(x=>`<tr><th scope="row">${x.n}</th>${Object.keys(DOM).map(d=>`<td>${x.dom[d]===2?'<span class="mx-dot" title="Atuação principal"></span>':x.dom[d]===1?'<span class="mx-dot half" title="Atuação complementar"></span>':'<span class="muted">–</span>'}</td>`).join("")}</tr>`).join("")}</tbody></table><p class="small muted" style="padding:12px 16px;margin:0"><span class="mx-dot"></span> atuação principal &nbsp; <span class="mx-dot half"></span> atuação complementar</p>`;
 document.addEventListener("click",e=>{const b=e.target.closest("[data-goto]");if(b){e.preventDefault();const t=document.getElementById(b.dataset.goto);if(t)t.scrollIntoView({behavior:"smooth"});}});
