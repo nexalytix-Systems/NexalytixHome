@@ -26,7 +26,7 @@ Cada etapa pode ser contratada isoladamente. Modelos: projeto fechado, squad ded
 - Páginas por domínio: [Cloud e Infraestrutura](#cloud), [Segurança](#seguranca), [FinOps](#finops), [Transformação Digital e IA](#ia). Matriz completa em [Ecossistema](#ecossistema).
 
 # Oferta atual
-- Assessment de 40 horas incluso em qualquer contrato acima de R$ 15.000 (valor equivalente R$ 8.500), entregue em até 10 dias, sem letras miúdas.
+- Oferta para novos clientes: o cliente contrata o Assessment (40 horas, entrega em até 10 dias). Se, depois do Assessment, contratar com a Nexalytix o serviço recomendado, 50% do valor pago no Assessment vira desconto no projeto (abatido na primeira fatura do serviço contratado). Não informe o preço do Assessment: o valor é definido na proposta, conforme o porte e o escopo.
 - Call técnica gratuita de 30 minutos com arquitetos.
 - Resposta a contatos em até 24 horas úteis.
 
