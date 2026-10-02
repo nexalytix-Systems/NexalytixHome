@@ -1,0 +1,12 @@
+# Cabeçalhos HTTP (Cloudflare Pages)
+
+# Homologação (*.pages.dev): não indexar no Google
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Segurança básica para todos os endereços
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
