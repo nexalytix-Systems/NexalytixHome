@@ -284,8 +284,13 @@ svg.dom-focus .cycle-arrow{stroke:var(--accent);opacity:1}
 .partner-doms a:hover{background:var(--primary-soft);text-decoration:none}
 .mx-dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--primary)}
 .mx-dot.half{background:transparent;border:2px solid var(--primary)}
-#partnerMatrix table{min-width:860px}
-#partnerMatrix td{text-align:center}
+#partnerMatrix table{min-width:1080px}
+#partnerMatrix td{text-align:left;vertical-align:top}
+#partnerMatrix td .mx-dot{display:block;margin-bottom:6px}
+.mx-txt{display:block;font-size:.78rem;line-height:1.35;color:var(--muted)}
+.mx-self{background:var(--primary-soft)}
+.mx-self th,.mx-self .mx-txt{color:var(--text)}
+.mx-logo{height:26px;width:auto;vertical-align:middle;margin-right:8px}
 #partnerMatrix td:first-child,#partnerMatrix th:first-child{text-align:left}
 @media (max-width:900px){.partner .wrap{grid-template-columns:1fr;gap:24px}.partner-id{position:static}}
 .mx-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
@@ -789,7 +794,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   </div></div>
   <div id="partnerBlocks"></div>
   <div class="section" style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">Onde cada parceiro atua</span><h2>Parceiros por domínio do ecossistema</h2></div>
+    <div class="section-head"><span class="eyebrow">Onde a Nexalytix e os parceiros atuam</span><h2>Nexalytix e parceiros por domínio do ecossistema</h2><p class="muted">A Nexalytix atua em todos os domínios, do diagnóstico à operação. Os parceiros entram com a tecnologia certa onde ela faz diferença.</p></div>
     <div class="mx-wrap" id="partnerMatrix"></div>
   </div></div>
   <div class="band section"><div class="wrap two">
@@ -1281,7 +1286,7 @@ const PARTNERS=[
    {t:"IA sobre o conteúdo",p:["Processamento inteligente de documentos (IDP)","Agentes de IA","Descoberta de conhecimento"],d:"Leitura, classificação e extração de dados de documentos e automação com agentes.",
     uses:["Leitura automática de notas fiscais, contratos e formulários","Agente que responde dúvidas consultando políticas e manuais internos","Classificação de documentos com dados pessoais para a LGPD"]}],
   case:{who:"MetroHealth System",where:"Hospital público · Cleveland, EUA",problem:"Imagens e documentos clínicos espalhados em vários sistemas, cada um com login próprio.",solution:"OnBase, Acuo e NilRead integrados ao fluxo clínico.",results:["Mais de 80% de redução em relatórios faltantes","4,7 milhões de imagens acessadas por 8 mil profissionais em três anos","Cerca de 33 mil pacientes viram seus exames no portal nos primeiros sete meses"],src:"Hyland",url:"https://www.hyland.com/en/customers/metrohealth-system"},
-  dom:{ia:2,cloud:1,dev:1}},
+  dom:{ia:[2,"OnBase, IDP e agentes de IA"],cloud:[1,"Content Innovation Cloud"],dev:[1,"Alfresco e Nuxeo (APIs)"]}},
  {k:"manageengine",n:"ManageEngine",logo:"assets/logo-manageengine.png",tag:"Cibersegurança e gestão de TI",
   about:"Divisão de TI corporativa da Zoho Corporation, com um dos portfólios mais completos do mercado para segurança, identidades, endpoints e operação de TI, a um custo acessível para empresas de todos os portes.",
   ideal:"Empresas que precisam de visibilidade de segurança, controle de acessos e uma TI organizada, sem multiplicar fornecedores.",
@@ -1295,7 +1300,7 @@ const PARTNERS=[
    {t:"Gestão de TI",p:["ServiceDesk Plus","OpManager"],d:"Service desk, gestão de ativos e monitoramento de rede e servidores.",
     uses:["Central de chamados com SLA e base de conhecimento","Alerta de lentidão em links e servidores antes da queda"]}],
   case:{who:"Mineradora fundada em 1904",where:"Mineração · Austrália",problem:"TI com três pessoas atendendo seis localidades, com patches e instalações feitos à mão, máquina por máquina.",solution:"Endpoint Central integrado ao OpManager e ao ServiceDesk Plus.",results:["70% menos tempo gasto em operações de TI","119 aplicações implantadas sem interromper os usuários","Fim do deslocamento para atualizar máquinas nas unidades"],src:"ManageEngine",url:"https://www.manageengine.com/br/desktop-central/australian-case-study.html"},
-  dom:{seguranca:2,cloud:1}},
+  dom:{seguranca:[2,"Log360, AD360, PAM360, Endpoint Central"],cloud:[1,"OpManager"],suporte:[1,"ServiceDesk Plus"]}},
  {k:"acronis",n:"Acronis",logo:"assets/logo-acronis.png",tag:"Backup e proteção cibernética",
   about:"Plataforma que une backup, recuperação de desastres e segurança de endpoints num único console e num único agente, reduzindo ferramentas e pontos de falha.",
   ideal:"Empresas que precisam garantir que dados e sistemas voltem a funcionar rápido depois de falhas, erros ou ataques.",
@@ -1307,7 +1312,7 @@ const PARTNERS=[
    {t:"Pessoas e operação",p:["Treinamento de conscientização","RMM"],d:"Conscientização de usuários e gestão remota dos equipamentos.",
     uses:["Simulações de phishing e trilhas curtas de treinamento","Manutenção remota de equipamentos em filiais e home office"]}],
   case:{who:"Fabricante de componentes industriais",where:"Manufatura · Índia",problem:"Ataques direcionados e backups espalhados entre NAS e Google Drive, sem visão unificada e com custo alto de armazenamento.",solution:"Acronis Cyber Protect Cloud.",results:["Recuperação completa da infraestrutura sem perda de dados","Backup e segurança gerenciados numa única interface","Licenciamento por armazenamento, mais econômico que por equipamento"],src:"Acronis",url:"https://www.acronis.com/en-gb/resource-center/resource/manufacturer-transformed-backup-security-acronis-cyber-protect-cloud/"},
-  dom:{seguranca:2,cloud:2}},
+  dom:{seguranca:[2,"EDR, XDR, MDR"],cloud:[2,"Backup e Disaster Recovery"],suporte:[1,"RMM"]}},
  {k:"omid",n:"Omid Cloud",logo:"assets/logo-omid.svg",dark:1,tag:"Nuvem soberana brasileira",
   about:"Provedora de cloud pública soberana operada no Brasil, com data centers próprios Tier III. Os dados ficam no país, sob controle operacional brasileiro, com preço em reais.",
   ideal:"Empresas que querem previsibilidade de custo, dados no Brasil por conformidade e LGPD, ou uma alternativa às nuvens globais.",
@@ -1317,7 +1322,7 @@ const PARTNERS=[
    {t:"Serviços gerenciados",p:["OMID Smart IT Services","OMID Smart Cybersecurity","OMID Cloud Cognitiva"],d:"Gestão de infraestrutura, SOC e observabilidade com IA.",
     uses:["Operação da infraestrutura com suporte 24x7 no Brasil","Monitoramento de segurança (SOC) do ambiente em nuvem","Observabilidade com IA para antecipar falhas"]}],
   case:{who:"Praxis Globe",where:"Multinacional · operações no Brasil · set/2026",problem:"Custos de TI imprevisíveis e governança complexa dos ambientes no país.",solution:"Nuvem soberana da Omid em data centers Tier III no Brasil.",results:["Mensalidade fixa, sem cobrança por transferência de dados (egress)","Suporte 24x7 com equipes locais","Expansão para a América Latina em avaliação"],src:"Brasil Inovador",url:"https://brasilinovador.com.br/praxis-globe-contrata-infraestrutura-da-omid-no-brasil-e-estuda-expansao-de-nuvem-soberana-na-america-latina/"},
-  dom:{cloud:2,finops:2,seguranca:1}}
+  dom:{cloud:[2,"Smart Cloud e Colocation"],finops:[2,"Preço fixo em reais, sem egress"],seguranca:[1,"Smart Cybersecurity (SOC)"],suporte:[1,"Smart IT Services"]}}
 ];
 const chip=x=>`<span class="logo-chip${x.dark?' dark':''}"><img src="${x.logo}" alt="${x.n}"></span>`;
 $(".partner-nav").innerHTML=PARTNERS.map(x=>`<button type="button" class="logo-chip${x.dark?' dark':''}" data-goto="pt-${x.k}" aria-label="Ir para ${x.n}"><img src="${x.logo}" alt="${x.n}"></button>`).join("");
@@ -1336,11 +1341,14 @@ $("#partnerBlocks").innerHTML=PARTNERS.map(x=>`<section class="partner" id="pt-$
       <h3>${x.case.who}</h3><p class="rdate">${x.case.where}</p>
       <div class="ract"><span class="rlbl">Desafio</span><p>${x.case.problem}</p><span class="rlbl">Solução</span><p>${x.case.solution}</p><span class="rlbl">Resultados</span><ul class="clean check">${x.case.results.map(r=>`<li>${r}</li>`).join("")}</ul></div>
       <a class="rsrc" href="${x.case.url}" target="_blank" rel="noopener">Fonte: ${x.case.src} ↗</a>
-      <div class="partner-doms">${Object.keys(x.dom).map(d=>`<a href="#${DOM[d].route}" ${DOM[d].filter?`data-filter="${DOM[d].filter}"`:''}>${DOM[d].n}</a>`).join("")}</div>
+      <div class="partner-doms">${Object.keys(x.dom).filter(d=>DOM[d]).map(d=>`<a href="#${DOM[d].route}" ${DOM[d].filter?`data-filter="${DOM[d].filter}"`:''}>${DOM[d].n}</a>`).join("")}</div>
     </aside>
   </div>
 </div></section>`).join("");
-$("#partnerMatrix").innerHTML=`<table><thead><tr><th scope="col">Parceiro</th>${Object.keys(DOM).map(d=>`<th scope="col">${DOM[d].s}</th>`).join("")}</tr></thead><tbody>${PARTNERS.map(x=>`<tr><th scope="row">${x.n}</th>${Object.keys(DOM).map(d=>`<td>${x.dom[d]===2?'<span class="mx-dot" title="Atuação principal"></span>':x.dom[d]===1?'<span class="mx-dot half" title="Atuação complementar"></span>':'<span class="muted">–</span>'}</td>`).join("")}</tr>`).join("")}</tbody></table><p class="small muted" style="padding:12px 16px;margin:0"><span class="mx-dot"></span> atuação principal &nbsp; <span class="mx-dot half"></span> atuação complementar</p>`;
+const MXCOLS=[...Object.keys(DOM).map(d=>[d,DOM[d].s]),["suporte","Suporte e Manutenção"]];
+const NEXA_ROW={n:"Nexalytix",self:1,dom:{cloud:[2,"Assessment, migração, redes e NOC"],seguranca:[2,"Assessment, GRC, SIEM operado e resposta a incidentes"],finops:[2,"Diagnóstico de custos e FinOps contínuo"],ia:[2,"Estratégia, agentes de IA e assistente Alya"],saas:[2,"ERP, CRM, Financeiro, BG-Check, Transcribe, AgendaBella"],dev:[2,"CTO as a Service, MVP e evolução"],suporte:[2,"Service desk, manutenção preventiva e corretiva"]}};
+const mxCell=c=>c?`<span class="mx-dot${c[0]===1?' half':''}" title="${c[0]===2?'Atuação principal':'Atuação complementar'}"></span><span class="mx-txt">${c[1]}</span>`:'<span class="muted">–</span>';
+$("#partnerMatrix").innerHTML=`<table><thead><tr><th scope="col">Quem</th>${MXCOLS.map(([k,t])=>`<th scope="col">${t}</th>`).join("")}</tr></thead><tbody>${[NEXA_ROW,...PARTNERS].map(x=>`<tr${x.self?' class="mx-self"':''}><th scope="row">${x.self?'<img src="assets/logo-nexalytix-systems.png" alt="" class="mx-logo">':''}${x.n}</th>${MXCOLS.map(([k])=>`<td>${mxCell(x.dom[k])}</td>`).join("")}</tr>`).join("")}</tbody></table><p class="small muted" style="padding:12px 16px;margin:0"><span class="mx-dot"></span> atuação principal &nbsp; <span class="mx-dot half"></span> atuação complementar</p>`;
 document.addEventListener("click",e=>{const b=e.target.closest("[data-goto]");if(b){e.preventDefault();const t=document.getElementById(b.dataset.goto);if(t)t.scrollIntoView({behavior:"smooth"});}});
 
 /* ---------- Quiz ---------- */
