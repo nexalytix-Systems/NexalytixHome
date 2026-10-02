@@ -19,12 +19,13 @@ Formulários do site ─────────> /api/lead ──> Make (webhoo
 
 | Arquivo | O que faz |
 | --- | --- |
-| `dist/index.html` | Site pronto para publicar (gerado pelo `build.py`) |
+| `dist/index.html` | Site pronto para publicar na Cloudflare (gerado pelo `build.py`) |
 | `functions/api/chat.js` | Endpoint do assistente (Claude + registro de lead) |
 | `functions/api/lead.js` | Endpoint dos formulários |
 | `functions/_lib/knowledge.js` | **Base de conhecimento e regras da Alya**: edite aqui preços, serviços e tom |
 | `functions/_lib/crm.js` | Envio ao Make ou ao CRM e mapeamento de campos |
-| `src/nexa.js`, `index.html`, `build.py` | Fonte do site; rode `python3 build.py` após editar (gera `dist/index.html` para produção e `preview.html` para a prévia) |
+| `src/site.html`, `src/nexa.js`, `build.py` | **Fonte do site.** Edite aqui e rode `python3 build.py`: ele gera `index.html` (raiz, usado pelo GitHub Pages), `dist/index.html` (Cloudflare Pages) e `preview.html` |
+| `index.html` (raiz) | Gerado pelo `build.py`. Não edite direto: as mudanças se perdem no próximo build |
 | `assets/alya-avatar.svg` | Avatar da assistente (também usado como ícone do site) |
 
 Para trocar o nome da assistente: altere `BOT_NAME` em `src/nexa.js`, o nome em `knowledge.js` e os textos do widget em `build.py`.
@@ -100,3 +101,8 @@ curl -X POST https://nexalytix.com.br/api/lead -H 'content-type: application/jso
 - Remover/confirmar os pontos pendentes do briefing (números da Home, descrições dos SaaS).
 - Revisar a Política de Privacidade para citar o uso de IA no atendimento e o armazenamento dos leads no CRM.
 - Definir um limite de gasto na conta Anthropic.
+
+## GitHub Pages x Cloudflare Pages
+
+- **GitHub Pages** (nexalytix-systems.github.io/NexalytixHome) serve só arquivos estáticos: o site e a Alya aparecem, mas a IA e o envio de leads não funcionam, porque as funções `/api/chat` e `/api/lead` não rodam lá. Nesse caso a Alya mostra o formulário curto e avisa que não conseguiu enviar. Use só como prévia.
+- **Cloudflare Pages** (nexalytix.com.br) roda as funções da pasta `functions/`: IA e leads funcionam.

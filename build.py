@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Gera dist/index.html a partir de index.html + src/nexa.js + functions/_lib/knowledge.js.
+"""Gera index.html (raiz) e dist/index.html a partir de src/site.html + src/nexa.js + functions/_lib/knowledge.js.
 Uso: python3 build.py
 """
 import json, re, pathlib, shutil
 
 root = pathlib.Path(__file__).parent
-html = (root / "index.html").read_text()
+html = (root / "src/site.html").read_text()
 nexa = (root / "src/nexa.js").read_text()
 kjs = (root / "functions/_lib/knowledge.js").read_text()
 
@@ -108,6 +108,8 @@ prod = (
     + body.split("</style>",1)[1] + "\n</body>\n</html>\n"
 )
 (out / "index.html").write_text(prod)
+# Cópia na raiz: GitHub Pages publica a raiz do repositório
+(root / "index.html").write_text(prod)
 if (root / "assets").exists():
     shutil.copytree(root / "assets", out / "assets", dirs_exist_ok=True)
 print("dist/index.html", len(html), "bytes")
