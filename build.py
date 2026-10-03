@@ -33,6 +33,7 @@ css = """
 .nexa-head b{display:block;font-family:var(--font-d);font-size:.98rem}
 .nexa-head span{display:block;font-size:.75rem;color:var(--band-muted)}
 .nexa-head button{margin-left:auto;background:none;border:1px solid var(--band-line);color:var(--band-text);border-radius:8px;width:34px;height:34px;cursor:pointer}
+.nexa-intro{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:14px;background:#050811;color:#E8EEF8;align-self:stretch}.nexa-intro video,.nexa-intro img{width:72px;height:72px;border-radius:10px;object-fit:cover;flex:none}.nexa-intro b{display:block;font-family:var(--font-d);font-size:1rem}.nexa-intro span{font-size:.8rem;color:#9FB0C8}
 #nexaLog{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
 .msg{max-width:88%;padding:10px 13px;border-radius:14px;font-size:.92rem;line-height:1.5;overflow-wrap:anywhere}
 .msg p{margin:0}.msg p+p{margin-top:6px}
