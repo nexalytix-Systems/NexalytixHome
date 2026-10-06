@@ -79,7 +79,7 @@ export async function onRequestPost({ request, env }) {
             leadSaved = true;
             result = { ok: true };
           } catch (e) {
-            console.error("lead_forward_failed", e.message);
+            console.error("lead_forward_failed", e.code || "", e.message);
             result = { ok: false, error: "Falha ao registrar. Peça ao visitante para escrever para contato@nexalytix.com.br." };
           }
         }

@@ -48,12 +48,14 @@ export async function forwardLead(env, lead) {
     headers[header] = header.toLowerCase() === "authorization" ? `Bearer ${env.CRM_API_KEY}` : env.CRM_API_KEY;
     body = toVetra(lead, env);
     } else {
-    throw new Error("CRM não configurado: defina MAKE_WEBHOOK_URL ou CRM_LEADS_URL + CRM_API_KEY.");
+    const e = new Error("CRM não configurado: defina MAKE_WEBHOOK_URL ou CRM_LEADS_URL + CRM_API_KEY."); e.code = "crm_sem_config"; throw e;
   }
 
-  const res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+  let res;
+  try { res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) }); }
+  catch (err) { const e = new Error(`Falha de rede ao chamar o CRM: ${err.message}`); e.code = "crm_rede"; throw e; }
   const txt = await res.text().catch(() => "");
-  if (!res.ok) throw new Error(`CRM respondeu ${res.status}: ${txt.slice(0, 300)}`);
+  if (!res.ok) { const e = new Error(`CRM respondeu ${res.status}: ${txt.slice(0, 300)}`); e.code = `crm_${res.status}`; throw e; }
   let out = {};
   try { out = JSON.parse(txt); } catch {}
   if (out && out.ok === false) throw new Error(`CRM recusou: ${txt.slice(0, 300)}`);

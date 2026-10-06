@@ -24,8 +24,8 @@ export async function onRequestPost({ request, env }) {
     await forwardLead(env, lead);
     return json({ ok: true });
   } catch (e) {
-    console.error("lead_forward_failed", e.message);
-    return json({ ok: false, error: "Não conseguimos registrar agora. Escreva para contato@nexalytix.com.br." }, 502);
+    console.error("lead_forward_failed", e.code || "", e.message);
+    return json({ ok: false, code: e.code || "crm_erro", error: `Não conseguimos registrar agora (código ${e.code || "crm_erro"}).` }, 502);
   }
 }
 
