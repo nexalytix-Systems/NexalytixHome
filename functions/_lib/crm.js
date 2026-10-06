@@ -15,16 +15,20 @@ export function normalizeLead(input = {}, extra = {}) {
     mensagem: clean(input.mensagem || input.msg || input.resumo, 2000),
     origem: clean(extra.origem || input.origem, 40) || "site",
     pagina: clean(extra.pagina || input.pagina, 200),
+    interesse: clean(input.interesse, 200),
     consentimento_lgpd: extra.consentimento_lgpd ?? Boolean(input.consentimento_lgpd),
     transcricao: clean(extra.transcricao, 8000),
     criado_em: new Date().toISOString(),
   };
   if (!lead.transcricao) delete lead.transcricao;
+  if (!lead.interesse) delete lead.interesse;
+  // Página como URL completa (o CRM espera URL): "#contato" → "https://site/#contato"
+  if (extra.site && lead.pagina && lead.pagina.startsWith("#")) lead.pagina = `${extra.site}/${lead.pagina}`;
   return lead;
 }
 
 export function validateLead(lead) {
-  if (!lead.nome) return "Informe o nome.";
+  if (lead.nome.length < 2) return "Informe o nome.";
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email);
   const phoneOk = lead.whatsapp.replace(/\D/g, "").length >= 10;
   if (!emailOk && !phoneOk) return "Informe um e-mail válido ou um WhatsApp com DDD.";
@@ -38,35 +42,68 @@ export async function forwardLead(env, lead) {
     url = env.MAKE_WEBHOOK_URL;
     if (env.MAKE_WEBHOOK_TOKEN) headers["x-make-apikey"] = env.MAKE_WEBHOOK_TOKEN;
   } else if (env.CRM_LEADS_URL && env.CRM_API_KEY) {
+    // Vetra CRM (POST /api/public/leads). Especificação: nome + (email ou whatsapp) + company_id.
     url = env.CRM_LEADS_URL;
     const header = env.CRM_AUTH_HEADER || "x-api-key";
     headers[header] = header.toLowerCase() === "authorization" ? `Bearer ${env.CRM_API_KEY}` : env.CRM_API_KEY;
-    // Mapeamento de campos para o Vetra CRM: ajuste aqui se o endpoint usar outros nomes.
-    body = {
-      name: lead.nome,
-      email: lead.email || undefined,
-      phone: lead.whatsapp || undefined,
-      company: lead.empresa || undefined,
-      source: `site:${lead.origem}`,
-      notes: [
-        `Assunto: ${lead.assunto}`,
-        lead.porte && `Porte: ${lead.porte}`,
-        lead.mensagem && `Mensagem: ${lead.mensagem}`,
-        lead.pagina && `Página: ${lead.pagina}`,
-        lead.transcricao && `Conversa com o assistente:\n${lead.transcricao}`,
-      ].filter(Boolean).join("\n"),
-      consent_lgpd: lead.consentimento_lgpd,
-    };
-  } else {
+    body = toVetra(lead, env);
+    } else {
     throw new Error("CRM não configurado: defina MAKE_WEBHOOK_URL ou CRM_LEADS_URL + CRM_API_KEY.");
   }
 
   const res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
-  if (!res.ok) {
-    const txt = await res.text().catch(() => "");
-    throw new Error(`CRM respondeu ${res.status}: ${txt.slice(0, 200)}`);
-  }
-  return true;
+  const txt = await res.text().catch(() => "");
+  if (!res.ok) throw new Error(`CRM respondeu ${res.status}: ${txt.slice(0, 300)}`);
+  let out = {};
+  try { out = JSON.parse(txt); } catch {}
+  if (out && out.ok === false) throw new Error(`CRM recusou: ${txt.slice(0, 300)}`);
+  return out;
+}
+
+// ---- Vetra CRM: mapeamento dos campos do site ----
+const VETRA_COMPANY_ID = "d706a0c1-648b-4dc8-b96c-4ca02ff8c77f"; // empresa Nexalytix no CRM (pode trocar via CRM_COMPANY_ID)
+
+const ASSUNTOS = {
+  diagnostico: "Assessment / diagnóstico",
+  servico: "Contratar serviço",
+  demo: "Demonstração de SaaS",
+  cotacao: "Cotação de produto ou parceiro",
+  treinamento: "Academia / treinamento",
+  parceria: "Parceria",
+  emergencia: "Emergência / incidente",
+  outro: "Outro",
+};
+
+function portePadrao(p) {
+  const s = (p || "").toLowerCase();
+  if (!s) return undefined;
+  if (s.includes("micro")) return "micro";
+  if (s.includes("pequen")) return "pequena";
+  if (s.includes("méd") || s.includes("med")) return "media";
+  if (s.includes("grand")) return "grande";
+  if (s.includes("startup") || s.includes("tech")) return "startup";
+  return s.slice(0, 60);
+}
+
+export function toVetra(lead, env = {}) {
+  const v = {
+    company_id: env.CRM_COMPANY_ID || VETRA_COMPANY_ID,
+    nome: lead.nome.slice(0, 100),
+    email: lead.email || undefined,
+    whatsapp: lead.whatsapp || undefined,
+    empresa: lead.empresa ? lead.empresa.slice(0, 150) : undefined,
+    porte: portePadrao(lead.porte),
+    assunto: ASSUNTOS[lead.assunto] || lead.assunto.slice(0, 150),
+    mensagem: lead.mensagem || undefined,
+    origem: lead.origem.slice(0, 120),
+    pagina: /^https?:\/\//.test(lead.pagina) ? lead.pagina.slice(0, 500) : undefined,
+    consentimento_lgpd: !!lead.consentimento_lgpd,
+    transcricao: lead.transcricao || undefined,
+    interesse: lead.interesse || undefined,
+    status: "ldr",
+  };
+  Object.keys(v).forEach((k) => v[k] === undefined && delete v[k]);
+  return v;
 }
 
 export function json(data, status = 200) {

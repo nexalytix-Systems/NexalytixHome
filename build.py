@@ -9,6 +9,41 @@ html = (root / "src/site.html").read_text()
 nexa = (root / "src/nexa.js").read_text()
 kjs = (root / "functions/_lib/knowledge.js").read_text()
 
+# Dados da empresa (empresa.json) → rodapé, Política de Privacidade e Termos
+emp = json.loads((root / "empresa.json").read_text())
+razao, cnpj = emp.get("razao_social","").strip(), emp.get("cnpj","").strip()
+nome_legal = f"Nexalytix, marca de {razao}" if razao else "Nexalytix"
+controlador = (f"{razao}, inscrita no CNPJ {cnpj}" if razao and cnpj else razao or "Nexalytix") + (f", com sede em {emp['endereco']}" if emp.get("endereco") else "") + ' ("Nexalytix")' * bool(razao)
+contatos = [emp.get("email","")]
+tel, whats = emp.get("telefone","").strip(), emp.get("whatsapp","").strip()
+def walink(n, label):
+    wa = re.sub(r"\D", "", n); wa = wa if wa.startswith("55") else "55" + wa
+    return f'<a href="https://wa.me/{wa}" target="_blank" rel="noopener">{label}</a>'
+if tel and whats and re.sub(r"\D","",tel) == re.sub(r"\D","",whats):
+    contatos.append(walink(whats, f"{tel} (telefone e WhatsApp)"))
+else:
+    if tel: contatos.append("Tel. " + tel)
+    if whats: contatos.append(walink(whats, "WhatsApp " + whats))
+contatos.append(emp.get("endereco") or emp.get("cidade_uf",""))
+tokens = {
+    "{{NOME_LEGAL}}": nome_legal,
+    "{{CNPJ_RODAPE}}": f" CNPJ {cnpj}." if cnpj else "",
+    "{{CONTATOS_RODAPE}}": " · ".join(c for c in contatos if c),
+    "{{CONTROLADOR}}": controlador,
+    "{{EMAIL}}": emp.get("email","contato@nexalytix.com.br"),
+    "{{EMAIL_PRIVACIDADE}}": emp.get("email_privacidade") or emp.get("email",""),
+    "{{ATUALIZADO_EM}}": emp.get("atualizado_em",""),
+    "{{FORO}}": (emp.get("cidade_uf") or "São Paulo, SP").replace(", ", "/"),
+    "{{SEDE}}": emp.get("endereco") or emp.get("cidade_uf",""),
+    "{{WHATS_CARD}}": (f'<div class="card"><h3>Telefone e WhatsApp</h3><p class="muted small">{whats or tel}</p>' + (walink(whats, "Chamar no WhatsApp →") if whats else "") + '</div>') if (whats or tel) else "",
+    "{{CONTATO_TERMOS}}": (" · Tel. " + emp["telefone"]) if emp.get("telefone") else "",
+}
+for k, v in tokens.items():
+    html = html.replace(k, v)
+faltam = [k for k in ("razao_social", "cnpj", "telefone", "whatsapp") if not emp.get(k)]
+if faltam:
+    print("AVISO: preencha em empresa.json antes da produção:", ", ".join(faltam))
+
 kb = re.search(r"export const KNOWLEDGE = `(.*?)`;", kjs, re.S).group(1)
 schema_src = re.search(r"input_schema: (\{.*?\n  \}),\n\};", kjs, re.S).group(1)
 # converte o objeto JS do schema em JSON
@@ -70,11 +105,12 @@ html = html.replace(
 
 # 4) atalho para o chat no contato + botão de leads no rodapé
 html = html.replace(
-    '<div class="card"><h3>Sede operacional</h3>',
-    '<div class="card"><h3>Prefere conversar agora?</h3><p class="muted small">A Alya, nossa assistente com IA, tira dúvidas e passa seu contato para o time.</p><button type="button" class="btn btn-ghost" data-nexa style="justify-self:start">Falar com a Alya</button></div>\n      <div class="card"><h3>Sede operacional</h3>')
+    '<div class="card"><h3>Endereço</h3>',
+    '<div class="card"><h3>Prefere conversar agora?</h3><p class="muted small">A Alya, nossa assistente com IA, tira dúvidas e passa seu contato para o time.</p><button type="button" class="btn btn-ghost" data-nexa style="justify-self:start">Falar com a Alya</button></div>\n      <div class="card"><h3>Endereço</h3>')
 html = html.replace(
-    '<span>contato@nexalytix.com.br · São Paulo, SP</span></div>',
-    '<span>contato@nexalytix.com.br · São Paulo, SP <button type="button" id="ownerLeads" hidden>Leads da prévia</button></span></div>')
+    '<a href="#termos">Termos de uso</a></span>',
+    '<a href="#termos">Termos de uso</a> <button type="button" id="ownerLeads" hidden>Leads da prévia</button></span>', 1)
+assert 'id="ownerLeads"' in html, "botão de leads não inserido"
 
 # 5) widget + script
 widget = """
@@ -83,7 +119,7 @@ widget = """
   <div class="nexa-head"><img class="av" src="assets/alya-avatar.svg" alt="" width="38" height="38"><div><b>Alya</b><span>Assistente com IA da Nexalytix · online</span></div><button type="button" id="nexaClose" aria-label="Fechar chat">✕</button></div>
   <div id="nexaLog" aria-live="polite"></div>
   <form id="nexaForm"><input id="nexaInput" autocomplete="off" placeholder="Escreva sua pergunta" aria-label="Mensagem para a Alya" maxlength="1500"><button class="btn btn-primary" id="nexaSend" type="submit">Enviar</button><button class="btn btn-ghost" id="nexaStop" type="button" hidden>Parar</button></form>
-  <p class="nexa-foot">Respostas geradas por IA podem conter erros; o time Nexalytix confirma propostas e prazos.</p>
+  <p class="nexa-foot">Respostas geradas por IA podem conter erros; o time Nexalytix confirma propostas e prazos. <a href="#privacidade">Privacidade</a></p>
 </section>
 <script>
 """ + nexa + "\n</script>\n"

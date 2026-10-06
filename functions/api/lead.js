@@ -16,7 +16,7 @@ export async function onRequestPost({ request, env }) {
 
   if (!data.consentimento_lgpd) return json({ ok: false, error: "Marque a autorização de contato (LGPD)." }, 400);
 
-  const lead = normalizeLead(data, { origem: data.origem || "formulario", consentimento_lgpd: true });
+  const lead = normalizeLead(data, { origem: data.origem || "formulario", consentimento_lgpd: true, site: new URL(request.url).origin });
   const problem = validateLead(lead);
   if (problem) return json({ ok: false, error: problem }, 400);
 

@@ -53,3 +53,9 @@
 /blog/*                            /#conteudos       301
 /blog                              /#conteudos       301
 /trabalhe-conosco                  /#academia        301
+
+# Páginas legais
+/privacidade                       /#privacidade     301
+/politica-de-privacidade           /#privacidade     301
+/termos                            /#termos          301
+/termos-de-uso                     /#termos          301

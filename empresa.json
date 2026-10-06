@@ -1,0 +1,12 @@
+{
+  "_comentario": "Dados da empresa usados no rodapé, na Política de Privacidade e nos Termos de Uso. Preencha e rode python3 build.py.",
+  "razao_social": "CC Vieira Consultoria e Serviços TI",
+  "cnpj": "39.292.587/0001-95",
+  "endereco": "Alameda Grajaú, 219, Alphaville Industrial, Barueri, SP, CEP 06454-050",
+  "cidade_uf": "Barueri, SP",
+  "telefone": "(11) 96590-4251",
+  "whatsapp": "(11) 96590-4251",
+  "email": "contato@nexalytix.com.br",
+  "email_privacidade": "contato@nexalytix.com.br",
+  "atualizado_em": "outubro de 2026"
+}

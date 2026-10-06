@@ -69,7 +69,7 @@ export async function onRequestPost({ request, env }) {
     for (const tu of toolUses) {
       let result;
       if (tu.name === LEAD_TOOL.name && !leadSaved) {
-        const lead = normalizeLead(tu.input, { origem: "chatbot", pagina, transcricao: transcript, consentimento_lgpd: true });
+        const lead = normalizeLead(tu.input, { origem: "chatbot", pagina, transcricao: transcript, consentimento_lgpd: true, site: new URL(request.url).origin });
         const problem = validateLead(lead);
         if (problem) {
           result = { ok: false, error: problem };

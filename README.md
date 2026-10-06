@@ -58,6 +58,7 @@ Ou conecte o repositório do GitHub ao projeto Pages (diretório de saída: `dis
 | `CRM_LEADS_URL` | Opção B | `https://nexalytixcrm.lovable.app/api/public/leads` |
 | `CRM_API_KEY` | Opção B | Chave secreta do endpoint de leads do Vetra CRM |
 | `CRM_AUTH_HEADER` | Não | Nome do header da chave no CRM. Padrão `x-api-key`; use `authorization` para `Bearer` |
+| `CRM_COMPANY_ID` | Não | UUID da empresa no Vetra CRM. Padrão: o da Nexalytix (`d706a0c1-648b-4dc8-b96c-4ca02ff8c77f`) |
 | `ALLOWED_ORIGINS` | Não | Outros domínios autorizados, separados por vírgula (ex.: `https://www.nexalytix.com.br`) |
 
 Se `MAKE_WEBHOOK_URL` existir, ele tem prioridade. Sem nenhuma das opções, os formulários mostram erro com o e-mail de contato.
@@ -86,7 +87,7 @@ Valores de `assunto`: `diagnostico`, `servico`, `demo`, `cotacao`, `treinamento`
 
 ## Opção B: direto no Vetra CRM
 
-Defina `CRM_LEADS_URL` e `CRM_API_KEY`. O mapeamento está em `functions/_lib/crm.js` e envia `name`, `email`, `phone`, `company`, `source`, `notes`, `consent_lgpd`. **Confira os nomes de campo e o header de autenticação do endpoint do Vetra** e ajuste nesse arquivo se forem diferentes.
+Defina `CRM_LEADS_URL` e `CRM_API_KEY` (a mesma chave cadastrada como `LEADS_API_KEY` no CRM). O mapeamento está em `toVetra()` em `functions/_lib/crm.js` e segue a especificação do endpoint: `company_id`, `nome`, `email`, `whatsapp`, `empresa`, `porte` (micro/pequena/media/startup/grande), `assunto`, `mensagem`, `origem`, `pagina` (URL completa), `consentimento_lgpd`, `transcricao`, `interesse` e `status: "ldr"`. Resposta esperada: `201 { ok: true, id, stage }`.
 
 ## Testar depois de publicar
 
@@ -95,6 +96,10 @@ curl -X POST https://nexalytix.com.br/api/lead -H 'content-type: application/jso
   -d '{"nome":"Teste","email":"teste@nexalytix.com.br","assunto":"outro","consentimento_lgpd":true}'
 # esperado: {"ok":true} e o lead aparecendo no CRM
 ```
+
+## Dados da empresa (rodapé, Privacidade e Termos)
+
+Edite `empresa.json` (razão social, CNPJ, endereço, telefone, WhatsApp, e-mail de privacidade) e rode `python3 build.py`. O build avisa o que ainda falta preencher. As páginas ficam em `#privacidade` e `#termos`.
 
 ## Antes de ir para produção
 

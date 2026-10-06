@@ -45,7 +45,7 @@ function leadFromForm(f){
   const d=Object.fromEntries(new FormData(f).entries()),t=f.dataset.form;
   const base={nome:d.nome||"",email:d.email||"",whatsapp:d.whatsapp||"",empresa:d.empresa||"",website:d.website||"",consentimento_lgpd:!!f.querySelector("input[type=checkbox][required]:checked"),origem:"formulario-"+t};
   if(t==="contato")return {...base,assunto:d.intent,porte:d.porte,mensagem:d.msg||""};
-  if(t==="academia")return {...base,assunto:"treinamento",mensagem:`Lista de espera · Trilha: ${d.trilha} · Perfil: ${d.perfil}`};
+  if(t==="academia")return {...base,assunto:"treinamento",interesse:`Academia: ${d.trilha}`,mensagem:`Lista de espera · Trilha: ${d.trilha} · Perfil: ${d.perfil}`};
   if(t==="parceiros")return {...base,assunto:"parceria",mensagem:`Modelo: ${d.tipo}${d.link?" · Portfólio: "+d.link:""}`};
   return {...base,nome:"Assinante da newsletter",assunto:"outro",mensagem:"Inscrição na newsletter"};
 }
@@ -159,7 +159,7 @@ function offline(pending){
 }
 
 /* ---------- Leads da prévia (só o dono vê) ---------- */
-$("#ownerLeads").addEventListener("click",async()=>{
+$("#ownerLeads")?.addEventListener("click",async()=>{
   const dr=$("#drawer"),sc=$("#scrim");
   dr.innerHTML=`<button type="button" class="drawer-close" aria-label="Fechar">✕</button><span class="pill blue" style="align-self:flex-start">Visível só para você</span><h2 id="dTitle">Leads da prévia</h2><p class="muted small">Contatos deixados nos formulários e no chat desta página de teste. No site publicado, eles vão direto para o CRM.</p><div id="leadList"><p class="muted">Carregando...</p></div>`;
   dr.hidden=false;sc.hidden=false;$(".drawer-close",dr).onclick=()=>{dr.hidden=true;sc.hidden=true;};

@@ -130,6 +130,8 @@ nav.main{display:flex;align-items:center;gap:2px}
 .brand-video.playing .brand-play{display:none}
 @media (max-width:820px){.brand{grid-template-columns:1fr;gap:32px}}
 a.prod-card{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}a.prod-card:hover{border-color:var(--primary);transform:translateY(-2px)}a.prod-card .more{margin-top:auto;font-weight:600;color:var(--primary)}
+.legal-doc{display:grid;gap:14px}.legal-doc>*{max-width:760px}.legal-doc h2{font-size:1.2rem;margin-top:18px}.legal-doc ul{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--text)}.legal-doc p,.legal-doc li{line-height:1.65}
+footer .legal{flex-wrap:wrap;gap:10px 24px}footer .legal a{display:inline;padding:0;color:inherit;text-decoration:underline}
 .foot-note{font-size:.8rem;color:var(--muted);margin-top:10px}
 .radar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .rcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
@@ -706,7 +708,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     </div>
   </div></div>
   <div class="section" style="padding-top:0"><div class="wrap two">
-    <div style="display:grid;gap:14px"><span class="eyebrow">Experiência</span><h2>Arquitetos que já operaram ambientes de missão crítica</h2><p class="muted">Mais de 50 anos de experiência somados no núcleo técnico, com passagem por fintechs, healthtechs, mídia e varejo digital.</p><div class="chips"><span class="chip">Fintechs</span><span class="chip">Healthtechs</span><span class="chip">Mídia</span><span class="chip">Varejo digital</span></div></div>
+    <div style="display:grid;gap:14px"><span class="eyebrow">Para quem atendemos</span><h2>Um só time, do diagnóstico à operação</h2><p class="muted">Atendemos pequenas e médias empresas, startups e grandes empresas, com escopo proporcional ao problema e o mesmo time carregando o contexto de uma etapa para a outra.</p><div class="chips"><span class="chip">Pequenas empresas</span><span class="chip">Médias empresas</span><span class="chip">Startups</span><span class="chip">Grandes empresas</span></div></div>
     <div>
       <details class="faq"><summary>Preciso contratar o ciclo completo?</summary><p>Não. Cada etapa pode ser contratada isoladamente. O ciclo completo reduz retrabalho porque o mesmo time carrega o contexto de uma etapa para a outra.</p></details>
       <details class="faq"><summary>Vocês atendem empresas pequenas?</summary><p>Sim. Atendemos pequenas, médias, startups e grandes empresas, com escopo proporcional ao problema.</p></details>
@@ -991,7 +993,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
           <div class="field"><label for="a-trilha">Interesse</label><select id="a-trilha" name="trilha"><option>Programa completo (ainda não sei a trilha)</option><option>Fase 01: Fundamentos</option><option>Suporte, Infraestrutura e Redes</option><option>Cloud e FinOps</option><option>Segurança e Operações (SOC)</option><option>Dados, Automação e IA aplicada</option><option>Liderança em IA e Transformação Digital</option><option>Desenvolvimento de Software (Dev)</option><option>Qualidade de Software (QA)</option><option>Produto (Product Owner)</option><option>Agilidade (Scrum Master)</option><option>Gestão de Projetos e PMO</option></select></div>
           <div class="field"><label for="a-perfil">Perfil</label><select id="a-perfil" name="perfil"><option>Iniciante na área</option><option>Profissional da área</option><option>Empresa (capacitar o time)</option><option>Empresa ou parceiro (bolsas ou talentos)</option></select></div>
         </div>
-        <label class="consent"><input type="checkbox" id="a-lgpd" required> Autorizo o contato da Nexalytix sobre a Academia, conforme a LGPD.</label>
+        <label class="consent"><input type="checkbox" id="a-lgpd" required> Autorizo o contato da Nexalytix sobre a Academia, conforme a <a href="#privacidade">Política de Privacidade</a>.</label>
         <button class="btn btn-primary" type="submit">Entrar na lista</button>
         <div class="form-msg" aria-live="polite"></div>
       </form>
@@ -1046,7 +1048,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
           <div class="field"><label for="p-empresa">Empresa (opcional)</label><input id="p-empresa" name="empresa" autocomplete="organization"></div>
           <div class="field"><label for="p-link">Site ou portfólio (opcional)</label><input id="p-link" name="link" type="url" placeholder="https://"></div>
         </div>
-        <label class="consent"><input type="checkbox" id="p-lgpd" required> Autorizo o contato da Nexalytix sobre o programa de parceiros, conforme a LGPD.</label>
+        <label class="consent"><input type="checkbox" id="p-lgpd" required> Autorizo o contato da Nexalytix sobre o programa de parceiros, conforme a <a href="#privacidade">Política de Privacidade</a>.</label>
         <button class="btn btn-primary" type="submit">Enviar cadastro</button>
         <div class="form-msg" aria-live="polite"></div>
       </form>
@@ -1074,7 +1076,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <div style="display:grid;gap:8px"><h3>Receba os conteúdos por e-mail</h3><p class="muted small">Um resumo mensal com os artigos, alertas e cases publicados.</p></div>
       <form class="f" data-form="newsletter" novalidate>
         <div class="field"><label for="n-email">E-mail</label><input id="n-email" name="email" type="email" required autocomplete="email"></div>
-        <label class="consent"><input type="checkbox" id="n-lgpd" required> Quero receber a newsletter da Nexalytix.</label>
+        <label class="consent"><input type="checkbox" id="n-lgpd" required> Quero receber a newsletter da Nexalytix, conforme a <a href="#privacidade">Política de Privacidade</a>.</label>
         <button class="btn btn-primary" type="submit">Assinar</button>
         <div class="form-msg" aria-live="polite"></div>
       </form>
@@ -1086,8 +1088,8 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <section class="page" data-page="sobre">
   <div class="phero"><div class="wrap">
     <span class="eyebrow">Sobre a Nexalytix</span>
-    <h1>Construímos a infraestrutura invisível que sustenta produtos digitais sérios</h1>
-    <p class="lead">A Nexalytix nasce da convicção de que excelência operacional é uma vantagem competitiva subestimada. Reunimos arquitetos, SREs e especialistas em FinOps para entregar engenharia, não apresentações.</p>
+    <h1>Um ecossistema de tecnologia para empresas que querem crescer com segurança</h1>
+    <p class="lead">A Nexalytix reúne serviços, produtos SaaS, parceiros de tecnologia e formação de profissionais em um só ecossistema. Do diagnóstico à operação contínua em cloud, segurança, FinOps, transformação digital e IA, com um único parceiro responsável do começo ao fim.</p>
   </div></div>
   <div class="section" style="padding-top:40px"><div class="wrap grid g3">
     <div class="card"><span class="eyebrow">Propósito</span><p>Tornar operações tecnológicas previsíveis, eficientes e seguras, para que negócios possam focar no que importa.</p></div>
@@ -1124,12 +1126,117 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <div><b>Rigor de engenharia</b><span>Decisões técnicas suportadas por evidências, benchmarks e ADRs documentados.</span></div>
       <div><b>Pragmatismo</b><span>Soluções proporcionais ao problema, sem overengineering em nome do hype.</span></div>
       <div><b>Transparência</b><span>Acesso total ao trabalho em andamento, métricas reais e comunicação direta.</span></div>
-      <div><b>Aprendizado contínuo</b><span>Investimento sério em certificações, pesquisa e contribuição à comunidade.</span></div>
+      <div><b>Aprendizado contínuo</b><span>Formação constante do time e de novos profissionais pela Academia, e conhecimento compartilhado com cada cliente.</span></div>
     </div>
   </div></div>
   <div class="band section"><div class="wrap two">
     <div style="display:grid;gap:14px"><span class="eyebrow" style="color:var(--band-muted)">Grupo Vieira Prime</span><h2>Parte de um grupo de negócios que opera o que recomenda</h2><p class="lead">A Nexalytix integra o Grupo Vieira Prime, que reúne empresas de serviços, varejo e alimentação. Nossas soluções nascem e são testadas na operação real do grupo.</p></div>
     <div style="display:grid;gap:14px;align-content:center"><p class="muted">Quer fazer parte do time?</p><div class="btn-row"><a class="btn btn-accent" href="#academia">Programa de Formação</a><a class="btn btn-ghost" style="color:var(--band-text);border-color:var(--band-line)" href="#parceiros" data-scroll="pForm" data-ptype="Freelancer / especialista">Seja parceiro</a></div></div>
+  </div></div>
+</section>
+
+
+<!-- POLÍTICA DE PRIVACIDADE -->
+<section class="page" data-page="privacidade">
+  <div class="phero"><div class="wrap">
+    <span class="eyebrow">LGPD</span>
+    <h1>Política de Privacidade</h1>
+    <p class="lead">Como a Nexalytix coleta, usa, guarda e protege os seus dados pessoais, inclusive no atendimento feito pela Alya, nossa assistente com inteligência artificial.</p>
+    <p class="small muted">Última atualização: {{ATUALIZADO_EM}}</p>
+  </div></div>
+  <div class="section" style="padding-top:40px"><div class="wrap legal-doc">
+    <h2>1. Quem é responsável pelos seus dados</h2>
+    <p>O controlador dos dados pessoais tratados neste site é {{CONTROLADOR}}. Dúvidas e pedidos sobre privacidade: <a href="mailto:{{EMAIL_PRIVACIDADE}}">{{EMAIL_PRIVACIDADE}}</a>.</p>
+
+    <h2>2. Quais dados coletamos</h2>
+    <ul>
+      <li><b>Dados que você informa nos formulários:</b> nome, e-mail, WhatsApp ou telefone, empresa, porte da empresa, assunto, mensagem e, na Academia e no programa de parceiros, trilha de interesse, perfil e tipo de parceria.</li>
+      <li><b>Conversas com a Alya:</b> as mensagens trocadas com a assistente e, quando você decide deixar seu contato, o nome, o contato e um resumo da conversa.</li>
+      <li><b>Dados técnicos:</b> endereço IP, tipo de navegador e páginas acessadas, registrados pela infraestrutura que hospeda o site para segurança e funcionamento.</li>
+    </ul>
+    <p>Não pedimos dados sensíveis (como saúde, religião ou biometria). Pedimos que você não os envie nos formulários nem no chat.</p>
+
+    <h2>3. Para que usamos os dados</h2>
+    <ul>
+      <li>Responder ao seu contato, agendar conversas, demonstrações e diagnósticos e enviar propostas que você pediu.</li>
+      <li>Avisar sobre turmas da Academia e sobre o programa de parceiros, quando você se inscrever.</li>
+      <li>Enviar a newsletter, se você assinar. Você pode cancelar a qualquer momento.</li>
+      <li>Manter o site seguro, evitar spam e abuso e cumprir obrigações legais.</li>
+    </ul>
+
+    <h2>4. Bases legais (LGPD)</h2>
+    <p>Tratamos dados com base no seu <b>consentimento</b> (formulários, newsletter e registro de contato pelo chat), nos <b>procedimentos preliminares a um contrato</b> que você pediu (propostas, diagnósticos e demonstrações), no <b>legítimo interesse</b> da Nexalytix em manter o site seguro e responder a quem nos procura, e no <b>cumprimento de obrigações legais</b>, conforme o artigo 7º da Lei 13.709/2018.</p>
+
+    <h2>5. Atendimento com inteligência artificial</h2>
+    <ul>
+      <li>A Alya é uma assistente automatizada. As respostas são geradas por um modelo de inteligência artificial e podem conter erros. Propostas, preços e prazos só valem depois de confirmados por uma pessoa do time Nexalytix.</li>
+      <li>Para responder, o texto da conversa é enviado ao fornecedor do modelo de IA, a Anthropic, com sede nos Estados Unidos. Isso caracteriza transferência internacional de dados, feita para executar o atendimento que você iniciou e com as garantias contratuais do fornecedor.</li>
+      <li>A Alya não toma decisões que afetem seus direitos. Ela responde dúvidas e, com a sua autorização, registra seu contato para que uma pessoa do time continue o atendimento.</li>
+      <li>Não escreva no chat senhas, dados bancários ou informações sensíveis.</li>
+    </ul>
+
+    <h2>6. Com quem compartilhamos</h2>
+    <p>Não vendemos dados pessoais. Compartilhamos apenas o necessário com fornecedores que nos ajudam a operar:</p>
+    <ul>
+      <li><b>Hospedagem e segurança do site:</b> Cloudflare.</li>
+      <li><b>Inteligência artificial do atendimento:</b> Anthropic.</li>
+      <li><b>CRM:</b> o sistema em que registramos e acompanhamos os contatos comerciais.</li>
+      <li><b>Parceiros de tecnologia</b> (Hyland, ManageEngine, Acronis e Omid Cloud), somente quando for necessário para cotar ou entregar uma solução que você pediu.</li>
+      <li><b>Autoridades</b>, quando houver obrigação legal ou ordem judicial.</li>
+    </ul>
+
+    <h2>7. Por quanto tempo guardamos</h2>
+    <p>Dados de contato e de conversas ficam guardados enquanto houver relacionamento comercial e por até 24 meses depois do último contato, a menos que você peça a exclusão antes ou que a lei exija prazo maior. Registros técnicos de acesso são mantidos pelo prazo exigido pelo Marco Civil da Internet.</p>
+
+    <h2>8. Seus direitos</h2>
+    <p>Você pode, a qualquer momento: confirmar se tratamos seus dados, acessá-los, corrigi-los, pedir anonimização, bloqueio ou eliminação, pedir a portabilidade, saber com quem foram compartilhados, revogar o consentimento e se opor a um tratamento. Para isso, escreva para <a href="mailto:{{EMAIL_PRIVACIDADE}}">{{EMAIL_PRIVACIDADE}}</a>. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+    <h2>9. Segurança</h2>
+    <p>Usamos conexão criptografada (HTTPS), chaves de acesso guardadas apenas no servidor, controle de acesso ao CRM e proteção contra spam nos formulários. Nenhum sistema é totalmente imune a incidentes; se ocorrer um incidente relevante, comunicaremos os titulares afetados e a ANPD, como prevê a LGPD.</p>
+
+    <h2>10. Cookies e armazenamento no navegador</h2>
+    <p>Este site não usa cookies de publicidade. Podem ser usados recursos técnicos essenciais da hospedagem para segurança. Se no futuro adotarmos ferramentas de medição ou anúncios, esta política será atualizada e pediremos seu consentimento quando necessário.</p>
+
+    <h2>11. Mudanças nesta política</h2>
+    <p>Podemos atualizar esta política. A data da última atualização fica no topo da página.</p>
+  </div></div>
+</section>
+
+<!-- TERMOS DE USO -->
+<section class="page" data-page="termos">
+  <div class="phero"><div class="wrap">
+    <span class="eyebrow">Termos</span>
+    <h1>Termos de Uso</h1>
+    <p class="lead">Regras para usar o site da Nexalytix e a assistente Alya.</p>
+    <p class="small muted">Última atualização: {{ATUALIZADO_EM}}</p>
+  </div></div>
+  <div class="section" style="padding-top:40px"><div class="wrap legal-doc">
+    <h2>1. Sobre estes termos</h2>
+    <p>Este site é mantido por {{CONTROLADOR}}. Ao usar o site, você concorda com estes termos e com a <a href="#privacidade">Política de Privacidade</a>.</p>
+
+    <h2>2. Conteúdo informativo</h2>
+    <p>As informações sobre serviços, produtos, parceiros, Academia e indicadores de mercado têm caráter informativo. Elas não são proposta comercial nem garantia de resultado. Escopo, prazos e valores só valem depois de formalizados em proposta ou contrato.</p>
+
+    <h2>3. Assistente com inteligência artificial</h2>
+    <p>A Alya é uma assistente automatizada e pode cometer erros. Use as respostas como orientação inicial. Qualquer compromisso comercial depende de confirmação por uma pessoa do time Nexalytix. É proibido usar o chat para enviar conteúdo ilegal, ofensivo, dados de terceiros sem autorização ou tentar fazer a assistente agir fora da sua finalidade.</p>
+
+    <h2>4. Ofertas e preços</h2>
+    <p>Ofertas como o desconto de 50% do Assessment e os valores da turma piloto da Academia seguem as condições informadas no site e na proposta, e podem mudar sem aviso para novos pedidos. A indicação de alunos da Academia a oportunidades não garante contratação.</p>
+
+    <h2>5. Propriedade intelectual</h2>
+    <p>Marca, logotipo, animações, textos, layout e conteúdos deste site pertencem à Nexalytix ou são usados com autorização. Marcas de parceiros pertencem aos respectivos donos. Não é permitido copiar ou reutilizar o conteúdo sem autorização por escrito.</p>
+
+    <h2>6. Links e serviços de terceiros</h2>
+    <p>O site pode levar a páginas de parceiros e de terceiros. Não respondemos pelo conteúdo nem pelas práticas de privacidade desses sites.</p>
+
+    <h2>7. Responsabilidade</h2>
+    <p>Trabalhamos para manter o site disponível e correto, mas ele pode ter interrupções ou imprecisões. A Nexalytix não responde por decisões tomadas apenas com base no conteúdo do site ou nas respostas automáticas da assistente.</p>
+
+    <h2>8. Lei e foro</h2>
+    <p>Estes termos seguem a legislação brasileira. Fica eleito o foro da comarca de {{FORO}} para resolver eventuais conflitos, salvo regra legal em contrário.</p>
+
+    <h2>9. Contato</h2>
+    <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a>{{CONTATO_TERMOS}}</p>
   </div></div>
 </section>
 
@@ -1163,7 +1270,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
           <div class="field"><label for="c-porte">Porte</label><select id="c-porte" name="porte"><option>Pequena empresa</option><option>Média empresa</option><option>Tech / Startup</option><option>Grande empresa</option></select></div>
         </div>
         <div class="field"><label for="c-msg">Mensagem (opcional)</label><textarea id="c-msg" name="msg" rows="4"></textarea></div>
-        <label class="consent"><input type="checkbox" id="c-lgpd" required> Autorizo a Nexalytix a usar estes dados para responder ao meu contato, conforme a LGPD.</label>
+        <label class="consent"><input type="checkbox" id="c-lgpd" required> Autorizo a Nexalytix a usar estes dados para responder ao meu contato, conforme a <a href="#privacidade">Política de Privacidade</a>.</label>
         <button class="btn btn-primary" type="submit">Enviar</button>
         <div class="form-msg" aria-live="polite"></div>
       </form>
@@ -1171,7 +1278,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div style="display:grid;gap:24px;align-content:start">
       <div class="card"><h3>Resposta em até 24 h</h3><p class="muted small">Em dias úteis. Contatos de emergência são priorizados.</p></div>
       <div class="card"><h3>E-mail</h3><div class="copy"><code id="mail">contato@nexalytix.com.br</code><button type="button" id="copyMail">Copiar</button></div></div>
-      <div class="card"><h3>Sede operacional</h3><p class="muted small">São Paulo, SP</p></div>
+      {{WHATS_CARD}}<div class="card"><h3>Endereço</h3><p class="muted small">{{SEDE}}</p></div>
     </div>
   </div></div>
 </section>
@@ -1187,7 +1294,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div><h4>Empresa</h4><a href="#ecossistema">Ecossistema</a><a href="#sobre">Sobre</a><a href="#aliancas">Parceiros de tecnologia</a><a href="#parceiros">Programa de parceiros</a></div>
     <div><h4>Contato</h4><a href="#contato">Fale com um especialista</a><a href="#contato" data-intent="emergencia">Sofreu um incidente?</a><a href="#conteudos">Conteúdos</a></div>
   </div>
-  <div class="legal"><span>© 2026 Nexalytix. Todos os direitos reservados.</span><span>contato@nexalytix.com.br · São Paulo, SP</span></div>
+  <div class="legal"><span>© 2026 {{NOME_LEGAL}}. Todos os direitos reservados.{{CNPJ_RODAPE}}</span><span><a href="#privacidade">Privacidade</a> · <a href="#termos">Termos de uso</a></span><span>{{CONTATOS_RODAPE}}</span></div>
 </div></footer>
 
 <div id="scrim" hidden></div>
@@ -1555,7 +1662,7 @@ document.addEventListener("click",e=>{const a=e.target.closest("a[href^='#']");i
   if(a.dataset.ptype)pendingPtype=a.dataset.ptype;
   if(a.getAttribute("href")==="#"+(location.hash.slice(1)||"home"))route();
 });
-const PAGES=["aliancas","cloud","seguranca","finops","dev","ia","home","ecossistema","servicos","saas","academia","parceiros","conteudos","sobre","contato"];
+const PAGES=["privacidade","termos","aliancas","cloud","seguranca","finops","dev","ia","home","ecossistema","servicos","saas","academia","parceiros","conteudos","sobre","contato"];
 const NAVMAP={aliancas:"parceiros",ia:"servicos",dev:"servicos",cloud:"servicos",seguranca:"servicos",finops:"servicos",assessment:"servicos",consultoria:"servicos",implementacao:"servicos",sustentacao:"servicos"};
 function route(){
   let h=location.hash.slice(1)||"home";
