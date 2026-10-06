@@ -55,7 +55,17 @@ export async function forwardLead(env, lead) {
   try { res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) }); }
   catch (err) { const e = new Error(`Falha de rede ao chamar o CRM: ${err.message}`); e.code = "crm_rede"; throw e; }
   const txt = await res.text().catch(() => "");
-  if (!res.ok) { const e = new Error(`CRM respondeu ${res.status}: ${txt.slice(0, 300)}`); e.code = `crm_${res.status}`; throw e; }
+  if (!res.ok) {
+    const e = new Error(`CRM respondeu ${res.status}: ${txt.slice(0, 300)}`);
+    e.code = `crm_${res.status}`;
+    // Detalhe legível (sem dados sensíveis) para diagnóstico na homologação
+    try {
+      const j = JSON.parse(txt);
+      const campos = j.issues ? Object.entries(j.issues).map(([k, v]) => `${k}: ${[].concat(v).join(", ")}`).join("; ") : "";
+      e.detail = [j.error, campos].filter(Boolean).join(" · ").slice(0, 300);
+    } catch { e.detail = txt.slice(0, 200); }
+    throw e;
+  }
   let out = {};
   try { out = JSON.parse(txt); } catch {}
   if (out && out.ok === false) throw new Error(`CRM recusou: ${txt.slice(0, 300)}`);

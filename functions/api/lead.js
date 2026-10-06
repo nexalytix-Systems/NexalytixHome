@@ -25,7 +25,9 @@ export async function onRequestPost({ request, env }) {
     return json({ ok: true });
   } catch (e) {
     console.error("lead_forward_failed", e.code || "", e.message);
-    return json({ ok: false, code: e.code || "crm_erro", error: `Não conseguimos registrar agora (código ${e.code || "crm_erro"}).` }, 502);
+    // Na homologação (*.pages.dev) devolve o detalhe do CRM para facilitar o diagnóstico
+    const homolog = new URL(request.url).hostname.endsWith(".pages.dev");
+    return json({ ok: false, code: e.code || "crm_erro", detail: homolog ? e.detail || e.message : undefined, error: `Não conseguimos registrar agora (código ${e.code || "crm_erro"}).` }, 502);
   }
 }
 
