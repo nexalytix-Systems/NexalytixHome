@@ -87,7 +87,7 @@ Valores de `assunto`: `diagnostico`, `servico`, `demo`, `cotacao`, `treinamento`
 
 ## Opção B: direto no Vetra CRM
 
-Defina `CRM_LEADS_URL` e `CRM_API_KEY` (a mesma chave cadastrada como `LEADS_API_KEY` no CRM). O mapeamento está em `toVetra()` em `functions/_lib/crm.js` e segue a especificação do endpoint: `company_id`, `nome`, `email`, `whatsapp`, `empresa`, `porte` (micro/pequena/media/startup/grande), `assunto`, `mensagem`, `origem`, `pagina` (URL completa), `consentimento_lgpd`, `transcricao`, `interesse` e `status: "ldr"`. Resposta esperada: `201 { ok: true, id, stage }`.
+Defina `CRM_LEADS_URL` e `CRM_API_KEY` (a mesma chave cadastrada como `LEADS_API_KEY` no CRM). O mapeamento está em `toVetra()` em `functions/_lib/crm.js` e segue a especificação do endpoint: `company_id`, `nome`, `email`, `whatsapp`, `empresa`, `porte` (micro/pequena/media/startup/grande), `assunto`, `mensagem`, `origem`, `pagina` (URL completa), `consentimento_lgpd`, `transcricao`, `interesse`, `cargo`, `linkedin`, `instagram`, `origem: "Site"` (Origem da captação), `canal` (Detalhe da origem: Formulário de contato, Alya, Academia, Parceiros, Newsletter) e `status: "ldr"`. O Vetra coloca o assunto como primeira linha da Nota. Resposta esperada: `201 { ok: true, id, stage }`.
 
 ## Testar depois de publicar
 

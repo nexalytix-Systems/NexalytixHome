@@ -99,9 +99,6 @@ html = html.replace("@media (prefers-reduced-motion:reduce)", css + "@media (pre
 # 3) honeypot em todos os formulários + WhatsApp no contato
 html = html.replace('<form class="f" ', '<form class="f" autocomplete="on" ')
 html = re.sub(r'(<form class="f"[^>]*>)', r'\1\n        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">', html)
-html = html.replace(
-    '<div class="field"><label for="c-msg">',
-    '<div class="field"><label for="c-whats">WhatsApp com DDD (opcional)</label><input id="c-whats" name="whatsapp" type="tel" autocomplete="tel" placeholder="(11) 90000-0000"></div>\n        <div class="field"><label for="c-msg">')
 
 # 4) atalho para o chat no contato + botão de leads no rodapé
 html = html.replace(

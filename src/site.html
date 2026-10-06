@@ -132,6 +132,7 @@ nav.main{display:flex;align-items:center;gap:2px}
 a.prod-card{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}a.prod-card:hover{border-color:var(--primary);transform:translateY(-2px)}a.prod-card .more{margin-top:auto;font-weight:600;color:var(--primary)}
 .legal-doc{display:grid;gap:14px}.legal-doc>*{max-width:760px}.legal-doc h2{font-size:1.2rem;margin-top:18px}.legal-doc ul{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--text)}.legal-doc p,.legal-doc li{line-height:1.65}
 footer .legal{flex-wrap:wrap;gap:10px 24px}footer .legal a{display:inline;padding:0;color:inherit;text-decoration:underline}
+.f [aria-invalid="true"]{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .foot-note{font-size:.8rem;color:var(--muted);margin-top:10px}
 .radar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .rcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
@@ -1263,11 +1264,19 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
         <div class="alert-box" id="emergBox" hidden><b>Incidente em andamento?</b> Descreva o que está acontecendo na mensagem: sistemas afetados, quando começou e o que já foi feito. Nosso time prioriza contatos marcados como emergência.</div>
         <div class="frow">
           <div class="field"><label for="c-nome">Nome</label><input id="c-nome" name="nome" required autocomplete="name"></div>
-          <div class="field"><label for="c-email">E-mail corporativo</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="c-cargo">Cargo</label><input id="c-cargo" name="cargo" required autocomplete="organization-title" placeholder="Ex.: Gerente de TI"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="c-email">E-mail corporativo</label><input id="c-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="nome@empresa.com.br"></div>
+          <div class="field"><label for="c-whats">Celular / WhatsApp (opcional)</label><input id="c-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" data-mask="fone"></div>
         </div>
         <div class="frow">
           <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" name="empresa" required autocomplete="organization"></div>
           <div class="field"><label for="c-porte">Porte</label><select id="c-porte" name="porte"><option>Pequena empresa</option><option>Média empresa</option><option>Tech / Startup</option><option>Grande empresa</option></select></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="c-insta">Instagram da empresa (opcional)</label><input id="c-insta" name="instagram" autocomplete="off" placeholder="@suaempresa" data-mask="instagram"></div>
+          <div class="field"><label for="c-linkedin">LinkedIn da empresa (opcional)</label><input id="c-linkedin" name="linkedin" type="url" inputmode="url" autocomplete="off" placeholder="linkedin.com/company/suaempresa" data-mask="linkedin"></div>
         </div>
         <div class="field"><label for="c-msg">Mensagem (opcional)</label><textarea id="c-msg" name="msg" rows="4"></textarea></div>
         <label class="consent"><input type="checkbox" id="c-lgpd" required><span>Autorizo a Nexalytix a usar estes dados para responder ao meu contato, conforme a <a href="#privacidade">Política de Privacidade</a>.</span></label>

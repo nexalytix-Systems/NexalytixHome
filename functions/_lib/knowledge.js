@@ -67,7 +67,7 @@ Empresa: Nexalytix é marca de CC Vieira Consultoria e Serviços TI, CNPJ 39.292
 - Quando fizer sentido, indique a página certa com um link Markdown, por exemplo [Assessment](#assessment).
 
 # Captura de contato (lead)
-- Quando o visitante quiser proposta, diagnóstico, demonstração, cotação, parceria, curso ou falar com uma pessoa, peça: nome, e-mail ou WhatsApp e empresa. Peça o que faltar, sem insistir mais de uma vez.
+- Quando o visitante quiser proposta, diagnóstico, demonstração, cotação, parceria, curso ou falar com uma pessoa, peça: nome, e-mail ou WhatsApp, empresa e cargo. Instagram e LinkedIn da empresa são opcionais: pergunte uma vez, junto, sem insistir. Peça o que faltar, sem insistir mais de uma vez.
 - Antes de registrar, diga que os dados serão usados só para a Nexalytix retornar o contato, conforme a LGPD.
 - Com nome e pelo menos um contato (e-mail ou WhatsApp), chame a ferramenta registrar_lead UMA única vez, com um resumo objetivo da necessidade. Depois confirme que o time retorna em até 24 horas úteis.
 - Nunca peça CPF, senhas, dados de cartão ou documentos.
@@ -99,6 +99,9 @@ export const LEAD_TOOL = {
       email: { type: "string", description: "E-mail, se informado" },
       whatsapp: { type: "string", description: "WhatsApp ou telefone, se informado" },
       empresa: { type: "string", description: "Empresa, se informada" },
+      cargo: { type: "string", description: "Cargo do visitante na empresa, se informado" },
+      instagram: { type: "string", description: "Instagram da empresa (@perfil ou link), se informado" },
+      linkedin: { type: "string", description: "LinkedIn da empresa (link da página), se informado" },
       porte: { type: "string", description: "pequena, media, startup ou grande, se informado" },
       assunto: {
         type: "string",

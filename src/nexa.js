@@ -44,14 +44,26 @@ const OKMSG={contato:"Recebemos seu contato. Nosso time retorna em até 24 horas
 function leadFromForm(f){
   const d=Object.fromEntries(new FormData(f).entries()),t=f.dataset.form;
   const base={nome:d.nome||"",email:d.email||"",whatsapp:d.whatsapp||"",empresa:d.empresa||"",website:d.website||"",consentimento_lgpd:!!f.querySelector("input[type=checkbox][required]:checked"),origem:"formulario-"+t};
-  if(t==="contato")return {...base,assunto:d.intent,porte:d.porte,mensagem:d.msg||""};
+  if(t==="contato")return {...base,assunto:d.intent,porte:d.porte,cargo:d.cargo||"",instagram:d.instagram||"",linkedin:d.linkedin||"",mensagem:d.msg||""};
   if(t==="academia")return {...base,assunto:"treinamento",interesse:`Academia: ${d.trilha}`,mensagem:`Lista de espera · Trilha: ${d.trilha} · Perfil: ${d.perfil}`};
   if(t==="parceiros")return {...base,assunto:"parceria",mensagem:`Modelo: ${d.tipo}${d.link?" · Portfólio: "+d.link:""}`};
   return {...base,nome:"Assinante da newsletter",assunto:"outro",mensagem:"Inscrição na newsletter"};
 }
+/* Formatação dos campos: celular/WhatsApp, Instagram e LinkedIn */
+const fmtFone=v=>{let d=v.replace(/\D/g,"");if(d.length>11&&d.startsWith("55"))d=d.slice(2);d=d.slice(0,11);if(!d)return"";if(d.length<3)return"("+d;const a=d.slice(0,2),r=d.slice(2);if(r.length<=4)return`(${a}) ${r}`;return r.length===9?`(${a}) ${r.slice(0,5)}-${r.slice(5)}`:`(${a}) ${r.slice(0,4)}-${r.slice(4,8)}${r.slice(8)}`;};
+const fmtInsta=v=>{let s=v.trim().replace(/^https?:\/\/(www\.)?instagram\.com\//i,"").replace(/^instagram\.com\//i,"").replace(/^@/,"").split(/[/?#\s]/)[0];return s?"@"+s:"";};
+const fmtLinkedin=v=>{const s=v.trim();if(!s)return"";const m=s.match(/linkedin\.com\/(company|in|school|showcase)\/([^/?#\s]+)/i);if(m)return`https://www.linkedin.com/${m[1].toLowerCase()}/${m[2]}`;if(/^[\w-]{2,100}$/.test(s))return"https://www.linkedin.com/company/"+s;return s;};
+const CHECK={
+  fone:v=>!v||/^\(\d{2}\) \d{4,5}-\d{4}$/.test(v)||"Informe o celular com DDD, como (11) 96590-4251.",
+  instagram:v=>!v||/^@[A-Za-z0-9._]{1,30}$/.test(v)||"Informe o Instagram com @, como @suaempresa.",
+  linkedin:v=>!v||/^https:\/\/www\.linkedin\.com\/(company|in|school|showcase)\/[^\s/]+$/.test(v)||"Cole o link da página, como linkedin.com/company/suaempresa."};
+document.addEventListener("input",e=>{const i=e.target;if(i.dataset&&i.dataset.mask==="fone"){const p=i.value;i.value=fmtFone(p);}});
+document.addEventListener("focusout",e=>{const i=e.target;if(!i.dataset||!i.dataset.mask)return;if(i.dataset.mask==="instagram")i.value=fmtInsta(i.value);if(i.dataset.mask==="linkedin")i.value=fmtLinkedin(i.value);if(i.type==="email")i.value=i.value.trim().toLowerCase();const ok=CHECK[i.dataset.mask]?CHECK[i.dataset.mask](i.value):true;i.setAttribute("aria-invalid",ok===true?"false":"true");});
+document.addEventListener("focusout",e=>{const i=e.target;if(i.type==="email"&&i.closest&&i.closest("form.f"))i.value=i.value.trim().toLowerCase();});
 $$("form.f").forEach(f=>f.addEventListener("submit",async e=>{
   e.preventDefault();e.stopImmediatePropagation();
   const out=$(".form-msg",f),btn=f.querySelector("button[type=submit]");
+  for(const i of $$("[data-mask]",f)){if(i.dataset.mask==="instagram")i.value=fmtInsta(i.value);if(i.dataset.mask==="linkedin")i.value=fmtLinkedin(i.value);const ok=CHECK[i.dataset.mask](i.value);if(ok!==true){out.innerHTML=`<p class="err">${ok}</p>`;i.setAttribute("aria-invalid","true");i.focus();return;}}
   const bad=$$("[required]",f).find(i=>i.type==="checkbox"?!i.checked:!i.value.trim()||(i.type==="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(i.value)));
   if(bad){out.innerHTML=`<p class="err">${bad.type==="checkbox"?"Marque a autorização de contato para continuar.":bad.type==="email"?"Informe um e-mail válido, como nome@empresa.com.br.":"Preencha o campo "+((f.querySelector(`label[for="${bad.id}"]`)||{}).textContent||"obrigatório")+"."}</p>`;bad.focus();return;}
   btn.disabled=true;const old=btn.textContent;btn.textContent="Enviando...";
