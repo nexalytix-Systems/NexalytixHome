@@ -33,7 +33,7 @@ async function sendLead(lead){
   try{
     const r=await fetch("/api/lead",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(lead)});
     const d=await r.json().catch(()=>({}));
-    if(r.ok&&d.ok)return {ok:true,where:"crm"};
+    if(r.ok&&d.ok)return {ok:true,where:"crm",crm_id:d.crm_id,stage:d.stage};
     return {ok:false,error:d.error,detail:d.detail};
   }catch(_){return {ok:false};}
 }
@@ -58,7 +58,7 @@ $$("form.f").forEach(f=>f.addEventListener("submit",async e=>{
   const r=await sendLead(leadFromForm(f));
   btn.disabled=false;btn.textContent=old;
   if(r.ok){
-    out.innerHTML=`<div class="ok-box"><b>${OKMSG[f.dataset.form]}</b>${r.where==="preview"?" <span class='muted'>Nesta prévia, o contato fica registrado na página. No site publicado, vai direto para o CRM.</span>":""}</div>`;
+    out.innerHTML=`<div class="ok-box"><b>${OKMSG[f.dataset.form]}</b>${r.crm_id?` <span class="small muted">(Homologação: lead ${String(r.crm_id).replace(/[<>&]/g,"")} criado no CRM${r.stage?", etapa "+String(r.stage).replace(/[<>&]/g,""):""}.)</span>`:""}${r.where==="preview"?" <span class='muted'>Nesta prévia, o contato fica registrado na página. No site publicado, vai direto para o CRM.</span>":""}</div>`;
     f.reset();$("#emergBox")&&($("#emergBox").hidden=true);
   }else{
     out.innerHTML=`<p class="err">${r.error||"Não conseguimos enviar agora."} Se preferir, escreva para contato@nexalytix.com.br.</p>${r.detail?`<p class="small muted">Detalhe (só na homologação): ${String(r.detail).replace(/[<>&]/g,"")}</p>`:""}`;

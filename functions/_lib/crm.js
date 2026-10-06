@@ -66,10 +66,18 @@ export async function forwardLead(env, lead) {
     } catch { e.detail = txt.slice(0, 200); }
     throw e;
   }
-  let out = {};
+  let out = null;
   try { out = JSON.parse(txt); } catch {}
-  if (out && out.ok === false) throw new Error(`CRM recusou: ${txt.slice(0, 300)}`);
-  return out;
+  if (out && out.ok === false) { const e = new Error(`CRM recusou: ${txt.slice(0, 300)}`); e.code = "crm_recusou"; e.detail = out.error; throw e; }
+  // No Vetra, sucesso só vale com { ok: true, id }. Qualquer outra resposta (ex.: página HTML) é tratada como erro.
+  if (!env.MAKE_WEBHOOK_URL && !(out && out.ok === true && out.id)) {
+    const e = new Error(`Resposta inesperada do CRM (${res.status}): ${txt.slice(0, 200)}`);
+    e.code = "crm_resposta";
+    e.detail = `HTTP ${res.status} · ${(res.headers.get("content-type") || "").split(";")[0]} · ${txt.replace(/\s+/g, " ").slice(0, 120)}`;
+    throw e;
+  }
+  console.log("lead_forward_ok", out && out.id, out && out.stage);
+  return out || {};
 }
 
 // ---- Vetra CRM: mapeamento dos campos do site ----
