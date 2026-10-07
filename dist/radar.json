@@ -1,0 +1,286 @@
+{
+  "atualizado_em": "2026-10-07T17:37:12.658Z",
+  "periodo": "30 de set a 07 de out de 2026",
+  "resumo_semana": "A semana foi marcada pela exploração em massa de uma falha crítica da Atlassian, alertas persistentes sobre campanhas como FortiBleed e ransomware mirando backups, enquanto o mercado brasileiro reagiu com forte otimismo ao primeiro turno das eleições e o debate sobre governança e adoção de IA ganhou força tanto nas empresas quanto na educação.",
+  "categorias": [
+    {
+      "id": "tecnologia",
+      "nome": "Tecnologia",
+      "curto": "Tecnologia"
+    },
+    {
+      "id": "negocios",
+      "nome": "Negócios e setor financeiro",
+      "curto": "Negócios"
+    },
+    {
+      "id": "ativos",
+      "nome": "Ativos digitais",
+      "curto": "Ativos digitais"
+    },
+    {
+      "id": "seguranca",
+      "nome": "Segurança",
+      "curto": "Segurança"
+    },
+    {
+      "id": "educacao",
+      "nome": "Educação",
+      "curto": "Educação"
+    }
+  ],
+  "itens": [
+    {
+      "categoria": "tecnologia",
+      "titulo": "Uso de IA nas empresas brasileiras quase triplica em 2026",
+      "resumo": "Levantamento mostra que as consultas a ferramentas de inteligência artificial nas empresas brasileiras passaram a ocorrer ao longo de mais horas do expediente, indicando adoção mais intensa da tecnologia no dia a dia corporativo.",
+      "por_que_importa": "Reforça a necessidade de políticas de uso responsável de IA e capacitação das equipes, área central da Academia e das frentes de IA da Nexalytix.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Olhar Digital",
+      "url": "https://olhardigital.com.br/2026/10/07/inteligencia-artificial/uso-de-ia-nas-empresas-quase-triplica-em-2026-aponta-levantamento/",
+      "data": "2026-10-07T17:14:52.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Google lança detector de marca d'água de IA aberto ao público",
+      "resumo": "A ferramenta SynthID Detector permite verificar se imagens, vídeos e áudios contêm marcas d'água geradas por inteligência artificial, ampliando o acesso a esse recurso de verificação.",
+      "por_que_importa": "Empresas podem usar a ferramenta para checar autenticidade de conteúdo e reduzir riscos de desinformação em materiais de marketing e comunicação.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/noticias/google-libera-detector-de-ia-para-qualquer-pessoa/",
+      "data": "2026-10-07T15:45:02.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Zuckerberg amplia megaprojeto de IA aplicada à biologia com Google e governo dos EUA",
+      "resumo": "A iniciativa Biohub, ligada a Zuckerberg, expande um projeto de dados para IA em parceria com Google DeepMind, Isomorphic Labs e Meta, somando-se a investimentos já realizados anteriormente.",
+      "por_que_importa": "Sinaliza a intensificação do uso de IA em pesquisa científica avançada; empresas de biotecnologia e saúde devem acompanhar oportunidades de parceria e aplicação prática.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Exame",
+      "url": "https://exame.com/inteligencia-artificial/zuckerberg-atrai-google-e-governo-dos-eua-para-megaprojeto-de-ia-em-biologia/",
+      "data": "2026-10-07T13:59:16.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Gartner prevê falha na governança de IA por barreiras culturais até 2027",
+      "resumo": "Segundo o Gartner, 60% das organizações que não resolverem desafios culturais ligados à governança de dados e analytics não conseguirão governar a inteligência artificial com sucesso. A cultura organizacional é apontada como fator decisivo para a adoção sustentável da governança.",
+      "por_que_importa": "Empresas devem investir em capacitação e mudança cultural, não só em ferramentas, para garantir uso seguro e eficaz da IA.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "CISO Advisor",
+      "url": "https://www.cisoadvisor.com.br/gartner-preve-falha-na-governanca-de-ia-por-desafios-culturais/",
+      "data": "2026-10-06T20:23:34.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Pix avança rumo a pagamentos instantâneos internacionais",
+      "resumo": "Está em estudo uma conexão entre o Pix e o sistema europeu TIPS, o que colocaria o sistema brasileiro no centro da disputa por interoperabilidade de pagamentos entre países.",
+      "por_que_importa": "Empresas com operações internacionais devem acompanhar essa evolução para planejar futuras reduções de custo e tempo em remessas e pagamentos transfronteiriços.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/reportagem-exclusiva-fintechs/pix-entra-na-corrida-por-pagamentos-instantaneos-globais/",
+      "data": "2026-10-07T12:41:19.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Nubank cresce no dobro do ritmo do mercado de cartões no Brasil",
+      "resumo": "O Nubank vem ampliando sua fatia no mercado de cartões em ritmo bem acima da média do setor, enquanto bancos tradicionais perdem espaço. Já na adquirência, Rede e Cielo ganham participação e a Stone recua para 9,4%.",
+      "por_que_importa": "Mostra a consolidação das fintechs no varejo bancário; empresas devem reavaliar parcerias de meios de pagamento e revisar custos de adquirência periodicamente.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/pagamentos/cartoes/nubank-cresce-o-dobro-do-mercado-de-cartoes-e-os-bancoes-assistem-a-festa-pela-janela/",
+      "data": "2026-10-06T19:41:21.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Balança comercial brasileira tem superávit de US$ 7,74 bilhões em setembro",
+      "resumo": "Impulsionada por petróleo, combustíveis, soja e cobre, a balança comercial mais que dobrou o superávit em relação a setembro de 2025, com exportações crescendo 12,9% no período.",
+      "por_que_importa": "Empresas exportadoras e importadoras devem monitorar o câmbio e os preços de commodities para ajustar contratos e projeções de custos no curto prazo.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Agência Brasil (Economia)",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/balanca-comercial-tem-superavit-de-us-774-bilhoes-em-setembro",
+      "data": "2026-10-06T19:25:00.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Dólar cai para R$ 5 e Ibovespa sobe quase 8% após 1º turno das eleições",
+      "resumo": "O mercado financeiro reagiu com forte otimismo ao resultado do primeiro turno, com o dólar recuando para perto de R$ 5 e o Ibovespa ultrapassando os 200 mil pontos pela primeira vez. Analistas associam o movimento à percepção de menor risco fiscal e político no curto prazo.",
+      "por_que_importa": "Empresas devem revisar hedge cambial e planejamento financeiro diante da volatilidade recente, já que o cenário eleitoral ainda pode mudar no segundo turno.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": true,
+      "fonte": "Agência Brasil (Economia)",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-cai-r-5-e-bolsa-sobe-quase-8-apos-primeiro-turno",
+      "data": "2026-10-05T21:24:00.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Banco Central vai intensificar supervisão sobre Instituições de Pagamento",
+      "resumo": "Representante do BC afirmou, em evento do setor, que o regulador está reunindo mais dados para concentrar a fiscalização nas instituições de pagamento consideradas de maior risco.",
+      "por_que_importa": "Fintechs e instituições de pagamento devem antecipar exigências de compliance e governança de dados para evitar restrições regulatórias futuras.",
+      "frente": "assessment",
+      "frente_nome": "Assessment",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/regulamentacao/bc-diz-que-vai-intensificar-atuacao-sobre-instituicoes-de-pagamento/",
+      "data": "2026-10-05T17:02:16.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Moody's atribui primeiro rating de crédito a um protocolo de stablecoin",
+      "resumo": "A agência de classificação de risco Moody's avaliou a Sky, antiga MakerDAO, tornando-a o primeiro protocolo de stablecoin a receber um rating formal da agência.",
+      "por_que_importa": "O movimento sinaliza maior institucionalização do mercado de stablecoins; empresas que avaliam uso de ativos digitais em tesouraria devem acompanhar critérios de avaliação de risco como esse.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/moodys-atribui-rating-a-sky-antiga-makerdao-que-se-torna-o-primeiro-protocolo-de-stablecoin-avaliado-pela-agencia/",
+      "data": "2026-10-07T17:23:43.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Europol alerta que Bitcoin precisa se preparar para ataques da computação quântica",
+      "resumo": "Em relatório divulgado nesta semana, a Europol destaca o risco que avanços da computação quântica representam para criptomoedas e pede que desenvolvedores comecem a agir com antecedência, já que a migração de segurança pode levar meses.",
+      "por_que_importa": "Empresas com exposição a ativos digitais devem acompanhar o tema de segurança pós-quântica como parte do planejamento de risco de longo prazo.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/europol-alerta-que-bitcoin-precisa-se-preparar-para-ataques-quanticos/",
+      "data": "2026-10-07T15:10:32.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Governo define regras para credenciar empresas de blockchain no monitoramento de soja e milho",
+      "resumo": "O Ministério da Agricultura publicou os requisitos para credenciar empresas de tecnologia blockchain voltadas à rastreabilidade das safras de grãos no país, formalizando o setor de monitoramento digital do agronegócio.",
+      "por_que_importa": "Abre espaço para empresas de tecnologia atuarem em rastreabilidade agrícola com blockchain; vale avaliar credenciamento e parcerias no setor do agronegócio.",
+      "frente": "cloud",
+      "frente_nome": "Cloud e Infraestrutura",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/ministerio-da-agricultura-apresenta-requisitos-para-credenciar-empresas-de-tecnologia-blockchain-para-monitorar-producao-de-soja-e-milho/",
+      "data": "2026-10-07T12:11:38.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "SEC aprova primeiros ETFs alavancados 3x de Bitcoin e Ethereum nos EUA",
+      "resumo": "A Comissão de Valores Mobiliários dos Estados Unidos aprovou seis ETFs com alavancagem de 3x da gestora Volatility Shares, incluindo produtos de Bitcoin e Ethereum, ampliando as opções de exposição alavancada a criptoativos no mercado americano.",
+      "por_que_importa": "Empresas e investidores institucionais devem considerar o maior risco embutido em produtos alavancados antes de qualquer alocação, sem perseguir retornos de curto prazo.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/sec-aprova-os-primeiros-etfs-de-bitcoin-e-ethereum-com-alavancagem-de-3x-nos-eua/",
+      "data": "2026-10-06T19:40:57.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Falha crítica sem correção no LMCache ameaça servidores de IA",
+      "resumo": "Uma vulnerabilidade não corrigida no LMCache, usado para acelerar servidores de modelos de linguagem como o vLLM, permite execução remota de código sem autenticação. Ainda não existe versão corrigida disponível.",
+      "por_que_importa": "Empresas que rodam infraestrutura própria de IA devem isolar esses servidores da rede até surgir um patch, prática essencial em projetos de IA corporativa.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/10/unpatched-critical-lmcache-flaw-lets.html",
+      "data": "2026-10-07T15:34:53.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Ransomware passa a mirar diretamente os backups das empresas",
+      "resumo": "Grupos de ransomware têm atacado primeiro a infraestrutura de backup para eliminar a possibilidade de recuperação e forçar o pagamento do resgate. Especialistas recomendam backups isolados, imutáveis e testados regularmente.",
+      "por_que_importa": "Reforça a necessidade de revisar a estratégia de backup e recuperação de desastres como parte do plano de segurança, não apenas como rotina de TI.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/ransomware-has-a-new-target-is-your-backup-ready/",
+      "data": "2026-10-07T14:01:11.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Falha crítica da Atlassian é explorada horas após divulgação pública",
+      "resumo": "Uma vulnerabilidade grave (CVE-2026-21589, nota 9.3) afeta Jira, Confluence e Bitbucket em versões self-hosted, permitindo acesso a arquivos sensíveis sem autenticação. Hackers começaram a explorá-la poucas horas após a publicação da prova de conceito.",
+      "por_que_importa": "Empresas que usam Atlassian Data Center devem aplicar os patches com urgência; a Nexalytix recomenda assessment imediato de exposição e resposta a incidentes.",
+      "frente": "assessment",
+      "frente_nome": "Assessment",
+      "destaque": true,
+      "fonte": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/",
+      "data": "2026-10-07T12:49:01.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "FBI alerta que campanha FortiBleed continua ativa e já coletou 86 mil credenciais",
+      "resumo": "FBI e Secret Service confirmaram que o ataque FortiBleed, que explora credenciais vazadas ou reutilizadas em firewalls FortiGate, segue ativo. Em alguns casos os invasores chegam a excluir contas legítimas, derrubando o acesso das organizações aos próprios equipamentos.",
+      "por_que_importa": "Empresas com VPN SSL Fortinet exposta devem trocar credenciais, revisar logs de acesso e reforçar segmentação; é um caso típico para resposta a incidentes e hardening de perímetro.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html",
+      "data": "2026-10-07T11:56:56.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "SonicWall corrige falha crítica em gateways SMA1000",
+      "resumo": "A SonicWall lançou correções emergenciais para uma vulnerabilidade de gravidade máxima do tipo SSRF nos appliances SMA1000. A falha poderia ser usada para comprometer o acesso remoto corporativo.",
+      "por_que_importa": "Organizações que usam SMA1000 para acesso remoto devem aplicar o hotfix imediatamente para evitar exploração por atacantes externos.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-max-severity-ssrf-flaw-in-sma1000-gateways/",
+      "data": "2026-10-07T11:37:07.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Fies 2026/2 encerra prazo para faculdades ofertarem vagas remanescentes",
+      "resumo": "Instituições de ensino superior privadas tinham até esta quarta-feira para aderir ao processo seletivo de vagas remanescentes do Fies no segundo semestre de 2026, conforme edital publicado pelo MEC.",
+      "por_que_importa": "Instituições de ensino parceiras da Academia devem ficar atentas a prazos regulatórios do Fies para ampliar o acesso de alunos a financiamento estudantil.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/fies-20262-faculdades-privadas-podem-ofertar-vagas-ate-quarta",
+      "data": "2026-10-07T10:05:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Relatório de Cambridge defende papel dos professores nas decisões sobre IA na escola",
+      "resumo": "Um relatório da Universidade de Cambridge argumenta que o avanço da inteligência artificial na educação deve ser avaliado por seus efeitos reais na aprendizagem, com participação ativa dos professores nas decisões sobre uso da tecnologia em sala de aula.",
+      "por_que_importa": "Reforça a importância de envolver educadores no desenho de soluções de IA educacional, tema central para parcerias da Academia com instituições de ensino.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Porvir",
+      "url": "https://porvir.org/politicas-ia-educacao-professores/",
+      "data": "2026-10-04T02:27:35.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Percentual de jovens nem-nem no Brasil cai para 22,4%",
+      "resumo": "Relatório da OCDE mostra queda de 4,4 pontos percentuais entre 2016 e 2024 na proporção de jovens brasileiros de 18 a 24 anos que não estudam, não trabalham nem estão em formação.",
+      "por_que_importa": "Indica maior disponibilidade de jovens qualificáveis para o mercado de tecnologia; é oportunidade para programas de capacitação e trilhas de entrada na área.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-09/percentual-de%20jovens-nem-nem-no-brasil-cai-para-224-mostra-estudo",
+      "data": "2026-09-30T23:39:00.000Z"
+    }
+  ]
+}
