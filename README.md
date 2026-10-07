@@ -130,3 +130,12 @@ Abre todas as páginas (descobertas pelos links) no computador (1360px) e no cel
 - Configuração única no GitHub: secret `ANTHROPIC_API_KEY` e Settings → Actions → General → Workflow permissions = "Read and write permissions".
 - Para atualizar todo dia, troque o cron para `"0 9 * * *"`.
 - Como o robô publica no repositório, antes de enviar mudanças locais rode `git pull --rebase`.
+
+## Endereços das páginas (SEO)
+
+- Cada seção tem endereço próprio: `/academia`, `/seguranca`, `/saas/erp` etc. O `build.py` gera um arquivo por página em `dist/` (por exemplo `dist/academia.html`) com título, descrição e endereço canônico próprios. A lista fica em `ROUTES`, no `build.py`.
+- Links antigos com `#` (como `/#academia`) continuam funcionando: o site troca para `/academia` automaticamente.
+- Endereços antigos que mudaram de nome ficam em `dist/_redirects`.
+- `dist/sitemap.xml`, `dist/robots.txt` e `dist/llms.txt` são gerados pelo `build.py`.
+- Para testar localmente como no Cloudflare Pages: `node qa/servidor-pages.mjs dist 8766` e abrir http://127.0.0.1:8766/academia.
+- A prévia (`preview.html`) continua usando endereços com `#`.

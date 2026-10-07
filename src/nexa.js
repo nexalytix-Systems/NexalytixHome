@@ -15,7 +15,7 @@ capsReady.then(async()=>{try{if(caps.user&&caps.db&&await Promise.resolve(caps.u
 
 async function sendLead(lead){
   await capsReady;
-  lead.pagina=lead.pagina||("#"+(location.hash.slice(1)||"home"));
+  lead.pagina=lead.pagina||(window.nxPath?nxPath(nxRouteKey()):"#"+(location.hash.slice(1)||"home"));
   lead.criado_em=new Date().toISOString();
   if(caps.db&&caps.user){
     try{
@@ -129,7 +129,7 @@ async function send(text){
 
 async function viaSample(b){
   ctl=new AbortController();
-  const route=location.hash.slice(1)||"home";
+  const route=window.nxRouteKey?nxRouteKey():(location.hash.slice(1)||"home");
   const input=[{role:"user",content:KB+`\n\n(O visitante está na página #${route} do site.)`},{role:"assistant",content:GREETING},...turns.slice(-16)];
   const opts={modelTier:"quick",signal:ctl.signal,onText:({text})=>{b.innerHTML=md(text);log.scrollTop=log.scrollHeight;}};
   let canTools=false;try{canTools=!!(await caps.sample.limits()).tools;}catch(_){}
@@ -145,7 +145,7 @@ async function viaSample(b){
 }
 
 async function viaApi(){
-  const r=await fetch("/api/chat",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({messages:turns.slice(-24),pagina:"#"+(location.hash.slice(1)||"home")})});
+  const r=await fetch("/api/chat",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({messages:turns.slice(-24),pagina:(window.nxPath?nxPath(nxRouteKey()):"#"+(location.hash.slice(1)||"home"))})});
   if(!r.ok)throw {code:"api_"+r.status};
   const d=await r.json();
   if(d.leadSaved&&!leadSaved){leadSaved=true;markSaved();}

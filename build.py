@@ -130,6 +130,40 @@ out.mkdir(exist_ok=True)
 m = re.match(r"\s*(<title>.*?</title>\s*<meta name=\"description\"[^>]*>)", html, re.S)
 head_bits = m.group(1)
 body = html[m.end():]
+
+# ---------- Páginas com endereço próprio: título e descrição de cada uma ----------
+ROUTES = {
+  "home": ("Nexalytix | SaaS, Cloud, FinOps, Segurança e IA", "Nexalytix: SaaS, Cloud, FinOps e Segurança em um só ecossistema, do diagnóstico à operação contínua."),
+  "ecossistema": ("Ecossistema Nexalytix | Como as frentes se conectam", "Assessment, consultoria, implementação e sustentação em torno do seu negócio, com domínios, SaaS, Academia e parceiros conectados."),
+  "servicos": ("Serviços de TI e Segurança | Nexalytix", "Do assessment à sustentação: catálogo de serviços em cloud, segurança, FinOps, IA, desenvolvimento de produtos e PMO."),
+  "assessment": ("Assessment e diagnóstico de TI | Nexalytix", "Diagnóstico de negócio, tecnologia e cultura, com riscos e oportunidades priorizados e um roadmap com quick wins. Entrega em até 10 dias."),
+  "consultoria": ("Consultoria em Cloud, Segurança e IA | Nexalytix", "Arquitetura, planos de migração, segurança, governança e FinOps para transformar o diagnóstico em plano de ação."),
+  "implementacao": ("Implementação e migração para cloud | Nexalytix", "Migração para cloud, segurança, automação, IA e software sob medida, entregues por squads com método e previsibilidade."),
+  "sustentacao": ("Sustentação e suporte de TI 24x7 | Nexalytix", "Operação contínua: monitoramento 24x7, SOC, FinOps contínuo, service desk e manutenção preventiva e corretiva."),
+  "cloud": ("Cloud e Infraestrutura | Nexalytix", "Migração e modernização em AWS, Azure, GCP e OMID, redes, backup e recuperação de desastres, com operação 24x7."),
+  "seguranca": ("Segurança, SOC e CISO as a Service | Nexalytix", "Assessment de segurança, pentest, SOC 24x7, resposta a incidentes, LGPD e CISO as a Service para empresas de todos os portes."),
+  "finops": ("FinOps e redução de custos de cloud | Nexalytix", "Diagnóstico de custos de nuvem, governança FinOps e otimização contínua, com metas e relatório mensal."),
+  "ia": ("Transformação Digital e IA | Nexalytix", "Diagnóstico de maturidade em IA, agentes de atendimento e automação de documentos e processos, com segurança e LGPD."),
+  "dev": ("Desenvolvimento de Negócios e Produtos | Nexalytix", "Discovery, MVP, software sob medida, squads e CTO as a Service para tirar produtos digitais do papel."),
+  "pmo": ("PMO as a Service e Gestão de Projetos | Nexalytix", "Estruturação de PMO, gestão de portfólio e de projetos e PMO as a Service para entregar no prazo e no orçamento."),
+  "saas": ("SaaS Nexalytix | ERP, CRM, Financeiro e IA", "Produtos próprios: ERP, CRM, Sistema Financeiro, Transcribe e a assistente Alya, com implantação e suporte Nexalytix."),
+  "saas-erp": ("ERP Nexalytix | Gestão empresarial integrada", "Compras, estoque, vendas e faturamento integrados em um só sistema, para tirar a operação das planilhas."),
+  "saas-crm": ("CRM Nexalytix | Vendas e relacionamento", "Funil de vendas, leads e relacionamento com clientes em um só lugar, com contatos do site, WhatsApp e indicações."),
+  "saas-financeiro": ("Sistema Financeiro Nexalytix | Gestão financeira", "Contas a pagar e a receber, fluxo de caixa e conciliação para saber quanto entra, quanto sai e quanto sobra."),
+  "saas-transcribe": ("Transcribe | Transcrição de áudio e vídeo com IA", "Reuniões, atendimentos e entrevistas viram texto pesquisável, com resumo e pontos de ação gerados por IA."),
+  "saas-alya": ("Alya | Assistente de IA para o seu site", "Atendimento 24 horas com IA treinada no conteúdo da sua empresa e ligada ao CRM, transformando conversas em leads."),
+  "academia": ("Academia Nexalytix | Formação em TI e residência em squads", "Fundamentos de TI, dez trilhas e residência em squads com projetos reais. Lista de espera da turma piloto aberta."),
+  "parceiros": ("Programa de Parceiros | Nexalytix", "Indique clientes, some seu talento a projetos ou leve nossas soluções para a sua carteira: indicação, freelancers, revendas e fabricantes."),
+  "aliancas": ("Parceiros de tecnologia | Nexalytix", "Hyland, ManageEngine, Acronis e OMID, com implementação, suporte e operação da Nexalytix."),
+  "conteudos": ("Conteúdos e Radar semanal | Nexalytix", "Resumo semanal das principais notícias de tecnologia, negócios e setor financeiro, ativos digitais, segurança e educação."),
+  "sobre": ("Sobre a Nexalytix | Grupo Vieira Prime", "Quem somos e como trabalhamos: tecnologia e segurança em um só ecossistema, do diagnóstico à operação contínua."),
+  "contato": ("Fale com um especialista | Nexalytix", "Agende um diagnóstico, peça uma proposta ou relate um incidente de segurança. Retorno em até 24 horas úteis."),
+  "privacidade": ("Política de Privacidade | Nexalytix", "Como a Nexalytix coleta, usa, guarda e protege dados pessoais, conforme a LGPD."),
+  "termos": ("Termos de Uso | Nexalytix", "Regras de uso do site e dos canais digitais da Nexalytix."),
+}
+def route_path(k):
+    return "/" if k == "home" else ("/saas/" + k[5:] if k.startswith("saas-") else "/" + k)
+
 # ---------- SEO: canonical, Open Graph, dados estruturados e exibição inicial ----------
 SITE = "https://nexalytix.com.br"
 _end = emp["endereco"]
@@ -152,9 +186,13 @@ _ld = {
   "knowsAbout": ["Cloud", "FinOps", "Segurança da informação", "SOC", "Inteligência artificial", "ERP", "CRM", "PMO", "DevOps"],
   "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": "+55 " + emp["telefone"], "email": emp["email"], "availableLanguage": "pt-BR"}
 }
-_boot = ("(function(){var h=location.hash.slice(1)||'home';if(h==='solucoes')h='saas';"
-         "if(!/^[a-z0-9-]+$/.test(h))h='home';var s=document.createElement('style');s.id='bootcss';"
-         "s.textContent='.page[data-page=\"'+h+'\"]{display:block}';document.head.appendChild(s);})();")
+_boot = ("(function(){var d=document.documentElement;d.dataset.mode='path';"
+         "var p=location.pathname.replace(/\\/+$/,'')||'/';var k=(p==='/'||p==='/index.html')?'home':p.slice(1);"
+         "if(/^saas\\/[a-z0-9-]+$/.test(k))k='produto';var h=location.hash.slice(1);"
+         "if(k==='home'&&/^[a-z0-9-]+$/.test(h))k=h.indexOf('saas-')===0?'produto':h;"
+         "var m={assessment:'etapa',consultoria:'etapa',implementacao:'etapa',sustentacao:'etapa',cloud:'dominio',seguranca:'dominio',finops:'dominio',dev:'dominio',pmo:'dominio',solucoes:'saas'};"
+         "k=m[k]||k;if(!/^[a-z0-9-]+$/.test(k))k='home';var s=document.createElement('style');s.id='bootcss';"
+         "s.textContent='.page[data-page=\"'+k+'\"]{display:block}footer{visibility:hidden}';document.head.appendChild(s);})();")
 SEO_HEAD = (
     f'<link rel="canonical" href="{SITE}/">\n'
     f'<meta property="og:type" content="website">\n'
@@ -167,6 +205,7 @@ SEO_HEAD = (
     '<meta name="theme-color" content="#0A0D16">\n'
     '<script type="application/ld+json">' + json.dumps(_ld, ensure_ascii=False) + '</script>\n'
     '<script>' + _boot + '</script>\n'
+    '<script>window.NX_META=' + json.dumps({k: list(v) for k, v in ROUTES.items()}, ensure_ascii=False) + ';</script>\n'
 )
 
 prod = (
@@ -181,7 +220,29 @@ prod = (
     + body.split("<style>",1)[0] + "<style>" + body.split("<style>",1)[1].split("</style>",1)[0] + "</style>\n</head>\n<body>\n"
     + body.split("</style>",1)[1] + "\n</body>\n</html>\n"
 )
+# Endereços absolutos (as páginas ficam em /academia, /saas/erp etc.)
+prod = re.sub(r'(?<=["\'(])assets/', '/assets/', prod)
+_keys = set(ROUTES) | {"solucoes"}
+prod = re.sub(r'href="#([a-z0-9-]+)"', lambda m: f'href="{route_path(m.group(1))}"' if m.group(1) in _keys else m.group(0), prod)
+assert prod.count('<title>') == 1
+def page_html(k):
+    t, d = ROUTES[k]
+    url = SITE + route_path(k)
+    h = re.sub(r"<title>.*?</title>", lambda _: f"<title>{t}</title>", prod, count=1, flags=re.S)
+    h = re.sub(r'<meta name="description" content="[^"]*">', lambda _: f'<meta name="description" content="{d}">', h, count=1)
+    h = h.replace(f'<link rel="canonical" href="{SITE}/">', f'<link rel="canonical" href="{url}">', 1)
+    h = h.replace(f'<meta property="og:url" content="{SITE}/">', f'<meta property="og:url" content="{url}">', 1)
+    h = re.sub(r'<meta property="og:title" content="[^"]*">', lambda _: f'<meta property="og:title" content="{t}">', h, count=1)
+    h = re.sub(r'<meta property="og:description" content="[^"]*">', lambda _: f'<meta property="og:description" content="{d}">', h, count=1)
+    return h
+prod = page_html("home")
 (out / "index.html").write_text(prod)
+for _k in ROUTES:
+    if _k == "home":
+        continue
+    _f = out / (route_path(_k).lstrip("/") + ".html")
+    _f.parent.mkdir(parents=True, exist_ok=True)
+    _f.write_text(page_html(_k))
 # Cópia na raiz: GitHub Pages publica a raiz do repositório
 (root / "index.html").write_text(prod)
 if (root / "assets").exists():
@@ -191,7 +252,7 @@ from datetime import date as _date
 (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\n")
 (out / "sitemap.xml").write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    f'  <url><loc>{SITE}/</loc><lastmod>{_date.today().isoformat()}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
-    '</urlset>\n')
+    + "".join(f'  <url><loc>{SITE}{route_path(k)}</loc><lastmod>{_date.today().isoformat()}</lastmod></url>\n' for k in ROUTES)
+    + '</urlset>\n')
 (out / "llms.txt").write_text((root / "llms.txt").read_text())
 print("dist/index.html", len(html), "bytes")
