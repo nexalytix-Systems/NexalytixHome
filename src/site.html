@@ -133,6 +133,22 @@ a.prod-card{color:inherit;text-decoration:none;transition:border-color .15s,tran
 .legal-doc{display:grid;gap:14px}.legal-doc>*{max-width:760px}.legal-doc h2{font-size:1.2rem;margin-top:18px}.legal-doc ul{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--text)}.legal-doc p,.legal-doc li{line-height:1.65}
 footer .legal{flex-wrap:wrap;gap:10px 24px}footer .legal a{display:inline;padding:0;color:inherit;text-decoration:underline}
 .f [aria-invalid="true"]{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.news-card{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+@media (max-width:640px){.news-card{grid-template-columns:1fr;gap:16px}}
+.card > a.more:last-child,.card > .btn-row:last-child{margin-top:auto}
+.scroll-hint{display:none;font-size:.8rem;color:var(--muted);margin:0 0 8px}
+@media (max-width:820px){.scroll-hint{display:block}}
+#nexaOpen.compact .lbl{display:none}#nexaOpen.compact{padding:10px}
+.radar-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.rd-resumo{font-size:1.05rem;max-width:80ch;margin:0 0 18px;padding:14px 18px;border-left:3px solid var(--primary);background:var(--primary-soft);border-radius:0 10px 10px 0}
+.rd-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:10px}
+.rd-card .rd-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 8px;align-items:center;font:500 .72rem/1.3 var(--font-m);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.rd-card h3{font-size:1.05rem;line-height:1.35}
+.rd-card p{font-size:.92rem;color:var(--muted)}
+.rd-card .rd-pq{border-top:1px dashed var(--line);padding-top:10px;color:var(--text)}
+.rd-card .rd-pq b{display:block;font:600 .66rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.rd-card .rd-links{margin-top:auto;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:600;font-size:.88rem;padding-top:6px}
+.rd-home{margin-top:40px}
 .foot-note{font-size:.8rem;color:var(--muted);margin-top:10px}
 .radar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .rcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
@@ -417,7 +433,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 
 <div class="util"><div class="wrap">
   <a href="#sobre">Sobre</a>
-  <a href="#parceiros">Portal do parceiro</a>
+  <a href="#parceiros">Seja parceiro</a>
   <a href="#contato" data-intent="emergencia" class="emerg">Sofreu um incidente?</a>
 </div></div>
 
@@ -450,9 +466,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
         <a href="#saas-erp"><b>ERP Nexalytix</b><span>Compras, estoque, vendas e faturamento</span></a>
         <a href="#saas-crm"><b>CRM Nexalytix</b><span>Funil de vendas, leads e relacionamento</span></a>
         <a href="#saas-financeiro"><b>Sistema Financeiro</b><span>Contas a pagar e receber, fluxo de caixa</span></a>
-        <a href="#saas-bgcheck"><b>BG-Check</b><span>Verificação de candidatos para contratação</span></a>
         <a href="#saas-transcribe"><b>Transcribe</b><span>Transcrição de áudio e vídeo com IA</span></a>
-        <a href="#saas-agendabella"><b>AgendaBella</b><span>Agendamento online para serviços</span></a>
         <a href="#saas-alya"><b>Alya, assistente de IA</b><span>Atendimento com IA ligado ao seu CRM</span></a>
         <a href="#aliancas"><b>Produtos de parceiros</b><span>Hyland, ManageEngine, Acronis e Omid Cloud</span></a>
         <div class="dd-foot">Todos com implantação, treinamento e suporte do time Nexalytix. <a href="#saas" style="display:inline;padding:0">Ver todos os produtos →</a></div>
@@ -478,7 +492,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <a class="sub" href="#cloud">Cloud e Infraestrutura</a><a class="sub" href="#seguranca">Segurança</a><a class="sub" href="#finops">FinOps</a>
   <a class="sub" href="#ia">Transformação Digital e IA</a><a class="sub" href="#dev">Desenvolvimento e Squads</a>
   <a href="#saas">SaaS</a>
-  <a class="sub" href="#saas-erp">ERP</a><a class="sub" href="#saas-crm">CRM</a><a class="sub" href="#saas-financeiro">Sistema Financeiro</a><a class="sub" href="#saas-bgcheck">BG-Check</a><a class="sub" href="#saas-transcribe">Transcribe</a><a class="sub" href="#saas-agendabella">AgendaBella</a><a class="sub" href="#saas-alya">Alya, assistente de IA</a>
+  <a class="sub" href="#saas-erp">ERP</a><a class="sub" href="#saas-crm">CRM</a><a class="sub" href="#saas-financeiro">Sistema Financeiro</a><a class="sub" href="#saas-transcribe">Transcribe</a><a class="sub" href="#saas-alya">Alya, assistente de IA</a>
   <a href="#academia">Academia</a>
   <a href="#aliancas">Parceiros de tecnologia</a>
   <a class="sub" href="#parceiros">Programa de parceiros</a>
@@ -512,11 +526,11 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div class="section-head"><span class="eyebrow">Posicionamento</span><h2>Seis pilares, uma operação</h2><p class="lead">A maioria dos fornecedores cobre um pedaço. Aqui, custo de nuvem, segurança, IA e sistemas de gestão conversam no mesmo plano.</p></div>
     <div class="pillars">
       <div class="pillar"><h3>SaaS</h3><p>ERP, CRM, Financeiro e outros produtos próprios, prontos para usar.</p><a class="small" href="#saas">Ver produtos →</a></div>
-      <div class="pillar"><h3>Cloud</h3><p>Migração e modernização multi-cloud em AWS, Azure e GCP, com redes e continuidade.</p><a class="small" href="#cloud">Cloud e Infraestrutura →</a></div>
-      <div class="pillar"><h3>FinOps</h3><p>Governança financeira para a conta de nuvem parar de surpreender.</p><a class="small" href="#finops">FinOps →</a></div>
-      <div class="pillar"><h3>Segurança</h3><p>Segurança ofensiva e defensiva: SIEM, identidades e acessos, proteção de endpoints e DevSecOps.</p><a class="small" href="#seguranca">Segurança →</a></div>
-      <div class="pillar new"><h3>Transformação Digital e IA</h3><p>Agentes de IA, automação de documentos e processos e estratégia de IA com governança.</p><a class="small" href="#ia">Ver IA →</a></div>
-      <div class="pillar"><h3>Serviços de TI e Segurança</h3><p>Monitoramento, suporte de TI e manutenção preventiva e corretiva operados pelo nosso time.</p><a class="small" href="#sustentacao">Sustentação e Manutenção →</a></div>
+      <div class="pillar"><h3>Cloud</h3><p>Migração e modernização multi-cloud em AWS, Azure e GCP, com redes e continuidade.</p><a class="small" href="#cloud">Ver Cloud e Infraestrutura →</a></div>
+      <div class="pillar"><h3>FinOps</h3><p>Governança financeira para a conta de nuvem parar de surpreender.</p><a class="small" href="#finops">Ver FinOps →</a></div>
+      <div class="pillar"><h3>Segurança</h3><p>Segurança ofensiva e defensiva: SIEM, identidades e acessos, proteção de endpoints e DevSecOps.</p><a class="small" href="#seguranca">Ver Segurança →</a></div>
+      <div class="pillar new"><h3>Transformação Digital e IA</h3><p>Agentes de IA, automação de documentos e processos e estratégia de IA com governança.</p><a class="small" href="#ia">Ver Transformação Digital e IA →</a></div>
+      <div class="pillar"><h3>Serviços de TI e Segurança</h3><p>Monitoramento, suporte de TI e manutenção preventiva e corretiva operados pelo nosso time.</p><a class="small" href="#sustentacao">Ver Sustentação e Manutenção →</a></div>
     </div>
   </div></div>
 
@@ -539,7 +553,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
         <p class="rnum">4.118</p>
         <h3>ataques por semana contra cada organização no Brasil</h3>
         <p class="rnews">Alta de 46% em um ano e quase o dobro da média global (2.201). Uma violação de dados custa em média <b>R$ 7,19 milhões</b> no país.</p>
-        <div class="ract"><span class="rlbl">O que fazer</span><p>Assessment de segurança e monitoramento contínuo com SIEM e resposta a incidentes.</p><span class="rlbl">Resultado possível</span><p>No Brasil, empresas com uso extensivo de IA e automação na segurança tiveram custo médio por violação menor: R$ 6,48 mi contra R$ 6,76 mi.</p></div>
+        <div class="ract"><span class="rlbl">O que fazer</span><p>Assessment de segurança e monitoramento contínuo com SIEM e resposta a incidentes.</p><span class="rlbl">Resultado possível</span><p>Detectar e conter incidentes mais rápido e com menor custo: o estudo da IBM mostra que empresas com uso extensivo de IA e automação na segurança têm violações mais baratas que as que não usam.</p></div>
         <div class="rfoot"><a href="#seguranca">Ver Segurança →</a><span class="rsrc">Fontes: Check Point Research (abr/2026); IBM Cost of a Data Breach 2025</span></div>
       </article>
       <article class="rcard">
@@ -560,6 +574,10 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       </article>
     </div>
     <p class="foot-note">Dados de fontes públicas, atualizados em out/2026. Resultados variam conforme o ambiente de cada empresa.</p>
+    <div class="rd-home" id="rdHome" hidden>
+      <div class="radar-top"><div><span class="eyebrow">Notícias da semana</span><h3 style="margin-top:6px">Destaques do Radar</h3></div><a class="more" href="#conteudos" style="font-weight:600">Ver o Radar completo →</a></div>
+      <div class="grid g3" id="rdHomeGrid"></div>
+    </div>
   </div></div>
 
   <div class="section" style="padding-top:0"><div class="wrap">
@@ -574,7 +592,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <div class="band section"><div class="wrap offer">
     <div style="display:grid;gap:18px">
       <span class="pill" style="justify-self:start">Oferta para novos clientes</span>
-      <h2>Faça o Assessment e receba 50% do valor de volta no projeto</h2>
+      <h2>Faça o Assessment e use 50% do valor como desconto no projeto</h2>
       <p class="lead">Comece pelo diagnóstico do seu ambiente. Se, depois do Assessment, você contratar com a Nexalytix o serviço recomendado, 50% do valor pago no Assessment vira desconto no projeto.</p>
       <p class="offer-price">Assessment de 40 horas · entrega em até 10 dias · desconto aplicado na primeira fatura do serviço contratado</p>
       <div class="btn-row"><a class="btn btn-accent" href="#contato" data-intent="diagnostico">Quero meu assessment</a></div>
@@ -608,7 +626,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   </div></div>
 
   <div class="section" style="padding-top:0"><div class="wrap">
-    <div class="next" style="padding:36px"><div style="display:grid;gap:6px"><b style="font-size:1.4rem">Pronto para estabilizar sua operação?</b><span class="muted">Agende uma call técnica de 30 minutos com nossos arquitetos.</span></div><a class="btn btn-primary" href="#contato" data-intent="diagnostico">Agendar diagnóstico</a></div>
+    <div class="next" style="padding:36px"><div style="display:grid;gap:6px"><b style="font-size:1.4rem">Pronto para estabilizar sua operação?</b><span class="muted">Comece pelo Assessment: em até 10 dias você tem os pontos fortes, as melhorias e um plano priorizado.</span></div><a class="btn btn-primary" href="#contato" data-intent="diagnostico">Agendar diagnóstico</a></div>
   </div></div>
 </section>
 
@@ -647,6 +665,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   </div></div>
   <div class="section" style="padding-top:0" id="matriz"><div class="wrap">
     <div class="section-head"><span class="eyebrow">Matriz do ecossistema</span><h2>O que entregamos em cada domínio, etapa por etapa</h2><p class="muted">Clique em um domínio ou em uma etapa para ver os detalhes.</p></div>
+    <p class="scroll-hint">Arraste a tabela para o lado para ver todas as etapas →</p>
     <div class="mx-wrap" id="ecoMatrix"></div>
   </div></div>
 
@@ -685,21 +704,20 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <div class="phero"><div class="wrap">
     <span class="eyebrow">Serviços</span>
     <h1>Do diagnóstico à operação, em todos os domínios</h1>
-    <p class="lead">Navegue por etapa do ciclo ou por domínio. Contrate uma etapa isolada ou o ciclo completo. Cada engajamento parte de uma baseline e termina com métricas claras: custo, latência, MTTR e lead time.</p>
+    <p class="lead">Navegue por etapa do ciclo ou por domínio. Contrate uma etapa isolada ou o ciclo completo. Cada engajamento parte de uma linha de base e termina com métricas claras: custo, latência, MTTR e lead time.</p>
   </div></div>
   <div class="section" style="padding-top:40px"><div class="wrap"><div class="section-head"><span class="eyebrow">Por etapa do ciclo</span><h2>Quatro etapas, contratadas juntas ou separadas</h2></div><div class="grid g2" id="svcBlocks"></div></div></div>
   <div class="section" style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">Por domínio</span><h2>Cinco domínios, todos passando pelas quatro etapas</h2><p class="muted">Escolha pelo assunto. Em cada domínio, o mesmo time diagnostica, decide, implementa e sustenta.</p></div>
+    <div class="section-head"><span class="eyebrow">Por domínio</span><h2>Cinco domínios e os produtos SaaS, todos passando pelas quatro etapas</h2><p class="muted">Escolha pelo assunto. Em cada domínio, o mesmo time diagnostica, decide, implementa e sustenta.</p></div>
     <div class="grid g3">
       <a class="door" href="#cloud"><span class="pill blue">Domínio</span><h3>Cloud e Infraestrutura</h3><p>Cloud, data center, redes, backup e continuidade de negócios.</p><span class="go">Ver domínio →</span></a>
       <a class="door" href="#seguranca"><span class="pill blue">Domínio</span><h3>Segurança</h3><p>SIEM, identidades e acessos, endpoints, resposta a incidentes e LGPD.</p><span class="go">Ver domínio →</span></a>
       <a class="door" href="#finops"><span class="pill blue">Domínio</span><h3>FinOps</h3><p>Governança e redução de custos de nuvem, com metas e relatório mensal.</p><span class="go">Ver domínio →</span></a>
       <a class="door" href="#ia"><span class="pill blue">Domínio</span><h3>Transformação Digital e IA</h3><p>Estratégia, agentes de IA e automação de documentos e processos.</p><span class="go">Ver domínio →</span></a>
       <a class="door" href="#dev"><span class="pill blue">Domínio</span><h3>Desenvolvimento e Squads</h3><p>Software sob medida, MVP e squads dedicados com Dev, QA, PO e Scrum Master.</p><span class="go">Ver domínio →</span></a>
-      <a class="door" href="#saas"><span class="pill">Produtos</span><h3>SaaS Nexalytix</h3><p>ERP, CRM, Financeiro, BG-Check, Transcribe, AgendaBella e Alya.</p><span class="go">Ver produtos →</span></a>
+      <a class="door" href="#saas"><span class="pill">Produtos</span><h3>SaaS Nexalytix</h3><p>ERP, CRM, Financeiro, Transcribe e a assistente de IA Alya.</p><span class="go">Ver produtos →</span></a>
     </div>
   </div></div>
-  <div class="section" style="padding-top:0"><div class="wrap"><div class="next"><div style="display:grid;gap:4px"><span class="eyebrow">Atravessa todo o ciclo</span><b style="font-size:1.25rem">Transformação Digital e IA</b><span class="muted">Do diagnóstico de maturidade à operação de agentes de IA, com governança e LGPD desde o início.</span></div><a class="btn btn-primary" href="#ia">Ver Transformação Digital e IA</a></div></div></div>
   <div class="section" style="padding-top:0"><div class="wrap two">
     <div style="display:grid;gap:14px"><span class="eyebrow">Modelos de contratação</span><h2>Do projeto fechado à operação recorrente</h2></div>
     <div class="dl">
@@ -758,7 +776,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <div class="section" style="padding-top:0"><div class="wrap">
     <div class="section-head"><span class="eyebrow">Produtos de IA</span><h2>Prontos para usar, configurados para você</h2></div>
     <div class="grid g3">
-      <div class="card"><div class="chips"><span class="pill blue">Produto Nexalytix</span></div><img src="assets/alya-avatar.svg" alt="" width="48" height="48"><h3>Assistente de IA Nexalytix</h3><p class="muted small">O mesmo assistente deste site, treinado com o conteúdo da sua empresa, com captação de leads direto no CRM.</p><button type="button" class="more btn-link" data-nexa>Conversar com a Alya →</button></div>
+      <div class="card"><div class="chips"><span class="pill blue">Produto Nexalytix</span></div><img src="assets/alya-avatar.svg" alt="" width="48" height="48"><h3>Alya, assistente de IA</h3><p class="muted small">O mesmo assistente deste site, treinado com o conteúdo da sua empresa, com captação de leads direto no CRM.</p><button type="button" class="more btn-link" data-nexa>Conversar com a Alya →</button></div>
       <div class="card"><div class="chips"><span class="pill blue">SaaS próprio</span></div><h3>Transcribe</h3><p class="muted small">Transcrição automática de áudios e vídeos com IA, para reuniões, atendimentos e conteúdo.</p><a class="more" href="#contato" data-intent="demo">Agendar demonstração →</a></div>
       <div class="card"><div class="chips"><span class="pill">Parceiro oficial</span></div><span class="logo-chip"  style="align-self:flex-start"><img src="assets/logo-hyland.png" alt="Hyland"></span><h3>Hyland: conteúdo e agentes de IA</h3><p class="muted small">Gestão de documentos, captura inteligente (IDP), descoberta de conhecimento e agentes de IA sobre o conteúdo corporativo.</p><a class="more" href="#contato" data-intent="cotacao">Falar sobre Hyland →</a></div>
     </div>
@@ -786,6 +804,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <div id="partnerBlocks"></div>
   <div class="section" style="padding-top:0"><div class="wrap">
     <div class="section-head"><span class="eyebrow">Onde a Nexalytix e os parceiros atuam</span><h2>Nexalytix e parceiros por domínio do ecossistema</h2><p class="muted">A Nexalytix atua em todos os domínios, do diagnóstico à operação. Os parceiros entram com a tecnologia certa onde ela faz diferença.</p></div>
+    <p class="scroll-hint">Arraste a tabela para o lado para ver todos os domínios →</p>
     <div class="mx-wrap" id="partnerMatrix"></div>
   </div></div>
   <div class="band section"><div class="wrap two">
@@ -804,8 +823,8 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <section class="page" data-page="saas">
   <div class="phero"><div class="wrap">
     <span class="eyebrow">SaaS Nexalytix</span>
-    <h1>Sistemas prontos para usar, com o time que os criou do seu lado</h1>
-    <p class="lead">Gestão, vendas, finanças, contratação, atendimento e produtividade. Produtos próprios da Nexalytix, com implantação, treinamento e suporte feitos pelo mesmo time, e integração com o restante do ecossistema.</p>
+    <h1>Sistemas prontos para usar, implantados e mantidos pelo time Nexalytix</h1>
+    <p class="lead">Gestão, vendas, finanças, atendimento e produtividade. Produtos próprios da Nexalytix, com implantação, treinamento e suporte feitos pelo mesmo time, e integração com o restante do ecossistema.</p>
     <div class="btn-row"><a class="btn btn-primary" href="#contato" data-intent="demo">Agendar demonstração</a><button class="btn btn-ghost" type="button" data-goto="saasGrid">Ver produtos</button></div>
   </div></div>
   <div class="section" style="padding-top:40px"><div class="wrap">
@@ -856,7 +875,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <article class="rcard">
         <div class="rtop"><span class="pill blue">Inteligência Artificial</span><span class="rdate">2025 · PwC</span></div>
         <p class="rnum">56%</p>
-        <h3>a mais de salário, em média, para quem tem habilidade em IA</h3>
+        <h3>a mais de salário, em média no mundo, para quem tem habilidade em IA</h3>
         <p class="rnews">No Brasil, 83% dos profissionais do conhecimento já usam IA no trabalho, mas só 39% receberam treinamento da empresa.</p>
         <div class="ract"><span class="rlbl">O que fazer</span><p>Aprender a usar IA como ferramenta de trabalho, com responsabilidade, em todas as trilhas.</p><span class="rlbl">Resultado possível</span><p>Entrar no grupo de profissionais que a IA amplia, e não no que ela substitui.</p></div>
         <div class="rfoot"><span class="rsrc">Fontes: PwC Global AI Jobs Barometer 2025; Microsoft e LinkedIn Work Trend Index 2024</span></div>
@@ -991,7 +1010,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
         <div class="field"><label for="a-nome">Nome</label><input id="a-nome" name="nome" required autocomplete="name"></div>
         <div class="field"><label for="a-email">E-mail</label><input id="a-email" name="email" type="email" required autocomplete="email"></div>
         <div class="frow">
-          <div class="field"><label for="a-trilha">Interesse</label><select id="a-trilha" name="trilha"><option>Programa completo (ainda não sei a trilha)</option><option>Fase 01: Fundamentos</option><option>Suporte, Infraestrutura e Redes</option><option>Cloud e FinOps</option><option>Segurança e Operações (SOC)</option><option>Dados, Automação e IA aplicada</option><option>Liderança em IA e Transformação Digital</option><option>Desenvolvimento de Software (Dev)</option><option>Qualidade de Software (QA)</option><option>Produto (Product Owner)</option><option>Agilidade (Scrum Master)</option><option>Gestão de Projetos e PMO</option></select></div>
+          <div class="field"><label for="a-trilha">Interesse</label><select id="a-trilha" name="trilha"><option>Programa completo</option><option>Fase 01: Fundamentos</option><option>Suporte, Infraestrutura e Redes</option><option>Cloud e FinOps</option><option>Segurança e Operações (SOC)</option><option>Dados, Automação e IA aplicada</option><option>Liderança em IA e Transformação Digital</option><option>Desenvolvimento de Software (Dev)</option><option>Qualidade de Software (QA)</option><option>Produto (Product Owner)</option><option>Agilidade (Scrum Master)</option><option>Gestão de Projetos e PMO</option></select></div>
           <div class="field"><label for="a-perfil">Perfil</label><select id="a-perfil" name="perfil"><option>Iniciante na área</option><option>Profissional da área</option><option>Empresa (capacitar o time)</option><option>Empresa ou parceiro (bolsas ou talentos)</option></select></div>
         </div>
         <label class="consent"><input type="checkbox" id="a-lgpd" required><span>Autorizo o contato da Nexalytix sobre a Academia, conforme a <a href="#privacidade">Política de Privacidade</a>.</span></label>
@@ -1061,20 +1080,22 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <section class="page" data-page="conteudos">
   <div class="phero"><div class="wrap">
     <span class="eyebrow">Conteúdos</span>
-    <h1>Conteúdo técnico para decidir melhor sobre tecnologia</h1>
-    <p class="lead">Análises, alertas e casos reais sobre cloud, FinOps e segurança, escritos pelo time que opera esses ambientes.</p>
+    <h1>Radar da semana: o que mudou em tecnologia, negócios e segurança</h1>
+    <p class="lead">Toda segunda-feira, as notícias mais relevantes da semana em tecnologia, negócios e setor financeiro, ativos digitais, segurança e educação, resumidas em português e com o que cada uma significa para a sua empresa.</p>
   </div></div>
-  <div class="section" style="padding-top:40px"><div class="wrap">
-    <div class="grid g4">
-      <div class="card"><h3>Insights</h3><p class="muted small">Artigos sobre arquitetura, custos de nuvem e operação.</p><span class="pill warn" style="margin-top:auto;align-self:flex-start">Primeiras publicações em produção</span></div>
-      <div class="card"><h3>Radar</h3><p class="muted small">O que está mudando no mercado de tecnologia e o que isso significa para você.</p><span class="pill warn" style="margin-top:auto;align-self:flex-start">Primeiras publicações em produção</span></div>
-      <div class="card"><h3>Alertas de segurança</h3><p class="muted small">Boletins curtos sobre vulnerabilidades relevantes e como agir.</p><span class="pill warn" style="margin-top:auto;align-self:flex-start">Primeiras publicações em produção</span></div>
-      <div class="card"><h3>Cases</h3><p class="muted small">Desafio, frentes do ecossistema usadas e resultado em números.</p><span class="pill warn" style="margin-top:auto;align-self:flex-start">Primeiras publicações em produção</span></div>
+  <div class="section" style="padding-top:36px"><div class="wrap">
+    <div class="radar-top">
+      <div><span class="eyebrow">Radar da semana</span><p class="small muted" id="rdPeriodo">Carregando as notícias da semana...</p></div>
+      <div class="filters" id="rdFiltros" role="group" aria-label="Filtrar por tema"></div>
     </div>
+    <p class="rd-resumo" id="rdResumo" hidden></p>
+    <div class="grid g3 rd-grid" id="rdGrid"></div>
+    <div class="card rd-vazio" id="rdVazio" hidden><h3>O radar é atualizado toda segunda-feira</h3><p class="muted small">A primeira edição está sendo preparada. Enquanto isso, veja os indicadores de mercado na página inicial ou fale com a Alya.</p></div>
+    <p class="foot-note">Seleção e resumos feitos com apoio de inteligência artificial a partir de fontes públicas. Cada notícia leva à matéria original. Conteúdo informativo, sem recomendação de investimento.</p>
   </div></div>
   <div class="section" style="padding-top:0"><div class="wrap">
-    <div class="form-card" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center" id="newsCard">
-      <div style="display:grid;gap:8px"><h3>Receba os conteúdos por e-mail</h3><p class="muted small">Um resumo mensal com os artigos, alertas e cases publicados.</p></div>
+    <div class="form-card news-card" id="newsCard">
+      <div style="display:grid;gap:8px"><h3>Receba o Radar por e-mail</h3><p class="muted small">Inscreva-se para receber novidades da Nexalytix e os destaques do Radar.</p></div>
       <form class="f" data-form="newsletter" novalidate>
         <div class="field"><label for="n-email">E-mail</label><input id="n-email" name="email" type="email" required autocomplete="email"></div>
         <label class="consent"><input type="checkbox" id="n-lgpd" required><span>Quero receber a newsletter da Nexalytix, conforme a <a href="#privacidade">Política de Privacidade</a>.</span></label>
@@ -1121,7 +1142,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <button type="button" class="brand-play" aria-label="Assistir à animação do logotipo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>Assistir</button>
     </figure>
   </div></div>
-  <div class="section" style="padding-top:0"><div class="wrap two">
+  <div class="section"><div class="wrap two">
     <div style="display:grid;gap:14px"><span class="eyebrow">Valores</span><h2>Princípios que regem cada engajamento</h2></div>
     <div class="dl">
       <div><b>Rigor de engenharia</b><span>Decisões técnicas suportadas por evidências, benchmarks e ADRs documentados.</span></div>
@@ -1132,7 +1153,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   </div></div>
   <div class="band section"><div class="wrap two">
     <div style="display:grid;gap:14px"><span class="eyebrow" style="color:var(--band-muted)">Grupo Vieira Prime</span><h2>Parte de um grupo de negócios que opera o que recomenda</h2><p class="lead">A Nexalytix integra o Grupo Vieira Prime, que reúne empresas de serviços, varejo e alimentação. Nossas soluções nascem e são testadas na operação real do grupo.</p></div>
-    <div style="display:grid;gap:14px;align-content:center"><p class="muted">Quer fazer parte do time?</p><div class="btn-row"><a class="btn btn-accent" href="#academia">Programa de Formação</a><a class="btn btn-ghost" style="color:var(--band-text);border-color:var(--band-line)" href="#parceiros" data-scroll="pForm" data-ptype="Freelancer / especialista">Seja parceiro</a></div></div>
+    <div style="display:grid;gap:14px;align-content:center"><p class="muted">Quer crescer com a gente?</p><div class="btn-row"><a class="btn btn-accent" href="#academia">Conhecer a Academia</a><a class="btn btn-ghost" style="color:var(--band-text);border-color:var(--band-line)" href="#parceiros" data-scroll="pForm" data-ptype="Freelancer / especialista">Seja parceiro</a></div></div>
   </div></div>
 </section>
 
@@ -1253,7 +1274,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <form class="f" data-form="contato" novalidate>
         <div class="field"><label for="c-intent">Assunto</label>
           <select id="c-intent" name="intent">
-            <option value="diagnostico">Agendar diagnóstico / Assessment</option>
+            <option value="diagnostico">Assessment (diagnóstico)</option>
             <option value="servico">Contratar um serviço</option>
             <option value="demo">Demonstração de SaaS</option>
             <option value="cotacao">Cotação de produto (Hyland, ManageEngine, Acronis, Omid)</option>
@@ -1298,9 +1319,9 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <div class="cols">
     <div><span class="foot-logo"><img src="assets/logo-nexalytix-systems.png" alt="Nexalytix"></span><p class="small">SaaS, Cloud, FinOps e Segurança em um só ecossistema: do diagnóstico à operação contínua.</p><p class="small" style="margin-top:10px">Parte do Grupo Vieira Prime.</p></div>
     <div><h4>Serviços</h4><a href="#assessment">Assessment</a><a href="#consultoria">Consultoria</a><a href="#implementacao">Implementação</a><a href="#sustentacao">Sustentação e Manutenção</a></div>
-    <div><h4>Domínios</h4><a href="#cloud">Cloud e Infraestrutura</a><a href="#seguranca">Segurança</a><a href="#finops">FinOps</a><a href="#ia">Transformação Digital e IA</a><a href="#dev">Desenvolvimento e Squads</a><a href="#academia">Academia</a></div>
-    <div><h4>SaaS</h4><a href="#saas-erp">ERP</a><a href="#saas-crm">CRM</a><a href="#saas-financeiro">Sistema Financeiro</a><a href="#saas-bgcheck">BG-Check</a><a href="#saas-transcribe">Transcribe</a><a href="#saas-agendabella">AgendaBella</a><a href="#saas-alya">Alya</a></div>
-    <div><h4>Empresa</h4><a href="#ecossistema">Ecossistema</a><a href="#sobre">Sobre</a><a href="#aliancas">Parceiros de tecnologia</a><a href="#parceiros">Programa de parceiros</a></div>
+    <div><h4>Domínios</h4><a href="#cloud">Cloud e Infraestrutura</a><a href="#seguranca">Segurança</a><a href="#finops">FinOps</a><a href="#ia">Transformação Digital e IA</a><a href="#dev">Desenvolvimento e Squads</a></div>
+    <div><h4>SaaS</h4><a href="#saas-erp">ERP</a><a href="#saas-crm">CRM</a><a href="#saas-financeiro">Sistema Financeiro</a><a href="#saas-transcribe">Transcribe</a><a href="#saas-alya">Alya</a></div>
+    <div><h4>Empresa</h4><a href="#ecossistema">Ecossistema</a><a href="#sobre">Sobre</a><a href="#academia">Academia</a><a href="#aliancas">Parceiros de tecnologia</a><a href="#parceiros">Programa de parceiros</a></div>
     <div><h4>Contato</h4><a href="#contato">Fale com um especialista</a><a href="#contato" data-intent="emergencia">Sofreu um incidente?</a><a href="#conteudos">Conteúdos</a></div>
   </div>
   <div class="legal"><span>© 2026 {{NOME_LEGAL}}. Todos os direitos reservados.{{CNPJ_RODAPE}}</span><span><a href="#privacidade">Privacidade</a> · <a href="#termos">Termos de uso</a></span><span>{{CONTATOS_RODAPE}}</span></div>
@@ -1327,19 +1348,19 @@ const STAGE_KEYS=Object.keys(STAGES);
 const DOM={
  cloud:{n:"Cloud e Infraestrutura",s:"Cloud e Infraestrutura",a:270,route:"cloud",d:"Cloud, data center, redes e conectividade, backup e continuidade: a base que sustenta a operação.",
   cells:{assessment:"Diagnóstico de cloud, redes, capacidade, backup e continuidade",consultoria:"Arquitetura híbrida e multi-cloud, redes e plano de recuperação de desastres",implementacao:"Migração para AWS, Azure e GCP, redes e conectividade, backup e DR, automação CI/CD",sustentacao:"Monitoramento 24x7, suporte, manutenção preventiva e corretiva, patches e capacidade"},
-  parceiros:["Omid Cloud","Acronis","ManageEngine OpManager"],academia:["Cloud e FinOps","Infraestrutura e Redes","DevOps e SRE"],en:["academia","parceiros"],g:["modernizar","proteger"]},
+  parceiros:["Omid Cloud","Acronis","ManageEngine OpManager"],academia:["Trilha Cloud e FinOps","Trilha Suporte, Infraestrutura e Redes"],en:["academia","parceiros"],g:["modernizar","proteger"]},
  seguranca:{n:"Segurança",s:"Segurança",a:330,route:"seguranca",d:"Segurança ofensiva e defensiva, identidades e acessos, proteção de endpoints e conformidade com a LGPD.",
   cells:{assessment:"Maturidade de segurança, pentest, vulnerabilidades, riscos e LGPD",consultoria:"GRC, arquitetura de segurança, políticas e plano de resposta a incidentes",implementacao:"SIEM, identidades e acessos privilegiados, proteção de endpoints e DevSecOps",sustentacao:"SIEM operado, gestão de vulnerabilidades e patches, resposta a incidentes e backup testado"},
-  parceiros:["ManageEngine (Log360, AD360, PAM360, Endpoint Central)","Acronis"],academia:["Segurança da Informação","Conscientização de colaboradores"],en:["academia","parceiros"],g:["proteger"]},
+  parceiros:["ManageEngine (Log360, AD360, PAM360, Endpoint Central)","Acronis"],academia:["Trilha Segurança e Operações (SOC)","Trilhas para times (conscientização em segurança)"],en:["academia","parceiros"],g:["proteger"]},
  finops:{n:"FinOps",s:"FinOps",a:30,route:"finops",d:"Governança financeira de nuvem para gastar menos e com previsibilidade.",
   cells:{assessment:"Diagnóstico de custos de cloud, desperdício e potencial de economia",consultoria:"Governança financeira, alocação de custos por área e metas de economia",implementacao:"Rightsizing, reservas, etiquetas de custo e automações de economia",sustentacao:"FinOps contínuo: relatórios mensais, alertas de orçamento e otimização recorrente"},
-  parceiros:["Omid Cloud"],academia:["Cloud e FinOps"],en:["academia","parceiros"],g:["economizar"]},
+  parceiros:["Omid Cloud"],academia:["Trilha Cloud e FinOps"],en:["academia","parceiros"],g:["economizar"]},
  ia:{n:"Transformação Digital e IA",s:"Transformação Digital e IA",a:90,route:"ia",d:"Agentes de IA, automação de documentos e processos e estratégia de IA com governança e LGPD.",
   cells:{assessment:"Maturidade digital e IA, processos manuais e oportunidades de automação",consultoria:"Estratégia e roadmap de IA, governança, segurança e LGPD em IA",implementacao:"Agentes e assistentes de IA, automação de documentos e processos, integrações",sustentacao:"Monitoramento de qualidade, custos e segurança dos agentes e melhoria contínua"},
-  parceiros:["Hyland (OnBase, Alfresco, Nuxeo)"],academia:["Capacitação em IA"],en:["academia","parceiros","inovacao"],g:["modernizar","crescer","economizar"]},
- saas:{n:"SaaS Nexalytix",s:"SaaS",a:150,route:"saas",d:"Produtos próprios prontos para usar: ERP, CRM, Financeiro, BG-Check, Transcribe e AgendaBella.",
+  parceiros:["Hyland (OnBase, Alfresco, Nuxeo)"],academia:["Trilha Dados, Automação e IA aplicada","Workshop de IA para times"],en:["academia","parceiros","inovacao"],g:["modernizar","crescer","economizar"]},
+ saas:{n:"SaaS Nexalytix",s:"SaaS",a:150,route:"saas",d:"Produtos próprios prontos para usar: ERP, CRM, Financeiro, Transcribe e a assistente de IA Alya.",
   cells:{assessment:"Mapeamento de planilhas, sistemas defasados e aderência dos produtos",consultoria:"Desenho de processos e escolha dos módulos",implementacao:"Implantação, migração de dados e integração com seus sistemas",sustentacao:"Suporte, atualizações e evolução contínua dos produtos"},
-  parceiros:["Produtos próprios Nexalytix"],academia:["Treinamento de usuários na implantação"],en:["academia","marketing"],g:["modernizar","crescer"]},
+  parceiros:["Integração com Hyland quando o processo pede gestão de documentos"],academia:["Treinamento de usuários na implantação"],en:["academia","marketing"],g:["modernizar","crescer"]},
  dev:{n:"Desenvolvimento e Squads",s:"Desenvolvimento",a:210,route:"dev",d:"Software sob medida e produtos digitais, do discovery ao MVP e à escala, com squads dedicados (Dev, QA, Product Owner e Scrum Master) e segurança desde o design.",
   cells:{assessment:"Discovery: problema, usuários e viabilidade técnica",consultoria:"CTO as a Service, arquitetura do produto e roadmap",implementacao:"MVP e evolução com DevSecOps e integrações",sustentacao:"Manutenção evolutiva e corretiva, monitoramento e suporte"},
   parceiros:["Freelancers e especialistas do programa de parceiros"],academia:["Trilhas de squad: Dev, QA, Product Owner, Scrum Master e PMO","Capacitação do seu time nos produtos entregues"],en:["academia","parceiros","inovacao","marketing"],g:["modernizar","crescer"]}
@@ -1451,7 +1472,7 @@ function openDrawer(k){
   drawer.innerHTML=`<button type="button" class="drawer-close" aria-label="Fechar">✕</button>
    <div class="chips"><span class="pill ${f.kind==='ena'?'warn':'blue'}">${f.layer}</span>${f.status?`<span class="pill">${f.status}</span>`:''}</div>
    <h2 id="dTitle">${f.n}</h2><p class="muted">${f.d}</p>${body}
-   <div class="btn-row" style="margin-top:auto"><a class="btn btn-primary" href="#${f.route}" ${f.filter?`data-filter="${f.filter}"`:''}>Ver página completa</a><a class="btn btn-ghost" href="#contato">Falar com especialista</a></div>`;
+   <div class="btn-row" style="margin-top:auto">${f.status==="Em estruturação"?"":`<a class="btn btn-primary" href="#${f.route}">Ver página completa</a>`}<a class="btn btn-ghost" href="#contato">Falar com especialista</a></div>`;
   drawer.hidden=false;scrim.hidden=false;$(".drawer-close",drawer).focus();
 }
 function closeDrawer(){if(drawer.hidden)return;drawer.hidden=true;scrim.hidden=true;$$(".node",eco).forEach(n=>n.classList.remove("sel"));$$("#ecoMatrix tbody tr").forEach(r=>r.classList.remove("sel"));if(lastFocus&&lastFocus.focus)lastFocus.focus();}
@@ -1465,30 +1486,30 @@ function renderDominio(k){const f=DOM[k];
  $("#dominio").innerHTML=`<div class="phero"><div class="wrap"><p class="crumb"><a href="#ecossistema">Ecossistema</a> / ${f.n}</p><span class="eyebrow">Domínio · passa por todo o ciclo</span><h1>${f.n}</h1><p class="lead">${f.d}</p><div class="btn-row"><a class="btn btn-primary" href="#contato" data-intent="diagnostico">Agendar diagnóstico</a><a class="btn btn-ghost" href="#ecossistema">Ver no ecossistema</a></div></div></div>
  <div class="section" style="padding-top:44px"><div class="wrap"><div class="section-head"><span class="eyebrow">Do diagnóstico à operação</span><h2>O que entregamos em cada etapa</h2></div>
  <div class="cycle">${STAGE_KEYS.map((s,i)=>`<div class="step"><span class="n">ETAPA ${i+1}</span><h3>${STAGES[s].n}</h3><p>${f.cells[s]}</p><a href="#${STAGES[s].route}">Ver etapa →</a></div>`).join("")}</div></div></div>
- <div class="section" style="padding-top:0"><div class="wrap two"><div class="card"><span class="eyebrow">Parceiros</span><ul class="clean check">${f.parceiros.map(p=>`<li>${p}</li>`).join("")}</ul><a class="more" href="#parceiros">Ver parceiros →</a></div><div class="card"><span class="eyebrow">Academia</span><ul class="clean check">${f.academia.map(p=>`<li>${p}</li>`).join("")}</ul><a class="more" href="#academia">Ver Academia →</a></div></div></div>
+ <div class="section" style="padding-top:0"><div class="wrap two"><div class="card"><span class="eyebrow">Parceiros</span><ul class="clean check">${f.parceiros.map(p=>`<li>${p}</li>`).join("")}</ul>${k==="dev"?`<a class="more" href="#parceiros">Ver programa de parceiros →</a>`:`<a class="more" href="#aliancas">Ver parceiros de tecnologia →</a>`}</div><div class="card"><span class="eyebrow">Academia</span><ul class="clean check">${f.academia.map(p=>`<li>${p}</li>`).join("")}</ul><a class="more" href="#academia">Ver Academia →</a></div></div></div>
  <div class="section" style="padding-top:0"><div class="wrap"><div class="next"><div style="display:grid;gap:4px"><span class="eyebrow">Por onde começar</span><b>O Assessment mostra os pontos fortes e as melhorias em ${f.n.toLowerCase()}, e o que priorizar.</b></div><a class="btn btn-primary" href="#assessment">Ver Assessment</a></div></div></div>`;}
 
 /* ---------- Services ---------- */
 const E={
- assessment:{n:"ETAPA 1",t:"Assessment e Diagnóstico",p:"Um retrato honesto do seu ambiente: o que já funciona bem e o que precisa melhorar, sob as lentes de negócio, tecnologia e cultura.",when:"Quando contratar: antes de investir, migrar, renovar contratos ou quando riscos, custos e retrabalho começam a travar o crescimento. É o ponto de partida do ecossistema: cada achado aponta a frente que resolve.",
+ assessment:{n:"ETAPA 1",t:"Assessment",p:"Um retrato honesto do seu ambiente: o que já funciona bem e o que precisa melhorar, sob as lentes de negócio, tecnologia e cultura.",when:"Quando contratar: antes de investir, migrar, renovar contratos ou quando riscos, custos e retrabalho começam a travar o crescimento. É o ponto de partida do ecossistema: cada achado aponta a frente que resolve.",
   dores:["Tecnologia não acompanha a estratégia do negócio","Ninguém sabe o nível real de segurança e riscos","Time sobrecarregado, processos manuais e retrabalho","Falta um plano priorizado para investir"],lenses:[["Negócio","n","Processos e fluxo de trabalho, custos de TI e de nuvem, alinhamento da tecnologia à estratégia, riscos e conformidade (LGPD)."],["Tecnologia","t","Infraestrutura, cloud, segurança, sistemas e integrações, dados e observabilidade, medidos contra DevOps, FinOps, SRE e CAF."],["Cultura","c","Pessoas e papéis, conhecimento do time, práticas de colaboração e entrega, governança e prontidão para adotar novas tecnologias e IA."]],
   svc:[["Assessment de 40 horas","Diagnóstico completo nas três lentes: negócio, tecnologia e cultura."],["Análise de maturidade","Avaliação contra DevOps, FinOps, SRE e Cloud Adoption Framework."],["Diagnóstico de maturidade digital e IA","Onde automação e IA geram retorno nos processos atuais."],["Segurança ofensiva","Pentest e análise de vulnerabilidades pela perspectiva do atacante."],["Diagnóstico de custos cloud","Onde está o desperdício e quanto dá para economizar."]],
   steps:[["Kickoff e objetivos","Metas do negócio, escopo e acessos de leitura ao ambiente."],["Entrevistas e coleta","Conversas com liderança e times e levantamento técnico do ambiente."],["Análise nas três lentes","Negócio, tecnologia e cultura avaliados contra frameworks de mercado."],["Devolutiva e roadmap","Pontos fortes, melhorias e plano priorizado, entregue em até 10 dias."]],
-  ent:["Mapa de pontos fortes e melhorias por lente","Riscos e oportunidades priorizados por impacto e esforço","Roadmap com quick wins e a frente do ecossistema indicada para cada achado"],cta:"Quero meu assessment",intent:"diagnostico",next:"consultoria",nextT:"Com o diagnóstico em mãos, a consultoria transforma prioridades em decisões."},
+  ent:["Mapa de pontos fortes e melhorias por lente","Riscos e oportunidades priorizados por impacto e esforço","Roadmap com ganhos rápidos e a frente do ecossistema indicada para cada achado","Oferta: se você contratar o serviço recomendado, 50% do valor do Assessment vira desconto no projeto"],cta:"Quero meu assessment",intent:"diagnostico",next:"consultoria",nextT:"Com o diagnóstico em mãos, a consultoria transforma prioridades em decisões."},
  consultoria:{n:"ETAPA 2",t:"Consultoria",p:"Decisões de arquitetura, cloud e custos tomadas com base em evidência.",when:"Quando contratar: para escalar a arquitetura, planejar uma migração, estruturar FinOps ou suprir liderança técnica.",
   dores:["Arquitetura que não acompanha o crescimento","Time sem liderança técnica sênior","Migração para cloud sem plano","IA generativa sem caso de uso claro"],
   svc:[["Arquitetura de Soluções","Sistemas resilientes e orientados a eventos."],["CTO as a Service","Liderança estratégica para escalar times e tecnologia."],["Estratégia de Cloud e FinOps","Governança financeira e modelo de adoção de nuvem."],["Inovação e Transformação Digital","IA generativa aplicada a problemas reais do negócio."]],
-  steps:[["Contexto e objetivos","Entendimento do negócio, restrições e metas."],["Opções com trade-offs","Alternativas comparadas em custo, risco e prazo."],["Decisão documentada","Escolhas registradas em ADRs, com responsáveis."],["Plano de execução","Roadmap pronto para a implementação."]],
+  steps:[["Contexto e objetivos","Entendimento do negócio, restrições e metas."],["Opções comparadas","Alternativas avaliadas em custo, risco e prazo."],["Decisão documentada","Escolhas registradas em ADRs, com responsáveis."],["Plano de execução","Roadmap pronto para a implementação."]],
   ent:["Arquitetura-alvo","ADRs documentados","Plano de migração ou roadmap"],cta:"Agendar conversa consultiva",intent:"servico",next:"implementacao",nextT:"Decisão tomada, a implementação coloca a arquitetura em produção."},
  implementacao:{n:"ETAPA 3",t:"Implementação",p:"Da arquitetura ao ambiente em produção, com automação e segurança desde o início.",when:"Quando contratar: migração para cloud, automação de deploys, integração de sistemas ou nova infraestrutura.",
   dores:["Deploys manuais e arriscados","Sistemas legados que não conversam","Infraestrutura frágil","Segurança tratada só no fim do projeto"],
   svc:[["Cloud Computing","Migração e modernização em AWS, Azure e GCP."],["DevOps e Automação","CI/CD e cultura de entrega contínua."],["Integração de Sistemas","Conexão robusta entre sistemas legados e modernos."],["Infraestrutura e Redes","Conectividade híbrida e infraestrutura crítica."],["DevSecOps","Segurança incorporada ao ciclo de desenvolvimento."],["Projetos de cibersegurança","Implantação de SIEM, gestão de identidades e acessos privilegiados e proteção de endpoints, com ManageEngine."]],
-  steps:[["Planejamento e baseline","Métricas iniciais de custo, latência e lead time."],["Sprints de execução","Entregas incrementais com o seu time junto."],["Testes e validação","Carga, segurança e recuperação testadas antes do go-live."],["Go-live assistido","Virada acompanhada e documentação entregue."]],
+  steps:[["Planejamento e linha de base","Métricas iniciais de custo, desempenho e prazo de entrega."],["Sprints de execução","Entregas incrementais com o seu time junto."],["Testes e validação","Carga, segurança e recuperação testadas antes do go-live."],["Go-live assistido","Virada acompanhada e documentação entregue."]],
   ent:["Ambiente em produção","Pipelines de CI/CD","Documentação e runbooks"],cta:"Solicitar proposta de projeto",intent:"servico",next:"sustentacao",nextT:"Ambiente no ar, a sustentação mantém tudo estável, seguro e dentro do orçamento."},
- sustentacao:{n:"ETAPA 4",t:"Sustentação e Manutenção (Managed Services)",p:"Sua infraestrutura, seus sistemas, seus custos e sua segurança operados e mantidos por especialistas, todos os dias.",when:"Quando contratar: quando o time interno não dá conta da operação ou quando custos e riscos precisam de acompanhamento contínuo.",
+ sustentacao:{n:"ETAPA 4",t:"Sustentação e Manutenção",p:"Sua infraestrutura, seus sistemas, seus custos e sua segurança operados e mantidos por especialistas, todos os dias.",when:"Quando contratar: quando o time interno não dá conta da operação ou quando custos e riscos precisam de acompanhamento contínuo.",
   dores:["Time interno sobrecarregado com operação","Muitos alertas e pouca resposta","Custos de nuvem voltam a subir depois da otimização","Backup que ninguém testou"],
   svc:[["Monitoramento e Observabilidade","Monitoramento proativo e telemetria de ponta a ponta."],["FinOps contínuo","Acompanhamento mensal de custos e otimização recorrente."],["Segurança defensiva e SIEM","Monitoramento de eventos de segurança, gestão contínua de vulnerabilidades e patches e resposta a incidentes, com ManageEngine Log360 e Endpoint Central."],["Identidades e acessos","Gestão de Active Directory, contas privilegiadas e senhas com ManageEngine AD360 e PAM360."],["Backup e continuidade","Proteção de dados com Acronis, com testes de recuperação."],["Suporte de TI","Service desk e atendimento aos usuários, com gestão de ativos, via ManageEngine ServiceDesk Plus."],["Manutenção preventiva e corretiva","Rotinas programadas, atualizações e correções de infraestrutura, redes e sistemas para evitar paradas."]],
-  steps:[["Onboarding e baseline","Inventário, acessos e métricas de partida."],["Monitoramento contínuo","Alertas tratados pelo nosso time."],["Relatórios mensais","Custo, disponibilidade, incidentes e ações."],["Revisão trimestral","Novas prioridades e um novo assessment do ambiente."]],
+  steps:[["Entrada na operação","Inventário, acessos e métricas de partida."],["Monitoramento contínuo","Alertas tratados pelo nosso time."],["Relatórios mensais","Custo, disponibilidade, incidentes e ações."],["Revisão trimestral","Novas prioridades e um novo assessment do ambiente."]],
   ent:["Dashboard de operação","Relatório mensal de custo e disponibilidade","Runbooks atualizados"],cta:"Solicitar proposta de sustentação",intent:"servico",next:"assessment",nextT:"A cada ciclo, a sustentação gera dados para um novo assessment, e a operação amadurece."}
 };
 $("#svcBlocks").innerHTML=Object.keys(E).map(k=>{const e=E[k];return `<div class="svc-block"><span class="n">${e.n}</span><h2 style="font-size:1.5rem">${e.t}</h2><p class="when">${e.when}</p><ul class="clean check">${e.svc.map(s=>`<li><b>${s[0]}</b> <span class="muted">· ${s[1]}</span></li>`).join("")}</ul><a class="btn btn-ghost" style="justify-self:start;margin-top:6px" href="#${k}">Ver etapa completa</a></div>`;}).join("");
@@ -1518,22 +1539,12 @@ const SAAS={
   para:["Pequenas e médias empresas","Empresas que separam mal o caixa da operação","Gestores que precisam de relatório financeiro confiável"],
   rec:[["Contas a pagar","Vencimentos, pagamentos e fornecedores organizados."],["Contas a receber","Cobranças, recebimentos e inadimplência sob controle."],["Fluxo de caixa","Realizado e previsto, por dia, semana e mês."],["Conciliação","Conferência dos lançamentos com o extrato bancário."],["Centros de custo","Para saber onde o dinheiro está sendo usado."],["Relatórios gerenciais","Visão do resultado para decidir com números."]],
   ben:["Fechamento do mês mais rápido","Previsão de caixa para evitar sustos","Integra com o ERP e o CRM do ecossistema"]},
- bgcheck:{n:"BG-Check",tag:"RH e contratação",d:"Verificação de candidatos para processos de contratação, com LGPD.",
-  lead:"Mais segurança na contratação: verificações de candidatos reunidas em um relatório, com consentimento e trilha de auditoria.",
-  para:["Áreas de RH e recrutamento","Empresas que contratam para funções de confiança","Prestadores de serviço que alocam profissionais em clientes"],
-  rec:[["Consultas reunidas","Verificações em fontes públicas e autorizadas em um só pedido."],["Consentimento do candidato","Fluxo de autorização em linha com a LGPD."],["Relatório organizado","Resultado claro para apoiar a decisão do RH."],["Trilha de auditoria","Quem pediu, quando e com qual finalidade."],["Gestão de pedidos","Acompanhamento de cada verificação em andamento."],["Controle de acesso","Somente pessoas autorizadas veem os resultados."]],
-  ben:["Contratação mais segura e mais rápida","Processo documentado e em conformidade com a LGPD","Menos trabalho manual para o RH"]},
  transcribe:{n:"Transcribe",tag:"Produtividade com IA",d:"Transcrição de áudios e vídeos com IA, com resumos prontos.",
   lead:"Reuniões, atendimentos e entrevistas viram texto pesquisável, com resumo e pontos de ação gerados por IA.",
   para:["Times que fazem muitas reuniões e atendimentos","Produtores de conteúdo, pesquisa e jornalismo","Áreas de RH, jurídico e qualidade que precisam de registro"],
   rec:[["Transcrição com IA","Áudio e vídeo convertidos em texto."],["Resumos automáticos","Principais pontos e próximos passos de cada gravação."],["Busca no conteúdo","Encontre o momento em que um assunto foi falado."],["Exportação","Texto pronto para documentos, atas e conteúdo."],["Organização","Gravações separadas por projeto, cliente ou tema."],["Privacidade","Acesso controlado e tratamento de dados conforme a LGPD."]],
   ben:["Horas de anotação economizadas","Nenhuma decisão perdida depois da reunião","Conteúdo reaproveitado em atas, posts e treinamentos"]},
- agendabella:{n:"AgendaBella",tag:"Agendamento online",d:"Agendamento online e gestão de horários para negócios de serviço.",
-  lead:"Seus clientes marcam horário sozinhos, a qualquer hora, e você acompanha a agenda de cada profissional em um só lugar.",
-  para:["Salões, barbearias, clínicas de estética e bem-estar","Consultórios e prestadores de serviço com hora marcada","Negócios que perdem tempo marcando horários por mensagem"],
-  rec:[["Agenda online","Clientes escolhem serviço, profissional e horário."],["Confirmações e lembretes","Menos faltas e esquecimentos."],["Profissionais e serviços","Agenda, duração e serviços de cada profissional."],["Histórico do cliente","Atendimentos anteriores e preferências."],["Gestão do dia","Visão da agenda por dia, semana e profissional."],["Relatórios","Atendimentos, ocupação e serviços mais procurados."]],
-  ben:["Agenda cheia sem depender do WhatsApp","Menos faltas com lembretes automáticos","Mais tempo para atender, menos para organizar"]},
- alya:{n:"Alya, assistente de IA",tag:"Atendimento com IA",d:"Assistente com IA para o seu site, treinada com o seu conteúdo e ligada ao CRM.",
+ alya:{n:"Alya, assistente de IA",art:"a",tag:"Atendimento com IA",d:"Assistente com IA para o seu site, treinada com o seu conteúdo e ligada ao CRM.",
   lead:"Atenda visitantes 24 horas, responda dúvidas com o conteúdo da sua empresa e transforme conversas em leads no CRM, sem descartar nenhuma oportunidade.",
   para:["Empresas que recebem muitas dúvidas pelo site","Times comerciais que querem leads qualificados","Negócios que precisam atender fora do horário comercial"],
   rec:[["Treinada com o seu conteúdo","Serviços, produtos, preços e regras da sua empresa."],["Atendimento 24 horas","Respostas imediatas no site, a qualquer hora."],["Leads no CRM","Nome, contato e resumo da conversa registrados automaticamente."],["Encaminhamento para pessoas","Pedidos fora do escopo vão para um colaborador, sem perder o contato."],["Regras do negócio","O que pode e o que não pode responder, como prometer prazos e preços."],["LGPD e segurança","Consentimento, chaves protegidas no servidor e dados sob controle."]],
@@ -1541,12 +1552,12 @@ const SAAS={
 };
 const SAAS_KEYS=Object.keys(SAAS);
 $("#saasGrid").innerHTML=SAAS_KEYS.map(k=>{const x=SAAS[k];return `<a class="card sol-card prod-card" href="#saas-${k}"><span class="pill blue" style="align-self:flex-start">${x.tag}</span><h3>${x.n}</h3><p class="muted small">${x.d}</p><span class="more">Conhecer →</span></a>`;}).join("")+`<a class="card sol-card prod-card" href="#aliancas"><span class="pill" style="align-self:flex-start">Parceiros oficiais</span><h3>Produtos de parceiros</h3><p class="muted small">Hyland, ManageEngine, Acronis e Omid Cloud, implantados e operados pelo time Nexalytix.</p><span class="more">Ver parceiros →</span></a>`;
-function renderProduto(k){const x=SAAS[k];const msg=`Quero uma demonstração do ${x.n.split(",")[0]}.`;
+function renderProduto(k){const x=SAAS[k];const msg=`Quero uma demonstração ${x.art==="a"?"da":"do"} ${x.n.split(",")[0]}.`;
  $("#produto").innerHTML=`<div class="phero"><div class="wrap"><p class="crumb"><a href="#saas">SaaS</a> / ${x.n}</p><span class="eyebrow">${x.tag}</span><h1>${x.n}</h1><p class="lead">${x.lead}</p><div class="btn-row"><a class="btn btn-primary" href="#contato" data-intent="demo" data-msg="${msg}">Agendar demonstração</a>${k==="alya"?`<button class="btn btn-ghost" type="button" data-nexa>Conversar com a Alya</button>`:`<a class="btn btn-ghost" href="#saas">Ver outros produtos</a>`}</div></div></div>
- <div class="section" style="padding-top:44px"><div class="wrap"><div class="section-head"><span class="eyebrow">Recursos</span><h2>O que o ${x.n.split(",")[0]} faz</h2></div><div class="grid g3">${x.rec.map(r=>`<div class="card"><h3>${r[0]}</h3><p class="muted small">${r[1]}</p></div>`).join("")}</div></div></div>
+ <div class="section" style="padding-top:44px"><div class="wrap"><div class="section-head"><span class="eyebrow">Recursos</span><h2>O que ${x.art||"o"} ${x.n.split(",")[0]} faz</h2></div><div class="grid g3">${x.rec.map(r=>`<div class="card"><h3>${r[0]}</h3><p class="muted small">${r[1]}</p></div>`).join("")}</div></div></div>
  <div class="section" style="padding-top:0"><div class="wrap two"><div class="card"><span class="eyebrow">Para quem é</span><ul class="clean check">${x.para.map(i=>`<li>${i}</li>`).join("")}</ul></div><div class="card"><span class="eyebrow">Resultados esperados</span><ul class="clean check">${x.ben.map(i=>`<li>${i}</li>`).join("")}</ul></div></div></div>
  <div class="section" style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">Como começar</span><h2>Implantação feita com você</h2></div><div class="cycle"><div class="step"><span class="n">PASSO 1</span><h3>Demonstração</h3><p>Seu caso real, sem apresentação genérica.</p></div><div class="step"><span class="n">PASSO 2</span><h3>Configuração</h3><p>Cadastros, permissões e importação de dados.</p></div><div class="step"><span class="n">PASSO 3</span><h3>Treinamento</h3><p>Quem vai usar aprende com a Academia Nexalytix.</p></div><div class="step"><span class="n">PASSO 4</span><h3>Suporte contínuo</h3><p>Atendimento, atualizações e evolução.</p></div></div></div></div>
- <div class="section" style="padding-top:0"><div class="wrap"><div class="next"><div style="display:grid;gap:4px"><span class="eyebrow">Investimento sob consulta</span><b>${x.demo||"Veja o "+x.n.split(",")[0]+" funcionando com o seu caso."}</b></div><a class="btn btn-primary" href="#contato" data-intent="demo" data-msg="${msg}">Agendar demonstração</a></div></div></div>`;}
+ <div class="section" style="padding-top:0"><div class="wrap"><div class="next"><div style="display:grid;gap:4px"><span class="eyebrow">Investimento sob consulta</span><b>${x.demo||"Veja "+(x.art||"o")+" "+x.n.split(",")[0]+" funcionando com o seu caso."}</b></div><a class="btn btn-primary" href="#contato" data-intent="demo" data-msg="${msg}">Agendar demonstração</a></div></div></div>`;}
 
 /* ---------- Partners ---------- */
 const PARTNERS=[
@@ -1621,7 +1632,7 @@ $("#partnerBlocks").innerHTML=PARTNERS.map(x=>`<section class="partner" id="pt-$
   </div>
 </div></section>`).join("");
 const MXCOLS=[...Object.keys(DOM).map(d=>[d,DOM[d].s]),["suporte","Suporte e Manutenção"]];
-const NEXA_ROW={n:"Nexalytix",self:1,dom:{cloud:[2,"Assessment, migração, redes e NOC"],seguranca:[2,"Assessment, GRC, SIEM operado e resposta a incidentes"],finops:[2,"Diagnóstico de custos e FinOps contínuo"],ia:[2,"Estratégia, agentes de IA e assistente Alya"],saas:[2,"ERP, CRM, Financeiro, BG-Check, Transcribe, AgendaBella"],dev:[2,"CTO as a Service, MVP e evolução"],suporte:[2,"Service desk, manutenção preventiva e corretiva"]}};
+const NEXA_ROW={n:"Nexalytix",self:1,dom:{cloud:[2,"Assessment, migração, redes e NOC"],seguranca:[2,"Assessment, GRC, SIEM operado e resposta a incidentes"],finops:[2,"Diagnóstico de custos e FinOps contínuo"],ia:[2,"Estratégia, agentes de IA e assistente Alya"],saas:[2,"ERP, CRM, Financeiro, Transcribe e Alya"],dev:[2,"CTO as a Service, MVP e evolução"],suporte:[2,"Service desk, manutenção preventiva e corretiva"]}};
 const mxCell=c=>c?`<span class="mx-dot${c[0]===1?' half':''}" title="${c[0]===2?'Atuação principal':'Atuação complementar'}"></span><span class="mx-txt">${c[1]}</span>`:'<span class="muted">–</span>';
 $("#partnerMatrix").innerHTML=`<table><thead><tr><th scope="col">Quem</th>${MXCOLS.map(([k,t])=>`<th scope="col">${t}</th>`).join("")}</tr></thead><tbody>${[NEXA_ROW,...PARTNERS].map(x=>`<tr${x.self?' class="mx-self"':''}><th scope="row">${x.self?'<img src="assets/logo-nexalytix-systems.png" alt="" class="mx-logo">':''}${x.n}</th>${MXCOLS.map(([k])=>`<td>${mxCell(x.dom[k])}</td>`).join("")}</tr>`).join("")}</tbody></table><p class="small muted" style="padding:12px 16px;margin:0"><span class="mx-dot"></span> atuação principal &nbsp; <span class="mx-dot half"></span> atuação complementar</p>`;
 document.addEventListener("click",e=>{const b=e.target.closest(".brand-play");if(!b)return;const f=b.closest(".brand-video"),v=f.querySelector("video");f.classList.add("playing");v.controls=true;v.currentTime=0;v.play().catch(()=>{});});
@@ -1661,6 +1672,24 @@ $("#copyMail").addEventListener("click",function(){const b=this,t=$("#mail").tex
   function sel(){const r=document.createRange();r.selectNodeContents($("#mail"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selecionado";}
 });
 
+/* ---------- Radar da semana (dist/radar.json, atualizado pelo GitHub Actions) ---------- */
+const RD={dados:null,filtro:""};
+const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const urlOk=u=>/^https?:\/\//.test(u)?u:"#";
+function rdCard(i,cats){const cc=cats.find(c=>c.id===i.categoria)||{};const cat=cc.curto||cc.nome||i.categoria;const d=new Date(i.data);const dt=isNaN(d)?"":d.toLocaleDateString("pt-BR",{day:"2-digit",month:"short"}).replace(".","");
+ return `<article class="rd-card"><div class="rd-meta"><span class="pill blue">${esc(cat)}</span><span>${esc(i.fonte)} · ${esc(dt)}</span></div><h3>${esc(i.titulo)}</h3><p>${esc(i.resumo)}</p><p class="rd-pq"><b>Por que importa</b>${esc(i.por_que_importa)}</p><div class="rd-links"><a href="${esc(urlOk(i.url))}" target="_blank" rel="noopener nofollow">Ler na fonte ↗</a><a href="#${esc(i.frente)}">${esc(i.frente_nome)} →</a></div></article>`;}
+function rdRender(){const d=RD.dados;if(!d||!d.itens||!d.itens.length){$("#rdVazio").hidden=false;$("#rdPeriodo").textContent="Atualizado toda segunda-feira.";return;}
+ const cats=d.categorias||[];const at=new Date(d.atualizado_em);
+ $("#rdPeriodo").textContent=`Semana de ${d.periodo||""} · atualizado em ${isNaN(at)?"":at.toLocaleDateString("pt-BR")}`;
+ if(d.resumo_semana){$("#rdResumo").textContent=d.resumo_semana;$("#rdResumo").hidden=false;}
+ const usadas=cats.filter(c=>d.itens.some(i=>i.categoria===c.id));
+ $("#rdFiltros").innerHTML=[`<button type="button" data-rf="" aria-pressed="${!RD.filtro}">Todos</button>`,...usadas.map(c=>`<button type="button" data-rf="${esc(c.id)}" aria-pressed="${RD.filtro===c.id}">${esc(c.nome)}</button>`)].join("");
+ $("#rdGrid").innerHTML=d.itens.filter(i=>!RD.filtro||i.categoria===RD.filtro).map(i=>rdCard(i,cats)).join("");
+ const dest=d.itens.filter(i=>i.destaque).slice(0,3);
+ if(dest.length){$("#rdHomeGrid").innerHTML=dest.map(i=>rdCard(i,cats)).join("");$("#rdHome").hidden=false;}}
+$("#rdFiltros").addEventListener("click",e=>{const b=e.target.closest("[data-rf]");if(!b)return;RD.filtro=b.dataset.rf;rdRender();});
+fetch("radar.json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).then(d=>{RD.dados=d;rdRender();}).catch(()=>rdRender());
+
 /* ---------- Router ---------- */
 let pendingMsg=null,pendingIntent=null,pendingFilter=null,pendingScroll=null,pendingPtype=null;
 document.addEventListener("click",e=>{const a=e.target.closest("a[href^='#']");if(!a)return;
@@ -1677,6 +1706,7 @@ function route(){
   let h=location.hash.slice(1)||"home";
   if(h==="solucoes")h="saas";
   const prod=h.startsWith("saas-")&&SAAS[h.slice(5)]?h.slice(5):null;
+  if(!prod&&h.startsWith("saas-"))h="saas";
   if(!prod&&!PAGES.includes(h)&&!E[h])h="home";
   const DOMPAGE=["cloud","seguranca","finops","dev"];
   const pageId=prod?"produto":E[h]?"etapa":DOMPAGE.includes(h)?"dominio":h;

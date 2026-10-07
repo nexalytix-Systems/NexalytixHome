@@ -1,0 +1,34 @@
+# Atualiza o Radar da semana sozinho, toda segunda-feira às 6h (Brasília).
+# Configuração única: em GitHub → Settings → Secrets and variables → Actions, crie o secret ANTHROPIC_API_KEY.
+name: Radar semanal
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # segunda-feira, 09:00 UTC = 06:00 em Brasília
+  workflow_dispatch: {}    # permite rodar na hora pelo botão "Run workflow"
+permissions:
+  contents: write
+concurrency:
+  group: radar
+  cancel-in-progress: false
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Gerar radar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node radar/atualizar.mjs
+      - name: Publicar
+        run: |
+          git config user.name "Radar Nexalytix"
+          git config user.email "radar@nexalytix.com.br"
+          git add dist/radar.json
+          git diff --cached --quiet && { echo "Sem mudanças"; exit 0; }
+          git commit -m "Radar da semana: $(date -u +%Y-%m-%d)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

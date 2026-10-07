@@ -111,3 +111,21 @@ Edite `empresa.json` (razão social, CNPJ, endereço, telefone, WhatsApp, e-mail
 
 - **GitHub Pages** (nexalytix-systems.github.io/NexalytixHome) serve só arquivos estáticos: o site e a Alya aparecem, mas a IA e o envio de leads não funcionam, porque as funções `/api/chat` e `/api/lead` não rodam lá. Nesse caso a Alya mostra o formulário curto e avisa que não conseguiu enviar. Use só como prévia.
 - **Cloudflare Pages** (nexalytix.com.br) roda as funções da pasta `functions/`: IA e leads funcionam.
+
+## Teste de qualidade (QA)
+
+```bash
+python3 build.py
+node qa/qa.mjs   # precisa do Playwright (npm i playwright) e de um Chromium; use CHROME=/caminho/do/chrome se necessário
+```
+
+Abre todas as páginas (descobertas pelos links) no computador (1360px) e no celular (390px) e verifica: erros de JavaScript, arquivos que não carregam, imagens quebradas, página mais larga que a tela, páginas sem título, links para páginas inexistentes, textos proibidos (BG-Check, AgendaBella, "50 anos", marcadores {{ }}), menu do celular, chat da Alya e os 4 formulários (aviso com campos vazios e envio com campos preenchidos, com o CRM simulado). Gera `qa/out/relatorio.md` e uma captura de cada página em `qa/out/`.
+
+## Radar da semana (automático)
+
+- `radar/fontes.json`: lista de feeds RSS por categoria (tecnologia, negócios e setor financeiro, ativos digitais, segurança, educação). Pode incluir ou remover fontes.
+- `radar/atualizar.mjs`: coleta as notícias dos últimos 7 dias, pede à IA (Anthropic) a seleção de 12 a 18 itens com resumo e "por que importa", valida (só notícias reais da lista, com link da fonte) e grava `dist/radar.json`. Se algo falhar, o radar anterior continua no ar.
+- `.github/workflows/radar.yml`: roda toda segunda-feira às 6h (Brasília) e publica o `dist/radar.json` no repositório; o Cloudflare Pages atualiza o site sozinho.
+- Configuração única no GitHub: secret `ANTHROPIC_API_KEY` e Settings → Actions → General → Workflow permissions = "Read and write permissions".
+- Para atualizar todo dia, troque o cron para `"0 9 * * *"`.
+- Como o robô publica no repositório, antes de enviar mudanças locais rode `git pull --rebase`.

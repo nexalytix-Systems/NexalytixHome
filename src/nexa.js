@@ -182,3 +182,5 @@ $("#ownerLeads")?.addEventListener("click",async()=>{
   }catch(e){$("#leadList").innerHTML='<p class="err">Não foi possível carregar os leads.</p>';}
 });
 })();
+/* Botão da Alya fica compacto ao rolar a página, para não cobrir o conteúdo */
+addEventListener("scroll",()=>{launcher.classList.toggle("compact",scrollY>240);},{passive:true});

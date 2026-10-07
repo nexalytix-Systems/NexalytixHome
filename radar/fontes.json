@@ -1,0 +1,107 @@
+{
+  "_comentario": "Fontes do Radar semanal. Pode incluir ou remover feeds RSS. Fontes fora do ar são ignoradas automaticamente.",
+  "categorias": [
+    {
+      "id": "tecnologia",
+      "nome": "Tecnologia",
+      "curto": "Tecnologia"
+    },
+    {
+      "id": "negocios",
+      "nome": "Negócios e setor financeiro",
+      "curto": "Negócios"
+    },
+    {
+      "id": "ativos",
+      "nome": "Ativos digitais",
+      "curto": "Ativos digitais"
+    },
+    {
+      "id": "seguranca",
+      "nome": "Segurança",
+      "curto": "Segurança"
+    },
+    {
+      "id": "educacao",
+      "nome": "Educação",
+      "curto": "Educação"
+    }
+  ],
+  "fontes": [
+    {
+      "nome": "Tecnoblog",
+      "url": "https://tecnoblog.net/feed/",
+      "categoria": "tecnologia"
+    },
+    {
+      "nome": "IT Forum",
+      "url": "https://itforum.com.br/feed/",
+      "categoria": "tecnologia"
+    },
+    {
+      "nome": "Olhar Digital",
+      "url": "https://olhardigital.com.br/feed/",
+      "categoria": "tecnologia"
+    },
+    {
+      "nome": "Exame",
+      "url": "https://exame.com/feed/",
+      "categoria": "negocios"
+    },
+    {
+      "nome": "InfoMoney",
+      "url": "https://www.infomoney.com.br/feed/",
+      "categoria": "negocios"
+    },
+    {
+      "nome": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/feed/",
+      "categoria": "negocios"
+    },
+    {
+      "nome": "Agência Brasil (Economia)",
+      "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
+      "categoria": "negocios"
+    },
+    {
+      "nome": "Livecoins",
+      "url": "https://livecoins.com.br/feed/",
+      "categoria": "ativos"
+    },
+    {
+      "nome": "CriptoFácil",
+      "url": "https://www.criptofacil.com/feed/",
+      "categoria": "ativos"
+    },
+    {
+      "nome": "CISO Advisor",
+      "url": "https://www.cisoadvisor.com.br/feed/",
+      "categoria": "seguranca"
+    },
+    {
+      "nome": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "categoria": "seguranca"
+    },
+    {
+      "nome": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "categoria": "seguranca"
+    },
+    {
+      "nome": "Porvir",
+      "url": "https://porvir.org/feed/",
+      "categoria": "educacao"
+    },
+    {
+      "nome": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/rss/educacao/feed.xml",
+      "categoria": "educacao"
+    },
+    {
+      "nome": "EdSurge",
+      "url": "https://www.edsurge.com/articles_rss",
+      "categoria": "educacao"
+    }
+  ]
+}

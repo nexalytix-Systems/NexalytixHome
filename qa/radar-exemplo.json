@@ -1,0 +1,202 @@
+{
+  "atualizado_em": "2026-10-07T17:22:36.616Z",
+  "periodo": "30 de set a 07 de out de 2026",
+  "resumo_semana": "Semana marcada por IA e segurança.",
+  "categorias": [
+    {
+      "id": "tecnologia",
+      "nome": "Tecnologia",
+      "curto": "Tecnologia"
+    },
+    {
+      "id": "negocios",
+      "nome": "Negócios e setor financeiro",
+      "curto": "Negócios"
+    },
+    {
+      "id": "ativos",
+      "nome": "Ativos digitais",
+      "curto": "Ativos digitais"
+    },
+    {
+      "id": "seguranca",
+      "nome": "Segurança",
+      "curto": "Segurança"
+    },
+    {
+      "id": "educacao",
+      "nome": "Educação",
+      "curto": "Educação"
+    }
+  ],
+  "itens": [
+    {
+      "categoria": "tecnologia",
+      "titulo": "Título reescrito número 1 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": true,
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Título reescrito número 2 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": true,
+      "fonte": "IT Forum",
+      "url": "https://itforum.com.br/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Título reescrito número 3 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": true,
+      "fonte": "Exame",
+      "url": "https://exame.com/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Título reescrito número 4 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "InfoMoney",
+      "url": "https://www.infomoney.com.br/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Título reescrito número 5 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Título reescrito número 6 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Agência Brasil (Economia)",
+      "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xmlnoticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Título reescrito número 7 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Título reescrito número 8 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "CriptoFácil",
+      "url": "https://www.criptofacil.com/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Título reescrito número 9 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "CISO Advisor",
+      "url": "https://www.cisoadvisor.com.br/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Título reescrito número 10 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNewsnoticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Título reescrito número 11 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Título reescrito número 12 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Porvir",
+      "url": "https://porvir.org/feed/noticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Título reescrito número 13 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/rss/educacao/feed.xmlnoticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Título reescrito número 14 sobre o tema",
+      "resumo": "Resumo em duas frases com palavras próprias. Segunda frase explicando o contexto.",
+      "por_que_importa": "Empresas devem revisar processos e falar com o time de segurança.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "EdSurge",
+      "url": "https://www.edsurge.com/articles_rssnoticia-0",
+      "data": "2026-10-07T17:22:36.000Z"
+    }
+  ]
+}
