@@ -58,6 +58,7 @@ Ou conecte o repositório do GitHub ao projeto Pages (diretório de saída: `dis
 | `CRM_LEADS_URL` | Opção B | `https://nexalytixcrm.lovable.app/api/public/leads` |
 | `CRM_API_KEY` | Opção B | Chave secreta do endpoint de leads do Vetra CRM |
 | `CRM_AUTH_HEADER` | Não | Nome do header da chave no CRM. Padrão `x-api-key`; use `authorization` para `Bearer` |
+| `CRM_COMPANY_ID_ACADEMIA` | Não | UUID da empresa "Contraturno Escolar" no Vetra. A lista de espera da Academia vai para ela; sem a variável, vai para a Nexalytix |
 | `CRM_COMPANY_ID` | Não | UUID da empresa no Vetra CRM. Padrão: o da Nexalytix (`d706a0c1-648b-4dc8-b96c-4ca02ff8c77f`) |
 | `ALLOWED_ORIGINS` | Não | Outros domínios autorizados, separados por vírgula (ex.: `https://www.nexalytix.com.br`) |
 

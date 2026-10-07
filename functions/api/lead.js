@@ -21,9 +21,8 @@ export async function onRequestPost({ request, env }) {
   if (problem) return json({ ok: false, error: problem }, 400);
 
   try {
-    const out = await forwardLead(env, lead);
-    const homologOk = new URL(request.url).hostname.endsWith(".pages.dev");
-    return json({ ok: true, crm_id: homologOk ? out.id : undefined, stage: homologOk ? out.stage : undefined });
+    await forwardLead(env, lead);
+    return json({ ok: true });
   } catch (e) {
     console.error("lead_forward_failed", e.code || "", e.message);
     // Na homologação (*.pages.dev) devolve o detalhe do CRM para facilitar o diagnóstico

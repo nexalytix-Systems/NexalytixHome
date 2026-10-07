@@ -142,20 +142,30 @@ function portePadrao(p) {
   return s.slice(0, 60);
 }
 
+// "Detalhe da origem" no Vetra. Todo canal começa com "Site Nexalytix" para separar dos leads
+// que chegam por outros sites (ex.: página do projeto Contraturno Escolar) na mesma estrutura do CRM.
+const SITE = "Site Nexalytix";
 const CANAIS = {
-  "formulario-contato": "Formulário de contato",
-  "formulario-academia": "Lista de espera da Academia",
-  "formulario-parceiros": "Programa de parceiros",
-  "formulario-newsletter": "Newsletter",
-  formulario: "Formulário do site",
-  chatbot: "Alya (chat do site)",
-  "chat-formulario": "Alya (formulário do chat)",
+  "formulario-contato": `${SITE} · Formulário de contato`,
+  "formulario-academia": `${SITE} · Lista de espera da Academia (turma piloto)`,
+  "formulario-parceiros": `${SITE} · Programa de parceiros`,
+  "formulario-newsletter": `${SITE} · Newsletter`,
+  formulario: `${SITE} · Formulário`,
+  chatbot: `${SITE} · Alya (chat)`,
+  "chat-formulario": `${SITE} · Alya (formulário do chat)`,
 };
 
+// Empresa do CRM que recebe o lead: a lista de espera da Academia vai para a empresa
+// "Contraturno Escolar" (CRM_COMPANY_ID_ACADEMIA); o resto vai para a Nexalytix.
+function empresaCRM(lead, env) {
+  if (lead.origem === "formulario-academia" && env.CRM_COMPANY_ID_ACADEMIA) return env.CRM_COMPANY_ID_ACADEMIA;
+  return env.CRM_COMPANY_ID || VETRA_COMPANY_ID;
+}
+
 export function toVetra(lead, env = {}) {
-  const canal = (CANAIS[lead.origem] || lead.origem || "Site").slice(0, 120);
+  const canal = (CANAIS[lead.origem] || `${SITE} · ${lead.origem || "Site"}`).slice(0, 120);
   const v = {
-    company_id: env.CRM_COMPANY_ID || VETRA_COMPANY_ID,
+    company_id: empresaCRM(lead, env),
     nome: lead.nome.slice(0, 100),
     email: lead.email || undefined,
     whatsapp: lead.whatsapp || undefined,
