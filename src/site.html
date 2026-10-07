@@ -662,7 +662,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <div class="legend">
         <div><b><i style="background:var(--primary)"></i>Ciclo · como entregamos</b><span>Assessment, Consultoria, Implementação e Sustentação e Manutenção. O ciclo gira: a operação alimenta o próximo assessment.</span></div>
         <div><b><i style="background:var(--surface);border:1.5px solid var(--primary)"></i>Domínios · o que entregamos</b><span>Cloud e Infraestrutura, Segurança, FinOps, IA, SaaS, Negócios e Produtos e PMO. Todo domínio passa por todo o ciclo.</span></div>
-        <div><b><i style="background:var(--accent-soft);border:1.5px solid var(--accent)"></i>Habilitadores · o que amplia</b><span>Academia, Parceiros e Marketing Digital apoiam os domínios.</span></div>
+        <div><b><i style="background:var(--accent-soft);border:1.5px solid var(--accent)"></i>Habilitadores · o que amplia</b><span>Academia e Parceiros apoiam os domínios.</span></div>
         <p class="hint">Passe o mouse em um domínio para ver o ciclo e os habilitadores que ele usa. Clique para ver o que entregamos em cada etapa.</p>
       </div>
     </div>
@@ -679,7 +679,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div class="grid g3">
       <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Varejo com a conta de nuvem fora de controle</h3><ol><li>Assessment</li><li class="arrow">→</li><li>Consultoria FinOps</li><li class="arrow">→</li><li>Implementação</li><li class="arrow">→</li><li>FinOps contínuo</li></ol><p class="small muted">O diagnóstico mostra onde está o desperdício, a consultoria define a governança e a sustentação impede que o custo volte a subir.</p></div>
       <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Empresa sem backup confiável</h3><ol><li>Assessment</li><li class="arrow">→</li><li>Acronis</li><li class="arrow">→</li><li>Implementação</li><li class="arrow">→</li><li>Sustentação e Manutenção</li><li class="arrow">→</li><li>Academia</li></ol><p class="small muted">Produto de parceiro implementado e operado pelo nosso time, com o time do cliente capacitado para o dia a dia.</p></div>
-      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Startup lançando um produto digital</h3><ol><li>CTO as a Service</li><li class="arrow">→</li><li>Desenvolvimento</li><li class="arrow">→</li><li>Cloud</li><li class="arrow">→</li><li>Marketing Digital</li></ol><p class="small muted">Liderança técnica, produto construído com segurança desde o design, infraestrutura que escala e aquisição dos primeiros clientes.</p></div>
+      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Startup lançando um produto digital</h3><ol><li>CTO as a Service</li><li class="arrow">→</li><li>Desenvolvimento</li><li class="arrow">→</li><li>Cloud</li><li class="arrow">→</li><li>FinOps</li></ol><p class="small muted">Liderança técnica, produto construído com segurança desde o design, infraestrutura que escala e custo de nuvem sob controle desde o primeiro cliente.</p></div>
     </div>
   </div></div>
 
@@ -1017,6 +1017,10 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <form class="f" data-form="academia" novalidate>
         <div class="field"><label for="a-nome">Nome</label><input id="a-nome" name="nome" required autocomplete="name"></div>
         <div class="field"><label for="a-email">E-mail</label><input id="a-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="frow">
+          <div class="field"><label for="a-whats">Celular/WhatsApp (opcional)</label><input id="a-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" data-mask="fone"></div>
+          <div class="field"><label for="a-insta">Instagram (opcional)</label><input id="a-insta" name="instagram" placeholder="@seuperfil" data-mask="instagram"></div>
+        </div>
         <div class="frow">
           <div class="field"><label for="a-trilha">Interesse</label><select id="a-trilha" name="trilha"><option>Programa completo</option><option>Fase 01: Fundamentos</option><option>Suporte, Infraestrutura e Redes</option><option>Cloud e FinOps</option><option>Segurança e Operações (SOC)</option><option>Dados, Automação e IA aplicada</option><option>Liderança em IA e Transformação Digital</option><option>Desenvolvimento de Software (Dev)</option><option>Qualidade de Software (QA)</option><option>Produto (Product Owner)</option><option>Agilidade (Scrum Master)</option><option>Gestão de Projetos e PMO</option></select></div>
           <div class="field"><label for="a-perfil">Perfil</label><select id="a-perfil" name="perfil"><option>Iniciante na área</option><option>Profissional da área</option><option>Empresa (capacitar o time)</option><option>Empresa ou parceiro (bolsas ou talentos)</option></select></div>
@@ -1370,18 +1374,17 @@ const DOM={
   parceiros:["Hyland (OnBase, Alfresco, Nuxeo)"],academia:["Trilha Dados, Automação e IA aplicada","Workshop de IA para times"],en:["academia","parceiros"],g:["modernizar","crescer","economizar"]},
  saas:{n:"SaaS Nexalytix",s:"SaaS",a:167,route:"saas",d:"Produtos próprios prontos para usar: ERP, CRM, Financeiro, Transcribe e a assistente de IA Alya.",
   cells:{assessment:"Mapeamento de planilhas, sistemas defasados e aderência dos produtos",consultoria:"Desenho de processos e escolha dos módulos",implementacao:"Implantação, migração de dados e integração com seus sistemas",sustentacao:"Suporte, atualizações e evolução contínua dos produtos"},
-  parceiros:["Integração com Hyland quando o processo pede gestão de documentos"],academia:["Treinamento de usuários na implantação"],en:["academia","marketing"],g:["modernizar","crescer"]},
+  parceiros:["Integração com Hyland quando o processo pede gestão de documentos"],academia:["Treinamento de usuários na implantação"],en:["academia"],g:["modernizar","crescer"]},
  pmo:{n:"Gestão de Projetos e PMO",s:"PMO",a:116,route:"pmo",d:"Projetos entregues no prazo e no orçamento: estruturação de PMO, gestão de portfólio, agilidade e governança, para projetos ágeis e tradicionais.",
   cells:{assessment:"Maturidade em gestão de projetos e avaliação do portfólio",consultoria:"Estruturação de PMO, governança de portfólio e transformação ágil",implementacao:"Gestão de projetos, ferramentas e Scrum Masters",sustentacao:"PMO as a Service e relatórios executivos"},
   parceiros:["Freelancers e especialistas do programa de parceiros"],academia:["Trilha Gestão de Projetos e PMO","Trilha Agilidade (Scrum Master)"],en:["academia","parceiros"],g:["crescer","modernizar"]},
  dev:{n:"Desenvolvimento de Negócios e Produtos",s:"Negócios e Produtos",a:219,route:"dev",d:"Da ideia ao produto no mercado: desenvolvimento de negócios, descoberta de produto, MVP e evolução com squads dedicados (Dev, QA, Product Owner e Scrum Master).",
   cells:{assessment:"Discovery de negócio e produto: a dor, os clientes e a viabilidade",consultoria:"Desenvolvimento de negócios, roadmap de produto, arquitetura e CTO as a Service",implementacao:"Protótipo, MVP e evolução com squads dedicados e DevSecOps",sustentacao:"Manutenção evolutiva e corretiva, monitoramento e gestão de produto"},
-  parceiros:["Freelancers e especialistas do programa de parceiros"],academia:["Trilhas de squad: Dev, QA, Product Owner, Scrum Master e PMO","Capacitação do seu time nos produtos entregues"],en:["academia","parceiros","marketing"],g:["modernizar","crescer"]}
+  parceiros:["Freelancers e especialistas do programa de parceiros"],academia:["Trilhas de squad: Dev, QA, Product Owner, Scrum Master e PMO","Capacitação do seu time nos produtos entregues"],en:["academia","parceiros"],g:["modernizar","crescer"]}
 };
 const ENA={
- academia:{n:"Academia",s:"Academia",a:347,route:"academia",status:"Turma piloto",d:"Capacita o time do cliente em cada domínio e fecha os gaps de cultura apontados no assessment."},
- parceiros:{n:"Parceiros",s:"Parceiros",a:90,route:"aliancas",d:"Hyland, ManageEngine, Acronis e Omid Cloud, além de indicadores, freelancers e revendas que ampliam o alcance."},
- marketing:{n:"Marketing Digital",s:"Marketing Digital",a:243,route:"servicos",status:"Em estruturação",d:"Aquisição de clientes para os produtos e para empresas de tecnologia e B2B."}
+ academia:{n:"Academia",s:"Academia",a:270,route:"academia",status:"Turma piloto",d:"Capacita o time do cliente em cada domínio e fecha os gaps de cultura apontados no assessment."},
+ parceiros:{n:"Parceiros",s:"Parceiros",a:90,route:"aliancas",d:"Hyland, ManageEngine, Acronis e Omid Cloud, além de indicadores, freelancers e revendas que ampliam o alcance."}
 };
 const ALL={};
 Object.entries(STAGES).forEach(([k,v])=>ALL[k]={...v,kind:"stage",ring:1});

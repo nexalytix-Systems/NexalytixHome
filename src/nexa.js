@@ -45,7 +45,7 @@ function leadFromForm(f){
   const d=Object.fromEntries(new FormData(f).entries()),t=f.dataset.form;
   const base={nome:d.nome||"",email:d.email||"",whatsapp:d.whatsapp||"",empresa:d.empresa||"",website:d.website||"",consentimento_lgpd:!!f.querySelector("input[type=checkbox][required]:checked"),origem:"formulario-"+t};
   if(t==="contato")return {...base,assunto:d.intent,porte:d.porte,cargo:d.cargo||"",instagram:d.instagram||"",linkedin:d.linkedin||"",mensagem:d.msg||""};
-  if(t==="academia")return {...base,assunto:"treinamento",interesse:`Academia: ${d.trilha}`,mensagem:`Lista de espera · Trilha: ${d.trilha} · Perfil: ${d.perfil}`};
+  if(t==="academia")return {...base,assunto:"treinamento",interesse:`Academia: ${d.trilha}`,instagram:d.instagram||"",mensagem:`Lista de espera · Trilha: ${d.trilha} · Perfil: ${d.perfil}`};
   if(t==="parceiros")return {...base,assunto:"parceria",mensagem:`Modelo: ${d.tipo}${d.link?" · Portfólio: "+d.link:""}`};
   return {...base,nome:"Assinante da newsletter",assunto:"outro",mensagem:"Inscrição na newsletter"};
 }
