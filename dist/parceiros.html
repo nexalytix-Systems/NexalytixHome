@@ -579,6 +579,60 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <main id="main">
 
 <!-- HOME -->
+<section class="page" data-page="parceiros">
+  <div class="phero"><div class="wrap">
+    <span class="eyebrow">Programa de parceiros</span>
+    <h1>Cresça junto com um ecossistema completo de tecnologia</h1>
+    <p class="lead">Indique clientes, some seu talento a projetos ou leve nossas soluções para a sua carteira. Cada modelo tem regras e benefícios próprios.</p>
+  </div></div>
+  <div class="section" style="padding-top:40px"><div class="wrap">
+    <div class="grid g4">
+      <div class="card"><span class="pill blue">Indicação</span><h3>NexaFriends</h3><p class="muted small">Indique empresas que precisam de tecnologia e faça parte da comunidade Nexalytix.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="NexaFriends (indicação)">Quero indicar →</a></div>
+      <div class="card"><span class="pill blue">Talentos</span><h3>Freelancers e especialistas</h3><p class="muted small">Compartilhe seu portfólio e participe de projetos do ecossistema.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="Freelancer / especialista">Enviar portfólio →</a></div>
+      <div class="card"><span class="pill blue">Canal</span><h3>Revendas e integradores</h3><p class="muted small">Leve nossos SaaS e serviços para a sua carteira, com suporte pré-venda.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="Revenda / integrador">Ser revenda →</a></div>
+      <div class="card"><span class="pill blue">Tecnologia</span><h3>Fabricantes</h3><p class="muted small">Alianças para que sua tecnologia chegue ao cliente com implementação e operação.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="Fabricante">Propor aliança →</a></div>
+    </div>
+  </div></div>
+  <div class="section" style="padding-top:0"><div class="wrap two">
+    <div style="display:grid;gap:14px"><span class="eyebrow">Como funciona</span><h2>Do cadastro à primeira oportunidade</h2>
+      <ol class="steps-v">
+        <li><div><b>Cadastro</b><span>Você preenche o formulário com seu modelo de parceria.</span></div></li>
+        <li><div><b>Qualificação</b><span>Conversa com o nosso time para alinhar perfil, região e interesse.</span></div></li>
+        <li><div><b>Onboarding</b><span>Apresentação do ecossistema, materiais de venda e capacitação.</span></div></li>
+        <li><div><b>Primeira oportunidade</b><span>Registro da oportunidade e acompanhamento conjunto até o fechamento.</span></div></li>
+      </ol>
+    </div>
+    <div style="display:grid;gap:14px"><span class="eyebrow">Alianças tecnológicas</span><h2>Parceiros que usamos na nossa própria operação</h2><a href="/aliancas" style="font-weight:600">Ver detalhes de cada parceiro →</a>
+      <div class="dl">
+        <div><span class="logo-chip" style="justify-self:start" ><img src="/assets/logo-hyland.png" alt="Hyland"></span><span>Gestão de conteúdo e documentos, automação de processos e IA sobre o conteúdo corporativo (OnBase, Alfresco, Nuxeo).</span></div>
+        <div><span class="logo-chip" style="justify-self:start"><img src="/assets/logo-acronis.png" alt="Acronis"></span><span>Backup, recuperação de desastres e continuidade de negócios.</span></div>
+        <div><span class="logo-chip" style="justify-self:start"><img src="/assets/logo-manageengine.png" alt="ManageEngine"></span><span>Cibersegurança e gestão de TI: SIEM e análise de logs (Log360), identidades e acessos privilegiados (AD360, PAM360), segurança de endpoints, patches e vulnerabilidades (Endpoint Central, Vulnerability Manager Plus), além de service desk e monitoramento de rede (ServiceDesk Plus, OpManager).</span></div>
+        <div><span class="logo-chip dark omid" style="justify-self:start"><img src="/assets/omid/LOGO_OMID_NEGATIVO.svg" alt="OMID"></span><span>Infraestrutura digital brasileira: cloud pública soberana, data centers próprios, segurança e serviços especializados.</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="section" style="padding-top:0" id="pForm"><div class="wrap">
+    <div class="form-card" style="max-width:760px">
+      <h3 style="margin-bottom:6px">Quero ser parceiro</h3>
+      <p class="muted small" style="margin-bottom:18px">Respondemos em até 5 dias úteis.</p>
+      <form class="f" autocomplete="on" data-form="parceiros" novalidate toolname="cadastrar_parceiro" tooldescription="Cadastra uma empresa ou profissional no programa de parceiros da Nexalytix (indicação, freelancer, revenda ou fabricante).">
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="p-tipo">Modelo de parceria</label><select id="p-tipo" name="tipo"><option>NexaFriends (indicação)</option><option>Freelancer / especialista</option><option>Revenda / integrador</option><option>Fabricante</option></select></div>
+        <div class="frow">
+          <div class="field"><label for="p-nome">Nome</label><input id="p-nome" name="nome" required autocomplete="name"></div>
+          <div class="field"><label for="p-email">E-mail</label><input id="p-email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="p-empresa">Empresa (opcional)</label><input id="p-empresa" name="empresa" autocomplete="organization"></div>
+          <div class="field"><label for="p-link">Site ou portfólio (opcional)</label><input id="p-link" name="link" type="url" placeholder="https://"></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="p-lgpd" required><span>Autorizo o contato da Nexalytix sobre o programa de parceiros, conforme a <a href="/privacidade">Política de Privacidade</a>.</span></label>
+        <button class="btn btn-primary" type="submit">Enviar cadastro</button>
+        <div class="form-msg" aria-live="polite"></div>
+      </form>
+    </div>
+  </div></div>
+</section>
 <section class="page" data-page="home">
   <div class="hero"><div class="wrap">
     <div class="hero-copy">
@@ -1104,60 +1158,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 </section>
 
 <!-- PARCEIROS -->
-<section class="page" data-page="parceiros">
-  <div class="phero"><div class="wrap">
-    <span class="eyebrow">Programa de parceiros</span>
-    <h1>Cresça junto com um ecossistema completo de tecnologia</h1>
-    <p class="lead">Indique clientes, some seu talento a projetos ou leve nossas soluções para a sua carteira. Cada modelo tem regras e benefícios próprios.</p>
-  </div></div>
-  <div class="section" style="padding-top:40px"><div class="wrap">
-    <div class="grid g4">
-      <div class="card"><span class="pill blue">Indicação</span><h3>NexaFriends</h3><p class="muted small">Indique empresas que precisam de tecnologia e faça parte da comunidade Nexalytix.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="NexaFriends (indicação)">Quero indicar →</a></div>
-      <div class="card"><span class="pill blue">Talentos</span><h3>Freelancers e especialistas</h3><p class="muted small">Compartilhe seu portfólio e participe de projetos do ecossistema.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="Freelancer / especialista">Enviar portfólio →</a></div>
-      <div class="card"><span class="pill blue">Canal</span><h3>Revendas e integradores</h3><p class="muted small">Leve nossos SaaS e serviços para a sua carteira, com suporte pré-venda.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="Revenda / integrador">Ser revenda →</a></div>
-      <div class="card"><span class="pill blue">Tecnologia</span><h3>Fabricantes</h3><p class="muted small">Alianças para que sua tecnologia chegue ao cliente com implementação e operação.</p><a class="more" href="/parceiros" data-scroll="pForm" data-ptype="Fabricante">Propor aliança →</a></div>
-    </div>
-  </div></div>
-  <div class="section" style="padding-top:0"><div class="wrap two">
-    <div style="display:grid;gap:14px"><span class="eyebrow">Como funciona</span><h2>Do cadastro à primeira oportunidade</h2>
-      <ol class="steps-v">
-        <li><div><b>Cadastro</b><span>Você preenche o formulário com seu modelo de parceria.</span></div></li>
-        <li><div><b>Qualificação</b><span>Conversa com o nosso time para alinhar perfil, região e interesse.</span></div></li>
-        <li><div><b>Onboarding</b><span>Apresentação do ecossistema, materiais de venda e capacitação.</span></div></li>
-        <li><div><b>Primeira oportunidade</b><span>Registro da oportunidade e acompanhamento conjunto até o fechamento.</span></div></li>
-      </ol>
-    </div>
-    <div style="display:grid;gap:14px"><span class="eyebrow">Alianças tecnológicas</span><h2>Parceiros que usamos na nossa própria operação</h2><a href="/aliancas" style="font-weight:600">Ver detalhes de cada parceiro →</a>
-      <div class="dl">
-        <div><span class="logo-chip" style="justify-self:start" ><img src="/assets/logo-hyland.png" alt="Hyland"></span><span>Gestão de conteúdo e documentos, automação de processos e IA sobre o conteúdo corporativo (OnBase, Alfresco, Nuxeo).</span></div>
-        <div><span class="logo-chip" style="justify-self:start"><img src="/assets/logo-acronis.png" alt="Acronis"></span><span>Backup, recuperação de desastres e continuidade de negócios.</span></div>
-        <div><span class="logo-chip" style="justify-self:start"><img src="/assets/logo-manageengine.png" alt="ManageEngine"></span><span>Cibersegurança e gestão de TI: SIEM e análise de logs (Log360), identidades e acessos privilegiados (AD360, PAM360), segurança de endpoints, patches e vulnerabilidades (Endpoint Central, Vulnerability Manager Plus), além de service desk e monitoramento de rede (ServiceDesk Plus, OpManager).</span></div>
-        <div><span class="logo-chip dark omid" style="justify-self:start"><img src="/assets/omid/LOGO_OMID_NEGATIVO.svg" alt="OMID"></span><span>Infraestrutura digital brasileira: cloud pública soberana, data centers próprios, segurança e serviços especializados.</span></div>
-      </div>
-    </div>
-  </div></div>
-  <div class="section" style="padding-top:0" id="pForm"><div class="wrap">
-    <div class="form-card" style="max-width:760px">
-      <h3 style="margin-bottom:6px">Quero ser parceiro</h3>
-      <p class="muted small" style="margin-bottom:18px">Respondemos em até 5 dias úteis.</p>
-      <form class="f" autocomplete="on" data-form="parceiros" novalidate toolname="cadastrar_parceiro" tooldescription="Cadastra uma empresa ou profissional no programa de parceiros da Nexalytix (indicação, freelancer, revenda ou fabricante).">
-        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field"><label for="p-tipo">Modelo de parceria</label><select id="p-tipo" name="tipo"><option>NexaFriends (indicação)</option><option>Freelancer / especialista</option><option>Revenda / integrador</option><option>Fabricante</option></select></div>
-        <div class="frow">
-          <div class="field"><label for="p-nome">Nome</label><input id="p-nome" name="nome" required autocomplete="name"></div>
-          <div class="field"><label for="p-email">E-mail</label><input id="p-email" name="email" type="email" required autocomplete="email"></div>
-        </div>
-        <div class="frow">
-          <div class="field"><label for="p-empresa">Empresa (opcional)</label><input id="p-empresa" name="empresa" autocomplete="organization"></div>
-          <div class="field"><label for="p-link">Site ou portfólio (opcional)</label><input id="p-link" name="link" type="url" placeholder="https://"></div>
-        </div>
-        <label class="consent"><input type="checkbox" id="p-lgpd" required><span>Autorizo o contato da Nexalytix sobre o programa de parceiros, conforme a <a href="/privacidade">Política de Privacidade</a>.</span></label>
-        <button class="btn btn-primary" type="submit">Enviar cadastro</button>
-        <div class="form-msg" aria-live="polite"></div>
-      </form>
-    </div>
-  </div></div>
-</section>
+
 
 <!-- CONTEÚDOS -->
 <section class="page" data-page="conteudos">

@@ -225,6 +225,22 @@ prod = re.sub(r'(?<=["\'(])assets/', '/assets/', prod)
 _keys = set(ROUTES) | {"solucoes"}
 prod = re.sub(r'href="#([a-z0-9-]+)"', lambda m: f'href="{route_path(m.group(1))}"' if m.group(1) in _keys else m.group(0), prod)
 assert prod.count('<title>') == 1
+_pre = json.loads((root / "prerender.json").read_text()) if (root / "prerender.json").exists() else {}
+_PAGEID = {"assessment": "etapa", "consultoria": "etapa", "implementacao": "etapa", "sustentacao": "etapa",
+           "cloud": "dominio", "seguranca": "dominio", "finops": "dominio", "dev": "dominio", "pmo": "dominio"}
+def _section_first(h, k):
+    """Coloca a seção da página no início do conteúdo (o primeiro h1 do HTML passa a ser o dela)
+    e, nas páginas montadas no navegador, já entrega o conteúdo pronto (prerender.json)."""
+    pid = "produto" if k.startswith("saas-") else _PAGEID.get(k, k)
+    m = re.search(r'<section class="page"[^>]*data-page="%s"[^>]*>.*?</section>' % pid, h, re.S)
+    if not m:
+        return h
+    sec = m.group(0)
+    if k in _pre and _pre[k]["page"] == pid:
+        sec = re.sub(r'(<section class="page"[^>]*>).*?(</section>)$', lambda x: x.group(1) + _pre[k]["html"] + x.group(2), sec, flags=re.S)
+    h = h[:m.start()] + h[m.end():]
+    first = re.search(r'<section class="page"[^>]*data-page="', h)
+    return h[:first.start()] + sec + "\n" + h[first.start():]
 def page_html(k):
     t, d = ROUTES[k]
     url = SITE + route_path(k)
@@ -234,7 +250,7 @@ def page_html(k):
     h = h.replace(f'<meta property="og:url" content="{SITE}/">', f'<meta property="og:url" content="{url}">', 1)
     h = re.sub(r'<meta property="og:title" content="[^"]*">', lambda _: f'<meta property="og:title" content="{t}">', h, count=1)
     h = re.sub(r'<meta property="og:description" content="[^"]*">', lambda _: f'<meta property="og:description" content="{d}">', h, count=1)
-    return h
+    return _section_first(h, k) if k != "home" else h
 prod = page_html("home")
 (out / "index.html").write_text(prod)
 for _k in ROUTES:

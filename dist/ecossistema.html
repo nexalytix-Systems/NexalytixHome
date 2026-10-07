@@ -579,6 +579,72 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <main id="main">
 
 <!-- HOME -->
+<section class="page" data-page="ecossistema">
+  <div class="phero"><div class="wrap">
+    <span class="eyebrow">Ecossistema Nexalytix</span>
+    <h1>Todas as frentes conectadas em torno do seu negócio</h1>
+    <p class="lead">No centro, o seu negócio. Ao redor, o ciclo de serviços. Por fora, as soluções que entregamos e as frentes que ampliam o ecossistema. Escolha um objetivo ou clique em uma frente para ver como ela se conecta às outras.</p>
+  </div></div>
+  <div class="section" style="padding-top:36px"><div class="wrap">
+    <div class="eco-bar">
+      <div class="filters" id="ecoFilters" role="group" aria-label="Filtrar por objetivo">
+        <button type="button" data-g="" aria-pressed="true">Tudo</button>
+        <button type="button" data-g="proteger" aria-pressed="false">Proteger</button>
+        <button type="button" data-g="modernizar" aria-pressed="false">Modernizar</button>
+        <button type="button" data-g="economizar" aria-pressed="false">Economizar (FinOps)</button>
+        <button type="button" data-g="capacitar" aria-pressed="false">Capacitar</button>
+        <button type="button" data-g="crescer" aria-pressed="false">Crescer</button>
+      </div>
+      <div class="seg" role="group" aria-label="Modo de visualização">
+        <button type="button" id="vDiag" aria-pressed="true">Diagrama</button>
+        <button type="button" id="vList" aria-pressed="false">Lista</button>
+      </div>
+    </div>
+    <div class="eco-stage" id="ecoDiag">
+      <div class="eco-svg" id="ecoSvg"></div>
+      <div class="legend">
+        <div><b><i style="background:var(--primary)"></i>Ciclo · como entregamos</b><span>Assessment, Consultoria, Implementação e Sustentação e Manutenção. O ciclo gira: a operação alimenta o próximo assessment.</span></div>
+        <div><b><i style="background:var(--surface);border:1.5px solid var(--primary)"></i>Domínios · o que entregamos</b><span>Cloud e Infraestrutura, Segurança, FinOps, IA, SaaS, Negócios e Produtos e PMO. Todo domínio passa por todo o ciclo.</span></div>
+        <div><b><i style="background:var(--accent-soft);border:1.5px solid var(--accent)"></i>Habilitadores · o que amplia</b><span>Academia e Parceiros apoiam os domínios.</span></div>
+        <p class="hint">Passe o mouse em um domínio para ver o ciclo e os habilitadores que ele usa. Clique para ver o que entregamos em cada etapa.</p>
+      </div>
+    </div>
+    <div class="eco-list" id="ecoList" hidden></div>
+  </div></div>
+  <div class="section" style="padding-top:0" id="matriz"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Matriz do ecossistema</span><h2>O que entregamos em cada domínio, etapa por etapa</h2><p class="muted">Clique em um domínio ou em uma etapa para ver os detalhes.</p></div>
+    <p class="scroll-hint">Arraste a tabela para o lado para ver todas as etapas →</p>
+    <div class="mx-wrap" id="ecoMatrix"></div>
+  </div></div>
+
+  <div class="section" style="padding-top:0"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Como as frentes se conectam</span><h2>Três jornadas típicas pelo ecossistema</h2><p class="muted">Exemplos ilustrativos de como os problemas mais comuns atravessam várias frentes.</p></div>
+    <div class="grid g3">
+      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Varejo com a conta de nuvem fora de controle</h3><ol><li>Assessment</li><li class="arrow">→</li><li>Consultoria FinOps</li><li class="arrow">→</li><li>Implementação</li><li class="arrow">→</li><li>FinOps contínuo</li></ol><p class="small muted">O diagnóstico mostra onde está o desperdício, a consultoria define a governança e a sustentação impede que o custo volte a subir.</p></div>
+      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Empresa sem backup confiável</h3><ol><li>Assessment</li><li class="arrow">→</li><li>Acronis</li><li class="arrow">→</li><li>Implementação</li><li class="arrow">→</li><li>Sustentação e Manutenção</li><li class="arrow">→</li><li>Academia</li></ol><p class="small muted">Produto de parceiro implementado e operado pelo nosso time, com o time do cliente capacitado para o dia a dia.</p></div>
+      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Startup lançando um produto digital</h3><ol><li>CTO as a Service</li><li class="arrow">→</li><li>Desenvolvimento</li><li class="arrow">→</li><li>Cloud</li><li class="arrow">→</li><li>FinOps</li></ol><p class="small muted">Liderança técnica, produto construído com segurança desde o design, infraestrutura que escala e custo de nuvem sob controle desde o primeiro cliente.</p></div>
+    </div>
+  </div></div>
+
+  <div class="band section"><div class="wrap two">
+    <div style="display:grid;gap:14px"><span class="eyebrow" style="color:var(--band-muted)">Por que ecossistema</span><h2>Um contrato, uma visão da sua operação</h2><p class="lead">Menos fornecedores para coordenar e ninguém culpando o outro quando algo falha.</p></div>
+    <div class="offer-list">
+      <div><b>Governança única</b><span>Um ponto de contato responde por cloud, custos, segurança e sistemas.</span></div>
+      <div><b>Métricas consolidadas</b><span>Custo, disponibilidade, MTTR e lead time no mesmo relatório.</span></div>
+      <div><b>Evolução contínua</b><span>O que a sustentação aprende volta como prioridade no próximo assessment.</span></div>
+    </div>
+  </div></div>
+
+  <div class="section"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Por onde começar</span><h2>Qual é o seu momento?</h2></div>
+    <div class="grid g4">
+      <a class="door" href="/assessment" style="padding:18px"><h3 style="font-size:1rem">Quero entender meus riscos e custos</h3><span class="go">Assessment →</span></a>
+      <a class="door" href="/implementacao" style="padding:18px"><h3 style="font-size:1rem">Tenho um projeto para tirar do papel</h3><span class="go">Implementação →</span></a>
+      <a class="door" href="/sustentacao" style="padding:18px"><h3 style="font-size:1rem">Preciso de operação, suporte e manutenção</h3><span class="go">Sustentação e Manutenção →</span></a>
+      <a class="door" href="/academia" style="padding:18px"><h3 style="font-size:1rem">Quero capacitar meu time</h3><span class="go">Academia →</span></a>
+    </div>
+  </div></div>
+</section>
 <section class="page" data-page="home">
   <div class="hero"><div class="wrap">
     <div class="hero-copy">
@@ -705,72 +771,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 </section>
 
 <!-- ECOSSISTEMA -->
-<section class="page" data-page="ecossistema">
-  <div class="phero"><div class="wrap">
-    <span class="eyebrow">Ecossistema Nexalytix</span>
-    <h1>Todas as frentes conectadas em torno do seu negócio</h1>
-    <p class="lead">No centro, o seu negócio. Ao redor, o ciclo de serviços. Por fora, as soluções que entregamos e as frentes que ampliam o ecossistema. Escolha um objetivo ou clique em uma frente para ver como ela se conecta às outras.</p>
-  </div></div>
-  <div class="section" style="padding-top:36px"><div class="wrap">
-    <div class="eco-bar">
-      <div class="filters" id="ecoFilters" role="group" aria-label="Filtrar por objetivo">
-        <button type="button" data-g="" aria-pressed="true">Tudo</button>
-        <button type="button" data-g="proteger" aria-pressed="false">Proteger</button>
-        <button type="button" data-g="modernizar" aria-pressed="false">Modernizar</button>
-        <button type="button" data-g="economizar" aria-pressed="false">Economizar (FinOps)</button>
-        <button type="button" data-g="capacitar" aria-pressed="false">Capacitar</button>
-        <button type="button" data-g="crescer" aria-pressed="false">Crescer</button>
-      </div>
-      <div class="seg" role="group" aria-label="Modo de visualização">
-        <button type="button" id="vDiag" aria-pressed="true">Diagrama</button>
-        <button type="button" id="vList" aria-pressed="false">Lista</button>
-      </div>
-    </div>
-    <div class="eco-stage" id="ecoDiag">
-      <div class="eco-svg" id="ecoSvg"></div>
-      <div class="legend">
-        <div><b><i style="background:var(--primary)"></i>Ciclo · como entregamos</b><span>Assessment, Consultoria, Implementação e Sustentação e Manutenção. O ciclo gira: a operação alimenta o próximo assessment.</span></div>
-        <div><b><i style="background:var(--surface);border:1.5px solid var(--primary)"></i>Domínios · o que entregamos</b><span>Cloud e Infraestrutura, Segurança, FinOps, IA, SaaS, Negócios e Produtos e PMO. Todo domínio passa por todo o ciclo.</span></div>
-        <div><b><i style="background:var(--accent-soft);border:1.5px solid var(--accent)"></i>Habilitadores · o que amplia</b><span>Academia e Parceiros apoiam os domínios.</span></div>
-        <p class="hint">Passe o mouse em um domínio para ver o ciclo e os habilitadores que ele usa. Clique para ver o que entregamos em cada etapa.</p>
-      </div>
-    </div>
-    <div class="eco-list" id="ecoList" hidden></div>
-  </div></div>
-  <div class="section" style="padding-top:0" id="matriz"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">Matriz do ecossistema</span><h2>O que entregamos em cada domínio, etapa por etapa</h2><p class="muted">Clique em um domínio ou em uma etapa para ver os detalhes.</p></div>
-    <p class="scroll-hint">Arraste a tabela para o lado para ver todas as etapas →</p>
-    <div class="mx-wrap" id="ecoMatrix"></div>
-  </div></div>
 
-  <div class="section" style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">Como as frentes se conectam</span><h2>Três jornadas típicas pelo ecossistema</h2><p class="muted">Exemplos ilustrativos de como os problemas mais comuns atravessam várias frentes.</p></div>
-    <div class="grid g3">
-      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Varejo com a conta de nuvem fora de controle</h3><ol><li>Assessment</li><li class="arrow">→</li><li>Consultoria FinOps</li><li class="arrow">→</li><li>Implementação</li><li class="arrow">→</li><li>FinOps contínuo</li></ol><p class="small muted">O diagnóstico mostra onde está o desperdício, a consultoria define a governança e a sustentação impede que o custo volte a subir.</p></div>
-      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Empresa sem backup confiável</h3><ol><li>Assessment</li><li class="arrow">→</li><li>Acronis</li><li class="arrow">→</li><li>Implementação</li><li class="arrow">→</li><li>Sustentação e Manutenção</li><li class="arrow">→</li><li>Academia</li></ol><p class="small muted">Produto de parceiro implementado e operado pelo nosso time, com o time do cliente capacitado para o dia a dia.</p></div>
-      <div class="flow"><span class="pill">Exemplo de jornada</span><h3>Startup lançando um produto digital</h3><ol><li>CTO as a Service</li><li class="arrow">→</li><li>Desenvolvimento</li><li class="arrow">→</li><li>Cloud</li><li class="arrow">→</li><li>FinOps</li></ol><p class="small muted">Liderança técnica, produto construído com segurança desde o design, infraestrutura que escala e custo de nuvem sob controle desde o primeiro cliente.</p></div>
-    </div>
-  </div></div>
-
-  <div class="band section"><div class="wrap two">
-    <div style="display:grid;gap:14px"><span class="eyebrow" style="color:var(--band-muted)">Por que ecossistema</span><h2>Um contrato, uma visão da sua operação</h2><p class="lead">Menos fornecedores para coordenar e ninguém culpando o outro quando algo falha.</p></div>
-    <div class="offer-list">
-      <div><b>Governança única</b><span>Um ponto de contato responde por cloud, custos, segurança e sistemas.</span></div>
-      <div><b>Métricas consolidadas</b><span>Custo, disponibilidade, MTTR e lead time no mesmo relatório.</span></div>
-      <div><b>Evolução contínua</b><span>O que a sustentação aprende volta como prioridade no próximo assessment.</span></div>
-    </div>
-  </div></div>
-
-  <div class="section"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">Por onde começar</span><h2>Qual é o seu momento?</h2></div>
-    <div class="grid g4">
-      <a class="door" href="/assessment" style="padding:18px"><h3 style="font-size:1rem">Quero entender meus riscos e custos</h3><span class="go">Assessment →</span></a>
-      <a class="door" href="/implementacao" style="padding:18px"><h3 style="font-size:1rem">Tenho um projeto para tirar do papel</h3><span class="go">Implementação →</span></a>
-      <a class="door" href="/sustentacao" style="padding:18px"><h3 style="font-size:1rem">Preciso de operação, suporte e manutenção</h3><span class="go">Sustentação e Manutenção →</span></a>
-      <a class="door" href="/academia" style="padding:18px"><h3 style="font-size:1rem">Quero capacitar meu time</h3><span class="go">Academia →</span></a>
-    </div>
-  </div></div>
-</section>
 
 <!-- SERVIÇOS -->
 <section class="page" data-page="servicos">

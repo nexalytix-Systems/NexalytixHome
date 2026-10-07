@@ -579,6 +579,57 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <main id="main">
 
 <!-- HOME -->
+<section class="page" data-page="contato">
+  <div class="phero"><div class="wrap">
+    <span class="eyebrow">Contato</span>
+    <h1>Conte o que você precisa, e o time certo responde</h1>
+    <p class="lead">Escolha o assunto para seu contato ir direto para quem resolve.</p>
+  </div></div>
+  <div class="section" style="padding-top:40px"><div class="wrap two" style="grid-template-columns:1.25fr .75fr">
+    <div class="form-card">
+      <form class="f" autocomplete="on" data-form="contato" novalidate toolname="falar_com_especialista" tooldescription="Envia um pedido de contato para um especialista da Nexalytix (diagnóstico, proposta, cotação, suporte ou incidente). Exige nome, e-mail e autorização de contato (LGPD).">
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="c-intent">Assunto</label>
+          <select id="c-intent" name="intent">
+            <option value="diagnostico">Assessment (diagnóstico)</option>
+            <option value="servico">Contratar um serviço</option>
+            <option value="demo">Demonstração de SaaS</option>
+            <option value="cotacao">Cotação de produto (Hyland, ManageEngine, Acronis, OMID)</option>
+            <option value="treinamento">Treinamento e Academia</option>
+            <option value="parceria">Parceria</option>
+            <option value="emergencia">Emergência de segurança (incidente em andamento)</option>
+          </select></div>
+        <div class="alert-box" id="emergBox" hidden><b>Incidente em andamento?</b> Descreva o que está acontecendo na mensagem: sistemas afetados, quando começou e o que já foi feito. Nosso time prioriza contatos marcados como emergência.</div>
+        <div class="frow">
+          <div class="field"><label for="c-nome">Nome</label><input id="c-nome" name="nome" required autocomplete="name"></div>
+          <div class="field"><label for="c-cargo">Cargo</label><input id="c-cargo" name="cargo" required autocomplete="organization-title" placeholder="Ex.: Gerente de TI"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="c-email">E-mail corporativo</label><input id="c-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="nome@empresa.com.br"></div>
+          <div class="field"><label for="c-whats">Celular / WhatsApp (opcional)</label><input id="c-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" data-mask="fone"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" name="empresa" required autocomplete="organization"></div>
+          <div class="field"><label for="c-porte">Porte</label><select id="c-porte" name="porte"><option>Pequena empresa</option><option>Média empresa</option><option>Tech / Startup</option><option>Grande empresa</option></select></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="c-insta">Instagram da empresa (opcional)</label><input id="c-insta" name="instagram" autocomplete="off" placeholder="@suaempresa" data-mask="instagram"></div>
+          <div class="field"><label for="c-linkedin">LinkedIn da empresa (opcional)</label><input id="c-linkedin" name="linkedin" type="url" inputmode="url" autocomplete="off" placeholder="linkedin.com/company/suaempresa" data-mask="linkedin"></div>
+        </div>
+        <div class="field"><label for="c-msg">Mensagem (opcional)</label><textarea id="c-msg" name="msg" rows="4"></textarea></div>
+        <label class="consent"><input type="checkbox" id="c-lgpd" required><span>Autorizo a Nexalytix a usar estes dados para responder ao meu contato, conforme a <a href="/privacidade">Política de Privacidade</a>.</span></label>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+        <div class="form-msg" aria-live="polite"></div>
+      </form>
+    </div>
+    <div style="display:grid;gap:24px;align-content:start">
+      <div class="card"><h3>Resposta em até 24 h</h3><p class="muted small">Em dias úteis. Contatos de emergência são priorizados.</p></div>
+      <div class="card"><h3>E-mail</h3><div class="copy"><code id="mail">contato@nexalytix.com.br</code><button type="button" id="copyMail">Copiar</button></div></div>
+      <div class="card"><h3>Telefone e WhatsApp</h3><p class="muted small">(11) 96590-4251</p><a href="https://wa.me/5511965904251" target="_blank" rel="noopener">Chamar no WhatsApp →</a></div><div class="card"><h3>Prefere conversar agora?</h3><p class="muted small">A Alya, nossa assistente com IA, tira dúvidas e passa seu contato para o time.</p><button type="button" class="btn btn-ghost" data-nexa style="justify-self:start">Falar com a Alya</button></div>
+      <div class="card"><h3>Endereço</h3><p class="muted small">Alameda Grajaú, 219, Alphaville Industrial, Barueri, SP, CEP 06454-050</p></div>
+    </div>
+  </div></div>
+</section>
 <section class="page" data-page="home">
   <div class="hero"><div class="wrap">
     <div class="hero-copy">
@@ -1347,57 +1398,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 </section>
 
 <!-- CONTATO -->
-<section class="page" data-page="contato">
-  <div class="phero"><div class="wrap">
-    <span class="eyebrow">Contato</span>
-    <h1>Conte o que você precisa, e o time certo responde</h1>
-    <p class="lead">Escolha o assunto para seu contato ir direto para quem resolve.</p>
-  </div></div>
-  <div class="section" style="padding-top:40px"><div class="wrap two" style="grid-template-columns:1.25fr .75fr">
-    <div class="form-card">
-      <form class="f" autocomplete="on" data-form="contato" novalidate toolname="falar_com_especialista" tooldescription="Envia um pedido de contato para um especialista da Nexalytix (diagnóstico, proposta, cotação, suporte ou incidente). Exige nome, e-mail e autorização de contato (LGPD).">
-        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field"><label for="c-intent">Assunto</label>
-          <select id="c-intent" name="intent">
-            <option value="diagnostico">Assessment (diagnóstico)</option>
-            <option value="servico">Contratar um serviço</option>
-            <option value="demo">Demonstração de SaaS</option>
-            <option value="cotacao">Cotação de produto (Hyland, ManageEngine, Acronis, OMID)</option>
-            <option value="treinamento">Treinamento e Academia</option>
-            <option value="parceria">Parceria</option>
-            <option value="emergencia">Emergência de segurança (incidente em andamento)</option>
-          </select></div>
-        <div class="alert-box" id="emergBox" hidden><b>Incidente em andamento?</b> Descreva o que está acontecendo na mensagem: sistemas afetados, quando começou e o que já foi feito. Nosso time prioriza contatos marcados como emergência.</div>
-        <div class="frow">
-          <div class="field"><label for="c-nome">Nome</label><input id="c-nome" name="nome" required autocomplete="name"></div>
-          <div class="field"><label for="c-cargo">Cargo</label><input id="c-cargo" name="cargo" required autocomplete="organization-title" placeholder="Ex.: Gerente de TI"></div>
-        </div>
-        <div class="frow">
-          <div class="field"><label for="c-email">E-mail corporativo</label><input id="c-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="nome@empresa.com.br"></div>
-          <div class="field"><label for="c-whats">Celular / WhatsApp (opcional)</label><input id="c-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" data-mask="fone"></div>
-        </div>
-        <div class="frow">
-          <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" name="empresa" required autocomplete="organization"></div>
-          <div class="field"><label for="c-porte">Porte</label><select id="c-porte" name="porte"><option>Pequena empresa</option><option>Média empresa</option><option>Tech / Startup</option><option>Grande empresa</option></select></div>
-        </div>
-        <div class="frow">
-          <div class="field"><label for="c-insta">Instagram da empresa (opcional)</label><input id="c-insta" name="instagram" autocomplete="off" placeholder="@suaempresa" data-mask="instagram"></div>
-          <div class="field"><label for="c-linkedin">LinkedIn da empresa (opcional)</label><input id="c-linkedin" name="linkedin" type="url" inputmode="url" autocomplete="off" placeholder="linkedin.com/company/suaempresa" data-mask="linkedin"></div>
-        </div>
-        <div class="field"><label for="c-msg">Mensagem (opcional)</label><textarea id="c-msg" name="msg" rows="4"></textarea></div>
-        <label class="consent"><input type="checkbox" id="c-lgpd" required><span>Autorizo a Nexalytix a usar estes dados para responder ao meu contato, conforme a <a href="/privacidade">Política de Privacidade</a>.</span></label>
-        <button class="btn btn-primary" type="submit">Enviar</button>
-        <div class="form-msg" aria-live="polite"></div>
-      </form>
-    </div>
-    <div style="display:grid;gap:24px;align-content:start">
-      <div class="card"><h3>Resposta em até 24 h</h3><p class="muted small">Em dias úteis. Contatos de emergência são priorizados.</p></div>
-      <div class="card"><h3>E-mail</h3><div class="copy"><code id="mail">contato@nexalytix.com.br</code><button type="button" id="copyMail">Copiar</button></div></div>
-      <div class="card"><h3>Telefone e WhatsApp</h3><p class="muted small">(11) 96590-4251</p><a href="https://wa.me/5511965904251" target="_blank" rel="noopener">Chamar no WhatsApp →</a></div><div class="card"><h3>Prefere conversar agora?</h3><p class="muted small">A Alya, nossa assistente com IA, tira dúvidas e passa seu contato para o time.</p><button type="button" class="btn btn-ghost" data-nexa style="justify-self:start">Falar com a Alya</button></div>
-      <div class="card"><h3>Endereço</h3><p class="muted small">Alameda Grajaú, 219, Alphaville Industrial, Barueri, SP, CEP 06454-050</p></div>
-    </div>
-  </div></div>
-</section>
+
 
 </main>
 

@@ -579,6 +579,35 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 <main id="main">
 
 <!-- HOME -->
+<section class="page" data-page="conteudos">
+  <div class="phero"><div class="wrap">
+    <span class="eyebrow">Conteúdos</span>
+    <h1>Radar da semana: o que mudou em tecnologia, negócios e segurança</h1>
+    <p class="lead">Toda segunda-feira, as notícias mais relevantes da semana em tecnologia, negócios e setor financeiro, ativos digitais, segurança e educação, resumidas em português e com o que cada uma significa para a sua empresa.</p>
+  </div></div>
+  <div class="section" style="padding-top:36px"><div class="wrap">
+    <div class="radar-top">
+      <div><span class="eyebrow">Radar da semana</span><p class="small muted" id="rdPeriodo">Carregando as notícias da semana...</p></div>
+      <div class="filters" id="rdFiltros" role="group" aria-label="Filtrar por tema"></div>
+    </div>
+    <p class="rd-resumo" id="rdResumo" hidden></p>
+    <div class="grid g3 rd-grid" id="rdGrid"></div>
+    <div class="card rd-vazio" id="rdVazio" hidden><h3>O radar é atualizado toda segunda-feira</h3><p class="muted small">A primeira edição está sendo preparada. Enquanto isso, veja os indicadores de mercado na página inicial ou fale com a Alya.</p></div>
+    <p class="foot-note">Seleção e resumos feitos com apoio de inteligência artificial a partir de fontes públicas. Cada notícia leva à matéria original. Conteúdo informativo, sem recomendação de investimento.</p>
+  </div></div>
+  <div class="section" style="padding-top:0"><div class="wrap">
+    <div class="form-card news-card" id="newsCard">
+      <div style="display:grid;gap:8px"><h3>Receba o Radar por e-mail</h3><p class="muted small">Inscreva-se para receber novidades da Nexalytix e os destaques do Radar.</p></div>
+      <form class="f" autocomplete="on" data-form="newsletter" novalidate toolname="assinar_newsletter" tooldescription="Inscreve um e-mail na newsletter da Nexalytix.">
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="n-email">E-mail</label><input id="n-email" name="email" type="email" required autocomplete="email"></div>
+        <label class="consent"><input type="checkbox" id="n-lgpd" required><span>Quero receber a newsletter da Nexalytix, conforme a <a href="/privacidade">Política de Privacidade</a>.</span></label>
+        <button class="btn btn-primary" type="submit">Assinar</button>
+        <div class="form-msg" aria-live="polite"></div>
+      </form>
+    </div>
+  </div></div>
+</section>
 <section class="page" data-page="home">
   <div class="hero"><div class="wrap">
     <div class="hero-copy">
@@ -1160,35 +1189,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 </section>
 
 <!-- CONTEÚDOS -->
-<section class="page" data-page="conteudos">
-  <div class="phero"><div class="wrap">
-    <span class="eyebrow">Conteúdos</span>
-    <h1>Radar da semana: o que mudou em tecnologia, negócios e segurança</h1>
-    <p class="lead">Toda segunda-feira, as notícias mais relevantes da semana em tecnologia, negócios e setor financeiro, ativos digitais, segurança e educação, resumidas em português e com o que cada uma significa para a sua empresa.</p>
-  </div></div>
-  <div class="section" style="padding-top:36px"><div class="wrap">
-    <div class="radar-top">
-      <div><span class="eyebrow">Radar da semana</span><p class="small muted" id="rdPeriodo">Carregando as notícias da semana...</p></div>
-      <div class="filters" id="rdFiltros" role="group" aria-label="Filtrar por tema"></div>
-    </div>
-    <p class="rd-resumo" id="rdResumo" hidden></p>
-    <div class="grid g3 rd-grid" id="rdGrid"></div>
-    <div class="card rd-vazio" id="rdVazio" hidden><h3>O radar é atualizado toda segunda-feira</h3><p class="muted small">A primeira edição está sendo preparada. Enquanto isso, veja os indicadores de mercado na página inicial ou fale com a Alya.</p></div>
-    <p class="foot-note">Seleção e resumos feitos com apoio de inteligência artificial a partir de fontes públicas. Cada notícia leva à matéria original. Conteúdo informativo, sem recomendação de investimento.</p>
-  </div></div>
-  <div class="section" style="padding-top:0"><div class="wrap">
-    <div class="form-card news-card" id="newsCard">
-      <div style="display:grid;gap:8px"><h3>Receba o Radar por e-mail</h3><p class="muted small">Inscreva-se para receber novidades da Nexalytix e os destaques do Radar.</p></div>
-      <form class="f" autocomplete="on" data-form="newsletter" novalidate toolname="assinar_newsletter" tooldescription="Inscreve um e-mail na newsletter da Nexalytix.">
-        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field"><label for="n-email">E-mail</label><input id="n-email" name="email" type="email" required autocomplete="email"></div>
-        <label class="consent"><input type="checkbox" id="n-lgpd" required><span>Quero receber a newsletter da Nexalytix, conforme a <a href="/privacidade">Política de Privacidade</a>.</span></label>
-        <button class="btn btn-primary" type="submit">Assinar</button>
-        <div class="form-msg" aria-live="polite"></div>
-      </form>
-    </div>
-  </div></div>
-</section>
+
 
 <!-- SOBRE -->
 <section class="page" data-page="sobre">

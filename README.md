@@ -139,3 +139,4 @@ Abre todas as páginas (descobertas pelos links) no computador (1360px) e no cel
 - `dist/sitemap.xml`, `dist/robots.txt` e `dist/llms.txt` são gerados pelo `build.py`.
 - Para testar localmente como no Cloudflare Pages: `node qa/servidor-pages.mjs dist 8766` e abrir http://127.0.0.1:8766/academia.
 - A prévia (`preview.html`) continua usando endereços com `#`.
+- **Pré-renderização:** as páginas de domínios, etapas e SaaS são montadas no navegador. Para que buscadores simples, prévias de link e robôs de IA vejam o conteúdo certo, o build usa `prerender.json`. Sempre que mudar textos dessas páginas, rode: `python3 build.py && node qa/prerender.mjs && python3 build.py`.
