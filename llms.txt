@@ -1,0 +1,38 @@
+# Nexalytix
+
+> Ecossistema brasileiro de tecnologia: SaaS, Cloud, FinOps, Segurança, Transformação Digital e IA, com Academia e parceiros oficiais. Atende empresas do diagnóstico (assessment) à operação contínua. Marca da CC Vieira Consultoria e Serviços TI (CNPJ 39.292.587/0001-95), Barueri, SP.
+
+O site é uma página única. As seções abaixo são abertas pelo endereço com # (por exemplo, https://nexalytix.com.br/#academia). Para falar com a empresa, use o formulário de contato ou o e-mail contato@nexalytix.com.br.
+
+## Como entregamos
+
+- [Assessment](https://nexalytix.com.br/#assessment): diagnóstico de negócio, tecnologia e cultura, com roadmap priorizado.
+- [Consultoria](https://nexalytix.com.br/#consultoria): arquitetura, planos de migração, segurança e governança.
+- [Implementação](https://nexalytix.com.br/#implementacao): migração para cloud, segurança, automação, IA e software sob medida.
+- [Sustentação e Manutenção](https://nexalytix.com.br/#sustentacao): operação 24x7, SOC, FinOps contínuo e service desk.
+- [Catálogo de serviços](https://nexalytix.com.br/#servicos): todos os serviços, da descoberta da dor à sustentação.
+
+## Domínios
+
+- [Cloud e Infraestrutura](https://nexalytix.com.br/#cloud)
+- [Segurança](https://nexalytix.com.br/#seguranca): SOC, CISO as a Service, pentest, LGPD.
+- [FinOps](https://nexalytix.com.br/#finops): redução e governança de custos de nuvem.
+- [Transformação Digital e IA](https://nexalytix.com.br/#ia): agentes de IA e automação de processos.
+- [Desenvolvimento de Negócios e Produtos](https://nexalytix.com.br/#dev): discovery, MVP, squads e CTO as a Service.
+- [Gestão de Projetos e PMO](https://nexalytix.com.br/#pmo): PMO as a Service.
+
+## Produtos SaaS
+
+- [Visão geral dos SaaS](https://nexalytix.com.br/#saas)
+- [ERP](https://nexalytix.com.br/#saas-erp), [CRM](https://nexalytix.com.br/#saas-crm), [Sistema Financeiro](https://nexalytix.com.br/#saas-financeiro), [Transcribe](https://nexalytix.com.br/#saas-transcribe), [Alya](https://nexalytix.com.br/#saas-alya)
+
+## Empresa
+
+- [Ecossistema](https://nexalytix.com.br/#ecossistema): como as frentes se conectam.
+- [Sobre](https://nexalytix.com.br/#sobre)
+- [Academia Nexalytix](https://nexalytix.com.br/#academia): formação em TI com fundamentos, trilhas e residência em squads.
+- [Parceiros de tecnologia](https://nexalytix.com.br/#aliancas): Hyland, ManageEngine, Acronis e OMID.
+- [Programa de parceiros](https://nexalytix.com.br/#parceiros): indicação, freelancers, revendas e fabricantes.
+- [Conteúdos e Radar](https://nexalytix.com.br/#conteudos): resumo semanal de notícias de tecnologia, negócios, ativos digitais, segurança e educação.
+- [Contato](https://nexalytix.com.br/#contato)
+- [Política de Privacidade](https://nexalytix.com.br/#privacidade) e [Termos de Uso](https://nexalytix.com.br/#termos)

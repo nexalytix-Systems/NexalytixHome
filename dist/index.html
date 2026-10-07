@@ -9,13 +9,26 @@
 <meta property="og:title" content="Nexalytix | SaaS, Cloud, FinOps, Segurança e IA">
 <meta property="og:description" content="Tecnologia e segurança em um só ecossistema, do diagnóstico à operação contínua.">
 <meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://nexalytix.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nexalytix">
+<meta property="og:url" content="https://nexalytix.com.br/">
+<meta property="og:image" content="https://nexalytix.com.br/assets/og-nexalytix.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nexalytix: tecnologia e segurança em um só ecossistema">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0D16">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://nexalytix.com.br/#empresa", "name": "Nexalytix", "legalName": "CC Vieira Consultoria e Serviços TI", "taxID": "39.292.587/0001-95", "url": "https://nexalytix.com.br/", "logo": "https://nexalytix.com.br/assets/logo-nexalytix-systems.png", "image": "https://nexalytix.com.br/assets/og-nexalytix.jpg", "description": "Ecossistema de tecnologia: SaaS, Cloud, FinOps, Segurança, IA e Academia, do diagnóstico à operação contínua.", "email": "contato@nexalytix.com.br", "telephone": "+55 (11) 96590-4251", "address": {"@type": "PostalAddress", "streetAddress": "Alameda Grajaú, 219, Alphaville Industrial", "addressLocality": "Barueri", "addressRegion": "SP", "postalCode": "06454-050", "addressCountry": "BR"}, "areaServed": "BR", "knowsAbout": ["Cloud", "FinOps", "Segurança da informação", "SOC", "Inteligência artificial", "ERP", "CRM", "PMO", "DevOps"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": "+55 (11) 96590-4251", "email": "contato@nexalytix.com.br", "availableLanguage": "pt-BR"}}</script>
+<script>(function(){var h=location.hash.slice(1)||'home';if(h==='solucoes')h='saas';if(!/^[a-z0-9-]+$/.test(h))h='home';var s=document.createElement('style');s.id='bootcss';s.textContent='.page[data-page="'+h+'"]{display:block}';document.head.appendChild(s);})();</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
 :root{
   --bg:#F6F8FC; --surface:#FFFFFF; --surface-2:#EDF1F8; --text:#1A2133; --muted:#5A6378; --line:#DCE2EE;
-  --primary:#0C42B4; --primary-ink:#FFFFFF; --primary-soft:#E5ECFB; --accent:#F2650A; --accent-ink:#FFFFFF; --accent-soft:#FFEADB;
+  --primary:#0C42B4; --primary-ink:#FFFFFF; --primary-soft:#E5ECFB; --accent:#F2650A; --accent-text:#B4470A; --accent-strong:#C64B05; --accent-ink:#FFFFFF; --accent-soft:#FFEADB;
   --band:#0A0D16; --band-text:#E8ECF4; --band-muted:#9AA4BA; --band-line:#232B40; --ok:#1E8E5A;
   --shadow:0 1px 2px rgba(12,24,60,.05),0 12px 32px -18px rgba(12,24,60,.28);
   --radius:10px; --font-d:"Sora",ui-sans-serif,system-ui,sans-serif; --font-b:"Manrope",ui-sans-serif,system-ui,sans-serif; --font-m:"JetBrains Mono",ui-monospace,Menlo,monospace;
@@ -44,12 +57,12 @@ p{margin:0}
 .btn{display:inline-flex;align-items:center;gap:8px;font:600 .95rem/1 var(--font-b);padding:14px 20px;border-radius:8px;border:1px solid transparent;cursor:pointer;text-decoration:none!important;transition:transform .15s ease,background .15s ease}
 .btn-primary{background:var(--primary);color:var(--primary-ink)}
 .btn-primary:hover{transform:translateY(-1px)}
-.btn-accent{background:var(--accent);color:var(--accent-ink)}
+.btn-accent{background:var(--accent-strong);color:var(--accent-ink)}
 .btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
 .btn-row{display:flex;flex-wrap:wrap;gap:12px}
 .pill{display:inline-flex;align-items:center;gap:6px;font:600 .72rem/1 var(--font-m);letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;border-radius:999px;background:var(--surface-2);color:var(--muted);white-space:nowrap}
-.pill.warn{background:var(--accent-soft);color:var(--accent)}
+.pill.warn{background:var(--accent-soft);color:var(--accent-text)}
 .phero .pill{white-space:normal;line-height:1.3}
 .phero .wrap>*{min-width:0}
 .pill.blue{background:var(--primary-soft);color:var(--primary)}
@@ -112,7 +125,7 @@ nav.main{display:flex;align-items:center;gap:2px}
 .hero-note{flex-wrap:nowrap!important;align-items:flex-start!important}
 .hero-map{position:relative;cursor:pointer}
 .hero-map svg{width:100%;height:auto;display:block}
-.hero-map figcaption{text-align:center;font-size:.82rem;color:var(--muted);margin-top:4px}
+.hero-map .cap{margin:4px 0 0;text-align:center;font-size:.82rem;color:var(--muted);margin-top:4px}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-map{display:none}}
 .trust{border-block:1px solid var(--line);background:var(--surface)}
 .trust .wrap{display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding-block:18px;justify-content:space-between}
@@ -161,7 +174,7 @@ footer .legal{flex-wrap:wrap;gap:10px 24px}footer .legal a{display:inline;paddin
 .rd-card h3{font-size:1.05rem;line-height:1.35}
 .rd-card p{font-size:.92rem;color:var(--muted)}
 .rd-card .rd-pq{border-top:1px dashed var(--line);padding-top:10px;color:var(--text)}
-.rd-card .rd-pq b{display:block;font:600 .66rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.rd-card .rd-pq b{display:block;font:600 .66rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);margin-bottom:6px}
 .rd-card .rd-links{margin-top:auto;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:600;font-size:.88rem;padding-top:6px}
 .rd-home{margin-top:40px}
 .svc-cycle .step{gap:8px}.svc-list{list-style:none;margin:4px 0 6px;padding:0;display:grid;gap:10px}.svc-list li{display:grid;gap:2px;font-size:.88rem}.svc-list b{font-family:var(--font-d);font-weight:600;font-size:.92rem}.svc-list span{color:var(--muted)}
@@ -179,7 +192,7 @@ footer .legal{flex-wrap:wrap;gap:10px 24px}footer .legal a{display:inline;paddin
 .rnews{font-size:.92rem;color:var(--muted)}
 .ract{border-top:1px dashed var(--line);padding-top:14px;display:grid;gap:4px}
 .ract p{font-size:.9rem}
-.rlbl{font:600 .66rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:6px}
+.rlbl{font:600 .66rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);margin-top:6px}
 .rlbl:first-child{margin-top:0}
 .rfoot{margin-top:auto;padding-top:10px;display:grid;gap:8px}
 .rfoot a{font-weight:600;font-size:.92rem}
@@ -351,7 +364,7 @@ svg.dom-focus .cycle-arrow{stroke:var(--accent);opacity:1}
 .mx-dom:hover,.mx-stage:hover{color:var(--primary);text-decoration:underline}
 .mx-stage{font:600 .74rem/1.3 var(--font-m);letter-spacing:.05em;text-transform:uppercase;color:var(--primary)}
 .mx-ena{font-size:.82rem}
-.mx-lbl{display:block;font:600 .64rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
+.mx-lbl{display:block;font:600 .64rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);margin:0 0 4px}
 .mx-lbl+*,.mx-ena .mx-lbl:not(:first-child){margin-top:8px}
 .lens-n{--lc:var(--accent)}.lens-t{--lc:var(--primary)}.lens-c{--lc:var(--ok)}
 .chip.lens-n,.chip.lens-t,.chip.lens-c{border-left:3px solid var(--lc)}
@@ -415,7 +428,7 @@ form.f{display:grid;gap:16px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:30px}
 .ok-box{border:1px solid var(--ok);background:color-mix(in srgb,var(--ok) 10%,transparent);border-radius:10px;padding:16px;font-size:.93rem}
-.err{color:var(--accent);font-size:.85rem}
+.err{color:var(--accent-text);font-size:.85rem}
 .consent{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--muted)}
 .consent input{margin-top:4px}
 .copy{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
@@ -427,12 +440,12 @@ form.f{display:grid;gap:16px}
 .name-parts div{padding:26px;display:grid;gap:8px}
 .name-parts div + div{border-left:1px solid var(--line)}
 .name-parts b{font:700 2rem/1 var(--font-d);color:var(--primary)}
-.name-parts div:last-child b{color:var(--accent)}
+.name-parts div:last-child b{color:var(--accent-text)}
 .name-parts span{color:var(--muted);font-size:.93rem}
 /* footer */
 footer{background:var(--band);color:var(--band-muted);padding-block:56px 32px;margin-top:0}
 footer .cols{display:grid;grid-template-columns:1.3fr repeat(5,minmax(0,1fr));gap:24px}
-footer h4{color:var(--band-text);font-size:.8rem;font-family:var(--font-m);letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-bottom:12px}
+footer .fh{color:var(--band-text);font-size:.8rem;font-family:var(--font-m);letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-bottom:12px}
 footer a{color:var(--band-muted);display:block;padding-block:4px;font-size:.9rem}
 footer a:hover{color:var(--band-text)}
 footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem}
@@ -443,7 +456,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 @media (max-width:560px){.g4,.cycle,.pillars{grid-template-columns:1fr}.pillar,.pillar + .pillar,.pillar:nth-child(2n){padding-left:0;border-left:0;border-top:1px solid var(--line)}.frow{grid-template-columns:1fr}.section{padding-block:52px}footer .cols{grid-template-columns:1fr}.stat b{font-size:1.9rem}.quiz,.form-card{padding:22px}}
 .pillars{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;border-top:0}
 .pillars .pillar,.pillars .pillar + .pillar,.pillars .pillar:nth-child(2n),.pillars .pillar:nth-child(odd),.pillars .pillar:last-child{padding:18px 0 20px;border-left:0;border-top:2px solid var(--text);grid-column:auto}
-.pillar.new h3::after{content:"novo";font:600 .62rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 6px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.pillar.new h3::after{content:"novo";font:600 .62rem/1 var(--font-m);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);background:var(--accent-soft);padding:4px 6px;border-radius:999px;margin-left:8px;vertical-align:middle}
 .logo-chip.logo-text{font:700 1.05rem/1 var(--font-b);color:#1B3D6E;letter-spacing:-.01em}
 @media (max-width:820px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.pillars{grid-template-columns:1fr}}
@@ -497,7 +510,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 </div></div>
 
 <header class="top"><div class="wrap">
-  <a class="logo" href="#home" aria-label="Nexalytix — página inicial"><img src="assets/logo-nexalytix-systems.png" alt="Nexalytix"></a>
+  <a class="logo" href="#home" aria-label="Nexalytix — página inicial"><img src="assets/logo-nexalytix-systems.webp" alt="Nexalytix" width="240" height="218"></a>
   <nav class="main" aria-label="Navegação principal">
     <div class="nav-item"><a class="nav-link" href="#ecossistema" data-nav="ecossistema">Ecossistema</a></div>
     <div class="nav-item">
@@ -575,10 +588,10 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
         <a class="btn btn-ghost" href="#ecossistema">Explorar o ecossistema</a>
       </div>
     </div>
-    <figure class="hero-map" id="heroMap" style="margin:0" role="link" tabindex="0" aria-label="Abrir o mapa do ecossistema">
+    <div class="hero-map" id="heroMap" role="link" tabindex="0" aria-label="Abrir o mapa do ecossistema">
       <div id="heroSvg"></div>
-      <figcaption>O cliente no centro, o ciclo de serviços ao redor. Clique para explorar.</figcaption>
-    </figure>
+      <p class="cap">O cliente no centro, o ciclo de serviços ao redor. Clique para explorar.</p>
+    </div>
   </div></div>
 
   <div class="section"><div class="wrap">
@@ -1068,7 +1081,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div class="form-card" id="aForm">
       <h3 style="margin-bottom:6px">Entre na lista de espera da turma piloto</h3>
       <p class="muted small" style="margin-bottom:18px">Avisamos quando as inscrições abrirem e enviamos os detalhes da sua trilha.</p>
-      <form class="f" autocomplete="on" data-form="academia" novalidate>
+      <form class="f" autocomplete="on" data-form="academia" novalidate toolname="entrar_lista_academia" tooldescription="Inscreve a pessoa na lista de espera da Academia Nexalytix (formação em TI). Exige nome, e-mail e autorização de contato (LGPD).">
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field"><label for="a-nome">Nome</label><input id="a-nome" name="nome" required autocomplete="name"></div>
         <div class="field"><label for="a-email">E-mail</label><input id="a-email" name="email" type="email" required autocomplete="email"></div>
@@ -1125,7 +1138,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
     <div class="form-card" style="max-width:760px">
       <h3 style="margin-bottom:6px">Quero ser parceiro</h3>
       <p class="muted small" style="margin-bottom:18px">Respondemos em até 5 dias úteis.</p>
-      <form class="f" autocomplete="on" data-form="parceiros" novalidate>
+      <form class="f" autocomplete="on" data-form="parceiros" novalidate toolname="cadastrar_parceiro" tooldescription="Cadastra uma empresa ou profissional no programa de parceiros da Nexalytix (indicação, freelancer, revenda ou fabricante).">
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field"><label for="p-tipo">Modelo de parceria</label><select id="p-tipo" name="tipo"><option>NexaFriends (indicação)</option><option>Freelancer / especialista</option><option>Revenda / integrador</option><option>Fabricante</option></select></div>
         <div class="frow">
@@ -1164,7 +1177,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   <div class="section" style="padding-top:0"><div class="wrap">
     <div class="form-card news-card" id="newsCard">
       <div style="display:grid;gap:8px"><h3>Receba o Radar por e-mail</h3><p class="muted small">Inscreva-se para receber novidades da Nexalytix e os destaques do Radar.</p></div>
-      <form class="f" autocomplete="on" data-form="newsletter" novalidate>
+      <form class="f" autocomplete="on" data-form="newsletter" novalidate toolname="assinar_newsletter" tooldescription="Inscreve um e-mail na newsletter da Nexalytix.">
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field"><label for="n-email">E-mail</label><input id="n-email" name="email" type="email" required autocomplete="email"></div>
         <label class="consent"><input type="checkbox" id="n-lgpd" required><span>Quero receber a newsletter da Nexalytix, conforme a <a href="#privacidade">Política de Privacidade</a>.</span></label>
@@ -1340,7 +1353,7 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
   </div></div>
   <div class="section" style="padding-top:40px"><div class="wrap two" style="grid-template-columns:1.25fr .75fr">
     <div class="form-card">
-      <form class="f" autocomplete="on" data-form="contato" novalidate>
+      <form class="f" autocomplete="on" data-form="contato" novalidate toolname="falar_com_especialista" tooldescription="Envia um pedido de contato para um especialista da Nexalytix (diagnóstico, proposta, cotação, suporte ou incidente). Exige nome, e-mail e autorização de contato (LGPD).">
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field"><label for="c-intent">Assunto</label>
           <select id="c-intent" name="intent">
@@ -1388,12 +1401,12 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
 
 <footer><div class="wrap">
   <div class="cols">
-    <div><span class="foot-logo"><img src="assets/logo-nexalytix-systems.png" alt="Nexalytix"></span><p class="small">SaaS, Cloud, FinOps e Segurança em um só ecossistema: do diagnóstico à operação contínua.</p><p class="small" style="margin-top:10px">Parte do Grupo Vieira Prime.</p></div>
-    <div><h4>Serviços</h4><a href="#assessment">Assessment</a><a href="#consultoria">Consultoria</a><a href="#implementacao">Implementação</a><a href="#sustentacao">Sustentação e Manutenção</a></div>
-    <div><h4>Domínios</h4><a href="#cloud">Cloud e Infraestrutura</a><a href="#seguranca">Segurança</a><a href="#finops">FinOps</a><a href="#ia">Transformação Digital e IA</a><a href="#dev">Desenvolvimento de Negócios e Produtos</a><a href="#pmo">Gestão de Projetos e PMO</a></div>
-    <div><h4>SaaS</h4><a href="#saas-erp">ERP</a><a href="#saas-crm">CRM</a><a href="#saas-financeiro">Sistema Financeiro</a><a href="#saas-transcribe">Transcribe</a><a href="#saas-alya">Alya</a></div>
-    <div><h4>Empresa</h4><a href="#ecossistema">Ecossistema</a><a href="#sobre">Sobre</a><a href="#academia">Academia</a><a href="#aliancas">Parceiros de tecnologia</a><a href="#parceiros">Programa de parceiros</a></div>
-    <div><h4>Contato</h4><a href="#contato">Fale com um especialista</a><a href="#contato" data-intent="emergencia">Sofreu um incidente?</a><a href="#conteudos">Conteúdos</a></div>
+    <div><span class="foot-logo"><img src="assets/logo-nexalytix-systems.webp" alt="Nexalytix" width="240" height="218"></span><p class="small">SaaS, Cloud, FinOps e Segurança em um só ecossistema: do diagnóstico à operação contínua.</p><p class="small" style="margin-top:10px">Parte do Grupo Vieira Prime.</p></div>
+    <div><h2 class="fh">Serviços</h2><a href="#assessment">Assessment</a><a href="#consultoria">Consultoria</a><a href="#implementacao">Implementação</a><a href="#sustentacao">Sustentação e Manutenção</a></div>
+    <div><h2 class="fh">Domínios</h2><a href="#cloud">Cloud e Infraestrutura</a><a href="#seguranca">Segurança</a><a href="#finops">FinOps</a><a href="#ia">Transformação Digital e IA</a><a href="#dev">Desenvolvimento de Negócios e Produtos</a><a href="#pmo">Gestão de Projetos e PMO</a></div>
+    <div><h2 class="fh">SaaS</h2><a href="#saas-erp">ERP</a><a href="#saas-crm">CRM</a><a href="#saas-financeiro">Sistema Financeiro</a><a href="#saas-transcribe">Transcribe</a><a href="#saas-alya">Alya</a></div>
+    <div><h2 class="fh">Empresa</h2><a href="#ecossistema">Ecossistema</a><a href="#sobre">Sobre</a><a href="#academia">Academia</a><a href="#aliancas">Parceiros de tecnologia</a><a href="#parceiros">Programa de parceiros</a></div>
+    <div><h2 class="fh">Contato</h2><a href="#contato">Fale com um especialista</a><a href="#contato" data-intent="emergencia">Sofreu um incidente?</a><a href="#conteudos">Conteúdos</a></div>
   </div>
   <div class="legal"><span>© 2026 Nexalytix, marca de CC Vieira Consultoria e Serviços TI. Todos os direitos reservados. CNPJ 39.292.587/0001-95.</span><span><a href="#privacidade">Privacidade</a> · <a href="#termos">Termos de uso</a> <button type="button" id="ownerLeads" hidden>Leads da prévia</button></span><span>contato@nexalytix.com.br · <a href="https://wa.me/5511965904251" target="_blank" rel="noopener">(11) 96590-4251 (telefone e WhatsApp)</a> · Alameda Grajaú, 219, Alphaville Industrial, Barueri, SP, CEP 06454-050</span></div>
 </div></footer>
@@ -1786,6 +1799,7 @@ function route(){
   if(E[h])renderEtapa(h);
   if(DOMPAGE.includes(h))renderDominio(h);
   $$(".page").forEach(p=>p.classList.toggle("on",p.dataset.page===pageId));
+  document.getElementById("bootcss")?.remove();
   const navKey=prod?"saas":(NAVMAP[h]||h);
   $$("[data-nav]").forEach(n=>n.dataset.nav===navKey?n.setAttribute("aria-current","page"):n.removeAttribute("aria-current"));
   if(h==="contato"){intentSel.value=pendingIntent||"diagnostico";syncEmerg();if(pendingMsg)$("#c-msg").value=pendingMsg;}
@@ -1802,7 +1816,7 @@ route();
 })();
 </script>
 
-<button type="button" id="nexaOpen" aria-expanded="false" aria-controls="nexa"><img class="av" src="assets/alya-avatar.svg" alt="" width="36" height="36"><span class="lbl">Fale com a Alya</span></button>
+<button type="button" id="nexaOpen" aria-expanded="false" aria-controls="nexa" aria-label="Fale com a Alya, assistente da Nexalytix"><img class="av" src="assets/alya-avatar.svg" alt="" width="36" height="36"><span class="lbl">Fale com a Alya</span></button>
 <section id="nexa" hidden role="dialog" aria-label="Chat com a Alya, assistente da Nexalytix">
   <div class="nexa-head"><img class="av" src="assets/alya-avatar.svg" alt="" width="38" height="38"><div><b>Alya</b><span>Assistente com IA da Nexalytix · online</span></div><button type="button" id="nexaClose" aria-label="Fechar chat">✕</button></div>
   <div id="nexaLog" aria-live="polite"></div>
@@ -1881,6 +1895,7 @@ $$("form.f").forEach(f=>f.addEventListener("submit",async e=>{
   btn.disabled=true;const old=btn.textContent;btn.textContent="Enviando...";
   const r=await sendLead(leadFromForm(f));
   btn.disabled=false;btn.textContent=old;
+  if(e.agentInvoked&&typeof e.respondWith==="function")e.respondWith(Promise.resolve(r.ok?OKMSG[f.dataset.form]:(r.error||"Não foi possível enviar.")));
   if(r.ok){
     out.innerHTML=`<div class="ok-box"><b>${OKMSG[f.dataset.form]}</b>${r.where==="preview"?" <span class='muted'>Nesta prévia, o contato fica registrado na página. No site publicado, vai direto para o CRM.</span>":""}</div>`;
     f.reset();$("#emergBox")&&($("#emergBox").hidden=true);

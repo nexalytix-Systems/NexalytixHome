@@ -111,7 +111,7 @@ assert 'id="ownerLeads"' in html, "botão de leads não inserido"
 
 # 5) widget + script
 widget = """
-<button type="button" id="nexaOpen" aria-expanded="false" aria-controls="nexa"><img class="av" src="assets/alya-avatar.svg" alt="" width="36" height="36"><span class="lbl">Fale com a Alya</span></button>
+<button type="button" id="nexaOpen" aria-expanded="false" aria-controls="nexa" aria-label="Fale com a Alya, assistente da Nexalytix"><img class="av" src="assets/alya-avatar.svg" alt="" width="36" height="36"><span class="lbl">Fale com a Alya</span></button>
 <section id="nexa" hidden role="dialog" aria-label="Chat com a Alya, assistente da Nexalytix">
   <div class="nexa-head"><img class="av" src="assets/alya-avatar.svg" alt="" width="38" height="38"><div><b>Alya</b><span>Assistente com IA da Nexalytix · online</span></div><button type="button" id="nexaClose" aria-label="Fechar chat">✕</button></div>
   <div id="nexaLog" aria-live="polite"></div>
@@ -130,6 +130,45 @@ out.mkdir(exist_ok=True)
 m = re.match(r"\s*(<title>.*?</title>\s*<meta name=\"description\"[^>]*>)", html, re.S)
 head_bits = m.group(1)
 body = html[m.end():]
+# ---------- SEO: canonical, Open Graph, dados estruturados e exibição inicial ----------
+SITE = "https://nexalytix.com.br"
+_end = emp["endereco"]
+_ld = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": SITE + "/#empresa",
+  "name": "Nexalytix",
+  "legalName": emp["razao_social"],
+  "taxID": emp["cnpj"],
+  "url": SITE + "/",
+  "logo": SITE + "/assets/logo-nexalytix-systems.png",
+  "image": SITE + "/assets/og-nexalytix.jpg",
+  "description": "Ecossistema de tecnologia: SaaS, Cloud, FinOps, Segurança, IA e Academia, do diagnóstico à operação contínua.",
+  "email": emp["email"],
+  "telephone": "+55 " + emp["telefone"],
+  "address": {"@type": "PostalAddress", "streetAddress": "Alameda Grajaú, 219, Alphaville Industrial",
+              "addressLocality": "Barueri", "addressRegion": "SP", "postalCode": "06454-050", "addressCountry": "BR"},
+  "areaServed": "BR",
+  "knowsAbout": ["Cloud", "FinOps", "Segurança da informação", "SOC", "Inteligência artificial", "ERP", "CRM", "PMO", "DevOps"],
+  "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": "+55 " + emp["telefone"], "email": emp["email"], "availableLanguage": "pt-BR"}
+}
+_boot = ("(function(){var h=location.hash.slice(1)||'home';if(h==='solucoes')h='saas';"
+         "if(!/^[a-z0-9-]+$/.test(h))h='home';var s=document.createElement('style');s.id='bootcss';"
+         "s.textContent='.page[data-page=\"'+h+'\"]{display:block}';document.head.appendChild(s);})();")
+SEO_HEAD = (
+    f'<link rel="canonical" href="{SITE}/">\n'
+    f'<meta property="og:type" content="website">\n'
+    f'<meta property="og:site_name" content="Nexalytix">\n'
+    f'<meta property="og:url" content="{SITE}/">\n'
+    f'<meta property="og:image" content="{SITE}/assets/og-nexalytix.jpg">\n'
+    '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+    '<meta property="og:image:alt" content="Nexalytix: tecnologia e segurança em um só ecossistema">\n'
+    '<meta name="twitter:card" content="summary_large_image">\n'
+    '<meta name="theme-color" content="#0A0D16">\n'
+    '<script type="application/ld+json">' + json.dumps(_ld, ensure_ascii=False) + '</script>\n'
+    '<script>' + _boot + '</script>\n'
+)
+
 prod = (
     '<!doctype html>\n<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n'
     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
@@ -138,6 +177,7 @@ prod = (
     + '<meta property="og:title" content="Nexalytix | SaaS, Cloud, FinOps, Segurança e IA">\n'
     + '<meta property="og:description" content="Tecnologia e segurança em um só ecossistema, do diagnóstico à operação contínua.">\n'
     + '<meta property="og:locale" content="pt_BR">\n'
+    + SEO_HEAD
     + body.split("<style>",1)[0] + "<style>" + body.split("<style>",1)[1].split("</style>",1)[0] + "</style>\n</head>\n<body>\n"
     + body.split("</style>",1)[1] + "\n</body>\n</html>\n"
 )
@@ -146,4 +186,12 @@ prod = (
 (root / "index.html").write_text(prod)
 if (root / "assets").exists():
     shutil.copytree(root / "assets", out / "assets", dirs_exist_ok=True)
+# ---------- Arquivos para buscadores e agentes de IA ----------
+from datetime import date as _date
+(out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\n")
+(out / "sitemap.xml").write_text(
+    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    f'  <url><loc>{SITE}/</loc><lastmod>{_date.today().isoformat()}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
+    '</urlset>\n')
+(out / "llms.txt").write_text((root / "llms.txt").read_text())
 print("dist/index.html", len(html), "bytes")

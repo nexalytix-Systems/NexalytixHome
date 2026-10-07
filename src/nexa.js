@@ -69,6 +69,7 @@ $$("form.f").forEach(f=>f.addEventListener("submit",async e=>{
   btn.disabled=true;const old=btn.textContent;btn.textContent="Enviando...";
   const r=await sendLead(leadFromForm(f));
   btn.disabled=false;btn.textContent=old;
+  if(e.agentInvoked&&typeof e.respondWith==="function")e.respondWith(Promise.resolve(r.ok?OKMSG[f.dataset.form]:(r.error||"Não foi possível enviar.")));
   if(r.ok){
     out.innerHTML=`<div class="ok-box"><b>${OKMSG[f.dataset.form]}</b>${r.where==="preview"?" <span class='muted'>Nesta prévia, o contato fica registrado na página. No site publicado, vai direto para o CRM.</span>":""}</div>`;
     f.reset();$("#emergBox")&&($("#emergBox").hidden=true);
