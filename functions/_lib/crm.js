@@ -56,7 +56,9 @@ export function normalizeLead(input = {}, extra = {}) {
   if (!lead.transcricao) delete lead.transcricao;
   for (const k of ["interesse", "cargo", "instagram", "linkedin"]) if (!lead[k]) delete lead[k];
   // Página como URL completa (o CRM espera URL): "#contato" → "https://site/#contato"
+  // Também "/contato" (endereços próprios das páginas) → "https://site/contato"
   if (extra.site && lead.pagina && lead.pagina.startsWith("#")) lead.pagina = `${extra.site}/${lead.pagina}`;
+  else if (extra.site && lead.pagina && lead.pagina.startsWith("/")) lead.pagina = `${extra.site}${lead.pagina}`;
   return lead;
 }
 
@@ -145,7 +147,7 @@ function portePadrao(p) {
 // "Detalhe da origem" no Vetra. Todo canal começa com "Site Nexalytix" para separar dos leads
 // que chegam por outros sites (ex.: página do projeto Contraturno Escolar) na mesma estrutura do CRM.
 const SITE = "Site Nexalytix";
-const CANAIS = {
+export const CANAIS = {
   "formulario-contato": `${SITE} · Formulário de contato`,
   "formulario-academia": `${SITE} · Lista de espera da Academia (turma piloto)`,
   "formulario-parceiros": `${SITE} · Programa de parceiros`,

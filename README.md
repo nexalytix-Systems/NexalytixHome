@@ -140,3 +140,16 @@ Abre todas as páginas (descobertas pelos links) no computador (1360px) e no cel
 - Para testar localmente como no Cloudflare Pages: `node qa/servidor-pages.mjs dist 8766` e abrir http://127.0.0.1:8766/academia.
 - A prévia (`preview.html`) continua usando endereços com `#`.
 - **Pré-renderização:** as páginas de domínios, etapas e SaaS são montadas no navegador. Para que buscadores simples, prévias de link e robôs de IA vejam o conteúdo certo, o build usa `prerender.json`. Sempre que mudar textos dessas páginas, rode: `python3 build.py && node qa/prerender.mjs && python3 build.py`.
+
+## Alerta por e-mail de novos leads
+
+Todo lead (formulários e Alya) gera um e-mail para `contato@nexalytix.com.br`, com os dados da pessoa e se ele entrou ou não no CRM. Se o CRM falhar e o e-mail sair, o visitante vê sucesso e o lead fica no e-mail. Código em `functions/_lib/notify.js`.
+
+Variáveis (Cloudflare Pages → Configurações → Variáveis e segredos):
+
+| Variável | Tipo | Valor |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Secret | Chave da conta Resend com o domínio nexalytix.com.br verificado |
+| `NOTIFY_EMAIL_TO` | Text (opcional) | Padrão `contato@nexalytix.com.br`; aceita vários separados por vírgula |
+| `NOTIFY_EMAIL_FROM` | Text (opcional) | Padrão `Site Nexalytix <site@nexalytix.com.br>` |
+| `NOTIFY_WEBHOOK_URL` | Secret (alternativa) | Webhook do Make que envia o e-mail, se não usar Resend |

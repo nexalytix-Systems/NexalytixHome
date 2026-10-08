@@ -3,6 +3,7 @@
 // Resposta: { reply: string, leadSaved: boolean }
 import { KNOWLEDGE, LEAD_TOOL } from "../_lib/knowledge.js";
 import { normalizeLead, validateLead, forwardLead, json, originAllowed } from "../_lib/crm.js";
+import { notifyLead } from "../_lib/notify.js";
 
 const MAX_TURNS = 24;
 const MAX_CHARS = 1500;
@@ -74,12 +75,19 @@ export async function onRequestPost({ request, env }) {
         if (problem) {
           result = { ok: false, error: problem };
         } else {
+          let crm;
           try {
-            await forwardLead(env, lead);
-            leadSaved = true;
-            result = { ok: true };
+            const out = await forwardLead(env, lead);
+            crm = { ok: true, id: out.id, stage: out.stage };
           } catch (e) {
             console.error("lead_forward_failed", e.code || "", e.message);
+            crm = { ok: false, code: e.code || "crm_erro" };
+          }
+          const email = await notifyLead(env, lead, crm);
+          if (crm.ok || email.ok) {
+            leadSaved = true;
+            result = { ok: true };
+          } else {
             result = { ok: false, error: "Falha ao registrar. Peça ao visitante para escrever para contato@nexalytix.com.br." };
           }
         }
