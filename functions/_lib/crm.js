@@ -83,9 +83,10 @@ export async function forwardLead(env, lead) {
   } else if (env.CRM_LEADS_URL && env.CRM_API_KEY) {
     // Vetra CRM (POST /api/public/leads). Especificação: nome + (email ou whatsapp) + company_id.
     url = env.CRM_LEADS_URL;
+    const chave = chaveCRM(lead, env);
     const header = env.CRM_AUTH_HEADER || "x-api-key";
-    headers[header] = header.toLowerCase() === "authorization" ? `Bearer ${env.CRM_API_KEY}` : env.CRM_API_KEY;
-    body = toVetra(lead, env);
+    headers[header] = header.toLowerCase() === "authorization" ? `Bearer ${chave}` : chave;
+    body = toVetra(lead, env, chave);
     } else {
     const e = new Error("CRM não configurado: defina MAKE_WEBHOOK_URL ou CRM_LEADS_URL + CRM_API_KEY."); e.code = "crm_sem_config"; throw e;
   }
@@ -164,10 +165,22 @@ function empresaCRM(lead, env) {
   return env.CRM_COMPANY_ID || VETRA_COMPANY_ID;
 }
 
-export function toVetra(lead, env = {}) {
+// Chave do CRM. No CRM novo (crm.nexalytix.com.br), cada chave "vk_..." já é presa a UMA empresa:
+//   CRM_API_KEY          → Nexalytix Systems (site e Alya)
+//   CRM_API_KEY_ACADEMIA → Contraturno Escolar (lista de espera da Academia)
+// Sem CRM_API_KEY_ACADEMIA, a Academia usa a chave principal (vai para a Nexalytix).
+export function chaveCRM(lead, env) {
+  if (lead.origem === "formulario-academia" && env.CRM_API_KEY_ACADEMIA) return env.CRM_API_KEY_ACADEMIA;
+  return env.CRM_API_KEY;
+}
+
+export function toVetra(lead, env = {}, chave = env.CRM_API_KEY) {
   const canal = (CANAIS[lead.origem] || `${SITE} · ${lead.origem || "Site"}`).slice(0, 120);
+  // Chave de integração do CRM novo: a empresa vem da própria chave, então não se envia company_id
+  // (o identificador da empresa no CRM antigo do Lovable seria recusado).
+  const chaveDeEmpresa = typeof chave === "string" && chave.startsWith("vk_");
   const v = {
-    company_id: empresaCRM(lead, env),
+    company_id: chaveDeEmpresa ? undefined : empresaCRM(lead, env),
     nome: lead.nome.slice(0, 100),
     email: lead.email || undefined,
     whatsapp: lead.whatsapp || undefined,

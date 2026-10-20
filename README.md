@@ -55,11 +55,12 @@ Ou conecte o repositório do GitHub ao projeto Pages (diretório de saída: `dis
 | `ANTHROPIC_MODEL` | Não | Padrão `claude-haiku-4-5-20251001` (rápido e barato) |
 | `MAKE_WEBHOOK_URL` | Opção A | URL do webhook do cenário no Make |
 | `MAKE_WEBHOOK_TOKEN` | Não | Chave do webhook, se você ativar "API key" no Make (enviada no header `x-make-apikey`) |
-| `CRM_LEADS_URL` | Opção B | `https://nexalytixcrm.lovable.app/api/public/leads` |
-| `CRM_API_KEY` | Opção B | Chave secreta do endpoint de leads do Vetra CRM |
+| `CRM_LEADS_URL` | Opção B | CRM novo: `https://crm.nexalytix.com.br/api/public/leads` (antigo: `https://nexalytixcrm.lovable.app/api/public/leads`) |
+| `CRM_API_KEY` | Opção B | Chave do CRM. No CRM novo, a chave `vk_…` "Site Nexalytix" (empresa Nexalytix Systems); com ela o `company_id` não é enviado |
+| `CRM_API_KEY_ACADEMIA` | Não | CRM novo: chave `vk_…` "Site Nexalytix · Academia" (empresa Contraturno Escolar) para a lista de espera da Academia |
 | `CRM_AUTH_HEADER` | Não | Nome do header da chave no CRM. Padrão `x-api-key`; use `authorization` para `Bearer` |
-| `CRM_COMPANY_ID_ACADEMIA` | Não | UUID da empresa "Contraturno Escolar" no Vetra. A lista de espera da Academia vai para ela; sem a variável, vai para a Nexalytix |
-| `CRM_COMPANY_ID` | Não | UUID da empresa no Vetra CRM. Padrão: o da Nexalytix (`d706a0c1-648b-4dc8-b96c-4ca02ff8c77f`) |
+| `CRM_COMPANY_ID_ACADEMIA` | Não | (só CRM antigo) UUID da empresa "Contraturno Escolar" no Vetra. A lista de espera da Academia vai para ela; sem a variável, vai para a Nexalytix |
+| `CRM_COMPANY_ID` | Não | (só CRM antigo) UUID da empresa no Vetra CRM. Padrão: o da Nexalytix (`d706a0c1-648b-4dc8-b96c-4ca02ff8c77f`) |
 | `ALLOWED_ORIGINS` | Não | Outros domínios autorizados, separados por vírgula (ex.: `https://www.nexalytix.com.br`) |
 
 Se `MAKE_WEBHOOK_URL` existir, ele tem prioridade. Sem nenhuma das opções, os formulários mostram erro com o e-mail de contato.
