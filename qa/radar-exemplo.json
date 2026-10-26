@@ -4,6 +4,11 @@
   "resumo_semana": "Semana marcada por IA e segurança.",
   "categorias": [
     {
+      "id": "estudos",
+      "nome": "Estudos e tendências",
+      "curto": "Estudos"
+    },
+    {
       "id": "tecnologia",
       "nome": "Tecnologia",
       "curto": "Tecnologia"
@@ -197,6 +202,228 @@
       "fonte": "EdSurge",
       "url": "https://www.edsurge.com/articles_rssnoticia-0",
       "data": "2026-10-07T17:22:36.000Z"
+    }
+  ],
+  "temas": [
+    {
+      "posicao": 1,
+      "titulo": "Tema de exemplo 1: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 2,
+      "titulo": "Tema de exemplo 2: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 3,
+      "titulo": "Tema de exemplo 3: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 4,
+      "titulo": "Tema de exemplo 4: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 5,
+      "titulo": "Tema de exemplo 5: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 6,
+      "titulo": "Tema de exemplo 6: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 7,
+      "titulo": "Tema de exemplo 7: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 8,
+      "titulo": "Tema de exemplo 8: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 9,
+      "titulo": "Tema de exemplo 9: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
+    },
+    {
+      "posicao": 10,
+      "titulo": "Tema de exemplo 10: agentes de IA nas operações",
+      "explicacao": "Explicação de exemplo em duas frases, com base nos estudos e notícias da semana. Segunda frase com contexto.",
+      "por_que_importa": "Gestores devem revisar processos e governança antes de escalar.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Estudo de exemplo",
+          "url": "https://www.mckinsey.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Notícia de exemplo",
+          "url": "https://exame.com/",
+          "data": "2026-10-07T17:22:36.616Z"
+        }
+      ]
     }
   ]
 }

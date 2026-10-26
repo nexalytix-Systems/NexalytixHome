@@ -155,7 +155,7 @@ ROUTES = {
   "academia": ("Academia Nexalytix | Formação em TI e residência em squads", "Fundamentos de TI, dez trilhas e residência em squads com projetos reais. Lista de espera da turma piloto aberta."),
   "parceiros": ("Programa de Parceiros | Nexalytix", "Indique clientes, some seu talento a projetos ou leve nossas soluções para a sua carteira: indicação, freelancers, revendas e fabricantes."),
   "aliancas": ("Parceiros de tecnologia | Nexalytix", "Hyland, ManageEngine, Acronis e OMID, com implementação, suporte e operação da Nexalytix."),
-  "conteudos": ("Conteúdos e Radar semanal | Nexalytix", "Resumo semanal das principais notícias de tecnologia, negócios e setor financeiro, ativos digitais, segurança e educação."),
+  "conteudos": ("Conteúdos e Radar semanal | Nexalytix", "Os 10 temas do momento e o resumo semanal das principais notícias e estudos (como os da McKinsey) de tecnologia, negócios e setor financeiro, ativos digitais, segurança e educação."),
   "sobre": ("Sobre a Nexalytix | Grupo Vieira Prime", "Quem somos e como trabalhamos: tecnologia e segurança em um só ecossistema, do diagnóstico à operação contínua."),
   "contato": ("Fale com um especialista | Nexalytix", "Agende um diagnóstico, peça uma proposta ou relate um incidente de segurança. Retorno em até 24 horas úteis."),
   "privacidade": ("Política de Privacidade | Nexalytix", "Como a Nexalytix coleta, usa, guarda e protege dados pessoais, conforme a LGPD."),

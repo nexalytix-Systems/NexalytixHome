@@ -1,6 +1,11 @@
 {
-  "_comentario": "Fontes do Radar semanal. Pode incluir ou remover feeds RSS. Fontes fora do ar são ignoradas automaticamente.",
+  "_comentario": "Fontes do Radar semanal. Pode incluir ou remover feeds RSS. Fontes fora do ar são ignoradas automaticamente. Opcional por fonte: \"dias\" (janela de datas, padrão 7) e \"max\" (máximo de notícias, padrão 15).",
   "categorias": [
+    {
+      "id": "estudos",
+      "nome": "Estudos e tendências",
+      "curto": "Estudos"
+    },
     {
       "id": "tecnologia",
       "nome": "Tecnologia",
@@ -28,6 +33,21 @@
     }
   ],
   "fontes": [
+    {
+      "nome": "McKinsey",
+      "url": "https://www.mckinsey.com/insights/rss",
+      "categoria": "estudos",
+      "dias": 21,
+      "max": 25
+    },
+    {
+      "nome": "McKinsey",
+      "url": "https://news.google.com/rss/search?q=site:mckinsey.com+when:21d&hl=en-US&gl=US&ceid=US:en",
+      "categoria": "estudos",
+      "dias": 21,
+      "max": 15,
+      "sufixo": true
+    },
     {
       "nome": "Tecnoblog",
       "url": "https://tecnoblog.net/feed/",
