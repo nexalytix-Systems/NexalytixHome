@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>E-book: O abismo da IA nas empresas | Nexalytix</title>
+<meta name="description" content="Quase 9 em cada 10 empresas usam IA, mas só 6 em cada 100 lucram com ela. Baixe grátis o e-book da Nexalytix com dados da McKinsey, BCG, MIT, Gartner, IBGE e Sebrae.">
+<link rel="canonical" href="https://nexalytix.com.br/materiais/abismo-da-ia">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nexalytix">
+<meta property="og:url" content="https://nexalytix.com.br/materiais/abismo-da-ia">
+<meta property="og:title" content="E-book: O abismo da IA nas empresas">
+<meta property="og:description" content="9 em cada 10 empresas usam IA. Só 6 em cada 100 lucram com ela. Baixe grátis.">
+<meta property="og:image" content="https://nexalytix.com.br/materiais/abismo-da-ia-og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0D16">
+<link rel="icon" href="/assets/alya-avatar.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#F6F8FC;--surface:#fff;--text:#1A2133;--muted:#5A6378;--line:#DCE2EE;--primary:#0C42B4;--primary-soft:#E5ECFB;--accent:#C64B05;--accent-text:#B4470A;--band:#0A0D16;--band-text:#E8ECF4;--band-muted:#9AA4BA;--ok:#1E8E5A;
+--fd:"Sora",system-ui,sans-serif;--fb:"Manrope",system-ui,sans-serif;--fm:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--fb)}
+a{color:var(--primary)}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+header{background:var(--surface);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
+header img{height:56px;width:auto;display:block}
+.btn-line{font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:10px 16px;color:var(--text);white-space:nowrap}
+.hero{background:var(--band);color:var(--band-text);padding-block:56px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:48px;align-items:start}
+.eb{font:500 12.5px/1.3 var(--fm);letter-spacing:.12em;text-transform:uppercase;color:#F7A35C}
+h1{font:700 clamp(34px,5vw,54px)/1.05 var(--fd);letter-spacing:-.02em;margin:14px 0 18px;color:#fff;text-wrap:balance}
+h2{font:700 26px/1.2 var(--fd);margin:0 0 16px;letter-spacing:-.01em;text-wrap:balance}
+.lead{font-size:19px;color:#C9D2E4;margin:0 0 14px;max-width:62ch}
+.lead b{color:#fff}
+.ask{font-size:19px;color:#fff;margin:0;max-width:62ch}
+.ask b{color:#F7A35C}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.stat{border:1px solid #232B40;border-radius:10px;padding:16px}
+.stat b{display:block;font:700 30px/1 var(--fd);color:#fff}
+.stat.hot b{color:#F7A35C}
+.stat span{display:block;font-size:14px;color:var(--band-muted);margin-top:8px}
+.stat i{display:block;font:500 11px var(--fm);color:var(--band-muted);font-style:normal;margin-top:6px}
+.card{background:var(--surface);color:var(--text);border-radius:12px;padding:26px;box-shadow:0 20px 50px -20px rgba(0,0,0,.45);position:sticky;top:20px}
+.card h2{font-size:22px;margin-bottom:6px}
+.card .sub{color:var(--muted);font-size:14.5px;margin:0 0 18px}
+form{display:grid;gap:13px}
+label{display:grid;gap:5px;font-size:13.5px;font-weight:600}
+input,select{font:inherit;font-weight:400;font-size:15px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--text);width:100%}
+input:focus,select:focus{outline:2px solid var(--primary);outline-offset:1px;border-color:var(--primary)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13px;color:var(--muted)}
+.consent input{width:auto;margin-top:3px}
+.consent a{text-decoration:underline}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+button{font:700 16px var(--fd);background:var(--accent);color:#fff;border:0;border-radius:8px;padding:15px 18px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+button:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+.msg{font-size:14px}
+.err{color:var(--accent-text)}
+.done{display:none;text-align:center;padding:10px 0}
+.done.on{display:block}
+.done b{display:block;font:700 22px var(--fd);margin-bottom:8px}
+.done p{color:var(--muted);margin:0 0 14px}
+.dl{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border-radius:8px;padding:13px 20px}
+.body{padding-block:56px}
+.inside{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:center}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.list li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.list li::before{content:"✓";width:24px;height:24px;border-radius:50%;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-weight:700;font-size:13px;margin-top:1px}
+.cover{width:100%;max-width:300px;border-radius:8px;box-shadow:0 20px 40px -18px rgba(12,24,60,.45)}
+.why{margin-top:48px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px}
+.why p{margin:0;color:var(--muted);max-width:75ch}
+footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:var(--muted)}
+@media (max-width:960px){.grid{grid-template-columns:1fr}.card{position:static}.inside{grid-template-columns:1fr}.cover{max-width:240px}}
+@media (max-width:560px){.stats{grid-template-columns:1fr}.row{grid-template-columns:1fr}header img{height:44px}.hero{padding-block:36px 40px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" aria-label="Nexalytix: página inicial"><img src="/assets/logo-nexalytix-systems.webp" alt="Nexalytix" width="240" height="218"></a>
+  <a class="btn-line" href="/contato">Fale com um especialista</a>
+</div></header>
+
+<section class="hero"><div class="wrap grid">
+  <div>
+    <div class="eb">E-book gratuito · Outubro de 2026</div>
+    <h1>O abismo da IA nas empresas</h1>
+    <p class="lead">Quase <b>9 em cada 10 empresas</b> já usam inteligência artificial. Só <b>6 em cada 100</b> colhem um resultado relevante no lucro. Reunimos os dados mais recentes para mostrar onde está esse abismo e o que separa quem ganha de quem só gasta.</p>
+    <p class="ask">Você quer estar entre as empresas que geram resultado com IA? <b>Nós da Nexalytix podemos ajudar.</b></p>
+    <div class="stats">
+      <div class="stat"><b>~9 em 10</b><span>empresas usam IA em ao menos uma área</span><i>McKinsey, 2026</i></div>
+      <div class="stat hot"><b>6%</b><span>atribuem à IA 5% ou mais do lucro operacional</span><i>McKinsey, 2026</i></div>
+      <div class="stat"><b>52%</b><span>dos pequenos negócios brasileiros já usam IA</span><i>Sebrae, 2026</i></div>
+    </div>
+  </div>
+
+  <div class="card" id="formulario">
+    <div id="formBox">
+      <h2>Receba o e-book por e-mail</h2>
+      <p class="sub">Preencha os campos e enviamos o link de download na hora.</p>
+      <form id="f" novalidate>
+        <label>Nome<input name="nome" required autocomplete="name"></label>
+        <label>E-mail corporativo<input name="email" type="email" required autocomplete="email" placeholder="nome@empresa.com.br"></label>
+        <div class="row">
+          <label>Empresa<input name="empresa" required autocomplete="organization"></label>
+          <label>Cargo<input name="cargo" autocomplete="organization-title"></label>
+        </div>
+        <label>Celular / WhatsApp (opcional)<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000"></label>
+        <div class="row">
+          <label>Porte<select name="porte" required><option value="">Selecione</option><option>Até 10 funcionários</option><option>11 a 50</option><option>51 a 200</option><option>201 a 500</option><option>Mais de 500</option></select></label>
+          <label>Como usa IA hoje<select name="uso_ia" required><option value="">Selecione</option><option>Ainda não usa</option><option>Pessoas usam por conta própria</option><option>Fazendo testes</option><option>Já tem IA em produção</option></select></label>
+        </div>
+        <div class="row">
+          <label>Principal objetivo<select name="objetivo" required><option value="">Selecione</option><option>Reduzir custos</option><option>Vender mais</option><option>Melhorar o atendimento</option><option>Automatizar documentos e processos</option><option>Segurança e LGPD</option></select></label>
+          <label>Quando pretende agir<select name="prazo" required><option value="">Selecione</option><option>Agora</option><option>Em até 3 meses</option><option>Em até 6 meses</option><option>Só pesquisando</option></select></label>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Site<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label class="consent"><input type="checkbox" name="lgpd" required><span>Autorizo a Nexalytix a enviar o material e a entrar em contato, conforme a <a href="/privacidade" target="_blank">Política de Privacidade</a>.</span></label>
+        <button type="submit">Quero receber o e-book</button>
+        <div class="msg" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="done" id="done" aria-live="polite">
+      <b>Pronto!</b>
+      <p id="doneText"></p>
+      <a class="dl" id="dl" href="#" hidden>Baixar o e-book</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="body"><div class="wrap">
+  <div class="inside">
+    <div>
+      <h2>O que você vai encontrar</h2>
+      <ul class="list">
+        <li>Quanto as empresas no mundo e no Brasil já usam IA, com dados de McKinsey, IBGE, Sebrae e Cetic.br</li>
+        <li>O funil do uso ao lucro: em que etapa a maioria das empresas para</li>
+        <li>O risco da IA usada "na sombra" pelos funcionários, e o que isso significa para a LGPD</li>
+        <li>Quanto o mundo gasta com IA e quanta energia ela consome (Gartner e IEA)</li>
+        <li>O que os 6% que lucram com IA fazem diferente</li>
+        <li>Um autodiagnóstico de 10 perguntas e um roteiro de 90 dias para sua empresa</li>
+      </ul>
+    </div>
+    <img class="cover" src="/materiais/abismo-da-ia-capa.jpg" alt="Capa do e-book O abismo da IA nas empresas" width="397" height="562" loading="lazy">
+  </div>
+  <div class="why">
+    <h2>Por que a Nexalytix</h2>
+    <p>Somos um ecossistema de tecnologia para empresas: avaliamos, desenhamos, implementamos e operamos cloud, segurança, custos de nuvem e iniciativas de IA. Todo projeto de IA começa por um diagnóstico, para que a tecnologia apareça no resultado e não só na conta. <a href="/assessment">Conheça o Assessment de IA</a>.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Nexalytix · CC Vieira Consultoria e Serviços TI · CNPJ 39.292.587/0001-95 · Barueri, SP · <a href="/privacidade">Privacidade</a> · <a href="/termos">Termos de uso</a></div></footer>
+
+<script>
+(function(){
+  var f=document.getElementById('f'),msg=f.querySelector('.msg'),btn=f.querySelector('button');
+  var q=new URLSearchParams(location.search);
+  function err(t,el){msg.innerHTML='<span class="err">'+t+'</span>';if(el)el.focus();}
+  f.addEventListener('submit',async function(e){
+    e.preventDefault();msg.textContent='';
+    var d=Object.fromEntries(new FormData(f).entries());
+    var falta=[...f.querySelectorAll('[required]')].find(function(i){return i.type==='checkbox'?!i.checked:!i.value.trim();});
+    if(falta)return err(falta.type==='checkbox'?'Marque a autorização para receber o material.':'Preencha todos os campos obrigatórios.',falta);
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email))return err('Informe um e-mail válido, como nome@empresa.com.br.',f.email);
+    btn.disabled=true;btn.textContent='Enviando...';
+    var body={material:'abismo-da-ia',nome:d.nome,email:d.email,empresa:d.empresa,cargo:d.cargo,whatsapp:d.whatsapp,porte:d.porte,uso_ia:d.uso_ia,objetivo:d.objetivo,prazo:d.prazo,website:d.website,consentimento_lgpd:true,
+      utm_source:q.get('utm_source')||'',utm_medium:q.get('utm_medium')||'',utm_campaign:q.get('utm_campaign')||''};
+    try{
+      var r=await fetch('/api/material',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+      var j=await r.json().catch(function(){return {};});
+      if(!r.ok||!j.ok){btn.disabled=false;btn.textContent='Quero receber o e-book';return err((j.error||'Não conseguimos enviar agora.')+' Se preferir, escreva para contato@nexalytix.com.br.');}
+      document.getElementById('formBox').hidden=true;
+      var done=document.getElementById('done'),txt=document.getElementById('doneText');
+      if(j.enviado){txt.textContent='Enviamos o link do e-book para '+d.email+'. Se não aparecer em alguns minutos, confira a caixa de spam ou promoções.';}
+      else{txt.textContent='Seu e-book está pronto para download.';var a=document.getElementById('dl');a.href=j.download;a.hidden=false;}
+      done.classList.add('on');
+    }catch(_){btn.disabled=false;btn.textContent='Quero receber o e-book';err('Falha de conexão. Tente de novo ou escreva para contato@nexalytix.com.br.');}
+  });
+})();
+</script>
+</body>
+</html>
