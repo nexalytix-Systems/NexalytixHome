@@ -1,9 +1,13 @@
-# Atualiza o Radar da semana sozinho, toda segunda-feira às 6h (Brasília).
+# Atualiza o Radar da semana sozinho, toda segunda-feira por volta das 5h30 (Brasília).
+# Também roda quando alguém publica mudança nas fontes ou no script do Radar (pasta radar/).
 # Configuração única: em GitHub → Settings → Secrets and variables → Actions, crie o secret ANTHROPIC_API_KEY.
 name: Radar semanal
 on:
   schedule:
-    - cron: "0 9 * * 1"   # segunda-feira, 09:00 UTC = 06:00 em Brasília
+    - cron: "23 8 * * 1"  # segunda-feira, 08:23 UTC = 05:23 em Brasília (fora da hora cheia, menos fila no GitHub)
+  push:
+    branches: [main]
+    paths: ["radar/**", ".github/workflows/radar.yml"]
   workflow_dispatch: {}    # permite rodar na hora pelo botão "Run workflow"
 permissions:
   contents: write
