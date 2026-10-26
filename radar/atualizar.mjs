@@ -98,11 +98,12 @@ const TOOL = {
 
 const SISTEMA = `Você é o editor do "Radar da semana" da Nexalytix, empresa brasileira de tecnologia (cloud, segurança, FinOps, transformação digital e IA, SaaS, desenvolvimento e a Academia de formação em tecnologia). O público são gestores de pequenas, médias e grandes empresas no Brasil.
 Escolha as notícias mais relevantes da semana para esse público, de 3 a 4 por categoria (estudos = estudos e tendências da McKinsey, tecnologia, negocios = negócios e setor financeiro, ativos = ativos digitais, seguranca, educacao). Total entre 15 e 22. Em "estudos", prefira os estudos da McKinsey sobre IA, tecnologia, gestão, varejo, bancos e produtividade; evite os que só falam de outros países sem lição aplicável no Brasil.
-Monte também "temas": os 10 principais temas do momento, do mais para o menos importante, cruzando estudos e notícias (ex.: agentes de IA, retorno da IA, ataques à cadeia de fornecedores). Cada tema cita de 1 a 4 ids da lista que o sustentam; use os estudos da McKinsey sempre que tratarem do tema. Não repita o mesmo tema com outro nome. Marque 3 itens como destaque (os mais importantes da semana, de categorias diferentes).
+Monte também "temas": os 10 principais temas do momento, do mais para o menos importante, cruzando estudos e notícias (ex.: agentes de IA, retorno da IA, ataques à cadeia de fornecedores). Cada tema cita de 1 a 4 ids da lista que o sustentam; use os estudos da McKinsey sempre que tratarem do tema e coloque primeiro os temas sustentados por estudos da McKinsey. Não repita o mesmo tema com outro nome. Marque 3 itens como destaque (os mais importantes da semana, de categorias diferentes).
 Regras:
 - Use somente notícias da lista recebida, pelo id. Nunca invente fatos, números ou fontes; use apenas o que está no título e no trecho.
 - Escreva título e resumo com suas próprias palavras, em português do Brasil, sem copiar frases da fonte. Traduza notícias em inglês.
-- Evite fofoca, celebridades, promoções, reviews de produto de consumo, listas de compras, política partidária e conteúdo patrocinado.
+- Evite fofoca, celebridades, promoções, reviews de produto de consumo, listas de compras e conteúdo patrocinado.
+- Nunca trate de política nem de eleições: não cite eleições, candidatos, partidos, governantes ou resultado de votação, nem atribua movimentos de mercado a eles. Nada disso entra em itens, temas ou no resumo da semana.
 - Em ativos digitais e finanças: informe, nunca recomende comprar ou vender; não faça previsão de preço.
 - "por_que_importa": impacto prático para empresas e o que fazer, ligado à frente da Nexalytix escolhida em "frente".
 - Itens de "estudos" são análises, não notícias: no resumo diga o que o estudo aponta ("segundo a McKinsey, ...").
@@ -134,6 +135,11 @@ async function chamarIA(lista, porId) {
   throw ultimoErro;
 }
 
+// ---------- política e eleições ficam fora do Radar ----------
+// Notícias sobre eleições, candidatos e partidos não entram nem na lista enviada à IA.
+const POLITICA = /(elei[çc][õoã]|eleitora|\beleit[oa]s?\b|reelei|reeleit|segundo turno|primeiro turno|\bTSE\b|\burnas?\b|\bLula\b|Bolsonaro|Tarc[íi]sio|Haddad|Alckmin|Pl[aá]n?alto|partido pol[íi]tico|\belection|\bTrump\b|Democrat|Republican)/i;
+const politico = (...t) => POLITICA.test(t.filter(Boolean).join(" "));
+
 // ---------- validação ----------
 const PROIBIDO = /\b(compre|venda agora|recomendamos comprar|vai subir|vai cair)\b/i;
 function validar(sel, porId) {
@@ -151,6 +157,7 @@ function validar(sel, porId) {
     const titulo = String(it.titulo || "").trim().slice(0, 140), resumo = String(it.resumo || "").trim().slice(0, 420), pq = String(it.por_que_importa || "").trim().slice(0, 300);
     if (titulo.length < 10 || resumo.length < 30 || pq.length < 15) { recusa("texto curto ou vazio"); continue; }
     if (PROIBIDO.test(resumo + " " + pq)) { recusa("recomendação de investimento"); continue; }
+    if (politico(titulo, resumo, pq, n.titulo, n.trecho)) { recusa("política/eleições"); continue; }
     usados.add(id);
     itens.push({ categoria, titulo, resumo, por_que_importa: pq, frente, frente_nome: FRENTES[frente], destaque: !!it.destaque, fonte: n.fonte, url: n.url, data: n.data });
   }
@@ -168,11 +175,14 @@ function validarTemas(sel, porId) {
     if (!refs.length || titulo.length < 6 || explicacao.length < 40 || pq.length < 20 ) continue;
     const frente = FRENTES[t.frente] ? t.frente : "ia";
     if (PROIBIDO.test(explicacao + " " + pq)) continue;
+    if (politico(titulo, explicacao, pq, ...refs.map((n) => n.titulo))) continue;
     if (temas.some((x) => x.titulo.toLowerCase() === titulo.toLowerCase())) continue;
     temas.push({ posicao: temas.length + 1, titulo, explicacao, por_que_importa: pq, frente, frente_nome: FRENTES[frente],
       fontes: refs.map((n) => ({ fonte: n.fonte, titulo: n.titulo.slice(0, 160), url: n.url, data: n.data })) });
     if (temas.length === 10) break;
   }
+  const mck = (t) => (t.fontes.some((f) => /mckinsey/i.test(f.fonte)) ? 0 : 1);
+  temas.sort((a, b) => mck(a) - mck(b) || a.posicao - b.posicao).forEach((t, i) => (t.posicao = i + 1));
   if (temas.length < 5) { console.warn(`Temas insuficientes (${temas.length}); seção de temas omitida nesta edição.`); return []; }
   return temas;
 }
@@ -191,6 +201,7 @@ for (const n of todas.sort((a, b) => a._alt - b._alt || b.data.localeCompare(a.d
   if (vistos.has(k1) || vistos.has(k2)) continue; vistos.add(k1); vistos.add(k2);
   const porFonte = lista.filter((x) => x.fonte === n.fonte).length;
   if (porFonte >= n._max) continue;
+  if (politico(n.titulo, n.trecho)) continue; // política e eleições: fora
   const { _lim, _max, _alt, ...limpo } = n;
   lista.push({ ...limpo, id: lista.length + 1 });
 }
@@ -207,7 +218,7 @@ const fmt = (d) => d.toLocaleDateString("pt-BR", { day: "2-digit", month: "short
 const radar = {
   atualizado_em: agora.toISOString(),
   periodo: `${fmt(limite)} a ${fmt(agora)} de ${agora.getFullYear()}`,
-  resumo_semana: String(sel.resumo_semana || "").slice(0, 400),
+  resumo_semana: politico(sel.resumo_semana) ? "" : String(sel.resumo_semana || "").slice(0, 400),
   categorias: CONF.categorias,
   temas,
   itens,

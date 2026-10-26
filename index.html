@@ -1184,6 +1184,10 @@ footer .legal{border-top:1px solid var(--band-line);margin-top:40px;padding-top:
       <div class="filters" id="rdFiltros" role="group" aria-label="Filtrar por tema"></div>
     </div>
     <p class="rd-resumo" id="rdResumo" hidden></p>
+    <div class="rd-temas-box" id="rdMck" hidden>
+      <div class="radar-top"><div><span class="eyebrow">Estudos da McKinsey</span><h2 style="margin-top:6px">O que a McKinsey publicou de mais relevante</h2></div></div>
+      <div class="grid g3" id="rdMckGrid"></div>
+    </div>
     <div class="rd-temas-box" id="rdTemas" hidden>
       <div class="radar-top"><div><span class="eyebrow">Temas do momento</span><h2 style="margin-top:6px">Os 10 temas que mais importam agora</h2></div></div>
       <ol class="rd-temas" id="rdTemasLista"></ol>
@@ -1799,7 +1803,10 @@ function rdRender(){const d=RD.dados;if(!d||!d.itens||!d.itens.length){$("#rdVaz
   $("#rdTemas").hidden=false;$("#rdNotTop").hidden=false;}
  const usadas=cats.filter(c=>d.itens.some(i=>i.categoria===c.id));
  $("#rdFiltros").innerHTML=[`<button type="button" data-rf="" aria-pressed="${!RD.filtro}">Todos</button>`,...usadas.map(c=>`<button type="button" data-rf="${esc(c.id)}" aria-pressed="${RD.filtro===c.id}">${esc(c.nome)}</button>`)].join("");
- $("#rdGrid").innerHTML=d.itens.filter(i=>!RD.filtro||i.categoria===RD.filtro).map(i=>rdCard(i,cats)).join("");
+ const ehMck=i=>/mckinsey/i.test(i.fonte||"");
+ const mk=d.itens.filter(ehMck);
+ if(mk.length){$("#rdMckGrid").innerHTML=mk.map(i=>rdCard(i,cats)).join("");$("#rdMck").hidden=false;}
+ $("#rdGrid").innerHTML=d.itens.filter(i=>RD.filtro?i.categoria===RD.filtro:!ehMck(i)).map(i=>rdCard(i,cats)).join("");
  const dest=d.itens.filter(i=>i.destaque).slice(0,3);
  if(dest.length){$("#rdHomeGrid").innerHTML=dest.map(i=>rdCard(i,cats)).join("");$("#rdHome").hidden=false;}}
 $("#rdFiltros").addEventListener("click",e=>{const b=e.target.closest("[data-rf]");if(!b)return;RD.filtro=b.dataset.rf;rdRender();});
