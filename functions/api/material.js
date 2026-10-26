@@ -24,6 +24,26 @@ const OPCOES = {
 const pick = (v, lista) => (lista.includes(v) ? v : "");
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+
+// E-mails pessoais (gratuitos) não são aceitos: o material é para empresas.
+const PESSOAIS = new Set(["gmail.com","googlemail.com","hotmail.com","hotmail.com.br","outlook.com","outlook.com.br","live.com","live.com.br","msn.com","yahoo.com","yahoo.com.br","ymail.com","rocketmail.com","icloud.com","me.com","mac.com","aol.com","bol.com.br","uol.com.br","terra.com.br","ig.com.br","globo.com","globomail.com","r7.com","oi.com.br","zipmail.com.br","protonmail.com","proton.me","gmx.com","gmx.net","mail.com","zoho.com","yandex.com","tutanota.com"]);
+function checaEmail(v) {
+  const e = String(v || "").trim().toLowerCase();
+  if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(e)) return { erro: "Informe um e-mail válido, como nome@empresa.com.br." };
+  if (PESSOAIS.has(e.split("@")[1])) return { erro: "Use o seu e-mail corporativo (da empresa). E-mails pessoais como Gmail, Hotmail e Yahoo não são aceitos." };
+  return { email: e };
+}
+// Telefone brasileiro: DDD + 8 ou 9 dígitos (aceita +55 na frente). Vazio é permitido (campo opcional).
+function checaFone(v) {
+  let n = String(v || "").replace(/\D/g, "");
+  if (!n) return { fone: "" };
+  if (n.length > 11 && n.startsWith("55")) n = n.slice(2);
+  if (n.length > 11 && n.startsWith("0")) n = n.slice(1);
+  const ok = (n.length === 11 && n[2] === "9") || n.length === 10;
+  if (!ok || +n.slice(0, 2) < 11) return { erro: "Informe o celular com DDD, por exemplo (11) 90000-0000." };
+  return { fone: n.length === 11 ? `(${n.slice(0, 2)}) ${n.slice(2, 7)}-${n.slice(7)}` : `(${n.slice(0, 2)}) ${n.slice(2, 6)}-${n.slice(6)}` };
+}
+
 function temperatura(r) {
   if (r.prazo === "Agora" || r.prazo === "Em até 3 meses") return "Quente";
   if (r.prazo === "Só pesquisando") return "Frio";
@@ -53,6 +73,9 @@ export async function onRequestPost({ request, env }) {
   if (!mat) return json({ ok: false, error: "Material não encontrado." }, 400);
   if (!d.consentimento_lgpd) return json({ ok: false, error: "Marque a autorização de contato (LGPD)." }, 400);
 
+  const em = checaEmail(d.email); if (em.erro) return json({ ok: false, error: em.erro }, 400);
+  const tel = checaFone(d.whatsapp); if (tel.erro) return json({ ok: false, error: tel.erro }, 400);
+  d.email = em.email; d.whatsapp = tel.fone;
   const site = new URL(request.url).origin;
   const r = { porte: pick(d.porte, OPCOES.porte), uso_ia: pick(d.uso_ia, OPCOES.uso_ia), objetivo: pick(d.objetivo, OPCOES.objetivo), prazo: pick(d.prazo, OPCOES.prazo) };
   const fonte = FONTES[String(d.utm_source || "").toLowerCase()] || "Site";
