@@ -1,7 +1,7 @@
 {
-  "atualizado_em": "2026-10-26T14:10:22.818Z",
+  "atualizado_em": "2026-10-26T14:24:34.796Z",
   "periodo": "19 de out a 26 de out de 2026",
-  "resumo_semana": "A semana foi dominada pela forte reação dos mercados brasileiros à reeleição de Lula, com queda recorde do Ibovespa, disparada do dólar e acionamento de circuit breaker, enquanto o debate global sobre governança de agentes de IA avança com o IPO da Anthropic, novos estudos da McKinsey e ataques direcionados a agentes autônomos de codificação e cadeias de suprimentos de software.",
+  "resumo_semana": "A semana foi marcada pela consolidação da IA agêntica em bancos e softwares, por um pacote de novas regras do Banco Central para crédito e Open Finance, e por uma onda intensa de ataques à cadeia de suprimentos de software (LiteLLM, PHP, GitHub Actions). No radar de ativos digitais, destaque para decisões judiciais e regulatórias que aumentam a fiscalização sobre cripto no Brasil.",
   "categorias": [
     {
       "id": "estudos",
@@ -37,46 +37,18 @@
   "temas": [
     {
       "posicao": 1,
-      "titulo": "Volatilidade de mercado pós-eleição no Brasil",
-      "explicacao": "A reeleição de Lula provocou queda de até 17% no Ibovespa, acionamento de circuit breaker e previsões de dólar podendo chegar a R$ 5,60, segundo o Goldman Sachs. Bancos e empresas ligadas ao governo foram os mais afetados.",
-      "por_que_importa": "Empresas devem revisar hedge cambial, fluxo de caixa e cenários de FinOps diante da alta volatilidade de curto prazo.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "fontes": [
-        {
-          "fonte": "InfoMoney",
-          "titulo": "Ibovespa desaba 17% e vai a 170 mil pontos após vitória de Lula nas eleições",
-          "url": "https://www.infomoney.com.br/mercados/ibovespa-desaba-17-e-vai-a-170-mil-pontos-apos-vitoria-de-lula-nas-eleicoes/",
-          "data": "2026-10-26T13:48:41.000Z"
-        },
-        {
-          "fonte": "InfoMoney",
-          "titulo": "Dólar pode saltar 12% e ir a R$ 5,60 após eleição, diz Goldman",
-          "url": "https://www.infomoney.com.br/mercados/dolar-r-560-eleicao-goldman/",
-          "data": "2026-10-26T13:37:46.000Z"
-        },
-        {
-          "fonte": "InfoMoney",
-          "titulo": "Bancos caem forte após fim das eleições; BBAS3 desaba mais de 30% e BBDC4 perde 24%",
-          "url": "https://www.infomoney.com.br/mercados/bancos-desempenho-eleicoes-26102026/",
-          "data": "2026-10-26T13:56:23.000Z"
-        },
-        {
-          "fonte": "Exame",
-          "titulo": "Ressaca eleitoral: como os mercados se comportaram no pós-eleição de 2018 e 2022?",
-          "url": "https://exame.com/invest/mercados/ressaca-eleitoral-como-os-mercados-se-comportaram-no-pos-eleicao-de-2018-e-2022/",
-          "data": "2026-10-26T10:58:45.000Z"
-        }
-      ]
-    },
-    {
-      "posicao": 2,
-      "titulo": "Governança de agentes de IA autônomos",
-      "explicacao": "Estudos da McKinsey mostram que agentes de IA já tomam decisões e agem em processos bancários e de compliance, exigindo nova governança. Ao mesmo tempo, incidentes reais mostram agentes sendo manipulados por arquivos maliciosos.",
-      "por_que_importa": "Empresas devem estabelecer políticas claras de autoridade e controle antes de escalar o uso de agentes de IA em processos críticos.",
+      "titulo": "IA agêntica em bancos e compliance",
+      "explicacao": "A McKinsey mostra que agentes de IA já atuam em prevenção a fraude, monitoramento de transações e como 'colegas de trabalho' em bancos, exigindo nova governança. O tema se conecta à compra do Itaú de uma startup de IA para turbinar sua plataforma generativa.",
+      "por_que_importa": "Bancos e fintechs brasileiras devem estruturar governança e accountability antes de escalar agentes de IA em processos críticos.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Agentic AI in financial-crime prevention: Lessons from winners",
+          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/agentic-ai-in-financial-crime-prevention-lessons-from-winners",
+          "data": "2026-10-26T00:00:00.000Z"
+        },
         {
           "fonte": "McKinsey",
           "titulo": "The rise of the agentic coworker: A banking CIO’s guide to the next wave of AI",
@@ -84,38 +56,60 @@
           "data": "2026-10-26T00:00:00.000Z"
         },
         {
-          "fonte": "The Hacker News",
-          "titulo": "Malicious File in Downloads Folder Tries to Trick AI Coding Agent Into Installing Malware",
-          "url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
-          "data": "2026-10-26T06:03:48.000Z"
+          "fonte": "McKinsey",
+          "titulo": "Agentic AI in transaction monitoring: How banks can scale AI in compliance",
+          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/agentic-ai-in-transaction-monitoring-how-banks-can-scale-ai-in-compliance",
+          "data": "2026-10-26T00:00:00.000Z"
         },
         {
-          "fonte": "BleepingComputer",
-          "titulo": "You gave your AI agent access, but who is giving it orders?",
-          "url": "https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/",
-          "data": "2026-10-23T14:00:10.000Z"
+          "fonte": "Exame",
+          "titulo": "Itaú compra startup brasileira de inteligência artificial por R$ 2,9 bilhões",
+          "url": "https://exame.com/invest/mercados/itau-compra-startup-brasileira-de-inteligencia-artificial-por-r-29-bilhoes/",
+          "data": "2026-10-26T08:36:56.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 2,
+      "titulo": "Retorno real da IA e julgamento humano",
+      "explicacao": "A McKinsey aponta que muitas empresas ainda medem adoção de IA em vez de valor gerado, propondo uma 'curva de valor' e alertando para o gargalo do julgamento humano frente à velocidade da IA. Isso ocorre enquanto a Anthropic testa o apetite do mercado por IA com um IPO bilionário.",
+      "por_que_importa": "Gestores devem cobrar métricas de retorno financeiro da IA, não apenas indicadores de uso, antes de ampliar investimentos.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "The AI value curve: The economics of applying AI to existing work",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work",
+          "data": "2026-10-14T00:00:00.000Z"
         },
         {
           "fonte": "McKinsey",
-          "titulo": "Agentic AI in financial-crime prevention: Lessons from winners",
-          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/agentic-ai-in-financial-crime-prevention-lessons-from-winners",
-          "data": "2026-10-26T00:00:00.000Z"
+          "titulo": "The judgment bottleneck: Balancing AI and human speeds in strategy",
+          "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-judgment-bottleneck-balancing-ai-and-human-speeds-in-strategy",
+          "data": "2026-10-15T00:00:00.000Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Anthropic prepara IPO de até US$ 1,75 trilhão e testa apetite de Wall Street por IA",
+          "url": "https://exame.com/exame-in/anthropic-prepara-ipo-de-ate-us-175-trilhao-e-testa-apetite-de-wall-street-por-ia/",
+          "data": "2026-10-26T11:00:34.000Z"
         }
       ]
     },
     {
       "posicao": 3,
       "titulo": "Ataques à cadeia de suprimentos de software",
-      "explicacao": "Vazamento de chave mestra do LiteLLM e campanha que rouba segredos via logs do GitHub Actions mostram como pipelines de desenvolvimento viraram alvo prioritário de atacantes. Ambos os casos resultaram em comprometimento de pacotes e repositórios usados amplamente.",
-      "por_que_importa": "Times de dev devem auditar segredos em repositórios e revisar permissões de tokens usados em integração contínua.",
+      "explicacao": "Múltiplos incidentes na semana envolveram comprometimento de pipelines open source: LiteLLM teve pacotes PyPI e imagens Docker infectados, GitHub Actions foi usado para vazar segredos, e falhas críticas no PHP (PHP2Shell) já são exploradas ativamente.",
+      "por_que_importa": "Times de desenvolvimento devem auditar dependências de terceiros, rotacionar credenciais e monitorar pipelines de CI/CD continuamente.",
       "frente": "dev",
       "frente_nome": "Desenvolvimento e Squads",
       "fontes": [
         {
-          "fonte": "The Hacker News",
-          "titulo": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
-          "url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
-          "data": "2026-10-24T11:03:33.000Z"
+          "fonte": "CISO Advisor",
+          "titulo": "Pipeline do LiteLLM é invadido para distribuir malware",
+          "url": "https://www.cisoadvisor.com.br/pipeline-do-litellm-e-invadido-para-distribuir-malware/",
+          "data": "2026-10-22T19:23:21.000Z"
         },
         {
           "fonte": "The Hacker News",
@@ -125,45 +119,23 @@
         },
         {
           "fonte": "CISO Advisor",
-          "titulo": "Pipeline do LiteLLM é invadido para distribuir malware",
-          "url": "https://www.cisoadvisor.com.br/pipeline-do-litellm-e-invadido-para-distribuir-malware/",
-          "data": "2026-10-22T19:23:21.000Z"
+          "titulo": "Leia o relatório que revelou as falhas críticas do PHP",
+          "url": "https://www.cisoadvisor.com.br/leia-o-relatorio-que-revelou-as-falhas-criticas-do-php/",
+          "data": "2026-10-22T11:09:19.000Z"
+        },
+        {
+          "fonte": "The Hacker News",
+          "titulo": "Malicious File in Downloads Folder Tries to Trick AI Coding Agent Into Installing Malware",
+          "url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
+          "data": "2026-10-26T06:03:48.000Z"
         }
       ]
     },
     {
       "posicao": 4,
-      "titulo": "Retorno sobre investimento em IA sob escrutínio",
-      "explicacao": "O IPO bilionário da Anthropic e o estudo da McKinsey sobre a 'curva de valor' da IA mostram que o mercado está mais exigente quanto ao retorno real dos investimentos em inteligência artificial. Empresas de tecnologia seguem captando bilhões para expandir infraestrutura, como no caso da Meta.",
-      "por_que_importa": "Gestores devem medir valor de negócio gerado pela IA, não apenas adoção, antes de ampliar investimentos na tecnologia.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "fontes": [
-        {
-          "fonte": "Exame",
-          "titulo": "Anthropic prepara IPO de até US$ 1,75 trilhão e testa apetite de Wall Street por IA",
-          "url": "https://exame.com/exame-in/anthropic-prepara-ipo-de-ate-us-175-trilhao-e-testa-apetite-de-wall-street-por-ia/",
-          "data": "2026-10-26T11:00:34.000Z"
-        },
-        {
-          "fonte": "McKinsey",
-          "titulo": "The AI value curve: The economics of applying AI to existing work",
-          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work",
-          "data": "2026-10-14T00:00:00.000Z"
-        },
-        {
-          "fonte": "Olhar Digital",
-          "titulo": "Meta quer captar R$ 475 bilhões para ampliar sua estrutura de IA",
-          "url": "https://olhardigital.com.br/2026/10/26/pro/meta-quer-captar-r-475-bilhoes-para-ampliar-sua-estrutura-de-ia/",
-          "data": "2026-10-26T13:24:47.000Z"
-        }
-      ]
-    },
-    {
-      "posicao": 5,
-      "titulo": "Regulação do sistema financeiro e fintechs no Brasil",
-      "explicacao": "O Banco Central endureceu regras do Open Finance e passou a negar mais licenças de instituições de pagamento, elevando o custo regulatório para fintechs. O movimento já influencia decisões de fusões e aquisições no setor.",
-      "por_que_importa": "Fintechs devem reavaliar estratégia de licenciamento e compliance diante do aumento das exigências regulatórias do BC.",
+      "titulo": "Novas regras do Banco Central para crédito e Open Finance",
+      "explicacao": "O BC endureceu regras de Open Finance para parcerias e uso de dados, além de criar painel de dívidas e novas exigências para crédito vinculado ao Pix. As medidas buscam frear o endividamento e aumentar proteção ao consumidor.",
+      "por_que_importa": "Instituições financeiras precisam revisar contratos, governança de dados e processos de oferta de crédito para se adequar às novas normas.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "fontes": [
@@ -175,25 +147,19 @@
         },
         {
           "fonte": "Finsiders Brasil",
-          "titulo": "Com regra nova do BC, manter licença própria deixa de compensar para parte das fintechs",
-          "url": "https://finsidersbrasil.com.br/regulamentacao/com-regra-nova-do-bc-manter-licenca-propria-deixa-de-compensar-para-parte-das-fintechs/",
-          "data": "2026-10-22T18:53:52.000Z"
-        },
-        {
-          "fonte": "Finsiders Brasil",
-          "titulo": "Custo regulatório muda o valor das fintechs e movimenta o mercado de M&A",
-          "url": "https://finsidersbrasil.com.br/reportagem-exclusiva-fintechs/fintechs-ja-reavaliam-valor-das-empresas-e-rota-apos-regulacao/",
-          "data": "2026-10-22T18:54:32.000Z"
+          "titulo": "BC aperta cerco ao crédito abusivo e busca frear endividamento",
+          "url": "https://finsidersbrasil.com.br/regulamentacao/bc-aperta-cerco-ao-credito-abusivo-para-frear-o-endividamento/",
+          "data": "2026-10-26T14:14:07.000Z"
         }
       ]
     },
     {
-      "posicao": 6,
-      "titulo": "Sequestro de agentes de IA para instalar malware",
-      "explicacao": "Pesquisadores identificaram arquivos de instrução maliciosos usados para enganar agentes de codificação por IA e induzi-los a instalar pacotes npm comprometidos. O ataque foi detectado antes da execução, mas expõe uma nova superfície de risco.",
-      "por_que_importa": "Equipes de desenvolvimento devem validar a origem de instruções automatizadas e isolar ambientes de execução de agentes de IA.",
-      "frente": "dev",
-      "frente_nome": "Desenvolvimento e Squads",
+      "posicao": 5,
+      "titulo": "Agentes de IA como alvo e vetor de ataque",
+      "explicacao": "Pesquisadores encontraram arquivos maliciosos tentando enganar agentes de IA de codificação a instalar malware, e um novo guia de órgãos de segurança trata agentes descontrolados como incidentes a serem simulados. O tema reforça riscos emergentes de autonomia de IA.",
+      "por_que_importa": "Empresas que usam agentes de IA em desenvolvimento devem isolar ambientes, validar instruções e preparar resposta a incidentes específicos.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
       "fontes": [
         {
           "fonte": "The Hacker News",
@@ -209,83 +175,117 @@
         },
         {
           "fonte": "BleepingComputer",
-          "titulo": "You gave your AI agent access, but who is giving it orders?",
-          "url": "https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/",
-          "data": "2026-10-23T14:00:10.000Z"
+          "titulo": "When an AI Agent Is the Incident, the Identity Record Is the Evidence",
+          "url": "https://www.bleepingcomputer.com/news/security/when-an-ai-agent-is-the-incident-the-identity-record-is-the-evidence/",
+          "data": "2026-10-26T14:00:10.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 6,
+      "titulo": "Corrida bilionária por infraestrutura de IA",
+      "explicacao": "A Meta busca captar R$ 475 bilhões para expandir sua estrutura de IA, mesmo com fluxo de caixa livre negativo, enquanto a Anthropic prepara um IPO avaliado em até US$ 1,75 trilhão. Os movimentos mostram apostas gigantescas no setor sob escrutínio do mercado.",
+      "por_que_importa": "Empresas de cloud e TI devem monitorar custos de infraestrutura de IA, que tendem a subir com a disputa por capacidade entre gigantes.",
+      "frente": "cloud",
+      "frente_nome": "Cloud e Infraestrutura",
+      "fontes": [
+        {
+          "fonte": "Olhar Digital",
+          "titulo": "Meta quer captar R$ 475 bilhões para ampliar sua estrutura de IA",
+          "url": "https://olhardigital.com.br/2026/10/26/pro/meta-quer-captar-r-475-bilhoes-para-ampliar-sua-estrutura-de-ia/",
+          "data": "2026-10-26T13:24:47.000Z"
+        },
+        {
+          "fonte": "Exame",
+          "titulo": "Anthropic prepara IPO de até US$ 1,75 trilhão e testa apetite de Wall Street por IA",
+          "url": "https://exame.com/exame-in/anthropic-prepara-ipo-de-ate-us-175-trilhao-e-testa-apetite-de-wall-street-por-ia/",
+          "data": "2026-10-26T11:00:34.000Z"
         }
       ]
     },
     {
       "posicao": 7,
-      "titulo": "Vazamentos de dados em larga escala",
-      "explicacao": "Capcom confirmou exposição de dados de 11,7 milhões de contas e a Quest Diagnostics revelou vazamento de registros de pacientes, ambos após acessos não autorizados a sistemas internos. Os casos reforçam a pressão sobre empresas com grandes bases de usuários.",
-      "por_que_importa": "Empresas devem revisar segmentação de dados sensíveis e planos de resposta a incidentes para reduzir impacto de vazamentos.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "fontes": [
-        {
-          "fonte": "BleepingComputer",
-          "titulo": "Capcom confirms data breach affecting 11.7 million accounts",
-          "url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
-          "data": "2026-10-22T20:22:45.000Z"
-        },
-        {
-          "fonte": "BleepingComputer",
-          "titulo": "Quest Diagnostics confirms data breach exposed patient records",
-          "url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
-          "data": "2026-10-23T16:40:07.000Z"
-        }
-      ]
-    },
-    {
-      "posicao": 8,
-      "titulo": "Ativos digitais e stablecoins em meio à volatilidade cambial",
-      "explicacao": "A disparada do dólar após a eleição elevou a cotação da stablecoin USDT a R$ 5,42, levando uma plataforma a pausar temporariamente operações em reais. Paralelamente, o debate sobre tokenização e liquidação com stablecoins avança na Anbima.",
-      "por_que_importa": "Empresas que usam ativos digitais para liquidação devem monitorar riscos operacionais e cambiais de plataformas no curto prazo.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "fontes": [
-        {
-          "fonte": "Livecoins",
-          "titulo": "Dólar dispara após reeleição de Lula; USDT chega a R$ 5,42",
-          "url": "https://livecoins.com.br/dolar-dispara-apos-reeleicao-de-lula-usdt-chega-a-r-542/",
-          "data": "2026-10-26T01:52:01.000Z"
-        },
-        {
-          "fonte": "Livecoins",
-          "titulo": "ANBIMA anuncia debate sobre liquidação com stablecoins e ativos tokenizados",
-          "url": "https://livecoins.com.br/anbima-anuncia-debate-sobre-liquidacao-com-stablecoins-e-ativos-tokenizados/",
-          "data": "2026-10-24T01:05:31.000Z"
-        },
-        {
-          "fonte": "Livecoins",
-          "titulo": "“INSS de Guarujá” publica norma que proíbe aplicação em fundos com criptomoedas e lembra que Governo Lula proíbe a prática desde 2025",
-          "url": "https://livecoins.com.br/inss-de-guaruja-publica-norma-que-proibe-aplicacao-em-fundos-com-criptomoedas-e-lembra-que-governo-lula-proibe-a-pratica-desde-2025/",
-          "data": "2026-10-25T14:00:59.000Z"
-        }
-      ]
-    },
-    {
-      "posicao": 9,
-      "titulo": "Ransomware contra infraestrutura crítica",
-      "explicacao": "Relatório da CISA e FBI revela que o grupo SafePay comprometeu mais de 600 organizações de infraestrutura crítica globalmente desde 2024. O alerta conjunto busca ajudar empresas a identificar indicadores de comprometimento do grupo.",
-      "por_que_importa": "Operadores de infraestrutura crítica devem revisar segmentação de rede e planos de resposta a incidentes com base nos indicadores divulgados.",
+      "titulo": "Exploração ativa de vulnerabilidades críticas em massa",
+      "explicacao": "Falhas no PHP (PHP2Shell), atualizações da Oracle com mais de 1.200 CVEs corrigidos e outras vulnerabilidades críticas em produtos amplamente usados mostram um volume alto de exposição a risco nesta semana.",
+      "por_que_importa": "Equipes de segurança devem priorizar patches críticos imediatamente, especialmente em sistemas expostos à internet.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "fontes": [
         {
           "fonte": "CISO Advisor",
-          "titulo": "SafePay atinge 600 organizações de infraestrutura crítica",
-          "url": "https://www.cisoadvisor.com.br/safepay-atinge-600-organizacoes-de-infraestrutura-critica/",
-          "data": "2026-10-21T20:57:21.000Z"
+          "titulo": "Leia o relatório que revelou as falhas críticas do PHP",
+          "url": "https://www.cisoadvisor.com.br/leia-o-relatorio-que-revelou-as-falhas-criticas-do-php/",
+          "data": "2026-10-22T11:09:19.000Z"
+        },
+        {
+          "fonte": "CISO Advisor",
+          "titulo": "Oracle corrige mais de 1.209 vulnerabilidades em outubro",
+          "url": "https://www.cisoadvisor.com.br/oracle-corrige-mais-de-1-209-vulnerabilidades-em-outubro/",
+          "data": "2026-10-23T02:57:05.000Z"
+        },
+        {
+          "fonte": "BleepingComputer",
+          "titulo": "PHP2Shell security flaws now sucessfully exploited in the wild",
+          "url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
+          "data": "2026-10-26T09:19:57.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 8,
+      "titulo": "Fiscalização e regulação de ativos digitais no Brasil",
+      "explicacao": "A Binance pediu licença ao Banco Central para operar no país, enquanto Justiça de SP ordenou devolução de ativos de uma corretora e MPs estaduais uniram forças para rastrear criptomoedas. O cenário mostra avanço simultâneo de regulação e fiscalização.",
+      "por_que_importa": "Empresas do setor cripto devem reforçar compliance regulatório e rastreabilidade para operar com segurança jurídica no Brasil.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "fontes": [
+        {
+          "fonte": "Exame",
+          "titulo": "Exclusivo: Binance pede licença ao BC e diz que terá mais produtos do que os bancos",
+          "url": "https://exame.com/future-of-money/exclusivo-binance-pede-licenca-ao-bc-e-diz-que-tera-mais-produtos-do-que-os-bancos/",
+          "data": "2026-10-26T10:08:24.000Z"
+        },
+        {
+          "fonte": "Livecoins",
+          "titulo": "Justiça de SP manda administradores devolverem site, chave Pix e depósitos para a corretora Brasil Bitcoin em 48 horas",
+          "url": "https://livecoins.com.br/justica-de-sp-manda-administradores-devolverem-site-chave-pix-e-depositos-para-a-corretora-brasil-bitcoin-em-48-horas/",
+          "data": "2026-10-24T17:58:06.000Z"
+        },
+        {
+          "fonte": "Livecoins",
+          "titulo": "MP da Bahia vai rastrear criptomoedas após parceria com Ministério Público do Rio de Janeiro",
+          "url": "https://livecoins.com.br/mp-da-bahia-vai-rastrear-criptomoedas-apos-parceria-com-ministerio-publico-do-rio-de-janeiro/",
+          "data": "2026-10-26T12:26:54.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 9,
+      "titulo": "Privacidade de dados em grandes plataformas",
+      "explicacao": "O Google atualizou sua política para permitir uso de dados do Gmail e Fotos em anúncios personalizados, gerando questionamentos sobre privacidade. A mudança ocorre em meio a maior atenção regulatória sobre uso de dados de clientes no Brasil, incluindo o Open Finance.",
+      "por_que_importa": "Empresas devem orientar equipes sobre configurações de privacidade e revisar uso corporativo de ferramentas Google.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "fontes": [
+        {
+          "fonte": "Tecnoblog",
+          "titulo": "Google quer usar seus dados no Gmail e Fotos para anúncios; veja como evitar",
+          "url": "https://tecnoblog.net/noticias/google-quer-usar-seus-dados-no-gmail-e-fotos-para-anuncios-veja-como-evitar/",
+          "data": "2026-10-26T10:05:17.000Z"
+        },
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "Open Finance: BC endurece regras para parcerias e uso de dados de clientes",
+          "url": "https://finsidersbrasil.com.br/regulamentacao/open-finance-bc-endurece-regras-para-parcerias-e-uso-de-dados-de-clientes/",
+          "data": "2026-10-22T23:17:46.000Z"
         }
       ]
     },
     {
       "posicao": 10,
-      "titulo": "IA na educação e formação de competências digitais",
-      "explicacao": "Especialistas defendem que proibir IA nas escolas é menos eficaz do que ensinar seu uso responsável, enquanto outro estudo propõe redefinir o que é alto desempenho acadêmico diante de ferramentas generativas. O debate reflete a necessidade de adaptar currículos à nova realidade tecnológica.",
-      "por_que_importa": "Academias corporativas devem priorizar capacitação crítica em IA e revisar critérios de avaliação de desempenho dos alunos.",
+      "titulo": "IA na educação corporativa e escolar",
+      "explicacao": "Especialistas defendem ensinar uso responsável de IA em vez de simplesmente proibi-la nas escolas, enquanto a disseminação de ferramentas de IA obriga repensar como se reconhece alto desempenho estudantil. Projetos de tecnologia também mostram resultados na redução de evasão escolar.",
+      "por_que_importa": "Programas de capacitação e Academia corporativa devem atualizar currículos para incluir letramento em IA e novos critérios de avaliação.",
       "frente": "academia",
       "frente_nome": "Academia",
       "fontes": [
@@ -313,9 +313,9 @@
   "itens": [
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: agentes de IA avançam na prevenção a crimes financeiros",
-      "resumo": "Segundo a McKinsey, um ano de implementação de IA agêntica em instituições financeiras confirmou expectativas sobre ganhos de eficiência e revelou cinco questões-chave para escalar o uso. O estudo destaca lições de instituições que já colhem resultados.",
-      "por_que_importa": "Bancos e fintechs brasileiros devem avaliar pilotos de IA agêntica em compliance com governança clara desde o início do projeto.",
+      "titulo": "IA agêntica já mostra resultados concretos na prevenção a fraudes financeiras",
+      "resumo": "Após um ano de uso real, a McKinsey identifica cinco questões-chave para escalar agentes de IA na prevenção a crimes financeiros. O estudo mostra que a tecnologia já sai do piloto e entra em produção em instituições financeiras.",
+      "por_que_importa": "Bancos e fintechs brasileiras devem priorizar casos de uso de IA agêntica em antifraude com governança clara desde o início.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "destaque": false,
@@ -325,9 +325,9 @@
     },
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: o guia do CIO bancário para a era dos agentes de IA",
-      "resumo": "O estudo aponta que agentes de IA estão cada vez mais capazes de tomar decisões e agir de forma autônoma em processos bancários. Segundo a McKinsey, escalar essa tecnologia exige novas abordagens de governança, arquitetura e responsabilização.",
-      "por_que_importa": "CIOs devem estruturar políticas de governança de agentes de IA antes de ampliar a automação de processos críticos.",
+      "titulo": "McKinsey traça guia para bancos adotarem agentes de IA como 'colegas de trabalho'",
+      "resumo": "O estudo mostra que agentes de IA já decidem, agem e colaboram em fluxos bancários, exigindo nova governança e arquitetura. CIOs de bancos precisam repensar responsabilidade e controle sobre essas decisões automatizadas.",
+      "por_que_importa": "Empresas que adotam IA agêntica devem estruturar accountability e arquitetura antes de escalar, evitando riscos operacionais.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "destaque": false,
@@ -337,9 +337,21 @@
     },
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: agentes de IA mudam a economia da engenharia de software",
-      "resumo": "Segundo a McKinsey, o próximo estágio da IA aplicada a software vai além de escrever código mais rápido, exigindo que empresas meçam valor de negócio gerado por agentes autônomos. O estudo traz a visão de um líder de empresa especializada em IA para desenvolvimento.",
-      "por_que_importa": "Equipes de desenvolvimento devem redefinir métricas de produtividade ao adotar agentes de IA, focando em valor entregue e não apenas velocidade.",
+      "titulo": "IA agêntica transforma monitoramento de transações em bancos",
+      "resumo": "Segundo a McKinsey, aplicar agentes de IA ao monitoramento de transações converte compliance de centro de custo em vantagem competitiva. O estudo detalha como bancos estão escalando essa aplicação na prática.",
+      "por_que_importa": "Instituições financeiras brasileiras podem usar IA para reduzir custo de compliance e acelerar detecção de irregularidades.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/agentic-ai-in-transaction-monitoring-how-banks-can-scale-ai-in-compliance",
+      "data": "2026-10-26T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "Agentes de IA mudam a economia da engenharia de software, diz co-fundador da Cognition",
+      "resumo": "Segundo a McKinsey, o próximo passo da IA em engenharia de software vai além de escrever código mais rápido: é preciso transformar agentes autônomos em valor de negócio mensurável. O estudo traz a visão do co-fundador da Cognition sobre essa economia.",
+      "por_que_importa": "Times de desenvolvimento devem medir IA agêntica por impacto de negócio, não só por velocidade de codificação.",
       "frente": "dev",
       "frente_nome": "Desenvolvimento e Squads",
       "destaque": false,
@@ -349,9 +361,9 @@
     },
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: o gargalo do julgamento humano na era da IA",
-      "resumo": "Segundo a McKinsey, a análise de dados já roda em velocidade de IA, mas o julgamento estratégico ainda depende do ritmo humano. O estudo propõe três movimentos para transformar a velocidade da IA em decisões estratégicas melhores.",
-      "por_que_importa": "Líderes devem desenhar processos de decisão que combinem velocidade da IA com validação humana em pontos críticos da estratégia.",
+      "titulo": "McKinsey: o gargalo do julgamento humano na era da IA rápida",
+      "resumo": "A análise aponta que a IA acelerou a etapa de análise, mas o julgamento estratégico ainda depende do ritmo humano. Três movimentos são propostos para transformar velocidade de IA em melhores decisões estratégicas.",
+      "por_que_importa": "Líderes devem redesenhar processos de decisão para equilibrar velocidade da IA com julgamento humano qualificado.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "destaque": false,
@@ -361,21 +373,33 @@
     },
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: a curva de valor da IA aplicada a processos existentes",
-      "resumo": "Segundo a McKinsey, muitas organizações ainda medem adoção de IA em vez de valor gerado. O estudo propõe uma curva de valor para identificar onde a automação por IA é mais custo-efetiva dentro dos processos atuais.",
-      "por_que_importa": "Gestores devem usar a curva de valor da IA para priorizar investimentos onde o retorno financeiro é mais claro e mensurável.",
+      "titulo": "McKinsey propõe 'curva de valor' para medir retorno real da IA nas empresas",
+      "resumo": "O estudo aponta que muitas organizações ainda medem adoção de IA em vez de valor gerado. A curva de valor ajuda a identificar onde a automação por IA é mais custo-efetiva dentro dos processos existentes.",
+      "por_que_importa": "Gestores devem substituir métricas de uso de IA por métricas de valor financeiro para justificar investimentos em IA.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
+      "destaque": true,
       "fonte": "McKinsey",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work",
       "data": "2026-10-14T00:00:00.000Z"
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Meta busca captar R$ 475 bilhões para expandir infraestrutura de IA",
-      "resumo": "A empresa prevê investir até US$ 145 bilhões em 2026 para ampliar sua estrutura de inteligência artificial, mesmo após registrar fluxo de caixa livre negativo. A receita, porém, veio acima das projeções do mercado.",
-      "por_que_importa": "O volume de investimento sinaliza intensificação da corrida por infraestrutura de IA, pressionando custos de nuvem e GPUs para empresas que dependem desses serviços.",
+      "titulo": "Apple lança iPad Mini com tela OLED e novo chip A20 Pro",
+      "resumo": "O novo iPad Mini chega com tela levemente maior, de 8,5 polegadas, tela OLED e até 512 GB de armazenamento. O modelo já está disponível com preços definidos para o mercado brasileiro.",
+      "por_que_importa": "Empresas que usam tablets corporativos podem avaliar o novo modelo para renovação de frota de dispositivos móveis.",
+      "frente": "dev",
+      "frente_nome": "Desenvolvimento e Squads",
+      "destaque": false,
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/noticias/apple-lanca-ipad-mini-com-tela-oled-e-chip-a20-pro-veja-precos-no-brasil/",
+      "data": "2026-10-26T13:59:25.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Meta busca R$ 475 bilhões para expandir infraestrutura de IA",
+      "resumo": "A empresa prevê investir até US$ 145 bilhões em 2026 em infraestrutura de inteligência artificial, mesmo após registrar fluxo de caixa livre negativo. A receita, porém, veio acima das projeções do mercado.",
+      "por_que_importa": "O volume de investimento sinaliza corrida acelerada por capacidade de IA, pressionando custos de infraestrutura cloud no mercado.",
       "frente": "cloud",
       "frente_nome": "Cloud e Infraestrutura",
       "destaque": false,
@@ -385,21 +409,9 @@
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Campanhas políticas dos EUA usam otimização para IA generativa",
-      "resumo": "Estratégias de GEO (otimização para motores gerativos) estão sendo usadas para influenciar respostas de ferramentas como ChatGPT e Gemini em campanhas eleitorais americanas. A prática levanta questões sobre manipulação de informação via IA.",
-      "por_que_importa": "Empresas de marketing e comunicação devem entender como a otimização para IA generativa pode afetar a visibilidade e reputação de marcas.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "Olhar Digital",
-      "url": "https://olhardigital.com.br/2026/10/26/inteligencia-artificial/chatgpt-e-gemini-entram-na-estrategia-de-campanhas-politicas-dos-eua/",
-      "data": "2026-10-26T12:55:41.000Z"
-    },
-    {
-      "categoria": "tecnologia",
       "titulo": "Vivo e Starlink lançam conectividade via satélite gratuita no Brasil",
-      "resumo": "Clientes da Vivo poderão conectar seus celulares diretamente à constelação de satélites da Starlink, sem custo adicional. A parceria amplia a cobertura em áreas remotas do país.",
-      "por_que_importa": "Empresas com operações em áreas de conectividade limitada podem se beneficiar de maior disponibilidade de rede para operações críticas e IoT.",
+      "resumo": "Clientes da Vivo poderão conectar seus celulares diretamente à constelação de satélites da Starlink. O serviço amplia a cobertura em áreas sem rede móvel tradicional no país.",
+      "por_que_importa": "Empresas com operações em áreas remotas ganham nova opção de conectividade para continuidade de negócio e IoT.",
       "frente": "cloud",
       "frente_nome": "Cloud e Infraestrutura",
       "destaque": false,
@@ -409,9 +421,9 @@
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Google vai usar dados do Gmail e Fotos para anúncios personalizados",
-      "resumo": "Nova política da empresa permite que informações compartilhadas com recursos de Inteligência Personalizada no Search e Gemini influenciem a publicidade direcionada. A mudança afeta usuários que ativarem os recursos de IA do Google.",
-      "por_que_importa": "Empresas devem revisar políticas internas de uso de ferramentas Google e orientar colaboradores sobre configurações de privacidade de dados.",
+      "titulo": "Google vai usar dados do Gmail e Fotos para personalizar anúncios",
+      "resumo": "Uma nova política permite que informações compartilhadas com recursos de Inteligência Personalizada do Google influenciem a exibição de anúncios. A mudança levanta questões sobre privacidade de dados dos usuários.",
+      "por_que_importa": "Empresas devem revisar políticas internas de uso de ferramentas Google e orientar colaboradores sobre configurações de privacidade.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": false,
@@ -421,57 +433,21 @@
     },
     {
       "categoria": "negocios",
-      "titulo": "Bancos desabam na bolsa após reeleição de Lula",
-      "resumo": "Ações de grandes bancos como BB e Bradesco caíram fortemente na B3 logo após o resultado do segundo turno. O movimento acompanhou a queda generalizada do Ibovespa no pregão seguinte à eleição.",
-      "por_que_importa": "Empresas com exposição a bancos e mercado de capitais devem revisar hedges e fluxo de caixa diante da volatilidade cambial e de juros.",
+      "titulo": "BC amplia controle sobre crédito e cria painel de dívidas",
+      "resumo": "Novas normas do Banco Central restringem ofertas de empréstimo, criam painel público de dívidas e aumentam exigências para operações de crédito vinculadas ao Pix. O objetivo é frear o endividamento das famílias.",
+      "por_que_importa": "Instituições financeiras precisam ajustar processos de oferta de crédito e comunicação para atender às novas regras já em 2027.",
       "frente": "finops",
       "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "InfoMoney",
-      "url": "https://www.infomoney.com.br/mercados/bancos-desempenho-eleicoes-26102026/",
-      "data": "2026-10-26T13:56:23.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Ibovespa cai 17% e aciona circuit breaker após eleição",
-      "resumo": "O principal índice da bolsa brasileira recuou cerca de 17% no pregão pós-eleitoral, levando a bolsa a interromper negociações. O fechamento abaixo de 170 mil pontos reforça o nervosismo do mercado com a reeleição de Lula.",
-      "por_que_importa": "Gestores financeiros devem reforçar monitoramento de risco de mercado e revisar projeções orçamentárias que dependam de câmbio e juros.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": true,
-      "fonte": "InfoMoney",
-      "url": "https://www.infomoney.com.br/mercados/ibovespa-desaba-17-e-vai-a-170-mil-pontos-apos-vitoria-de-lula-nas-eleicoes/",
-      "data": "2026-10-26T13:48:41.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Executivo de tecnologia deixa Nubank para laboratório de IA da Meta",
-      "resumo": "O responsável pela tecnologia do banco digital por mais de um ano assume novo cargo na área de inteligência artificial da Meta. Enquanto isso, o fundador do Nubank assume a liderança da área interinamente.",
-      "por_que_importa": "A disputa por talentos de IA se intensifica globalmente; empresas brasileiras devem revisar planos de retenção de especialistas em tecnologia.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
       "destaque": false,
       "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/gente-em-fintechs/eric-young-deixa-o-nubank-e-assume-cargo-no-laboratorio-de-ia-da-meta/",
-      "data": "2026-10-26T13:39:28.000Z"
+      "url": "https://finsidersbrasil.com.br/regulamentacao/bc-aperta-cerco-ao-credito-abusivo-para-frear-o-endividamento/",
+      "data": "2026-10-26T14:14:07.000Z"
     },
     {
       "categoria": "negocios",
-      "titulo": "Goldman projeta dólar a R$ 5,60 após eleição",
-      "resumo": "Segundo o banco, contratos futuros negociados na CME indicam alta de até 12% no dólar frente ao real, reação mais forte que em eleições anteriores. A avaliação reforça a percepção de maior risco fiscal e político no curto prazo.",
-      "por_que_importa": "Empresas com custos ou dívidas em dólar devem revisar proteção cambial e cenários de FinOps para os próximos meses.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "InfoMoney",
-      "url": "https://www.infomoney.com.br/mercados/dolar-r-560-eleicao-goldman/",
-      "data": "2026-10-26T13:37:46.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Anthropic prepara IPO bilionário e testa apetite por IA em Wall Street",
-      "resumo": "A dona do Claude protocolou prospecto para abrir capital em novembro, com valuation que pode chegar a US$ 1,75 trilhão. O movimento ocorre em meio a dúvidas sobre o retorno real dos investimentos bilionários em inteligência artificial.",
-      "por_que_importa": "O IPO é um termômetro do apetite de investidores por IA e pode influenciar valuations e financiamento de projetos de IA no Brasil.",
+      "titulo": "Anthropic prepara IPO bilionário e testa apetite do mercado por IA",
+      "resumo": "A dona do Claude está preparando abertura de capital avaliada em até US$ 1,75 trilhão, com prospecto previsto para novembro. O movimento ocorre em meio a dúvidas do mercado sobre o retorno dos investimentos bilionários em inteligência artificial.",
+      "por_que_importa": "O resultado do IPO sinalizará se investidores seguem dispostos a financiar grandes apostas em IA, afetando custo de capital do setor.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "destaque": true,
@@ -481,45 +457,9 @@
     },
     {
       "categoria": "negocios",
-      "titulo": "Peru lança sistema de pagamentos instantâneos inspirado no Pix",
-      "resumo": "O TAPP, nova infraestrutura pública de pagamentos peruana, estreia em dezembro inspirada no Pix brasileiro e na UPI indiana. O objetivo é reduzir a dependência de redes fechadas de pagamento no país.",
-      "por_que_importa": "O sucesso do Pix como modelo exportável reforça oportunidades para empresas brasileiras de SaaS financeiro atuarem na região.",
-      "frente": "saas",
-      "frente_nome": "SaaS Nexalytix",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/pagamentos/peru-lanca-tapp-em-dezembro-o-que-o-pix-ensina-ao-pais/",
-      "data": "2026-10-23T14:01:00.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "BC endurece regras do Open Finance para parcerias e uso de dados",
-      "resumo": "O Banco Central aprovou novas exigências para compartilhamento de dados entre bancos e fintechs no Open Finance, após meses de discussão com o setor. A medida busca reforçar segurança e transparência nas parcerias.",
-      "por_que_importa": "Instituições financeiras e fintechs devem revisar contratos e arquitetura de dados para se adequar às novas regras antes de entrarem em vigor.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/regulamentacao/open-finance-bc-endurece-regras-para-parcerias-e-uso-de-dados-de-clientes/",
-      "data": "2026-10-22T23:17:46.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Nova regra do BC reduz vantagem de licença própria para fintechs",
-      "resumo": "O regulador negou dez licenças de instituições de pagamento até setembro, mais que o dobro de 2025, levando empresas a avaliar vender, encolher ou migrar de modelo. O custo regulatório crescente está remodelando o mercado de fintechs.",
-      "por_que_importa": "Fintechs devem reavaliar a estratégia regulatória e considerar parcerias ou migração de licença diante do aumento de exigências do BC.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/regulamentacao/com-regra-nova-do-bc-manter-licenca-propria-deixa-de-compensar-para-parte-das-fintechs/",
-      "data": "2026-10-22T18:53:52.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Binance pede licença ao Banco Central para operar no Brasil",
-      "resumo": "A maior corretora de criptomoedas do mundo protocolou pedido de autorização como Prestadora de Serviços de Ativos Virtuais junto ao BC. Em entrevista, o diretor-geral no Brasil criticou pontos da regulação vigente.",
-      "por_que_importa": "A formalização de grandes exchanges sinaliza amadurecimento regulatório do setor; empresas devem acompanhar novas exigências de compliance.",
+      "titulo": "Binance pede licença ao Banco Central para operar como instituição de pagamento",
+      "resumo": "A maior corretora de criptomoedas do mundo protocolou pedido de autorização como PSAV junto ao Banco Central. A empresa afirma que pretende oferecer mais produtos financeiros do que os bancos tradicionais no Brasil.",
+      "por_que_importa": "Empresas do setor financeiro devem monitorar a entrada de grandes exchanges reguladas como novos concorrentes diretos.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "destaque": false,
@@ -528,34 +468,70 @@
       "data": "2026-10-26T10:08:24.000Z"
     },
     {
+      "categoria": "negocios",
+      "titulo": "Itaú compra startup de IA por R$ 2,9 bilhões para turbinar plataforma generativa",
+      "resumo": "O banco adquiriu uma startup brasileira de inteligência artificial para acelerar a evolução do ia.i, sua plataforma de IA generativa. A aquisição reforça a aposta de grandes bancos brasileiros em IA proprietária.",
+      "por_que_importa": "A movimentação mostra que bancos brasileiros tratam IA generativa como ativo estratégico, pressionando concorrentes a investir ou associar-se.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Exame",
+      "url": "https://exame.com/invest/mercados/itau-compra-startup-brasileira-de-inteligencia-artificial-por-r-29-bilhoes/",
+      "data": "2026-10-26T08:36:56.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "BC endurece regras do Open Finance para parcerias e uso de dados",
+      "resumo": "O Banco Central aprovou novas regras que tornam mais rígidas as condições para parcerias e compartilhamento de dados de clientes no Open Finance. A medida chega após meses de discussão com bancos, fintechs e especialistas em proteção de dados.",
+      "por_que_importa": "Empresas que usam Open Finance devem revisar contratos e governança de dados para se adequar às novas exigências regulatórias.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/regulamentacao/open-finance-bc-endurece-regras-para-parcerias-e-uso-de-dados-de-clientes/",
+      "data": "2026-10-22T23:17:46.000Z"
+    },
+    {
       "categoria": "ativos",
-      "titulo": "Dólar dispara e stablecoin USDT chega a R$ 5,42 após eleição",
-      "resumo": "O real recuou no mercado futuro após o resultado eleitoral, levando a cotação da stablecoin USDT a R$ 5,42. A plataforma Bridge chegou a pausar temporariamente operações de entrada e saída de reais no Brasil.",
-      "por_que_importa": "Empresas que usam stablecoins para liquidação internacional devem monitorar volatilidade cambial e riscos operacionais de plataformas.",
+      "titulo": "Strive realiza maior compra de Bitcoin de sua história",
+      "resumo": "A empresa Strive fez sua maior aquisição de Bitcoin até hoje, aproximando-se das maiores tesourarias corporativas da criptomoeda. O movimento ocorre enquanto a concorrente Strategy mantém foco em outro ativo.",
+      "por_que_importa": "Empresas que avaliam exposição a cripto em tesouraria devem acompanhar o movimento de grandes players e seus riscos de concentração.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "destaque": false,
       "fonte": "Livecoins",
-      "url": "https://livecoins.com.br/dolar-dispara-apos-reeleicao-de-lula-usdt-chega-a-r-542/",
-      "data": "2026-10-26T01:52:01.000Z"
+      "url": "https://livecoins.com.br/strive-faz-a-sua-maior-compra-de-bitcoin-da-historia-e-se-aproxima-das-tres-maiores-empresas-de-tesouraria-da-criptomoeda/",
+      "data": "2026-10-26T14:08:33.000Z"
     },
     {
       "categoria": "ativos",
-      "titulo": "Regra proíbe fundos de previdência com exposição a criptomoedas",
-      "resumo": "Norma de um regime próprio de previdência do Guarujá reforça proibição definida pelo Conselho Monetário Nacional desde 2025 para aplicações em fundos com criptoativos, exigindo patrimônio mínimo de R$ 100 milhões para gestoras.",
-      "por_que_importa": "Gestoras e empresas de previdência devem revisar carteiras e compliance para se adequar às restrições regulatórias sobre criptoativos.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
+      "titulo": "MPs de Bahia, Rio e Santa Catarina unem forças para rastrear criptomoedas",
+      "resumo": "Um convênio técnico entre procuradorias de três estados vai reforçar o combate a crimes financeiros digitais envolvendo criptoativos. A iniciativa amplia a capacidade de investigação conjunta entre os órgãos.",
+      "por_que_importa": "Empresas do setor cripto devem reforçar compliance e rastreabilidade de transações diante do aumento da fiscalização estadual.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
       "destaque": false,
       "fonte": "Livecoins",
-      "url": "https://livecoins.com.br/inss-de-guaruja-publica-norma-que-proibe-aplicacao-em-fundos-com-criptomoedas-e-lembra-que-governo-lula-proibe-a-pratica-desde-2025/",
-      "data": "2026-10-25T14:00:59.000Z"
+      "url": "https://livecoins.com.br/mp-da-bahia-vai-rastrear-criptomoedas-apos-parceria-com-ministerio-publico-do-rio-de-janeiro/",
+      "data": "2026-10-26T12:26:54.000Z"
     },
     {
       "categoria": "ativos",
-      "titulo": "Anbima debate liquidação com stablecoins e ativos tokenizados",
-      "resumo": "Encontro virtual reúne executivos de projetos como Solana Foundation, GoLedger e BRL1 para discutir uso de stablecoins e tokenização na liquidação financeira. O evento reflete o avanço do debate sobre ativos digitais no mercado brasileiro.",
-      "por_que_importa": "Empresas de serviços financeiros devem acompanhar o avanço da tokenização para avaliar oportunidades de eficiência em liquidação.",
+      "titulo": "Justiça de SP determina devolução de ativos da corretora Brasil Bitcoin em 48 horas",
+      "resumo": "Uma decisão judicial manda administradores devolverem site, chave Pix e depósitos à corretora, após pedido ao Banco Central. O prazo final para cumprimento é 30 de outubro.",
+      "por_que_importa": "Corretoras de ativos digitais devem reforçar governança e conformidade para evitar bloqueios judiciais semelhantes.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/justica-de-sp-manda-administradores-devolverem-site-chave-pix-e-depositos-para-a-corretora-brasil-bitcoin-em-48-horas/",
+      "data": "2026-10-24T17:58:06.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Anbima promove debate sobre liquidação com stablecoins e ativos tokenizados",
+      "resumo": "Um encontro virtual reunirá executivos da Solana Foundation, GoLedger e do projeto BRL1 para discutir liquidação financeira com stablecoins. O tema ganha relevância no mercado brasileiro de ativos digitais.",
+      "por_que_importa": "Empresas de pagamentos e finanças devem acompanhar o avanço regulatório e técnico de stablecoins para possível adoção futura.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "destaque": false,
@@ -564,34 +540,22 @@
       "data": "2026-10-24T01:05:31.000Z"
     },
     {
-      "categoria": "ativos",
-      "titulo": "Interpol prende mais de 1.400 suspeitos em operação contra fraudes com cripto",
-      "resumo": "A operação internacional, com apoio de empresas como Meta e Kaspersky, resultou na prisão de 1.462 suspeitos ligados a fraudes de investimento, mineração ilegal, ransomware e outros crimes digitais.",
-      "por_que_importa": "Reforça a necessidade de due diligence e monitoramento de contrapartes em operações com ativos digitais para evitar exposição a fraudes.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Livecoins",
-      "url": "https://livecoins.com.br/interpol-prende-1-462-suspeitos-em-operacao-contra-fraude-em-investimentos-mineracao-ilegal-de-criptomoedas-ransomware-e-outros-crimes/",
-      "data": "2026-10-23T18:52:21.000Z"
-    },
-    {
       "categoria": "seguranca",
-      "titulo": "Ataques de replay de token comprometem 97 contas do Microsoft 365",
-      "resumo": "Pesquisadores identificaram uma campanha que usa interceptação de sessões (AitM) para roubar e reutilizar tokens de login, comprometendo contas em 79 organizações entre julho e setembro. Foram registrados quase 500 eventos de login bem-sucedidos usando tokens roubados.",
-      "por_que_importa": "Empresas que usam Microsoft 365 devem reforçar autenticação multifator resistente a phishing e monitorar sessões anômalas.",
+      "titulo": "Ataque rouba tokens do Microsoft 365 e compromete 97 contas em 79 empresas",
+      "resumo": "Pesquisadores identificaram uma campanha que usa interceptação de sessão (AitM) para roubar e reutilizar tokens de login do Microsoft 365. O ataque, observado entre julho e setembro, resultou em quase 500 acessos indevidos bem-sucedidos.",
+      "por_que_importa": "Empresas que usam Microsoft 365 devem reforçar autenticação multifator resistente a phishing e monitorar sessões suspeitas.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
-      "destaque": false,
+      "destaque": true,
       "fonte": "The Hacker News",
       "url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
       "data": "2026-10-26T08:35:51.000Z"
     },
     {
       "categoria": "seguranca",
-      "titulo": "Campanha usa tokens roubados do GitHub para vazar segredos via logs",
-      "resumo": "Atacantes identificados como 'Gheist' usam tokens roubados para inserir workflows maliciosos que expõem segredos de repositórios nos logs do GitHub Actions, baixando os dados antes de apagar os registros. Repositórios privados e ambientes corporativos foram afetados.",
-      "por_que_importa": "Times de desenvolvimento devem revisar permissões de tokens e auditar workflows de CI/CD para evitar vazamento de credenciais.",
+      "titulo": "Campanha usa tokens roubados do GitHub para vazar segredos de repositórios privados",
+      "resumo": "Atacantes plantam workflows maliciosos que imprimem segredos de repositórios nos logs do GitHub Actions, depois baixam e apagam os rastros. O esquema já afetou repositórios privados e ambientes GitHub Enterprise.",
+      "por_que_importa": "Times de desenvolvimento devem revisar permissões de tokens e auditar logs de CI/CD para evitar vazamento de credenciais.",
       "frente": "dev",
       "frente_nome": "Desenvolvimento e Squads",
       "destaque": false,
@@ -601,69 +565,57 @@
     },
     {
       "categoria": "seguranca",
-      "titulo": "Arquivo malicioso tenta enganar agente de IA para instalar malware",
-      "resumo": "Um arquivo de instrução disfarçado foi colocado na pasta de downloads de um desenvolvedor para induzir um agente de codificação por IA a instalar um pacote npm malicioso. O ataque foi identificado e bloqueado antes da execução do código.",
-      "por_que_importa": "Equipes que usam agentes de IA para programar devem validar origem de instruções e isolar ambientes de execução automatizada.",
+      "titulo": "Arquivo malicioso tenta enganar agente de IA para instalar pacote infectado",
+      "resumo": "Um arquivo de instrução encontrado na pasta de Downloads de um desenvolvedor tentou induzir um agente de IA de codificação a instalar um pacote npm malicioso. A tentativa foi identificada e bloqueada antes da execução do código.",
+      "por_que_importa": "Equipes de desenvolvimento que usam agentes de IA devem validar origem de instruções e isolar ambientes de execução automatizada.",
       "frente": "dev",
       "frente_nome": "Desenvolvimento e Squads",
-      "destaque": true,
+      "destaque": false,
       "fonte": "The Hacker News",
       "url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
       "data": "2026-10-26T06:03:48.000Z"
     },
     {
       "categoria": "seguranca",
-      "titulo": "Chave mestra vazada do LiteLLM permite roubo de tokens e ataque à cadeia de suprimentos",
-      "resumo": "Uma chave de configuração publicada por engano em repositório público do GitHub permitiu que atacantes roubassem tokens e publicassem uma versão maliciosa do pacote Python LiteLLM. O incidente expôs sistemas Windows, Linux e macOS que usavam a ferramenta.",
-      "por_que_importa": "Equipes de desenvolvimento devem auditar segredos em repositórios públicos e revisar dependências de pacotes de IA usados em produção.",
-      "frente": "dev",
-      "frente_nome": "Desenvolvimento e Squads",
-      "destaque": false,
-      "fonte": "The Hacker News",
-      "url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
-      "data": "2026-10-24T11:03:33.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "Quest Diagnostics confirma vazamento de dados de pacientes",
-      "resumo": "A empresa de exames laboratoriais dos EUA revelou que registros de pacientes foram expostos após acesso não autorizado ao seu sistema Quanum LSM. O incidente expõe informações sensíveis de saúde.",
-      "por_que_importa": "Empresas de saúde e setores regulados devem reforçar controles de acesso a sistemas que armazenam dados sensíveis de clientes.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
-      "data": "2026-10-23T16:40:07.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "Capcom confirma vazamento de dados de 11,7 milhões de contas",
-      "resumo": "A empresa japonesa de games confirmou invasão ao serviço CAPCOM ID, expondo e-mails e dados associados de mais de 11,7 milhões de clientes. O incidente reforça riscos de vazamento em plataformas de grande escala.",
-      "por_que_importa": "Empresas com bases de clientes grandes devem revisar segmentação de dados e planos de resposta a incidentes para reduzir impacto de vazamentos.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
-      "data": "2026-10-22T20:22:45.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "Ransomware SafePay atinge 600 organizações de infraestrutura crítica",
-      "resumo": "Segundo relatório da CISA e FBI, o grupo SafePay comprometeu mais de 600 organizações de infraestrutura crítica globalmente desde 2024. A ação conjunta busca alertar sobre táticas e indicadores do grupo.",
-      "por_que_importa": "Operadores de infraestrutura crítica devem revisar segmentação de rede e planos de resposta a ransomware com base nos indicadores divulgados.",
+      "titulo": "Oracle corrige mais de 1.200 vulnerabilidades em atualização crítica de outubro",
+      "resumo": "A atualização trimestral da Oracle trouxe 1.295 correções, abrangendo 1.209 CVEs únicos, incluindo 95 falhas críticas. A Tenable classificou centenas de outras como de alta e média severidade.",
+      "por_que_importa": "Equipes de TI que usam produtos Oracle devem priorizar a aplicação dos patches críticos para reduzir superfície de ataque.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": false,
       "fonte": "CISO Advisor",
-      "url": "https://www.cisoadvisor.com.br/safepay-atinge-600-organizacoes-de-infraestrutura-critica/",
-      "data": "2026-10-21T20:57:21.000Z"
+      "url": "https://www.cisoadvisor.com.br/oracle-corrige-mais-de-1-209-vulnerabilidades-em-outubro/",
+      "data": "2026-10-23T02:57:05.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Pipeline do LiteLLM é comprometido e distribui malware via PyPI e Docker",
+      "resumo": "Atacantes invadiram o pacote PyPI do LiteLLM e publicaram imagens Docker maliciosas que roubam credenciais e variáveis de ambiente. O ataque à cadeia de suprimentos afetou todos os wheels da versão 1.107.0 em Windows, Linux e macOS.",
+      "por_que_importa": "Empresas que usam LiteLLM devem auditar dependências e rotacionar credenciais imediatamente após atualização para versão segura.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "CISO Advisor",
+      "url": "https://www.cisoadvisor.com.br/pipeline-do-litellm-e-invadido-para-distribuir-malware/",
+      "data": "2026-10-22T19:23:21.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Falhas críticas no PHP, batizadas de PHP2Shell, afetam 70% da internet",
+      "resumo": "Um relatório da Wiz.io, com apoio de IA na descoberta, detalha duas vulnerabilidades críticas de execução remota de código no PHP. As falhas já estão sendo exploradas ativamente, segundo pesquisadores de segurança.",
+      "por_que_importa": "Empresas com aplicações em PHP devem aplicar mitigações imediatas e monitorar tentativas de exploração nos próprios sistemas.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "CISO Advisor",
+      "url": "https://www.cisoadvisor.com.br/leia-o-relatorio-que-revelou-as-falhas-criticas-do-php/",
+      "data": "2026-10-22T11:09:19.000Z"
     },
     {
       "categoria": "educacao",
-      "titulo": "Especialista defende pausar proibições de IA nas escolas para ensinar uso responsável",
-      "resumo": "Segundo a diretora de programas da Common Sense Media, proibir ou não o uso de IA nas escolas é menos importante do que garantir que estudantes aprendam a usá-la com segurança. O artigo defende o desenvolvimento de competências digitais antes de qualquer banimento.",
-      "por_que_importa": "Instituições de ensino e empresas de treinamento devem priorizar capacitação em uso crítico de IA em vez de apenas restringir o acesso.",
+      "titulo": "Antes de banir IA nas escolas, é preciso ensinar seu uso, defende especialista",
+      "resumo": "Independente de proibições, estudantes já usam ferramentas de IA no dia a dia escolar. A chefe de programas da Common Sense Media defende priorizar o ensino de habilidades para navegar com segurança nessas tecnologias.",
+      "por_que_importa": "Organizações de treinamento e Academia corporativa devem antecipar currículos de letramento em IA em vez de apenas restringir o uso.",
       "frente": "academia",
       "frente_nome": "Academia",
       "destaque": false,
@@ -673,9 +625,9 @@
     },
     {
       "categoria": "educacao",
-      "titulo": "Tecnologia ajuda a manter estudantes na escola, aponta reportagem",
-      "resumo": "Aliada à formação docente e ao acompanhamento de estudantes, a tecnologia tem apoiado a aprendizagem e reduzido a evasão escolar em iniciativas educacionais. O relato destaca o papel de ferramentas digitais no acompanhamento pedagógico.",
-      "por_que_importa": "Empresas de EdTech e academias corporativas podem se inspirar em casos de uso de tecnologia para engajamento e retenção de alunos.",
+      "titulo": "Tecnologia ajuda a reduzir evasão escolar e melhorar aprendizagem",
+      "resumo": "Projetos que aliam formação docente e acompanhamento de estudantes com uso de tecnologia mostram resultados positivos na permanência escolar. A iniciativa reforça o papel de ferramentas digitais no combate ao abandono escolar.",
+      "por_que_importa": "Empresas de edtech e capacitação podem se inspirar em modelos que combinam tecnologia e suporte humano para melhorar retenção.",
       "frente": "academia",
       "frente_nome": "Academia",
       "destaque": false,
@@ -685,9 +637,9 @@
     },
     {
       "categoria": "educacao",
-      "titulo": "IA desafia critérios tradicionais de reconhecimento a estudantes de alto desempenho",
-      "resumo": "Com IA capaz de gerar trabalhos sofisticados em segundos, educadores precisam redefinir o que é alto desempenho acadêmico. O texto defende premiar curiosidade intelectual genuína em vez de apenas produtos finais polidos.",
-      "por_que_importa": "Programas de capacitação corporativa e academias de tecnologia devem repensar avaliações para valorizar raciocínio crítico frente ao uso de IA.",
+      "titulo": "IA obriga repensar como reconhecemos o alto desempenho estudantil",
+      "resumo": "Com IA capaz de gerar produtos prontos em segundos, educadores precisam redefinir o que é alto desempenho. A proposta é valorizar curiosidade intelectual genuína em vez de apenas resultados polidos.",
+      "por_que_importa": "Programas de capacitação corporativa devem ajustar critérios de avaliação para reconhecer raciocínio real em vez de apenas output gerado por IA.",
       "frente": "academia",
       "frente_nome": "Academia",
       "destaque": false,
