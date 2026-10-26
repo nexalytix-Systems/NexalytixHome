@@ -60,21 +60,6 @@ const TOOL = {
     type: "object",
     properties: {
       resumo_semana: { type: "string", description: "1 a 2 frases sobre o que marcou a semana, em pt-BR" },
-      temas: {
-        type: "array",
-        description: "Os 10 principais temas do momento para empresas brasileiras, do mais importante para o menos importante",
-        items: {
-          type: "object",
-          properties: {
-            titulo: { type: "string", description: "nome do tema em pt-BR, até 70 caracteres (ex.: Agentes de IA no atendimento)" },
-            explicacao: { type: "string", description: "2 frases: o que está acontecendo, com base nas notícias e estudos citados, até 320 caracteres" },
-            por_que_importa: { type: "string", description: "1 frase para gestores no Brasil: impacto e o que fazer, até 220 caracteres" },
-            frente: { type: "string", enum: Object.keys(FRENTES) },
-            ids: { type: "array", items: { type: "integer" }, description: "ids das notícias/estudos da lista que sustentam o tema (1 a 4); inclua McKinsey quando houver" },
-          },
-          required: ["titulo", "explicacao", "por_que_importa", "frente", "ids"],
-        },
-      },
       itens: {
         type: "array",
         items: {
@@ -91,8 +76,23 @@ const TOOL = {
           required: ["id", "categoria", "titulo", "resumo", "por_que_importa", "frente", "destaque"],
         },
       },
+      temas: {
+        type: "array",
+        description: "Os 10 principais temas do momento para empresas brasileiras, do mais importante para o menos importante",
+        items: {
+          type: "object",
+          properties: {
+            titulo: { type: "string", description: "nome do tema em pt-BR, até 70 caracteres (ex.: Agentes de IA no atendimento)" },
+            explicacao: { type: "string", description: "2 frases: o que está acontecendo, com base nas notícias e estudos citados, até 320 caracteres" },
+            por_que_importa: { type: "string", description: "1 frase para gestores no Brasil: impacto e o que fazer, até 220 caracteres" },
+            frente: { type: "string", enum: Object.keys(FRENTES) },
+            ids: { type: "array", items: { type: "integer" }, description: "ids das notícias/estudos da lista que sustentam o tema (1 a 4); inclua McKinsey quando houver" },
+          },
+          required: ["titulo", "explicacao", "por_que_importa", "frente", "ids"],
+        },
+      },
     },
-    required: ["resumo_semana", "temas", "itens"],
+    required: ["resumo_semana", "itens", "temas"],
   },
 };
 
@@ -108,24 +108,28 @@ Regras:
 - Itens de "estudos" são análises, não notícias: no resumo diga o que o estudo aponta ("segundo a McKinsey, ...").
 - Prefira fatos com data, números e consequências claras. Se uma categoria não tiver notícias boas, coloque menos itens nela.`;
 
-async function chamarIA(lista) {
+async function chamarIA(lista, porId) {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) throw new Error("ANTHROPIC_API_KEY ausente");
   const conteudo = lista.map((n) => `#${n.id} [${n.categoria}] ${n.fonte} · ${n.data.slice(0, 10)}\n${n.titulo}\n${n.trecho}`).join("\n\n");
   let ultimoErro;
-  for (const model of MODELOS) {
-    const r = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({ model, max_tokens: 12000, system: SISTEMA, tools: [TOOL], tool_choice: { type: "tool", name: "publicar_radar" },
-        messages: [{ role: "user", content: `Notícias dos últimos ${DIAS} dias:\n\n${conteudo}` }] }),
-    });
-    const j = await r.json().catch(() => ({}));
-    if (!r.ok) { ultimoErro = new Error(`${model}: HTTP ${r.status} ${JSON.stringify(j).slice(0, 300)}`); console.warn(ultimoErro.message); continue; }
-    const tu = (j.content || []).find((c) => c.type === "tool_use");
-    if (!tu) { ultimoErro = new Error(`${model}: resposta sem seleção`); continue; }
-    console.log(`IA: ${model}`);
-    return tu.input;
+  // tenta o modelo principal duas vezes e depois o reserva; aceita a primeira resposta que passar na validação
+  for (const model of [MODELOS[0], MODELOS[0], ...MODELOS.slice(1)]) {
+    try {
+      const r = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
+        body: JSON.stringify({ model, max_tokens: 16000, system: SISTEMA, tools: [TOOL], tool_choice: { type: "tool", name: "publicar_radar" },
+          messages: [{ role: "user", content: `Notícias e estudos recentes (até ${DIAS} dias; estudos até 3 semanas):\n\n${conteudo}` }] }),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(`HTTP ${r.status} ${JSON.stringify(j).slice(0, 300)}`);
+      const tu = (j.content || []).find((c) => c.type === "tool_use");
+      console.log(`IA ${model}: stop_reason=${j.stop_reason} tokens_saida=${j.usage?.output_tokens} itens=${(tu?.input?.itens || []).length} temas=${(tu?.input?.temas || []).length}`);
+      if (!tu) throw new Error("resposta sem seleção");
+      const itens = validar(tu.input, porId);
+      return { sel: tu.input, itens };
+    } catch (e) { ultimoErro = new Error(`${model}: ${e.message}`); console.warn(ultimoErro.message); }
   }
   throw ultimoErro;
 }
@@ -135,16 +139,22 @@ const PROIBIDO = /\b(compre|venda agora|recomendamos comprar|vai subir|vai cair)
 function validar(sel, porId) {
   const itens = [];
   const usados = new Set();
+  const motivos = {};
+  const recusa = (m) => (motivos[m] = (motivos[m] || 0) + 1);
   for (const it of sel.itens || []) {
-    const n = porId.get(it.id);
-    if (!n || usados.has(it.id)) continue; // só notícias reais da lista
-    if (!CATS.includes(it.categoria) || !FRENTES[it.frente]) continue;
+    const id = Number(it.id);
+    const n = porId.get(id);
+    if (!n) { recusa("id fora da lista"); continue; } // só notícias reais da lista
+    if (usados.has(id)) { recusa("repetido"); continue; }
+    const categoria = CATS.includes(it.categoria) ? it.categoria : n.categoria; // na dúvida, a categoria da fonte
+    const frente = FRENTES[it.frente] ? it.frente : "ia";
     const titulo = String(it.titulo || "").trim().slice(0, 140), resumo = String(it.resumo || "").trim().slice(0, 420), pq = String(it.por_que_importa || "").trim().slice(0, 300);
-    if (titulo.length < 15 || resumo.length < 40 || pq.length < 20) continue;
-    if (PROIBIDO.test(resumo + " " + pq)) continue;
-    usados.add(it.id);
-    itens.push({ categoria: it.categoria, titulo, resumo, por_que_importa: pq, frente: it.frente, frente_nome: FRENTES[it.frente], destaque: !!it.destaque, fonte: n.fonte, url: n.url, data: n.data });
+    if (titulo.length < 10 || resumo.length < 30 || pq.length < 15) { recusa("texto curto ou vazio"); continue; }
+    if (PROIBIDO.test(resumo + " " + pq)) { recusa("recomendação de investimento"); continue; }
+    usados.add(id);
+    itens.push({ categoria, titulo, resumo, por_que_importa: pq, frente, frente_nome: FRENTES[frente], destaque: !!it.destaque, fonte: n.fonte, url: n.url, data: n.data });
   }
+  if (Object.keys(motivos).length) console.log("Itens recusados:", JSON.stringify(motivos));
   if (itens.length < 8) throw new Error(`Seleção insuficiente (${itens.length} itens válidos). Radar anterior mantido.`);
   if (!itens.some((i) => i.destaque)) itens.slice(0, 3).forEach((i) => (i.destaque = true));
   return itens;
@@ -153,12 +163,13 @@ function validar(sel, porId) {
 function validarTemas(sel, porId) {
   const temas = [];
   for (const t of sel.temas || []) {
-    const refs = [...new Set((t.ids || []).filter((id) => porId.has(id)))].slice(0, 4).map((id) => porId.get(id));
+    const refs = [...new Set((t.ids || []).map(Number).filter((id) => porId.has(id)))].slice(0, 4).map((id) => porId.get(id));
     const titulo = String(t.titulo || "").trim().slice(0, 90), explicacao = String(t.explicacao || "").trim().slice(0, 420), pq = String(t.por_que_importa || "").trim().slice(0, 300);
-    if (!refs.length || titulo.length < 6 || explicacao.length < 40 || pq.length < 20 || !FRENTES[t.frente]) continue;
+    if (!refs.length || titulo.length < 6 || explicacao.length < 40 || pq.length < 20 ) continue;
+    const frente = FRENTES[t.frente] ? t.frente : "ia";
     if (PROIBIDO.test(explicacao + " " + pq)) continue;
     if (temas.some((x) => x.titulo.toLowerCase() === titulo.toLowerCase())) continue;
-    temas.push({ posicao: temas.length + 1, titulo, explicacao, por_que_importa: pq, frente: t.frente, frente_nome: FRENTES[t.frente],
+    temas.push({ posicao: temas.length + 1, titulo, explicacao, por_que_importa: pq, frente, frente_nome: FRENTES[frente],
       fontes: refs.map((n) => ({ fonte: n.fonte, titulo: n.titulo.slice(0, 160), url: n.url, data: n.data })) });
     if (temas.length === 10) break;
   }
@@ -187,9 +198,8 @@ console.log(`Notícias candidatas: ${lista.length}`);
 if (lista.length < 10) { console.error("Poucas notícias coletadas. Radar anterior mantido."); process.exit(1); }
 if (DRY) { console.log(JSON.stringify(lista.slice(0, 5), null, 2)); process.exit(0); }
 
-const sel = await chamarIA(lista);
 const porId = new Map(lista.map((n) => [n.id, n]));
-const itens = validar(sel, porId);
+const { sel, itens } = await chamarIA(lista, porId);
 const temas = validarTemas(sel, porId);
 const ordem = Object.fromEntries(CATS.map((c, i) => [c, i]));
 itens.sort((a, b) => ordem[a.categoria] - ordem[b.categoria] || b.data.localeCompare(a.data));
