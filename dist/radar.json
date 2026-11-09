@@ -1,7 +1,7 @@
 {
-  "atualizado_em": "2026-11-02T18:34:53.525Z",
-  "periodo": "26 de out a 02 de nov de 2026",
-  "resumo_semana": "A semana foi marcada pela confirmação do FBI de que hackers norte-coreanos roubaram US$ 6,3 bilhões da Binance, seguida por um ataque à corretora brasileira Mercado Bitcoin, reacendendo o debate sobre segurança de custódia de ativos digitais. Paralelamente, estudos da McKinsey reforçam a corrida por agentes de IA em bancos e seguros, enquanto novas regras de SAC e do Open Finance entram em vigor n",
+  "atualizado_em": "2026-11-09T18:56:55.228Z",
+  "periodo": "02 de nov a 09 de nov de 2026",
+  "resumo_semana": "A semana foi marcada por ataques a infraestrutura crítica (refrigeração e cadeia de frio), fraudes bilionárias contra bancos via fornecedores terceirizados, e novos estudos da McKinsey mostrando que empresas ainda deixam valor na mesa ao adotar IA sem redesenhar processos de risco e finanças. No Brasil, destaque para avanço da tokenização de ativos financeiros e debate sobre automação de áreas sen",
   "categorias": [
     {
       "id": "estudos",
@@ -37,23 +37,17 @@
   "temas": [
     {
       "posicao": 1,
-      "titulo": "Agentes de IA no setor financeiro",
-      "explicacao": "A McKinsey publicou múltiplos estudos sobre IA agêntica transformando bancos, seguros, compliance e prevenção a fraudes, mostrando que a tecnologia já atua de forma autônoma em processos críticos. A tendência exige nova governança e modelos operacionais adaptados.",
-      "por_que_importa": "Bancos e fintechs brasileiras devem priorizar governança e arquitetura antes de escalar agentes de IA em operações sensíveis.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
+      "titulo": "Retorno financeiro da IA ainda aquém do esperado",
+      "explicacao": "A McKinsey mostra que CFOs e bancos investem pesado em IA, mas grande parte do valor potencial não é capturada por falta de metas mensuráveis e redesenho de processos. O tema aparece em múltiplos estudos recentes da consultoria.",
+      "por_que_importa": "Gestores devem exigir métricas claras de ROI e redesenhar processos antes de expandir investimentos em IA, evitando gasto sem retorno.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
       "fontes": [
         {
           "fonte": "McKinsey",
-          "titulo": "The rise of the agentic coworker: A banking CIO’s guide to the next wave of AI",
-          "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-rise-of-the-agentic-coworker-a-banking-cios-guide-to-the-next-wave-of-ai",
-          "data": "2026-10-26T00:00:00.000Z"
-        },
-        {
-          "fonte": "McKinsey",
-          "titulo": "Agentic AI in financial-crime prevention: Lessons from winners",
-          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/agentic-ai-in-financial-crime-prevention-lessons-from-winners",
-          "data": "2026-10-26T00:00:00.000Z"
+          "titulo": "How CFOs can make AI pay off",
+          "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-cfos-can-make-ai-pay-off",
+          "data": "2026-11-09T00:00:00.000Z"
         },
         {
           "fonte": "McKinsey",
@@ -63,255 +57,213 @@
         },
         {
           "fonte": "McKinsey",
-          "titulo": "Waniwani’s CEO on the agentic future of insurance distribution",
-          "url": "https://www.mckinsey.com/industries/financial-services/our-insights/waniwanis-ceo-on-the-agentic-future-of-insurance-distribution",
-          "data": "2026-10-30T00:00:00.000Z"
+          "titulo": "The AI-enabled risk function of the future",
+          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-ai-enabled-risk-function-of-the-future",
+          "data": "2026-11-04T00:00:00.000Z"
         }
       ]
     },
     {
       "posicao": 2,
-      "titulo": "Retorno sobre investimento em IA ainda não capturado",
-      "explicacao": "Segundo a McKinsey, bancos e empresas de varejo investem pesado em IA, mas grande parte do valor potencial continua sem ser capturada por falta de modelo operacional adequado. O mesmo padrão aparece no comércio agêntico, onde empresas não estão preparadas para a demanda.",
-      "por_que_importa": "Lideranças devem redesenhar processos e métricas antes de expandir investimentos em IA, para não repetir projetos-piloto sem escala.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
+      "titulo": "IA mudando a função de risco e segurança corporativa",
+      "explicacao": "Segundo a McKinsey, IA está reshaping tanto a gestão de risco em bancos quanto as regras de segurança de software, já que atacantes também usam IA para achar vulnerabilidades mais rápido. Organizações precisam antecipar riscos híbridos antes que virem disrupção real.",
+      "por_que_importa": "Empresas devem integrar IA à governança de risco e acelerar patches, já que a velocidade de ataque também aumentou com IA.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
       "fontes": [
         {
           "fonte": "McKinsey",
-          "titulo": "Closing banking’s AI value gap: A CEO guide",
-          "url": "https://www.mckinsey.com/industries/financial-services/our-insights/closing-bankings-ai-value-gap-a-ceo-guide",
-          "data": "2026-10-30T00:00:00.000Z"
+          "titulo": "The AI-enabled risk function of the future",
+          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-ai-enabled-risk-function-of-the-future",
+          "data": "2026-11-04T00:00:00.000Z"
         },
         {
           "fonte": "McKinsey",
-          "titulo": "Who wins when AI does the shopping? New evidence on agentic commerce",
-          "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/who-wins-when-ai-does-the-shopping-new-evidence-on-agentic-commerce",
-          "data": "2026-10-28T00:00:00.000Z"
+          "titulo": "How frontier AI is rewriting software security rules",
+          "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/how-frontier-ai-is-rewriting-software-security-rules",
+          "data": "2026-11-03T00:00:00.000Z"
         },
         {
           "fonte": "McKinsey",
-          "titulo": "Turning executive judgment into organizational intelligence: Leveraging AI in CEO leadership",
-          "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/turning-executive-judgment-into-organizational-intelligence-leveraging-ai-in-ceo-leadership",
+          "titulo": "Critical infrastructure is under threat. Are organizations prepared?",
+          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/critical-infrastructure-is-under-threat-are-organizations-prepared",
           "data": "2026-11-02T00:00:00.000Z"
         }
       ]
     },
     {
       "posicao": 3,
-      "titulo": "Ataques a infraestrutura crítica e cadeias de fornecedores",
-      "explicacao": "A McKinsey alerta que organizações só percebem sua exposição a riscos híbridos após uma disrupção, enquanto ataques reais já afetaram sistemas de refrigeração em supermercados de quatro países europeus. O padrão reforça a vulnerabilidade de sistemas operacionais conectados.",
-      "por_que_importa": "Empresas de varejo e indústria devem isolar redes de OT da TI corporativa e mapear riscos híbridos antes de um incidente real.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
+      "titulo": "Automação de áreas sensíveis com IA substitui times humanos",
+      "explicacao": "O Nubank demitiu parte da equipe antifraude e passou a usar IA no lugar, citando queda de 80% na fila de golpes, enquanto a McKinsey destaca ganhos possíveis com IA em CFOs e risco bancário. O caso expõe tensões entre eficiência e supervisão humana.",
+      "por_que_importa": "Empresas devem equilibrar automação com supervisão humana em áreas críticas como antifraude, evitando riscos reputacionais e operacionais.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
       "fontes": [
         {
+          "fonte": "Finsiders Brasil",
+          "titulo": "Nubank demite equipe que caçava golpistas e coloca a IA no lugar",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/nubank-demite-equipe-que-cacava-golpistas-e-coloca-a-ia-no-lugar/",
+          "data": "2026-11-06T16:47:03.000Z"
+        },
+        {
           "fonte": "McKinsey",
-          "titulo": "Critical infrastructure is under threat. Are organizations prepared?",
-          "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/critical-infrastructure-is-under-threat-are-organizations-prepared",
-          "data": "2026-11-02T00:00:00.000Z"
-        },
-        {
-          "fonte": "Exame",
-          "titulo": "Freezers a 50°C: nova onda de ataques hacker atinge supermercados de quatro países",
-          "url": "https://exame.com/tecnologia/freezers-a-50c-nova-onda-de-ataques-hacker-atinge-supermercados-de-quatro-paises/",
-          "data": "2026-11-02T10:09:32.000Z"
-        },
-        {
-          "fonte": "Olhar Digital",
-          "titulo": "Novo ataque hacker faz geladeiras esquentarem em supermercados na Europa",
-          "url": "https://olhardigital.com.br/2026/11/02/seguranca/novo-ataque-hacker-faz-geladeiras-esquentarem-em-supermercados-na-europa/",
-          "data": "2026-11-02T16:58:15.000Z"
+          "titulo": "How CFOs can make AI pay off",
+          "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-cfos-can-make-ai-pay-off",
+          "data": "2026-11-09T00:00:00.000Z"
         }
       ]
     },
     {
       "posicao": 4,
-      "titulo": "Onda de ataques a corretoras e custódia de cripto",
-      "explicacao": "O roubo recorde de US$ 6,3 bilhões na Binance, atribuído pelo FBI à Coreia do Norte, foi seguido por um ataque à brasileira Mercado Bitcoin com perdas estimadas em R$ 217 milhões. Os casos expõem fragilidades em controles internos e custódia de ativos digitais.",
-      "por_que_importa": "Empresas que custodiam ou negociam cripto devem reforçar segregação de chaves, monitoramento de acessos privilegiados e planos de resposta a incidentes.",
+      "titulo": "Exploração de vulnerabilidades críticas em massa",
+      "explicacao": "Falhas como SSHole no OpenSSH e o bypass de MFA no SonicWall foram exploradas horas após divulgação, exigindo resposta rápida de patch. O ritmo de exploração está cada vez mais acelerado, reforçando o alerta da McKinsey sobre IA ofensiva.",
+      "por_que_importa": "Times de segurança devem automatizar a aplicação de patches críticos, já que o tempo entre divulgação e exploração está cada vez menor.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "fontes": [
         {
-          "fonte": "BleepingComputer",
-          "titulo": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
-          "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
-          "data": "2026-11-01T19:57:53.000Z"
-        },
-        {
-          "fonte": "Livecoins",
-          "titulo": "Corretora brasileira Mercado Bitcoin confirma ataque hacker e trava saques e depósitos enquanto investiga situação, fontes estimam perda de R$ 217 milhões",
-          "url": "https://livecoins.com.br/corretora-brasileira-mercado-bitcoin-confirma-ataque-hacker-e-trava-saques-e-depositos-enquanto-investiga-situacao-fontes-estimam-perda-de-r-217-milhoes/",
-          "data": "2026-11-02T13:56:44.000Z"
-        },
-        {
           "fonte": "The Hacker News",
-          "titulo": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
-          "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
-          "data": "2026-11-01T07:03:00.000Z"
+          "titulo": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+          "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+          "data": "2026-11-09T06:05:24.000Z"
         },
         {
-          "fonte": "Finsiders Brasil",
-          "titulo": "Caso Binance acende alerta sobre segurança das corretoras de criptomoedas",
-          "url": "https://finsidersbrasil.com.br/criptoativos/taque-a-binance-reforca-brechas-de-seguranca-em-pessoas-e-dispositivos/",
-          "data": "2026-10-30T21:37:52.000Z"
+          "fonte": "McKinsey",
+          "titulo": "How frontier AI is rewriting software security rules",
+          "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/how-frontier-ai-is-rewriting-software-security-rules",
+          "data": "2026-11-03T00:00:00.000Z"
         }
       ]
     },
     {
       "posicao": 5,
-      "titulo": "Exploração ativa de falhas em gateways e ferramentas de desenvolvimento",
-      "explicacao": "Vulnerabilidades críticas no Ivanti Connect Secure, GitLab e Langflow estão sendo exploradas ativamente, com a CISA incluindo falhas em seu catálogo de exploração conhecida. Ferramentas de IA agêntica como o Langflow também entraram na mira dos atacantes.",
-      "por_que_importa": "Times de TI e DevOps devem priorizar patches em gateways de acesso remoto e plataformas de desenvolvimento expostas à internet.",
+      "titulo": "Ataques a infraestrutura física e cadeia de frio",
+      "explicacao": "Hackers ligados ao Irã atacaram sistemas de refrigeração em mais de 700 supermercados franceses, causando incêndios e perdas de estoque; agências dos EUA alertaram para o mesmo padrão de ataque em escala global. O risco de ataques cibernéticos com consequências físicas está crescendo.",
+      "por_que_importa": "Varejo, logística e indústria de alimentos devem isolar e corrigir controladores industriais conectados à internet com urgência.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "fontes": [
         {
           "fonte": "BleepingComputer",
-          "titulo": "Ivanti patches two more Connect Secure zero-days chained in attacks",
-          "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
-          "data": "2026-11-02T09:33:26.000Z"
-        },
-        {
-          "fonte": "BleepingComputer",
-          "titulo": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
-          "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
-          "data": "2026-11-02T12:47:00.000Z"
+          "titulo": "France blames Iranian hackers for supermarket attacks that sparked fires",
+          "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+          "data": "2026-11-09T18:32:42.000Z"
         },
         {
           "fonte": "The Hacker News",
-          "titulo": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-          "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
-          "data": "2026-11-02T11:50:00.000Z"
-        },
-        {
-          "fonte": "The Hacker News",
-          "titulo": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
-          "url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
-          "data": "2026-10-31T08:27:43.000Z"
+          "titulo": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
+          "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+          "data": "2026-11-09T06:15:10.000Z"
         }
       ]
     },
     {
       "posicao": 6,
-      "titulo": "Engenharia social contra equipes corporativas",
-      "explicacao": "Golpistas têm se passado por suporte de TI no Microsoft Teams para obter acesso remoto e escalar privilégios via Active Directory, enquanto scripts maliciosos injetados em sites já desviaram fundos de usuários em outras plataformas. Os ataques exploram confiança em canais corporativos comuns.",
-      "por_que_importa": "Empresas devem treinar equipes contra engenharia social em ferramentas de colaboração e revisar configurações de certificados internos.",
+      "titulo": "Fraudes financeiras via fornecedores terceirizados",
+      "explicacao": "Um banco francês perdeu até US$ 133 milhões em um ataque que explorou um prestador de serviço terceirizado, enquanto no Brasil cresce a discussão sobre contas bolsão em fintechs como brecha para lavagem de dinheiro. O elo mais fraco da cadeia de fornecedores virou alvo preferencial.",
+      "por_que_importa": "Instituições financeiras devem auditar continuamente a segurança de fornecedores e parceiros, não apenas seus próprios sistemas.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "fontes": [
         {
-          "fonte": "The Hacker News",
-          "titulo": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-          "url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-          "data": "2026-11-02T11:08:45.000Z"
-        },
-        {
-          "fonte": "The Hacker News",
-          "titulo": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
-          "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
-          "data": "2026-11-01T07:25:40.000Z"
-        },
-        {
           "fonte": "BleepingComputer",
-          "titulo": "Northflank security breach leads to abuse of customers' AI API keys",
-          "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
-          "data": "2026-10-31T18:01:12.000Z"
+          "titulo": "Hackers pull off $133 million French bank heist via service provider",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+          "data": "2026-11-07T15:25:35.000Z"
+        },
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "‘Contas bolsão’ nas fintechs: eficiência operacional ou brecha para a lavagem de dinheiro?",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/contas-bolsao-nas-fintechs-eficiencia-operacional-ou-brecha-para-a-lavagem-de-dinheiro/",
+          "data": "2026-11-09T12:20:00.000Z"
+        },
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "Prevenção a fraudes avança, mas recuperação de valores ainda é desafio",
+          "url": "https://finsidersbrasil.com.br/pagamentos/pix/prevencao-a-fraudes-avanca-mas-recuperacao-de-valores-ainda-desafia/",
+          "data": "2026-11-09T15:18:53.000Z"
         }
       ]
     },
     {
       "posicao": 7,
-      "titulo": "Regulação de atendimento e dados no Brasil",
-      "explicacao": "Entraram em vigor novas regras de SAC exigindo atendimento humano rápido e reporte à Senacon, junto com a formalização de regras de dados do Open Finance pelo Banco Central. As mudanças aumentam exigências de transparência e qualidade de serviço.",
-      "por_que_importa": "Empresas de atendimento e instituições financeiras devem ajustar sistemas e processos para cumprir os novos prazos regulatórios sem elevar custos.",
-      "frente": "saas",
-      "frente_nome": "SaaS Nexalytix",
-      "fontes": [
-        {
-          "fonte": "Tecnoblog",
-          "titulo": "Novas regras de SAC entram em vigor no Brasil; veja o que muda",
-          "url": "https://tecnoblog.net/noticias/novas-regras-de-sac-entram-em-vigor-no-brasil-veja-o-que-muda/",
-          "data": "2026-11-02T17:43:57.000Z"
-        },
-        {
-          "fonte": "Finsiders Brasil",
-          "titulo": "Novas regras do BC tiram dados do Open Finance de ‘ambiente cinzento’",
-          "url": "https://finsidersbrasil.com.br/opinioes-e-artigos-fintechs/novas-regras-do-bc-tiram-dados-do-open-finance-de-ambiente-cinzento/",
-          "data": "2026-10-30T11:11:00.000Z"
-        },
-        {
-          "fonte": "Exame",
-          "titulo": "SAC que exige atendente humano ao cliente entra em vigor hoje: veja as novas regras",
-          "url": "https://exame.com/brasil/sac-que-exige-atendente-humano-ao-cliente-entra-em-vigor-hoje-veja-as-novas-regras/",
-          "data": "2026-11-02T11:00:21.000Z"
-        }
-      ]
-    },
-    {
-      "posicao": 8,
-      "titulo": "Pressão de juros sobre captação de empresas brasileiras",
-      "explicacao": "Juros altos continuam travando IPOs no Brasil mesmo com avaliações baratas, enquanto o dólar teve sua maior alta semanal desde 2008. A combinação afeta o apetite de empresas por captação e expansão no curto prazo.",
-      "por_que_importa": "Empresas que planejam captação devem reavaliar timing e estrutura de capital diante da volatilidade cambial e de juros.",
+      "titulo": "Tokenização de ativos financeiros ganha tração no Brasil",
+      "explicacao": "A CVM recebeu 11 propostas de pilotos de tokenização de B3, ANBIMA, Núclea e outras entidades, superando a meta inicial da iniciativa. O movimento indica avanço regulatório concreto para ativos digitais no mercado de capitais brasileiro.",
+      "por_que_importa": "Empresas do setor financeiro devem acompanhar os pilotos para se posicionar cedo em infraestrutura de emissão e liquidação tokenizada.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "fontes": [
         {
           "fonte": "Finsiders Brasil",
-          "titulo": "Juros altos derrubam valor das empresas e travam IPOs mesmo com ações baratas",
-          "url": "https://finsidersbrasil.com.br/negocios-em-fintechs/juros-altos-derrubam-valor-das-empresas-e-travam-ipos-mesmo-com-acoes-baratas/",
-          "data": "2026-10-30T23:26:54.000Z"
+          "titulo": "CVM recebe 11 propostas para testar tokenização no Brasil",
+          "url": "https://finsidersbrasil.com.br/giro-noticias/cvm-recebe-11-propostas-para-testar-tokenizacao-no-brasil/",
+          "data": "2026-11-09T13:55:51.000Z"
         },
         {
-          "fonte": "Agência Brasil (Economia)",
-          "titulo": "Dólar fecha a R$ 5,44 e registra maior alta semanal desde 2008",
-          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-fecha-r-544-e-registra-maior-alta-semanal-desde-2008",
-          "data": "2026-10-30T22:40:00.000Z"
+          "fonte": "Livecoins",
+          "titulo": "CVM recebe 11 propostas de pilotos para testes com ativos tokenizados e supera meta inicial",
+          "url": "https://livecoins.com.br/cvm-recebe-11-propostas-de-pilotos-para-testes-com-ativos-tokenizados-e-supera-meta-inicial/",
+          "data": "2026-11-09T10:27:05.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 8,
+      "titulo": "Falhas em identidade digital expõem contas e veículos conectados",
+      "explicacao": "Credenciais padrão em plataforma de identidade permitiram acesso a apps de montadoras e controle remoto de carros, enquanto falha na Web3Auth expôs mais de 44 mil carteiras cripto da Keplr. Provedores terceiros de autenticação viraram ponto único de falha.",
+      "por_que_importa": "Empresas que usam provedores de identidade terceirizados devem auditar configurações padrão e exigir autenticação reforçada.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "fontes": [
+        {
+          "fonte": "The Hacker News",
+          "titulo": "Default 'admin:admin' Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
+          "url": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
+          "data": "2026-11-09T11:27:53.000Z"
+        },
+        {
+          "fonte": "Livecoins",
+          "titulo": "Hacker ataca usuários da carteira Keplr que utilizam login via Google ou Apple",
+          "url": "https://livecoins.com.br/hacker-ataca-usuarios-da-carteira-keplr-que-utilizam-login-via-google-ou-apple/",
+          "data": "2026-11-09T14:50:30.000Z"
         }
       ]
     },
     {
       "posicao": 9,
-      "titulo": "Preocupação de estudantes com uso de IA na aprendizagem",
-      "explicacao": "Um estudo da HP Futures mostra que 8 em cada 10 estudantes brasileiros temem aprender menos usando IA, enquanto especialistas defendem que tutores de IA só desenvolvem pensamento crítico se a interação virar parte da avaliação. O tema ganha urgência com a proximidade do Enem.",
-      "por_que_importa": "Programas de educação corporativa e edtechs devem desenhar uso de IA que exija raciocínio explícito, evitando dependência passiva da ferramenta.",
-      "frente": "academia",
-      "frente_nome": "Academia",
+      "titulo": "Brasil busca espaço próprio na economia da IA",
+      "explicacao": "Análise aponta que investimento em infraestrutura e capacidade de transformar dados em soluções para dores reais do mercado são decisivos para o Brasil criar negócios lucrativos em IA, enquanto um terço dos CEOs brasileiros relata dificuldade para achar talento qualificado em dados e IA.",
+      "por_que_importa": "Empresas devem priorizar projetos de IA ligados a problemas concretos de negócio e investir em capacitação para suprir a escassez de talento.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
       "fontes": [
         {
-          "fonte": "Porvir",
-          "titulo": "8 em cada 10 estudantes brasileiros temem aprender menos com IA, diz estudo",
-          "url": "https://porvir.org/hp-futures-2026/",
-          "data": "2026-10-28T22:58:35.000Z"
+          "fonte": "Exame",
+          "titulo": "Onde estão as oportunidades para o Brasil na Inteligência Artificial?",
+          "url": "https://exame.com/negocios/onde-estao-as-oportunidades-para-o-brasil-na-inteligencia-artificial/",
+          "data": "2026-11-09T15:08:44.000Z"
         },
         {
-          "fonte": "EdSurge",
-          "titulo": "Want Students to Think With AI? Raise the Stakes.",
-          "url": "https://www.edsurge.com/news/want-students-to-think-with-ai-raise-the-stakes",
-          "data": "2026-11-02T00:00:00.000Z"
+          "fonte": "Exame",
+          "titulo": "33% dos CEOs brasileiros não encontram profissionais qualificados; saiba como se preparar",
+          "url": "https://exame.com/carreira/33-dos-ceos-brasileiros-nao-encontram-profissionais-qualificados-saiba-como-se-preparar/",
+          "data": "2026-11-09T14:17:17.000Z"
         }
       ]
     },
     {
       "posicao": 10,
-      "titulo": "Novas frentes de hardware e robótica em IA",
-      "explicacao": "A Meta avança em robótica humanoide doméstica em parceria com a chinesa Fourier, enquanto a Anthropic mostra crescimento acelerado de receita às vésperas de seu IPO, mesmo com prejuízos bilionários. Os movimentos indicam aposta pesada em infraestrutura física e de modelos de IA.",
-      "por_que_importa": "Empresas de tecnologia devem monitorar a saúde financeira de fornecedores de IA e a entrada de grandes players em hardware para avaliar riscos e oportunidades.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
+      "titulo": "Bancos tradicionais adotam modelo banking-as-a-service",
+      "explicacao": "O Bradesco lançou uma estratégia de 'banco como serviço' para que empresas de outros setores integrem soluções financeiras mantendo sua própria marca, combinando estrutura bancária com agilidade de fintech.",
+      "por_que_importa": "Empresas de varejo e serviços podem avaliar parcerias de banking-as-a-service para oferecer produtos financeiros sem construir banco próprio.",
+      "frente": "saas",
+      "frente_nome": "SaaS Nexalytix",
       "fontes": [
         {
-          "fonte": "Tecnoblog",
-          "titulo": "A Meta quer entrar na sua casa, agora com um robô humanoide",
-          "url": "https://tecnoblog.net/noticias/a-meta-quer-entrar-na-sua-casa-agora-com-um-robo-humanoide/",
-          "data": "2026-11-02T16:10:56.000Z"
-        },
-        {
-          "fonte": "Exame",
-          "titulo": "Receita da Anthropic salta 12 vezes, para US$ 17 bilhões, às vésperas do IPO",
-          "url": "https://exame.com/invest/mercados/receita-da-anthropic-salta-12-vezes-para-us-17-bilhoes-as-vesperas-do-ipo/",
-          "data": "2026-11-02T14:09:30.000Z"
+          "fonte": "Finsiders Brasil",
+          "titulo": "“Bradesco as a Service”: soluções de banco, agilidade de fintech",
+          "url": "https://finsidersbrasil.com.br/conteudo-de-marca/bradesco-as-a-service-solucoes-de-banco-agilidade-de-fintech/",
+          "data": "2026-11-09T13:04:00.000Z"
         }
       ]
     }
@@ -319,9 +271,57 @@
   "itens": [
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: infraestrutura crítica está exposta a riscos que organizações ainda não reconhecem",
-      "resumo": "Segundo a McKinsey, empresas muitas vezes só percebem sua exposição a riscos convencionais, cibernéticos e híbridos depois que a disrupção já ocorreu. O estudo propõe formas de antecipar e reduzir esses riscos antes do impacto.",
-      "por_que_importa": "Empresas de infraestrutura e setores regulados devem mapear riscos híbridos combinando segurança física e cibernética antes de um incidente.",
+      "titulo": "Saúde: evoluir rápido com IA ou ficar para trás",
+      "resumo": "A McKinsey analisa como o setor de saúde enfrenta pressão econômica crescente e precisa usar IA e avanços biofarmacêuticos para reinventar modelos clínicos e de negócio. Segundo o estudo, quem não evoluir corre risco real de ficar obsoleto.",
+      "por_que_importa": "Empresas de saúde e seguradoras no Brasil devem priorizar projetos de IA aplicada a processos clínicos e operacionais já em 2026.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/industries/healthcare/our-insights/the-future-of-healthcare",
+      "data": "2026-11-09T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "Como CFOs podem fazer a IA gerar retorno financeiro",
+      "resumo": "Segundo a McKinsey, criar valor real com IA em finanças exige metas mensuráveis e redesenho de processos, não apenas adoção de ferramentas. O estudo destaca a importância de medir resultado financeiro concreto dos investimentos em IA.",
+      "por_que_importa": "CFOs brasileiros devem exigir métricas claras de ROI antes de expandir investimentos em IA, evitando gasto sem retorno mensurável.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": true,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-cfos-can-make-ai-pay-off",
+      "data": "2026-11-09T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "IA está redesenhando a função de risco nos bancos",
+      "resumo": "A McKinsey mostra que bancos já usam IA para gestão de risco, mas o próximo passo é escalar essa capacidade com um modelo operacional redesenhado. O estudo aponta que a integração entre IA e governança de risco ainda é incompleta na maioria das instituições.",
+      "por_que_importa": "Bancos e fintechs no Brasil devem revisar seus modelos de governança de risco para incorporar IA de forma estruturada, não pontual.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-ai-enabled-risk-function-of-the-future",
+      "data": "2026-11-04T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "IA de ponta está mudando as regras da segurança de software",
+      "resumo": "A McKinsey aponta que modelos avançados de IA tornam mais rápida a descoberta e exploração de vulnerabilidades por atacantes. Por isso, empresas precisam repensar como protegem seus ativos digitais e infraestrutura.",
+      "por_que_importa": "Times de segurança devem acelerar a adoção de IA defensiva e revisar processos de patch, já que atacantes usam IA para achar falhas mais rápido.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/how-frontier-ai-is-rewriting-software-security-rules",
+      "data": "2026-11-03T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "Infraestrutura crítica sob ameaça crescente, alerta McKinsey",
+      "resumo": "Segundo a McKinsey, muitas organizações não percebem sua exposição a riscos convencionais, cibernéticos e híbridos até sofrerem uma disrupção real. O estudo propõe formas de antecipar e reduzir esses riscos antes que se concretizem.",
+      "por_que_importa": "Empresas de energia, saúde e varejo no Brasil devem mapear riscos híbridos de infraestrutura antes de um incidente, não depois.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": false,
@@ -331,21 +331,9 @@
     },
     {
       "categoria": "estudos",
-      "titulo": "McKinsey: IA pode transformar o julgamento de executivos em inteligência organizacional",
-      "resumo": "Segundo a McKinsey, a experiência e o julgamento de CEOs e líderes seniores podem agora ser codificados por IA e disponibilizados para toda a organização. Isso representa uma nova forma de escalar conhecimento tácito que antes ficava concentrado no topo.",
-      "por_que_importa": "Lideranças podem usar IA para capturar e difundir decisões estratégicas, acelerando a curva de aprendizado de gestores em todos os níveis.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "McKinsey",
-      "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/turning-executive-judgment-into-organizational-intelligence-leveraging-ai-in-ceo-leadership",
-      "data": "2026-11-02T00:00:00.000Z"
-    },
-    {
-      "categoria": "estudos",
-      "titulo": "McKinsey: bancos ainda deixam valor na mesa com a adoção de IA",
-      "resumo": "Segundo a McKinsey, apesar do avanço rápido da adoção de IA no setor bancário, grande parte do valor potencial ainda não é capturado. O estudo defende um modelo operacional que transforme investimentos em capital de IA reutilizável.",
-      "por_que_importa": "Bancos e instituições financeiras devem reestruturar seu modelo operacional de IA para evitar projetos isolados que não escalam valor.",
+      "titulo": "Bancos ainda deixam valor na mesa com IA, diz McKinsey",
+      "resumo": "Segundo a McKinsey, a adoção de IA em bancos avança rápido, mas grande parte do valor potencial não é capturada. O estudo propõe um modelo operacional que transforma investimento em IA em capital reutilizável continuamente.",
+      "por_que_importa": "Bancos brasileiros precisam de um plano estruturado de reaproveitamento de modelos de IA para não desperdiçar investimento já feito.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "destaque": false,
@@ -354,340 +342,268 @@
       "data": "2026-10-30T00:00:00.000Z"
     },
     {
-      "categoria": "estudos",
-      "titulo": "McKinsey: IA já influencia como consumidores compram, mas empresas não estão prontas",
-      "resumo": "Uma análise da McKinsey com cerca de 21 mil consumidores mostra que o comportamento de compra assistido por IA está crescendo e evoluindo rapidamente. O estudo aponta que a maioria das empresas ainda não está equipada para atender a essa demanda.",
-      "por_que_importa": "Varejistas e marcas devem adaptar catálogos e atendimento para agentes de compra de IA antes que a demanda ultrapasse sua capacidade de resposta.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "McKinsey",
-      "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/who-wins-when-ai-does-the-shopping-new-evidence-on-agentic-commerce",
-      "data": "2026-10-28T00:00:00.000Z"
-    },
-    {
-      "categoria": "estudos",
-      "titulo": "McKinsey: agentes de IA exigem nova governança em bancos",
-      "resumo": "Segundo a McKinsey, agentes de IA já tomam decisões, agem e colaboram em fluxos de trabalho bancário, mas escalar essa tecnologia requer novas abordagens de governança, arquitetura e responsabilização. O guia é voltado a CIOs do setor financeiro.",
-      "por_que_importa": "CIOs de bancos e fintechs devem redesenhar controles de governança antes de escalar agentes de IA em processos críticos.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "McKinsey",
-      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-rise-of-the-agentic-coworker-a-banking-cios-guide-to-the-next-wave-of-ai",
-      "data": "2026-10-26T00:00:00.000Z"
-    },
-    {
-      "categoria": "estudos",
-      "titulo": "McKinsey: agentes de IA avançam na prevenção a crimes financeiros",
-      "resumo": "Segundo a McKinsey, um ano de implementação de IA agêntica em prevenção a crimes financeiros confirmou expectativas e levantou cinco questões-chave para escalar a tecnologia. O estudo traz lições de instituições que já colhem resultados.",
-      "por_que_importa": "Bancos e fintechs brasileiras podem usar essas lições para acelerar a adoção de IA agêntica em compliance e prevenção a fraudes.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "McKinsey",
-      "url": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/agentic-ai-in-financial-crime-prevention-lessons-from-winners",
-      "data": "2026-10-26T00:00:00.000Z"
-    },
-    {
       "categoria": "tecnologia",
-      "titulo": "Novas regras de SAC entram em vigor com atendimento humano garantido",
-      "resumo": "O regulamento brasileiro exige atendimento humano em até 20 segundos para 80% das chamadas quando solicitado pelo cliente, além de limitar menus eletrônicos e exigir repasse de dados à Senacon. A medida vale a partir desta semana.",
-      "por_que_importa": "Empresas de atendimento devem revisar URA, dimensionamento de equipes e sistemas de reporte para cumprir os novos prazos sem elevar custos.",
-      "frente": "saas",
-      "frente_nome": "SaaS Nexalytix",
+      "titulo": "Google lança novos chips de IA mais potentes",
+      "resumo": "O Google apresentou as versões TPU 8tx e 8i Max, completando sua família de quatro aceleradores de IA de 8ª geração. O lançamento amplia a capacidade de processamento para cargas de trabalho de inteligência artificial em nuvem.",
+      "por_que_importa": "Empresas que usam IA em nuvem podem se beneficiar de mais opções de hardware especializado, reduzindo custo por processamento ao migrar cargas pesadas.",
+      "frente": "cloud",
+      "frente_nome": "Cloud e Infraestrutura",
       "destaque": false,
       "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/novas-regras-de-sac-entram-em-vigor-no-brasil-veja-o-que-muda/",
-      "data": "2026-11-02T17:43:57.000Z"
+      "url": "https://tecnoblog.net/noticias/google-apresenta-versoes-mais-potentes-de-seus-chips-de-ia/",
+      "data": "2026-11-09T18:53:38.000Z"
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Meta prepara robô humanoide doméstico em parceria com fabricante chinesa",
-      "resumo": "O robô, desenvolvido com a Fourier, teria 1,5 metro de altura e uma tela no rosto para exibir expressões. O projeto expande a aposta da Meta em hardware físico além de óculos e dispositivos de realidade aumentada.",
-      "por_que_importa": "Empresas de tecnologia devem acompanhar a entrada de grandes players em robótica doméstica como sinal de novas frentes de investimento em hardware e IA.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/a-meta-quer-entrar-na-sua-casa-agora-com-um-robo-humanoide/",
-      "data": "2026-11-02T16:10:56.000Z"
-    },
-    {
-      "categoria": "tecnologia",
-      "titulo": "Receita da Anthropic cresce 12 vezes antes de IPO, mas prejuízo também dispara",
-      "resumo": "A dona do Claude registrou receita de US$ 17 bilhões, mas teve prejuízo líquido de US$ 23,3 bilhões no terceiro trimestre, enquanto se prepara para estrear na Nasdaq. A empresa segue investindo pesado em capacidade computacional.",
-      "por_que_importa": "Empresas que dependem de modelos de IA como o Claude devem monitorar a saúde financeira dos fornecedores para avaliar riscos de continuidade de serviço.",
-      "frente": "ia",
-      "frente_nome": "Transformação Digital e IA",
-      "destaque": false,
-      "fonte": "Exame",
-      "url": "https://exame.com/invest/mercados/receita-da-anthropic-salta-12-vezes-para-us-17-bilhoes-as-vesperas-do-ipo/",
-      "data": "2026-11-02T14:09:30.000Z"
-    },
-    {
-      "categoria": "tecnologia",
-      "titulo": "EUA avaliam bloquear ligações de operadoras de telecomunicações chinesas",
-      "resumo": "A proposta da FCC cita riscos de golpes telefônicos e ameaças à segurança nacional como motivação. A embaixada da China alega que a medida prejudicaria o comércio entre os dois países.",
-      "por_que_importa": "Empresas com operações internacionais devem monitorar tensões regulatórias entre EUA e China que podem afetar cadeias de telecomunicações e fornecedores.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/eua-planejam-bloquear-ligacoes-de-operadoras-chinesas/",
-      "data": "2026-11-02T12:15:21.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "QI Tech, fintech brasileira, chega a avaliação de US$ 2 bilhões",
-      "resumo": "Fundada para resolver problemas que o fundador enfrentava como cliente bancário, a QI Tech cresceu até atender marcas como Vivo e Wellhub. A empresa se tornou uma das fintechs mais valiosas do país.",
-      "por_que_importa": "Mostra espaço para fintechs B2B de infraestrutura financeira no Brasil; empresas podem buscar parcerias com esses players para acelerar digitalização de pagamentos.",
-      "frente": "saas",
-      "frente_nome": "SaaS Nexalytix",
-      "destaque": false,
-      "fonte": "InfoMoney",
-      "url": "https://www.infomoney.com.br/mercados/historia-qi-tech-pedro-mac-dowell/",
-      "data": "2026-11-02T18:25:34.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Ataques hacker a sistemas de refrigeração atingem supermercados em quatro países europeus",
-      "resumo": "Bélgica, Luxemburgo, Suécia e Estônia registraram temperaturas alteradas remotamente em freezers, três semanas após ataque similar na França. O incidente expõe a fragilidade de sistemas industriais conectados (OT) no varejo.",
-      "por_que_importa": "Redes de varejo e indústria devem isolar redes de OT da TI corporativa e revisar acessos remotos a sistemas de refrigeração e automação predial.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Exame",
-      "url": "https://exame.com/tecnologia/freezers-a-50c-nova-onda-de-ataques-hacker-atinge-supermercados-de-quatro-paises/",
-      "data": "2026-11-02T10:09:32.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "CBS em 2027 exige planejamento de caixa das empresas já em 2026",
-      "resumo": "O primeiro recolhimento do novo tributo CBS ocorrerá em fevereiro de 2027, e atrasos na apropriação de créditos podem pressionar o fluxo de caixa das empresas. A reforma tributária exige adequação de sistemas e processos financeiros com antecedência.",
-      "por_que_importa": "Áreas de FinOps e financeiro devem mapear impactos de caixa e ajustar sistemas fiscais antes da virada da CBS para evitar surpresas de liquidez.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Exame",
-      "url": "https://exame.com/bussola/primeira-cobranca-da-cbs-em-2027-como-empresas-devem-preparar-o-caixa/",
-      "data": "2026-11-02T10:00:47.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Juros altos no Brasil seguram IPOs mesmo com ações baratas",
-      "resumo": "PicPay e Agibank estrearam nos EUA, a Compass retornou à B3 e a Elo pode adiar sua oferta para 2027, enquanto o mercado aguarda cortes na Selic. Juros elevados continuam travando avaliações de empresas brasileiras.",
-      "por_que_importa": "Empresas que planejam captação via IPO devem reavaliar timing e estrutura de capital diante do cenário de juros no Brasil.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/negocios-em-fintechs/juros-altos-derrubam-valor-das-empresas-e-travam-ipos-mesmo-com-acoes-baratas/",
-      "data": "2026-10-30T23:26:54.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Black Friday pressiona bancos e fintechs a equilibrar vendas e combate a fraudes",
-      "resumo": "Pesquisas de Mercado Pago, Serasa Experian, Appmax e Adyen mostram consumidores mais cautelosos, que dividem compras e temem golpes durante a data. Instituições financeiras precisam reforçar antifraude sem travar conversão.",
-      "por_que_importa": "Varejo e fintechs devem calibrar regras antifraude e jornadas de checkout para não perder vendas nem abrir brechas a golpes na Black Friday.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/black-friday-obriga-bancos-e-fintechs-a-equilibrar-vendas-e-seguranca-contra-fraudes/",
-      "data": "2026-10-30T18:06:29.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "BC formaliza regras de dados do Open Finance com nova resolução",
-      "resumo": "A Resolução Conjunta nº 21 do Banco Central tira o compartilhamento de dados do Open Finance de uma zona cinzenta e estabelece regras claras para o repasse de informações entre instituições. A medida é vista como passo decisivo para inovação financeira no país.",
-      "por_que_importa": "Bancos e fintechs devem revisar contratos e arquitetura de dados para se adequar às novas regras e explorar novos produtos baseados em dados abertos.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/opinioes-e-artigos-fintechs/novas-regras-do-bc-tiram-dados-do-open-finance-de-ambiente-cinzento/",
-      "data": "2026-10-30T11:11:00.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Empresa decide vender todos os seus bitcoins após onda de ataques ao setor cripto",
-      "resumo": "A decisão foi tomada um dia depois do roubo de US$ 6,3 bilhões sofrido pela Binance, em meio a temores sobre segurança de custódia no setor. O caso ilustra o nervosismo do mercado após incidentes recentes.",
-      "por_que_importa": "Empresas com tesouraria em cripto devem reavaliar riscos de custódia e diversificação diante da onda recente de ataques ao setor.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Livecoins",
-      "url": "https://livecoins.com.br/empresa-afirma-que-vendera-todos-os-seus-5-833-bitcoins-devido-a-onda-de-ataques-contra-projetos-do-setor/",
-      "data": "2026-11-02T15:02:21.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Mercado Bitcoin sofre ataque hacker e trava saques com prejuízo estimado em R$ 217 milhões",
-      "resumo": "A corretora brasileira confirmou acesso não autorizado a seus sistemas e suspendeu depósitos e saques enquanto investiga o incidente. A empresa afirma que não houve vazamento de dados nem prejuízo direto a clientes.",
-      "por_que_importa": "Reforça a necessidade de auditorias de segurança e planos de resposta a incidentes para empresas que custodiam ativos digitais no Brasil.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": true,
-      "fonte": "Livecoins",
-      "url": "https://livecoins.com.br/corretora-brasileira-mercado-bitcoin-confirma-ataque-hacker-e-trava-saques-e-depositos-enquanto-investiga-situacao-fontes-estimam-perda-de-r-217-milhoes/",
-      "data": "2026-11-02T13:56:44.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Exército brasileiro simula defesa contra extorsão em cripto e ataques de IA na Amazônia",
-      "resumo": "O treinamento reuniu mais de 1.300 especialistas de cerca de 300 organizações e 14 países para simular respostas a extorsões envolvendo criptomoedas e ataques com uso de IA. A iniciativa testou a cooperação entre setor público e privado em cenários de crise.",
-      "por_que_importa": "Empresas de infraestrutura crítica podem se inspirar em exercícios conjuntos de simulação para testar sua própria resposta a incidentes híbridos.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Livecoins",
-      "url": "https://livecoins.com.br/exercito-brasileiro-e-orgao-de-protecao-da-amazonia-simulam-defesa-contra-extorsao-em-criptomoedas-e-ataques-de-ia/",
-      "data": "2026-11-02T12:01:51.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Criptomoedas e stablecoins devem ganhar mais espaço no Brasil em 2027",
-      "resumo": "Segundo a Pomelo, o mercado de ativos virtuais caminha para maior integração com meios de pagamento tradicionais no país, com players mais maduros e foco na experiência do consumidor. A expectativa é de amadurecimento regulatório e operacional do setor.",
-      "por_que_importa": "Empresas de pagamento e varejo devem acompanhar a integração de stablecoins a meios de pagamento para avaliar novos casos de uso no Brasil.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/giro-noticias/ativos-virtuais-em-2027-preservar-a-experiencia-de-compra-do-consumidor-e-essencial-diz-pomelo/",
-      "data": "2026-10-30T18:59:46.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "Google desmonta botnet de 1,3 milhão de Android TV boxes e banha fabricante",
-      "resumo": "O Google e parceiros desarticularam a botnet XCPE, que infectava intencionalmente aparelhos de streaming para gerar receita com fraude publicitária. A fabricante dos dispositivos foi banida por inserir o malware de propósito.",
-      "por_que_importa": "Empresas devem evitar dispositivos de fabricantes sem reputação em redes corporativas e segmentar redes de IoT para conter botnets.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/",
-      "data": "2026-11-02T18:16:34.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "Mais de mil servidores GitLab seguem vulneráveis a ataques de execução remota",
-      "resumo": "Servidores GitLab expostos na internet continuam sem o patch para uma falha crítica já explorada ativamente por invasores. O risco afeta ambientes de desenvolvimento que armazenam código-fonte sensível.",
-      "por_que_importa": "Times de desenvolvimento devem verificar e atualizar instâncias GitLab imediatamente para proteger repositórios de código contra invasões.",
+      "titulo": "Linus Torvalds vê avanço na caça a bugs do Linux com IA",
+      "resumo": "Linus Torvalds relatou que, em algumas áreas do Linux, as correções já superam o número de bugs apontados por ferramentas de IA. Isso indica maturidade crescente da IA aplicada à segurança de código aberto.",
+      "por_que_importa": "Times de desenvolvimento devem considerar ferramentas de IA para revisão de código como parte do processo de qualidade e segurança.",
       "frente": "dev",
       "frente_nome": "Desenvolvimento e Squads",
       "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
-      "data": "2026-11-02T12:47:00.000Z"
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/noticias/linus-torvalds-ja-ve-paz-entre-linux-e-ferramentas-de-ia-que-cacam-bugs/",
+      "data": "2026-11-09T15:26:09.000Z"
     },
     {
-      "categoria": "seguranca",
-      "titulo": "Falhas críticas no Langflow permitem execução remota de código sem autenticação",
-      "resumo": "A IBM revelou duas vulnerabilidades graves no Langflow, ferramenta open-source usada para construir agentes de IA, presentes em todas as versões até a 1.12.8. A correção exige atualização para a versão 1.13.0.",
-      "por_que_importa": "Equipes que usam Langflow para orquestrar agentes de IA devem atualizar imediatamente para evitar comprometimento total dos servidores.",
+      "categoria": "tecnologia",
+      "titulo": "Alta no preço da memória RAM derruba configurações de PCs mais robustos",
+      "resumo": "Dados do CPU-Z mostram queda pela primeira vez na proporção de PCs com 32 GB e 64 GB de RAM, em meio à escalada dos preços de memória. A tendência reflete pressão de custo no mercado de componentes.",
+      "por_que_importa": "Empresas que planejam renovar parque de máquinas devem antecipar compras ou revisar orçamento de TI diante da alta de preços de memória.",
+      "frente": "sustentacao",
+      "frente_nome": "Sustentação e Manutenção",
+      "destaque": false,
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/noticias/pcs-com-32-gb-e-64-gb-de-ram-recuam-pela-primeira-vez/",
+      "data": "2026-11-09T13:59:01.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Starlink adota preço dinâmico para internet via satélite",
+      "resumo": "A Starlink começou a aplicar preços dinâmicos para assinaturas de internet via satélite nos Estados Unidos, modelo inspirado na cobrança usada por apps de transporte. A mudança pode indicar uma tendência para outros mercados.",
+      "por_que_importa": "Empresas que dependem de conectividade via satélite devem monitorar o modelo de precificação dinâmica para orçar custos futuros de conectividade.",
+      "frente": "cloud",
+      "frente_nome": "Cloud e Infraestrutura",
+      "destaque": false,
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/noticias/starlink-impoe-preco-dinamico-e-vai-cobrar-mais-por-acesso-a-internet/",
+      "data": "2026-11-09T13:12:42.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Onde o Brasil pode aproveitar oportunidades em Inteligência Artificial",
+      "resumo": "O artigo discute que investir em infraestrutura e transformar dados em soluções para dores reais do mercado são fatores decisivos para o Brasil criar negócios lucrativos em IA. A reflexão aponta caminhos concretos para empresas locais.",
+      "por_que_importa": "Empresas brasileiras devem priorizar projetos de IA ligados a problemas de negócio específicos, não apenas adoção genérica de tecnologia.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": true,
+      "fonte": "Exame",
+      "url": "https://exame.com/negocios/onde-estao-as-oportunidades-para-o-brasil-na-inteligencia-artificial/",
+      "data": "2026-11-09T15:08:44.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Um terço dos CEOs brasileiros não acha profissionais qualificados",
+      "resumo": "Pesquisa da PwC mostra que 33% dos CEOs no Brasil enfrentam dificuldade para contratar talentos, com destaque para competências em análise de dados, IA e liderança. O estudo reforça a urgência de requalificação da força de trabalho.",
+      "por_que_importa": "Empresas devem investir em capacitação interna e parcerias com instituições de ensino para suprir a lacuna de talentos em dados e IA.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Exame",
+      "url": "https://exame.com/carreira/33-dos-ceos-brasileiros-nao-encontram-profissionais-qualificados-saiba-como-se-preparar/",
+      "data": "2026-11-09T14:17:17.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "CVM recebe 11 propostas para testar tokenização de ativos no Brasil",
+      "resumo": "Projetos da B3, Núclea e outras entidades vão testar diferentes modelos de infraestrutura para emissão, negociação e liquidação de valores mobiliários tokenizados. A iniciativa superou a meta inicial de participação.",
+      "por_que_importa": "Empresas do mercado financeiro devem acompanhar os pilotos de tokenização para entender oportunidades futuras de emissão de ativos digitais regulados.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/giro-noticias/cvm-recebe-11-propostas-para-testar-tokenizacao-no-brasil/",
+      "data": "2026-11-09T13:55:51.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Bradesco lança modelo \"banco como serviço\" para outras empresas",
+      "resumo": "O banco oferece uma estratégia de \"Bradesco as a Service\", permitindo que empresas de diferentes setores integrem soluções financeiras à sua própria operação mantendo a marca própria. A proposta combina estrutura bancária tradicional com agilidade de fintech.",
+      "por_que_importa": "Empresas de varejo e serviços podem avaliar parcerias de banking-as-a-service para oferecer produtos financeiros sem construir banco próprio.",
+      "frente": "saas",
+      "frente_nome": "SaaS Nexalytix",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/conteudo-de-marca/bradesco-as-a-service-solucoes-de-banco-agilidade-de-fintech/",
+      "data": "2026-11-09T13:04:00.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Nubank substitui equipe antifraude por IA e reduz fila de golpes em 80%",
+      "resumo": "A fintech demitiu parte do time que investigava golpes e passou a usar automação com IA no lugar, segundo relato de ex-funcionário. A empresa afirma que a fila de casos de fraude caiu 80% com a mudança.",
+      "por_que_importa": "Empresas financeiras devem avaliar com cautela a automação de áreas sensíveis de combate a fraude, equilibrando eficiência e supervisão humana.",
       "frente": "ia",
       "frente_nome": "Transformação Digital e IA",
       "destaque": false,
-      "fonte": "The Hacker News",
-      "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
-      "data": "2026-11-02T11:50:00.000Z"
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/nubank-demite-equipe-que-cacava-golpistas-e-coloca-a-ia-no-lugar/",
+      "data": "2026-11-06T16:47:03.000Z"
     },
     {
-      "categoria": "seguranca",
-      "titulo": "Golpistas se passam por suporte de TI no Microsoft Teams para roubar dados corporativos",
-      "resumo": "Atacantes convenceram funcionários a liberar acesso remoto a seus PCs se passando por suporte técnico no Teams, depois exploraram configurações inseguras do Active Directory Certificate Services para obter certificados de contas privilegiadas. A Microsoft confirmou duas invasões desse tipo.",
-      "por_que_importa": "Empresas devem treinar equipes contra engenharia social via chat corporativo e revisar configurações do AD CS para evitar escalonamento de privilégios.",
+      "categoria": "ativos",
+      "titulo": "El Salvador e Quirguistão firmam acordo sobre regulação de criptomoedas",
+      "resumo": "Os dois países assinaram um acordo para compartilhar experiências regulatórias no setor de criptomoedas, buscando maior exposição ao mercado digital. A parceria reflete o interesse de países pequenos em ganhar relevância no setor.",
+      "por_que_importa": "Empresas brasileiras de ativos digitais devem acompanhar modelos regulatórios internacionais que podem inspirar futuras normas no Brasil.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/el-salvador-e-quirguistao-assinam-acordo-para-compartilhar-experiencias-regulatorias-sobre-criptomoedas/",
+      "data": "2026-11-09T18:48:23.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Falha expõe mais de 44 mil carteiras da Keplr com login via Google ou Apple",
+      "resumo": "Um ataque explorou uma vulnerabilidade na autenticação via Google e Apple da carteira de criptomoedas Keplr, afetando mais de 44 mil contas. A falha estava relacionada ao provedor de autenticação Web3Auth usado pela plataforma.",
+      "por_que_importa": "Empresas que integram login social em produtos financeiros devem auditar provedores terceiros de autenticação para evitar exposição de fundos de clientes.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": false,
-      "fonte": "The Hacker News",
-      "url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-      "data": "2026-11-02T11:08:45.000Z"
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/hacker-ataca-usuarios-da-carteira-keplr-que-utilizam-login-via-google-ou-apple/",
+      "data": "2026-11-09T14:50:30.000Z"
     },
     {
-      "categoria": "seguranca",
-      "titulo": "Ivanti corrige mais dois zero-days do Connect Secure explorados em ataques",
-      "resumo": "A Ivanti lançou atualizações para duas novas falhas no gateway de acesso remoto Connect Secure, encadeadas em ataques reais desde outubro. A CISA já incluiu vulnerabilidades relacionadas em seu catálogo de exploração ativa.",
-      "por_que_importa": "Organizações com VPNs Ivanti devem aplicar os patches com urgência, já que gateways de acesso remoto são alvo prioritário de invasores.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
+      "categoria": "ativos",
+      "titulo": "EUA banem corretora MEXC por evasão de sanções e ligação com cibercrime",
+      "resumo": "O Departamento do Tesouro dos EUA cortou o acesso da exchange MEXC Global ao sistema financeiro americano, citando evasão de sanções e vínculos com grupos de cibercrime. A medida reforça o escrutínio regulatório sobre exchanges globais.",
+      "por_que_importa": "Empresas que negociam com exchanges internacionais devem reforçar due diligence de compliance para evitar exposição a contrapartes sancionadas.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
       "destaque": false,
       "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
-      "data": "2026-11-02T09:33:26.000Z"
+      "url": "https://www.bleepingcomputer.com/news/security/us-bans-mexc-crypto-exchange-over-sanctions-evasion-cybercrime-links/",
+      "data": "2026-11-09T13:28:56.000Z"
     },
     {
-      "categoria": "seguranca",
-      "titulo": "Novo infostealer usa IA generativa para priorizar vítimas mais lucrativas",
-      "resumo": "O malware VOLTA, voltado a roubo de senhas e cookies, utiliza modelos de linguagem como Claude, Gemini e Kimi para classificar dados roubados pelo valor financeiro das vítimas. A técnica torna os ataques mais eficientes para os criminosos.",
-      "por_que_importa": "Mostra que a IA também está sendo usada ofensivamente; empresas devem reforçar autenticação multifator e monitoramento de credenciais vazadas.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
+      "categoria": "ativos",
+      "titulo": "CVM avalia 11 propostas de pilotos de tokenização de ativos financeiros",
+      "resumo": "A autarquia brasileira recebeu projetos de grupos como B3, ANBIMA e Liqi para testar a emissão e liquidação de títulos tokenizados no mercado de capitais, superando a meta inicial de participação. A iniciativa marca avanço regulatório no setor.",
+      "por_que_importa": "Empresas do setor financeiro devem acompanhar os pilotos para entender oportunidades futuras de emissão e negociação de ativos tokenizados no Brasil.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
       "destaque": false,
-      "fonte": "The Hacker News",
-      "url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
-      "data": "2026-11-02T05:51:07.000Z"
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/cvm-recebe-11-propostas-de-pilotos-para-testes-com-ativos-tokenizados-e-supera-meta-inicial/",
+      "data": "2026-11-09T10:27:05.000Z"
     },
     {
       "categoria": "seguranca",
-      "titulo": "FBI confirma Coreia do Norte por trás do maior roubo cripto da história",
-      "resumo": "O FBI atribuiu ao grupo norte-coreano TraderTraitor o roubo de US$ 6,3 bilhões da Binance, o maior já registrado em criptoativos. A investigação envolveu também o Secret Service e a Receita americana.",
-      "por_que_importa": "Mostra que custódia de ativos digitais exige controles de acesso robustos; empresas com exposição cripto devem revisar segregação de chaves e monitoramento.",
+      "titulo": "França atribui a hackers iranianos ataques que causaram incêndios em supermercados",
+      "resumo": "Autoridades francesas ligaram ataques de outubro contra sistemas de refrigeração de mais de 700 supermercados a hackers estatais do Irã, resultando em perdas de alimentos e ao menos 15 incêndios. O caso reforça o risco de ataques a infraestrutura física conectada.",
+      "por_que_importa": "Redes de varejo e logística devem revisar a segurança de controladores industriais conectados para evitar incidentes físicos graves.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": true,
       "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
-      "data": "2026-11-01T19:57:53.000Z"
+      "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+      "data": "2026-11-09T18:32:42.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Senha padrão 'admin:admin' permite invasão de apps de montadoras e destrava carros",
+      "resumo": "Pesquisadores encontraram credenciais padrão em servidores de identidade usados por aplicativos de duas montadoras, permitindo acesso a contas de clientes e controle remoto de veículos conectados. A falha envolvia a plataforma ForgeRock, da Ping Identity.",
+      "por_que_importa": "Empresas que operam sistemas conectados devem eliminar credenciais padrão e auditar fornecedores de identidade digital usados em seus apps.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
+      "data": "2026-11-09T11:27:53.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Agências dos EUA alertam para ataques a sistemas de refrigeração industrial",
+      "resumo": "Autoridades americanas alertaram que agentes maliciosos estão mirando controladores de refrigeração e monitoramento da cadeia de frio globalmente, buscando causar falhas, incêndios e perda de estoque. O alerta reforça o padrão visto nos ataques à França.",
+      "por_que_importa": "Empresas de varejo, alimentos e logística devem corrigir e isolar controladores industriais expostos à internet antes que sejam explorados.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+      "data": "2026-11-09T06:15:10.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "CISA alerta sobre falha explorada em firewalls SonicWall",
+      "resumo": "A agência de cibersegurança dos EUA incluiu uma vulnerabilidade de bypass de autenticação multifator no SonicOS em seu catálogo de falhas exploradas ativamente. A falha já havia sido corrigida pela SonicWall, mas segue sendo alvo de ataques.",
+      "por_que_importa": "Empresas que usam firewalls SonicWall devem aplicar as atualizações de segurança imediatamente para evitar invasões via VPN.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+      "data": "2026-11-09T06:05:24.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Hackers desviam US$ 133 milhões de banco francês via prestador de serviço",
+      "resumo": "O banco cooperativo Crédit Mutuel Arkéa foi alvo de um ataque cibernético que permitiu transações fraudulentas de até US$ 133 milhões, obrigando a suspensão de sistemas. O ataque ocorreu através de um fornecedor terceirizado do banco.",
+      "por_que_importa": "Instituições financeiras devem reforçar a auditoria de segurança de fornecedores terceirizados, já que eles são porta de entrada para fraudes de grande escala.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+      "data": "2026-11-07T15:25:35.000Z"
     },
     {
       "categoria": "educacao",
-      "titulo": "Tutores de IA só ensinam a pensar se a conversa virar parte da avaliação",
-      "resumo": "Segundo especialistas em educação, usar IA como tutor não garante desenvolvimento de pensamento crítico, a menos que o próprio diálogo com a ferramenta seja avaliado. A proposta é elevar as exigências cognitivas nas interações com IA.",
-      "por_que_importa": "Áreas de treinamento corporativo devem desenhar avaliações que exijam raciocínio explícito ao usar assistentes de IA, não apenas respostas prontas.",
+      "titulo": "Reportagens da EBC são citadas em questões do Enem 2026",
+      "resumo": "Conteúdos produzidos pela TV Brasil e pela Rádio Nacional, da Empresa Brasil de Comunicação, apareceram em questões da primeira prova do Enem 2026, aplicada no domingo. Um dos textos citados tratava da cultura paraense na obra de Dona Onete.",
+      "por_que_importa": "Instituições de ensino podem usar conteúdo jornalístico de qualidade como material de apoio para preparar estudantes para exames nacionais.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/reportagens-da-agencia-brasil-e-da-radioagencia-sao-citadas-no-enem",
+      "data": "2026-11-09T18:25:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Enem 2026 tem recorde de participação de estudantes da rede pública",
+      "resumo": "O primeiro dia de provas do Enem 2026 teve 68% de comparecimento entre os inscritos, segundo o Ministério da Educação, com aumento na participação de alunos da rede pública. O exame ocorreu sem grandes contratempos.",
+      "por_que_importa": "Empresas de educação e academias de tecnologia podem usar o dado para direcionar programas de capacitação a estudantes de escolas públicas.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/enem-registra-aumento-na-participacao-de-alunos-da-rede-publica",
+      "data": "2026-11-09T00:49:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Pesquisadores testam se IA consegue avaliar a percepção de professores em sala",
+      "resumo": "Um grupo de pesquisa está estudando se modelos de IA conseguem medir uma habilidade-chave de ensino e oferecer feedback mais rápido que avaliadores humanos. O projeto busca acelerar a formação continuada de educadores.",
+      "por_que_importa": "Empresas de edtech e academias corporativas podem explorar IA para avaliar e acelerar o desenvolvimento de instrutores e formadores internos.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "EdSurge",
+      "url": "https://www.edsurge.com/news/can-ai-tell-how-well-teachers-notice-researchers-are-testing-it",
+      "data": "2026-11-09T00:00:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Pesquisa: pais querem IA nas escolas, mas pedem mais segurança",
+      "resumo": "Um levantamento mostra que a maioria dos pais quer que estudantes usem IA na escola, desde que haja salvaguardas fortes. Ao mesmo tempo, quatro em cada dez professores dizem não ter recebido nenhum treinamento sobre o tema.",
+      "por_que_importa": "Instituições de ensino e academias de tecnologia devem investir em capacitação docente sobre uso seguro de IA antes de expandir seu uso em sala.",
       "frente": "academia",
       "frente_nome": "Academia",
       "destaque": false,
       "fonte": "EdSurge",
-      "url": "https://www.edsurge.com/news/want-students-to-think-with-ai-raise-the-stakes",
-      "data": "2026-11-02T00:00:00.000Z"
-    },
-    {
-      "categoria": "educacao",
-      "titulo": "Enem 2026 ocorre no próximo domingo com mais de 5 milhões de inscritos",
-      "resumo": "O exame reúne provas de linguagens, códigos e ciências humanas no primeiro dia, além da redação. O Inep orienta os candidatos sobre horários e documentos necessários.",
-      "por_que_importa": "Empresas com programas de bolsas ou trainee podem aproveitar o período para divulgar oportunidades educacionais a jovens talentos.",
-      "frente": "academia",
-      "frente_nome": "Academia",
-      "destaque": false,
-      "fonte": "Agência Brasil (Educação)",
-      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/falta-uma-semana-para-o-enem-2026-veja-horarios-e-o-que-levar",
-      "data": "2026-11-01T17:47:00.000Z"
-    },
-    {
-      "categoria": "educacao",
-      "titulo": "Governo lança cursos gratuitos de IA para professores da educação básica e superior",
-      "resumo": "O programa oferece capacitação sobre uso de IA, ferramentas digitais e segurança online, incluindo proteção de crianças na internet. As aulas abordam desde planejamento de aulas até uso responsável da tecnologia.",
-      "por_que_importa": "Empresas de educação corporativa podem se inspirar nesse modelo de capacitação em IA para formar equipes internas com segurança e responsabilidade.",
-      "frente": "academia",
-      "frente_nome": "Academia",
-      "destaque": false,
-      "fonte": "Agência Brasil (Educação)",
-      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/programa-oferece-cursos-gratuitos-sobre-ia-para-professores",
-      "data": "2026-10-31T13:23:00.000Z"
-    },
-    {
-      "categoria": "educacao",
-      "titulo": "Estudo aponta que 8 em cada 10 estudantes brasileiros temem aprender menos usando IA",
-      "resumo": "Pesquisa da HP Futures mostra que a maioria dos estudantes brasileiros teme que o uso de IA prejudique sua capacidade de aprendizado. O estudo propõe repensar como a tecnologia é incorporada em sala de aula.",
-      "por_que_importa": "Empresas de edtech e áreas de treinamento corporativo devem desenhar uso de IA que reforce, e não substitua, o raciocínio dos aprendizes.",
-      "frente": "academia",
-      "frente_nome": "Academia",
-      "destaque": true,
-      "fonte": "Porvir",
-      "url": "https://porvir.org/hp-futures-2026/",
-      "data": "2026-10-28T22:58:35.000Z"
+      "url": "https://www.edsurge.com/news/survey-most-parents-want-students-to-use-ai-in-school-with-strong-safeguards",
+      "data": "2026-11-03T00:00:00.000Z"
     }
   ]
 }
