@@ -1,7 +1,7 @@
 {
-  "atualizado_em": "2026-11-16T18:42:06.710Z",
-  "periodo": "09 de nov a 16 de nov de 2026",
-  "resumo_semana": "placeholder",
+  "atualizado_em": "2026-11-23T20:23:54.665Z",
+  "periodo": "16 de nov a 23 de nov de 2026",
+  "resumo_semana": "A semana foi marcada pela pressão da corrida por IA sobre custos e recursos de outras indústrias, por uma onda de falhas de segurança críticas em nuvem e ferramentas corporativas (Azure, ScreenConnect, Cisco), e pela turbulência de fintechs brasileiras na bolsa de Nova York em meio a ajustes regulatórios do Banco Central.",
   "categorias": [
     {
       "id": "estudos",
@@ -34,223 +34,570 @@
       "curto": "Educação"
     }
   ],
-  "temas": [],
+  "temas": [
+    {
+      "posicao": 1,
+      "titulo": "Retorno e custo da IA corporativa",
+      "explicacao": "A McKinsey mostra que ganhos reais de IA exigem redesenho de processos, não apenas novas ferramentas, e que empresas já conseguem reduzir custos de IA generativa mantendo resultados.",
+      "por_que_importa": "Empresas devem medir retorno real da IA antes de escalar investimentos, priorizando redesenho de processos sobre compra de ferramentas.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "The unit of activation: How industrial companies can make AI work",
+          "url": "https://www.mckinsey.com/industries/industrials/our-insights/the-unit-of-activation-how-industrial-companies-can-make-ai-work",
+          "data": "2026-11-23T00:00:00.000Z"
+        },
+        {
+          "fonte": "McKinsey",
+          "titulo": "AI economics in action: What four companies have done and learned",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/ai-economics-in-action-what-four-companies-have-done-and-learned",
+          "data": "2026-11-23T00:00:00.000Z"
+        },
+        {
+          "fonte": "McKinsey",
+          "titulo": "Separating signal from noise: The always-on finance intelligence layer",
+          "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/separating-signal-from-noise-the-always-on-finance-intelligence-layer",
+          "data": "2026-11-13T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 2,
+      "titulo": "Bancos e o dividendo da IA",
+      "explicacao": "Segundo a McKinsey, o setor bancário teve lucro recorde em 2025 e agora disputa o chamado dividendo da IA, que vai para quem mover com mais precisão e velocidade.",
+      "por_que_importa": "Bancos e fintechs brasileiras devem acelerar adoção responsável de IA para não perder competitividade no próximo ciclo.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Global Banking Annual Review 2026: Precision with speed",
+          "url": "https://www.mckinsey.com/industries/financial-services/our-insights/global-banking-annual-review",
+          "data": "2026-11-17T00:00:00.000Z"
+        },
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "Precisão da IA aumenta e bancos apostam na tecnologia para reforçar segurança digital",
+          "url": "https://finsidersbrasil.com.br/ia/precisao-da-ia-sobe-e-bancos-usam-em-seguranca-digital/",
+          "data": "2026-11-20T18:32:00.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 3,
+      "titulo": "Tendências tecnológicas de investimento em 2026",
+      "explicacao": "O relatório anual da McKinsey aponta que cinco das 14 tendências tecnológicas vão receber o dobro de investimento visto em 2025, puxadas por aplicações de IA.",
+      "por_que_importa": "Gestores devem usar o mapeamento para priorizar orçamento de tecnologia e evitar dispersão de investimentos.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "McKinsey",
+          "titulo": "Technology’s next frontier",
+          "url": "https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-technologys-next-frontier",
+          "data": "2026-11-18T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 4,
+      "titulo": "Corrida por recursos de IA pressiona outros setores",
+      "explicacao": "A disputa por chips, energia, talento e capital ligados à IA está encarecendo recursos essenciais e dificultando operações em setores não diretamente ligados à tecnologia.",
+      "por_que_importa": "Empresas de qualquer setor devem monitorar custos de energia e mão de obra especializada que podem subir por causa da demanda por IA.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "fontes": [
+        {
+          "fonte": "Olhar Digital",
+          "titulo": "Corrida pela IA começa a sufocar outros setores da economia",
+          "url": "https://olhardigital.com.br/2026/11/23/inteligencia-artificial/corrida-pela-ia-comeca-a-sufocar-outros-setores-da-economia/",
+          "data": "2026-11-23T19:04:44.000Z"
+        },
+        {
+          "fonte": "Olhar Digital",
+          "titulo": "Alta da Nvidia impulsiona Nasdaq e ações de rivais de chips",
+          "url": "https://olhardigital.com.br/2026/11/23/pro/alta-da-nvidia-impulsiona-nasdaq-e-acoes-de-rivais-de-chips/",
+          "data": "2026-11-23T18:05:40.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 5,
+      "titulo": "Falhas críticas em nuvem e infraestrutura corporativa",
+      "explicacao": "Vulnerabilidades graves foram exploradas ativamente no Azure API Management, ScreenConnect e Cisco Expressway, afetando credenciais e acesso a sistemas de clientes.",
+      "por_que_importa": "Equipes de segurança devem aplicar patches com urgência e revisar credenciais expostas em serviços de nuvem e suporte terceirizado.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "fontes": [
+        {
+          "fonte": "BleepingComputer",
+          "titulo": "Microsoft Azure flaw exploited to steal customers' API credentials",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+          "data": "2026-11-23T19:42:20.000Z"
+        },
+        {
+          "fonte": "The Hacker News",
+          "titulo": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+          "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+          "data": "2026-11-23T12:41:04.000Z"
+        },
+        {
+          "fonte": "BleepingComputer",
+          "titulo": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+          "data": "2026-11-23T07:44:19.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 6,
+      "titulo": "IA como vetor de ataque e fraude financeira",
+      "explicacao": "Ataques assistidos por IA já geraram pagamentos não autorizados em bancos indianos, enquanto provedores de IA tiveram prompts e dados sensíveis vazados por meses sem saber.",
+      "por_que_importa": "Instituições financeiras brasileiras devem reforçar detecção de fraude considerando que atacantes já usam IA para acelerar invasões.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "fontes": [
+        {
+          "fonte": "The Hacker News",
+          "titulo": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+          "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+          "data": "2026-11-23T08:24:15.000Z"
+        },
+        {
+          "fonte": "BleepingComputer",
+          "titulo": "OpenRouter drops AI providers over leaked prompts and secrets",
+          "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+          "data": "2026-11-23T20:00:20.000Z"
+        },
+        {
+          "fonte": "The Hacker News",
+          "titulo": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+          "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+          "data": "2026-11-22T05:06:55.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 7,
+      "titulo": "Turbulência de fintechs brasileiras no mercado de capitais",
+      "explicacao": "Ações de fintechs como PicPay caíram até 32% na semana em Nova York, pressionadas por mudança contábil, metas revisadas e alta da inadimplência.",
+      "por_que_importa": "Fintechs e investidores devem revisar métricas de risco e transparência contábil para evitar perdas abruptas de confiança do mercado.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "fontes": [
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "Fintechs brasileiras despencam em Nova York; PicPay perde 32% na semana",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/fintechs-brasileiras-despencam-em-nova-york-picpay-perde-32-na-semana/",
+          "data": "2026-11-23T15:02:00.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 8,
+      "titulo": "Banco Central aperta regulação de fintechs e BaaS",
+      "explicacao": "O BC sinalizou novas exigências equiparando responsabilidades de fintechs e empresas de banking-as-a-service às dos bancos tradicionais, após cassar licença da fintech A55 por esquema de apostas ilegais.",
+      "por_que_importa": "Fintechs devem antecipar adequação regulatória e reforçar compliance antes da entrada em vigor das novas regras.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "fontes": [
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "BC prepara novas exigências para fintechs e empresas de BaaS",
+          "url": "https://finsidersbrasil.com.br/regulamentacao/bc-prepara-novas-exigencias-para-fintechs-e-empresas-de-baas/",
+          "data": "2026-11-23T14:16:00.000Z"
+        },
+        {
+          "fonte": "Finsiders Brasil",
+          "titulo": "BC cancela licença da A55, investigada em esquema de ‘bets’ ilegais",
+          "url": "https://finsidersbrasil.com.br/regulamentacao/bc-cancela-autorizacao-da-fintech-a55-apos-operacao-azzardo/",
+          "data": "2026-11-23T14:30:19.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 9,
+      "titulo": "Reforma tributária avança com piloto aberto da CBS",
+      "explicacao": "A Receita Federal abriu o ambiente de testes da CBS para qualquer CNPJ, retirando a exigência de indicação por entidades representativas.",
+      "por_que_importa": "Empresas de todos os portes devem testar o piloto cedo para ajustar sistemas fiscais antes da obrigatoriedade da reforma.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "fontes": [
+        {
+          "fonte": "Exame",
+          "titulo": "Receita libera testes da CBS para todas as empresas; veja como participar",
+          "url": "https://exame.com/economia/receita-libera-testes-da-cbs-para-todas-as-empresas-veja-como-participar/",
+          "data": "2026-11-23T16:17:34.000Z"
+        }
+      ]
+    },
+    {
+      "posicao": 10,
+      "titulo": "Regulação de criptoativos ganha força global e regional",
+      "explicacao": "A União Europeia criou força-tarefa para rastrear cripto ligada a sanções contra a Rússia, enquanto o Brasil propôs ao Mercosul rastrear e confiscar ativos digitais do crime organizado.",
+      "por_que_importa": "Empresas que operam com ativos digitais devem reforçar compliance diante do aumento da fiscalização internacional e regional.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "fontes": [
+        {
+          "fonte": "Livecoins",
+          "titulo": "Comissão Europeia anuncia novo pacote de sanções contra a Rússia, incluindo criação de “Força-Tarefa de Sanções sobre Criptomoedas”",
+          "url": "https://livecoins.com.br/comissao-europeia-anuncia-novo-pacote-de-sancoes-contra-a-russia-incluindo-criacao-de-forca-tarefa-de-sancoes-sobre-criptomoedas/",
+          "data": "2026-11-23T19:21:41.000Z"
+        },
+        {
+          "fonte": "Livecoins",
+          "titulo": "Brasil pede no Mercosul para rastrear e confiscar criptomoedas do crime organizado como prioridade",
+          "url": "https://livecoins.com.br/brasil-pede-no-mercosul-para-rastrear-e-confiscar-criptomoedas-do-crime-organizado-como-prioridade/",
+          "data": "2026-11-22T12:11:15.000Z"
+        },
+        {
+          "fonte": "Livecoins",
+          "titulo": "Corretora Binance busca investigador de sanções em blockchain para atuar na América Latina",
+          "url": "https://livecoins.com.br/corretora-binance-busca-investigador-de-sancoes-em-blockchain-para-atuar-na-america-latina/",
+          "data": "2026-11-23T07:25:39.000Z"
+        }
+      ]
+    }
+  ],
   "itens": [
     {
-      "categoria": "tecnologia",
-      "titulo": "Microsoft explica apagão que derrubou o Outlook: falha veio de atualização de julho",
-      "resumo": "A Microsoft confirmou que a interrupção global do Outlook e outros serviços foi causada por um bug introduzido em uma atualização de software de julho, não por um ataque hacker. A falha provocou colapso em mais de 80% dos servidores de gateway de rede da empresa.",
-      "por_que_importa": "Reforça a importância de planos de continuidade e multi-fornecedor para serviços críticos de nuvem corporativa.",
-      "frente": "cloud",
-      "frente_nome": "Cloud e Infraestrutura",
+      "categoria": "estudos",
+      "titulo": "IA industrial só funciona se o processo for redesenhado",
+      "resumo": "A McKinsey mostra que indústrias não conseguem ganhos reais de IA apenas inserindo ferramentas em fluxos antigos. É preciso repensar o desenho do trabalho para capturar valor de verdade.",
+      "por_que_importa": "Empresas industriais brasileiras devem priorizar redesenho de processos antes de comprar ferramentas de IA, evitando investimento sem retorno.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
       "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/microsoft-explica-apagao-que-derrubou-o-outlook-nao-foi-hacker/",
-      "data": "2026-11-16T18:20:57.000Z"
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/industries/industrials/our-insights/the-unit-of-activation-how-industrial-companies-can-make-ai-work",
+      "data": "2026-11-23T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "Como empresas estão reduzindo o custo da IA e melhorando resultados",
+      "resumo": "A McKinsey analisa quatro empresas que conseguiram baixar despesas com IA generativa enquanto melhoravam seus resultados, mesmo com o custo da tecnologia subindo.",
+      "por_que_importa": "Gestores devem buscar essas práticas de eficiência para evitar que a conta de IA generativa cresça sem controle orçamentário.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/ai-economics-in-action-what-four-companies-have-done-and-learned",
+      "data": "2026-11-23T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "McKinsey aponta as tendências tecnológicas que vão dobrar investimento em 2026",
+      "resumo": "Do relatório anual de tendências tecnológicas da McKinsey, cinco das 14 tendências devem receber o dobro de investimento visto em 2025, com destaque para IA aplicada.",
+      "por_que_importa": "Empresas devem mapear essas tendências para decidir onde investir em tecnologia no próximo ciclo orçamentário.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/quarterly/the-five-fifty/five-fifty-technologys-next-frontier",
+      "data": "2026-11-18T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "Bancos tiveram lucro recorde de US$ 1,3 trilhão em 2025, diz McKinsey",
+      "resumo": "A revisão anual da McKinsey mostra que o setor bancário bateu recorde de lucro em 2025 e aponta que o chamado 'dividendo da IA' será decisivo nos próximos anos.",
+      "por_que_importa": "Bancos e fintechs brasileiras devem acelerar adoção de IA com precisão, pois a vantagem competitiva vai para quem mover rápido.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": true,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/industries/financial-services/our-insights/global-banking-annual-review",
+      "data": "2026-11-17T00:00:00.000Z"
+    },
+    {
+      "categoria": "estudos",
+      "titulo": "IA cria camada de inteligência financeira sempre ativa, diz McKinsey",
+      "resumo": "Segundo a McKinsey, ferramentas de IA podem ser integradas às áreas financeiras das empresas para separar sinal de ruído e melhorar decisões em tempo real.",
+      "por_que_importa": "Times de FinOps e finanças devem avaliar essas ferramentas para ganhar velocidade e precisão na tomada de decisão financeira.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/separating-signal-from-noise-the-always-on-finance-intelligence-layer",
+      "data": "2026-11-13T00:00:00.000Z"
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Apagão da Microsoft causou contaminação por gás cloro em hotel na Alemanha",
-      "resumo": "Uma falha no dosador de cloro de uma piscina elevou os níveis do produto químico porque o alerta por e-mail não chegou aos funcionários durante a pane do Outlook. O caso mostra consequências físicas reais de falhas em sistemas de TI.",
-      "por_que_importa": "Empresas que dependem de alertas automatizados críticos devem ter canais de backup independentes de um único provedor de nuvem.",
-      "frente": "cloud",
-      "frente_nome": "Cloud e Infraestrutura",
+      "titulo": "Corrida pela IA está pressionando outros setores da economia",
+      "resumo": "A disputa por trabalhadores, chips, energia e investimentos ligados à IA está encarecendo recursos essenciais e dificultando a operação de outras indústrias.",
+      "por_que_importa": "Empresas de todos os setores devem monitorar custos de energia e talento, pois a demanda por IA pode pressionar preços mesmo fora do setor de tecnologia.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
       "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/apagao-da-microsoft-leva-a-contaminacao-por-gas-cloro-entenda/",
-      "data": "2026-11-16T17:49:24.000Z"
+      "fonte": "Olhar Digital",
+      "url": "https://olhardigital.com.br/2026/11/23/inteligencia-artificial/corrida-pela-ia-comeca-a-sufocar-outros-setores-da-economia/",
+      "data": "2026-11-23T19:04:44.000Z"
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Falha em lançamento faz Amazon Leo perder 40 satélites",
-      "resumo": "Uma missão da ULA terminou cerca de dez minutos após a decolagem, interrompendo uma sequência de 20 anos sem falhas da empresa e derrubando 40 satélites do projeto Amazon Leo. O episódio é um revés para a expansão de infraestrutura de conectividade via satélite.",
-      "por_que_importa": "Empresas que dependem de conectividade via satélite para operações remotas devem monitorar atrasos na expansão dessas redes.",
-      "frente": "cloud",
-      "frente_nome": "Cloud e Infraestrutura",
-      "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/missao-falha-e-amazon-leo-perde-40-satelites/",
-      "data": "2026-11-16T14:40:23.000Z"
-    },
-    {
-      "categoria": "tecnologia",
-      "titulo": "Desenvolvedor veterano do Linux reduz atuação no projeto por sobrecarga causada pela IA",
-      "resumo": "Lorenzo Stoakes, responsável por áreas de gerenciamento de memória no kernel Linux, decidiu diminuir sua participação por causa do volume crescente de contribuições geradas por IA que exigem revisão. O caso expõe tensões entre produtividade e qualidade no desenvolvimento open source.",
-      "por_que_importa": "Times de desenvolvimento devem equilibrar uso de IA generativa com revisão humana de qualidade para não sobrecarregar mantenedores e processos críticos.",
+      "titulo": "Unreal Engine 6 troca programação visual por IA na criação de jogos",
+      "resumo": "A Epic Games antecipou a retirada do sistema Blueprints da próxima versão do motor gráfico, apostando em recursos de IA para o desenvolvimento.",
+      "por_que_importa": "Estúdios e equipes de dev que usam Unreal Engine devem planejar a migração e capacitação em ferramentas de IA generativa para jogos.",
       "frente": "dev",
       "frente_nome": "Desenvolvimento e Squads",
       "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/veterano-do-linux-reduz-atividades-no-projeto-por-causa-da-ia/",
-      "data": "2026-11-16T14:14:06.000Z"
+      "fonte": "Olhar Digital",
+      "url": "https://olhardigital.com.br/2026/11/23/games-e-consoles/unreal-engine-6-abandona-blueprints-inteligencia-artificial/",
+      "data": "2026-11-23T19:00:00.000Z"
     },
     {
       "categoria": "tecnologia",
-      "titulo": "Nubank recebe aprovação do Banco Central para operar oficialmente como banco",
-      "resumo": "Antes exclusivamente digital, o Nubank obteve autorização formal do Banco Central para usar a denominação de banco no país. A mudança reflete a consolidação do modelo digital no sistema financeiro brasileiro.",
-      "por_que_importa": "Sinaliza amadurecimento regulatório de fintechs, relevante para empresas que avaliam parceiros bancários digitais para operações financeiras.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
+      "titulo": "Nvidia sobe na Nasdaq após semana de turbulência sobre investigação da SEC",
+      "resumo": "As ações da Nvidia e de outras fabricantes de chips se recuperaram na bolsa após quedas ligadas a notícias sobre investigação da SEC e mudança na liderança da empresa.",
+      "por_que_importa": "Empresas que dependem de chips de IA devem acompanhar a volatilidade do setor, que pode afetar prazos e custos de hardware.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Olhar Digital",
+      "url": "https://olhardigital.com.br/2026/11/23/pro/alta-da-nvidia-impulsiona-nasdaq-e-acoes-de-rivais-de-chips/",
+      "data": "2026-11-23T18:05:40.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Windows 11 26H2 começa a ser instalado automaticamente",
+      "resumo": "A Microsoft iniciou a distribuição automática da atualização 26H2 para PCs que já rodam as versões 24H2 ou 25H2 do Windows 11.",
+      "por_que_importa": "Equipes de TI devem testar a atualização em ambiente controlado antes da chegada automática, evitando incompatibilidades em produção.",
+      "frente": "sustentacao",
+      "frente_nome": "Sustentação e Manutenção",
       "destaque": false,
       "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/nubank-agora-e-banco-de-fato/",
-      "data": "2026-11-16T01:54:08.000Z"
+      "url": "https://tecnoblog.net/noticias/microsoft-anuncia-atualizacao-automatica-para-o-windows-11-26h2/",
+      "data": "2026-11-23T17:27:04.000Z"
+    },
+    {
+      "categoria": "tecnologia",
+      "titulo": "Apagão do Outlook deixou e-mails sem entrega, admite Microsoft",
+      "resumo": "A Microsoft confirmou que usuários ficaram horas sem acesso ao Outlook e que parte dos e-mails não chegou a ser entregue durante a falha.",
+      "por_que_importa": "Empresas que dependem do Outlook para operação crítica devem ter planos de contingência de comunicação e revisar contratos de SLA com fornecedores de nuvem.",
+      "frente": "cloud",
+      "frente_nome": "Cloud e Infraestrutura",
+      "destaque": false,
+      "fonte": "Tecnoblog",
+      "url": "https://tecnoblog.net/noticias/microsoft-admite-alguns-e-mails-nao-foram-entregues-no-apagao-do-outlook/",
+      "data": "2026-11-23T15:21:44.000Z"
     },
     {
       "categoria": "negocios",
-      "titulo": "Pix completa seis anos com R$ 35,4 trilhões movimentados e disputa acirrada entre bancos e fintechs",
-      "resumo": "Em seis anos, o Pix já soma 154 milhões de usuários e, só em 2026, 76 bilhões de transações até outubro, alta de 17,6%. O sistema do Banco Central agora é também campo de disputa por crédito, investimentos e gestão de caixa.",
-      "por_que_importa": "Empresas devem revisar sua estratégia de meios de pagamento e explorar funcionalidades do Pix para crédito e gestão financeira.",
+      "titulo": "Anthropic permite que empresas usem o Claude sem compartilhar dados",
+      "resumo": "Em fase beta, um novo recurso do Claude permite monitorar usos indevidos da IA mantendo os registros na nuvem do próprio cliente, sob suas chaves de criptografia.",
+      "por_que_importa": "Empresas preocupadas com soberania de dados podem adotar o recurso para usar IA generativa sem ceder controle das informações corporativas.",
+      "frente": "ia",
+      "frente_nome": "Transformação Digital e IA",
+      "destaque": false,
+      "fonte": "Exame",
+      "url": "https://exame.com/inteligencia-artificial/claude-protecao-dados-empresas-anthropic/",
+      "data": "2026-11-23T16:22:22.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Receita Federal abre piloto da CBS para qualquer empresa",
+      "resumo": "O ambiente de testes da Contribuição sobre Bens e Serviços, parte da reforma tributária, deixou de exigir indicação de entidades e agora aceita qualquer CNPJ que cumpra os requisitos.",
+      "por_que_importa": "Empresas de todos os portes devem testar o piloto da CBS cedo para ajustar sistemas fiscais antes da obrigatoriedade da reforma tributária.",
+      "frente": "finops",
+      "frente_nome": "FinOps",
+      "destaque": false,
+      "fonte": "Exame",
+      "url": "https://exame.com/economia/receita-libera-testes-da-cbs-para-todas-as-empresas-veja-como-participar/",
+      "data": "2026-11-23T16:17:34.000Z"
+    },
+    {
+      "categoria": "negocios",
+      "titulo": "Fintechs brasileiras despencam na bolsa de Nova York, com PicPay caindo 32%",
+      "resumo": "Uma mudança contábil do PicPay, somada a metas revisadas por Stone e PagBank e ao aumento da inadimplência, derrubou as ações de fintechs brasileiras listadas nos EUA.",
+      "por_que_importa": "Fintechs e investidores devem reavaliar exposição a risco de crédito e rever métricas contábeis antes que o mercado puna surpresas negativas.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "destaque": true,
       "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/pix-6-anos/pix-completa-seis-anos-movimenta-r-354-tri-e-muda-a-disputa-entre-bancos-e-fintechs/",
-      "data": "2026-11-16T17:54:17.000Z"
+      "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/fintechs-brasileiras-despencam-em-nova-york-picpay-perde-32-na-semana/",
+      "data": "2026-11-23T15:02:00.000Z"
     },
     {
       "categoria": "negocios",
-      "titulo": "Fintechs brasileiras disparam até 27% na bolsa de NY após balanços do terceiro trimestre",
-      "resumo": "Agibank, Nubank e Inter lideraram altas em Nova York com resultados positivos no terceiro trimestre de 2026, enquanto a Stone subiu mesmo após reduzir projeções. O mercado reagiu bem aos lucros do setor financeiro digital brasileiro.",
-      "por_que_importa": "O desempenho sinaliza maturidade do setor fintech brasileiro, relevante para empresas que buscam parceiros financeiros digitais.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
+      "titulo": "BC cancela licença da fintech A55 por esquema de apostas ilegais",
+      "resumo": "A Operação Azzardo identificou cerca de R$ 1 bilhão movimentados em mais de 100 contas ligadas à fintech, levando o Banco Central a cassar sua licença.",
+      "por_que_importa": "Fintechs devem reforçar seus controles de prevenção à lavagem de dinheiro para evitar sanções regulatórias severas como essa.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
       "destaque": false,
       "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/fintechs-brasileiras-sobem-ate-27-em-nova-york-apos-balancos-do-3t26/",
-      "data": "2026-11-13T21:56:59.000Z"
+      "url": "https://finsidersbrasil.com.br/regulamentacao/bc-cancela-autorizacao-da-fintech-a55-apos-operacao-azzardo/",
+      "data": "2026-11-23T14:30:19.000Z"
     },
     {
       "categoria": "negocios",
-      "titulo": "Gastos de empresas brasileiras com ferramentas de IA sobem 176% em oito meses",
-      "resumo": "Levantamento da Pluggy mostra que o gasto mensal mediano com IA nas empresas passou de R$ 113 para R$ 312 entre janeiro e agosto. Porém, 62,8% das empresas ainda gastam menos de R$ 300 por mês, concentrando apenas 11% do total investido.",
-      "por_que_importa": "Mostra que a adoção de IA ainda é concentrada em poucas empresas; é hora de estruturar orçamento e governança de gastos com IA.",
+      "titulo": "Banco Central prepara novas exigências para fintechs e empresas de BaaS",
+      "resumo": "O diretor de Regulação do BC afirmou que fintechs, empresas de banking-as-a-service e prestadores de pagamento terão as mesmas responsabilidades regulatórias dos bancos tradicionais.",
+      "por_que_importa": "Fintechs e provedores de BaaS devem antecipar adequação regulatória e compliance antes das novas regras entrarem em vigor.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Finsiders Brasil",
+      "url": "https://finsidersbrasil.com.br/regulamentacao/bc-prepara-novas-exigencias-para-fintechs-e-empresas-de-baas/",
+      "data": "2026-11-23T14:16:00.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "União Europeia cria força-tarefa para rastrear criptomoedas ligadas a sanções contra a Rússia",
+      "resumo": "A Comissão Europeia anunciou novo pacote de sanções contra a Rússia, incluindo uma força-tarefa dedicada a monitorar o uso de criptomoedas para driblar restrições.",
+      "por_que_importa": "Empresas que operam com ativos digitais internacionalmente devem reforçar compliance para evitar envolvimento involuntário em rotas de evasão de sanções.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/comissao-europeia-anuncia-novo-pacote-de-sancoes-contra-a-russia-incluindo-criacao-de-forca-tarefa-de-sancoes-sobre-criptomoedas/",
+      "data": "2026-11-23T19:21:41.000Z"
+    },
+    {
+      "categoria": "ativos",
+      "titulo": "Strategy compra mais 457 bitcoins após queda do preço no fim de semana",
+      "resumo": "A empresa Strategy aproveitou a queda do Bitcoin para mínima de US$ 55 mil e ampliou sua posição, com preço médio de aquisição acima do valor mínimo atingido.",
+      "por_que_importa": "Empresas com exposição a cripto em tesouraria devem acompanhar essa estratégia como referência de gestão de risco, sem replicar decisões sem análise própria.",
       "frente": "finops",
       "frente_nome": "FinOps",
       "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/negocios-em-fintechs/gastos-das-empresas-com-inteligencia-artificial-sobem-176/",
-      "data": "2026-11-13T16:32:00.000Z"
-    },
-    {
-      "categoria": "negocios",
-      "titulo": "Banco Central prepara mudanças no câmbio com operações até as 19h",
-      "resumo": "O BC estuda transferir à B3 o envio de informações de operações cambiais e eliminar etapas que hoje geram risco de falha no mercado interbancário. A proposta também prevê ampliar o horário de operações.",
-      "por_que_importa": "Empresas com operações internacionais devem acompanhar a mudança, que pode ampliar horários e reduzir riscos operacionais em câmbio.",
-      "frente": "finops",
-      "frente_nome": "FinOps",
-      "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/bc-prepara-mudancas-no-mercado-de-cambio-e-preve-operacoes-ate-as-19h/",
-      "data": "2026-11-13T15:25:34.000Z"
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/strategy-aproveita-queda-do-bitcoin-para-comprar-457-moedas/",
+      "data": "2026-11-23T13:44:57.000Z"
     },
     {
       "categoria": "ativos",
-      "titulo": "Após ataques bilionários, debate sobre segurança de criptomoedas em corretoras se intensifica",
-      "resumo": "Incidentes recentes com Bitget, Binance e Mercado Bitcoin reacenderam a discussão sobre os riscos de manter criptoativos em exchanges versus autocustódia. Os ataques somam perdas bilionárias em pouco mais de um mês.",
-      "por_que_importa": "Empresas que lidam com ativos digitais devem reavaliar práticas de custódia e diversificação de risco operacional com exchanges.",
+      "titulo": "Binance busca investigador de sanções em blockchain para a América Latina",
+      "resumo": "A maior corretora de criptomoedas do mundo abriu vaga remota na região para atuar em compliance e combate ao financiamento ao terrorismo via blockchain.",
+      "por_que_importa": "O movimento sinaliza aumento da exigência regulatória no setor cripto latino-americano, algo que empresas do segmento devem monitorar de perto.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": false,
-      "fonte": "Finsiders Brasil",
-      "url": "https://finsidersbrasil.com.br/criptoativos/depois-dos-ataques-bilionarios-ainda-e-seguro-deixar-criptomoedas-nas-corretoras/",
-      "data": "2026-11-16T12:27:00.000Z"
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/corretora-binance-busca-investigador-de-sancoes-em-blockchain-para-atuar-na-america-latina/",
+      "data": "2026-11-23T07:25:39.000Z"
     },
     {
       "categoria": "ativos",
-      "titulo": "EUA desarticulam campanha norte-coreana que roubou mais de US$ 400 milhões em criptomoedas",
-      "resumo": "O governo americano interrompeu a operação 'FaceStealer', ligada à Coreia do Norte, que usava engenharia social para roubar ativos digitais. A ação integra esforços internacionais contra o financiamento ilícito via criptomoedas.",
-      "por_que_importa": "Reforça a necessidade de treinar equipes contra engenharia social, um dos vetores mais usados em fraudes com ativos digitais.",
+      "titulo": "Brasil propõe ao Mercosul rastrear e confiscar criptomoedas do crime organizado",
+      "resumo": "Em proposta apresentada em Montevidéu, o Brasil defendeu capacitação conjunta entre países do bloco para rastrear e confiscar ativos digitais usados por organizações criminosas.",
+      "por_que_importa": "Empresas do setor cripto no Brasil devem se preparar para maior fiscalização regional e reforçar seus próprios controles de origem de recursos.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
-      "data": "2026-11-14T15:15:49.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Binance cobre R$ 34 bilhões em prejuízo do maior roubo de criptomoedas da história",
-      "resumo": "A corretora anunciou que ressarciu integralmente os clientes afetados pelo ataque hacker ocorrido no final de outubro, considerado o maior roubo de criptoativos já registrado. A medida busca preservar a confiança dos usuários na plataforma.",
-      "por_que_importa": "Mostra a importância de políticas claras de ressarcimento e reservas de contingência para empresas que operam com ativos digitais.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "Tecnoblog",
-      "url": "https://tecnoblog.net/noticias/r-34-bilhoes-binance-cobriu-100-do-prejuizo-do-maior-roubo-de-cripto-da-historia/",
-      "data": "2026-11-14T09:29:01.000Z"
-    },
-    {
-      "categoria": "ativos",
-      "titulo": "Trezor confirma implantes maliciosos em carteiras vendidas por revendedor não oficial",
-      "resumo": "A fabricante confirmou que três carteiras Trezor Safe 5 vendidas pelo revendedor CryptoBilis continham componentes de hardware que roubavam frases de recuperação e as enviavam por rede celular a invasores. A empresa já lançou correção.",
-      "por_que_importa": "Empresas e usuários devem comprar hardware de segurança apenas de canais oficiais para evitar comprometimento físico de dispositivos.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
-      "data": "2026-11-13T19:38:36.000Z"
+      "fonte": "Livecoins",
+      "url": "https://livecoins.com.br/brasil-pede-no-mercosul-para-rastrear-e-confiscar-criptomoedas-do-crime-organizado-como-prioridade/",
+      "data": "2026-11-22T12:11:15.000Z"
     },
     {
       "categoria": "seguranca",
-      "titulo": "Google flagra hackers usando agentes de IA para criar e rodar exploits sozinhos",
-      "resumo": "O Google identificou grupos de ataque usando frameworks autônomos como ARTEX e CyberStrikeAI para transformar patches de segurança em exploits funcionais sem intervenção manual. Isso acelera o ciclo entre divulgação de falha e exploração em massa.",
-      "por_que_importa": "Empresas precisam reduzir o tempo de aplicação de patches, pois o intervalo seguro entre correção e ataque está encolhendo com IA ofensiva.",
+      "titulo": "OpenRouter remove provedores de IA após vazamento de prompts e dados sensíveis",
+      "resumo": "A OpenRouter retirou três provedores de IA de sua plataforma depois de descobrir que eles violavam políticas de tratamento de dados e expunham informações sensíveis dos usuários.",
+      "por_que_importa": "Empresas que usam gateways de IA terceirizados devem auditar provedores e exigir garantias contratuais sobre retenção zero de dados.",
       "frente": "seguranca",
       "frente_nome": "Segurança",
       "destaque": true,
-      "fonte": "The Hacker News",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html",
-      "data": "2026-11-16T14:00:00.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "Windows Server 2016 fica sem suporte em 60 dias",
-      "resumo": "A Microsoft reforçou o aviso de que o Windows Server 2016 deixará de receber atualizações de segurança em dois meses. Empresas que ainda usam a versão ficarão expostas a vulnerabilidades não corrigidas.",
-      "por_que_importa": "É hora de planejar migração ou contratar suporte estendido antes do prazo, evitando exposição a falhas críticas sem correção.",
-      "frente": "sustentacao",
-      "frente_nome": "Sustentação e Manutenção",
-      "destaque": false,
       "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/",
-      "data": "2026-11-16T12:53:18.000Z"
+      "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+      "data": "2026-11-23T20:00:20.000Z"
     },
     {
       "categoria": "seguranca",
-      "titulo": "Falha de 11 anos no kernel Linux permite derrubar servidores com configuração padrão",
-      "resumo": "Pesquisadores identificaram a vulnerabilidade NoisyTCP, presente há mais de uma década, que afeta quase todas as distribuições Linux e permite travar servidores Nginx, Apache e SSH. O problema atinge configurações padrão amplamente usadas.",
-      "por_que_importa": "Times de infraestrutura devem verificar patches disponíveis e revisar hardening de servidores Linux expostos à internet.",
-      "frente": "sustentacao",
-      "frente_nome": "Sustentação e Manutenção",
-      "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/",
-      "data": "2026-11-16T09:30:04.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "FBI alerta sobre ferramenta de hacking ARTEX usada em ataques globais",
-      "resumo": "O FBI confirmou que o framework ARTEX, baseado em IA, está sendo usado para automatizar invasões, incluindo o ataque à cadeia de fornecedores da ConnectWise que afetou clientes do Microsoft 365. O alerta reforça a tendência de ataques em velocidade de máquina.",
-      "por_que_importa": "Empresas que usam fornecedores de TI terceirizados devem revisar contratos e exigir validação de segurança na cadeia de suprimentos.",
-      "frente": "seguranca",
-      "frente_nome": "Segurança",
-      "destaque": false,
-      "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
-      "data": "2026-11-15T18:29:53.000Z"
-    },
-    {
-      "categoria": "seguranca",
-      "titulo": "TSMC confirma vazamento de dados de funcionários via fornecedor de nuvem",
-      "resumo": "A fabricante de chips TSMC confirmou que dados pessoais de funcionários foram expostos após um invasor colocar à venda 6,9 GB de informações obtidas de um provedor de nuvem terceirizado. O caso reforça riscos de segurança em cadeias de fornecedores de TI.",
-      "por_que_importa": "Reforça a necessidade de auditar o acesso e a postura de segurança de fornecedores de nuvem antes de compartilhar dados sensíveis.",
+      "titulo": "Falha no Azure API Management foi usada para roubar credenciais de clientes",
+      "resumo": "A Microsoft alertou que uma vulnerabilidade no Azure API Management Classic foi explorada para roubar credenciais armazenadas, com autoridades norueguesas ligando o caso a ataques contra empresas de energia.",
+      "por_que_importa": "Empresas que usam Azure APIM devem aplicar correções imediatamente e rotacionar credenciais expostas para evitar comprometimento em cadeia.",
       "frente": "cloud",
       "frente_nome": "Cloud e Infraestrutura",
       "destaque": false,
       "fonte": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
-      "data": "2026-11-15T15:23:48.000Z"
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "data": "2026-11-23T19:42:20.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Falha crítica no ScreenConnect é usada para sequestrar PCs de técnicos de MSP",
+      "resumo": "Atacantes exploram uma vulnerabilidade crítica no ConnectWise ScreenConnect para transferir e executar arquivos maliciosos em máquinas de técnicos conectados a provedores de serviços gerenciados.",
+      "por_que_importa": "Empresas que usam MSPs com ScreenConnect devem exigir patch imediato do fornecedor, pois o ataque compromete a cadeia de suporte terceirizado.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+      "data": "2026-11-23T12:41:04.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "Ataques com IA geram pagamentos não autorizados em bancos indianos",
+      "resumo": "O CERT-In da Índia alertou que ataques cibernéticos assistidos por IA miram ativos de tecnologia do setor financeiro, resultando em transações não autorizadas em bancos e fintechs.",
+      "por_que_importa": "Bancos e fintechs brasileiras devem reforçar detecção de fraude considerando que atacantes já usam IA para acelerar invasões financeiras.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "The Hacker News",
+      "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+      "data": "2026-11-23T08:24:15.000Z"
+    },
+    {
+      "categoria": "seguranca",
+      "titulo": "CISA alerta para exploração ativa de falha crítica no Cisco Expressway",
+      "resumo": "A agência de segurança dos EUA confirmou que uma vulnerabilidade crítica recém-corrigida no Cisco Expressway já está sendo explorada em ataques reais.",
+      "por_que_importa": "Empresas com infraestrutura Cisco Expressway devem aplicar o patch com urgência para evitar invasões já em curso no mercado.",
+      "frente": "seguranca",
+      "frente_nome": "Segurança",
+      "destaque": false,
+      "fonte": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+      "data": "2026-11-23T07:44:19.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Especialistas defendem capacitação de professores para uso de IA na Matemática",
+      "resumo": "Durante o 9º Simpósio Nacional da Formação do Professor de Matemática, especialistas discutiram a necessidade de preparar docentes para incorporar IA ao ensino da disciplina.",
+      "por_que_importa": "Instituições de ensino e empresas de edtech devem investir em formação continuada de professores para que a IA gere ganho pedagógico real.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/ia-na-educacao-exige-capacitacao-de-professores-dizem-especial",
+      "data": "2026-11-22T12:32:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Dossiê da Fundação Itaú mapeia desafios do ensino de matemática no Brasil",
+      "resumo": "O documento, lançado durante simpósio nacional, reúne evidências, políticas e estratégias para melhorar o aprendizado de matemática na educação básica.",
+      "por_que_importa": "Empresas parceiras de iniciativas educacionais podem usar o dossiê como referência para desenhar programas de impacto social em matemática.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/dossie-mapeia-desafios-do-ensino-de-matematica-e-sugere-solucoes",
+      "data": "2026-11-21T13:50:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Apenas 2,5% da grade de pedagogia é dedicada à formação matemática",
+      "resumo": "Um levantamento mostra que 70,6% dos cursos presenciais de pedagogia reservam entre 2,5% e 5% da carga horária para preparar professores a ensinar matemática.",
+      "por_que_importa": "Empresas de formação e academias corporativas podem suprir essa lacuna com programas complementares de capacitação em matemática para educadores.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "Agência Brasil (Educação)",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/70-dos-cursos-de-pedagogia-dedicam-apenas-25-da-grade-horaria",
+      "data": "2026-11-21T13:03:00.000Z"
+    },
+    {
+      "categoria": "educacao",
+      "titulo": "Google integra IA à busca escolar e divide opiniões entre instituições",
+      "resumo": "Segundo a reportagem, redes de ensino e empresas de filtragem de conteúdo já bloqueavam resultados de IA antes da nova política do Google, e agora buscam alternativas para manter o controle.",
+      "por_que_importa": "Escolas e academias de tecnologia devem revisar suas políticas de uso de ferramentas de busca com IA para estudantes, equilibrando acesso e segurança.",
+      "frente": "academia",
+      "frente_nome": "Academia",
+      "destaque": false,
+      "fonte": "EdSurge",
+      "url": "https://www.edsurge.com/news/google-says-schools-cant-have-search-without-ai-some-are-finding-a-way",
+      "data": "2026-11-19T00:00:00.000Z"
     }
   ]
 }
