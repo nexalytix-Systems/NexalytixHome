@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fale com a Nexalytix | FinOps</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Sora:wght@600&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Manrope',system-ui,sans-serif;background:#F3F6FA;color:#131D2C;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+.card{width:100%;max-width:460px;background:#fff;border-radius:8px;padding:32px 28px;box-shadow:0 2px 4px rgba(15,23,42,.05),0 20px 40px -20px rgba(15,23,42,.25)}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;margin-bottom:20px}
+.brand img{width:52px;height:38px;object-fit:contain}
+h1{font-family:'Sora',sans-serif;font-weight:600;font-size:26px;line-height:1.15;margin:0 0 20px}
+form{display:grid;gap:14px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+input[type=text],input[type=email],input[type=tel]{font:inherit;font-weight:400;font-size:16px;border:1px solid #DCE0E5;border-radius:6px;padding:12px 14px;min-height:48px}
+input:focus{outline:2px solid #104E89;outline-offset:1px}
+.flag{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;line-height:1.4}
+.flag input{width:20px;height:20px;margin-top:1px;flex-shrink:0}
+.hp{position:absolute;left:-9999px}
+button{font:inherit;font-family:'Sora',sans-serif;font-weight:600;font-size:17px;background:#104E89;color:#F8FAFD;border:0;border-radius:6px;min-height:52px;cursor:pointer}
+button:disabled{opacity:.6}
+.err{color:#B42318;font-size:14px;margin:0;min-height:1em}
+.ok{display:none;text-align:center}
+.ok p{color:#606A77}
+.done form,.done h1{display:none}.done .ok{display:block}
+</style>
+</head>
+<body>
+<main class="card" id="box">
+  <div class="brand"><img src="/nuvem/logo-nexalytix.png" alt="">Nexalytix Systems</div>
+  <h1>Fale com a Nexalytix</h1>
+  <form id="f" novalidate>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label>Nome<input type="text" name="nome" autocomplete="name"></label>
+    <label>Nome da empresa<input type="text" name="empresa" autocomplete="organization"></label>
+    <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+    <label>WhatsApp<input type="tel" name="whatsapp" autocomplete="tel" placeholder="(11) 90000-0000"></label>
+    <label class="flag"><input type="checkbox" name="finops">Tenho interesse em um contato da Nexalytix sobre o serviço de FinOps e autorizo esse contato.</label>
+    <p class="err" id="err" role="alert"></p>
+    <button type="submit" id="b">Enviar</button>
+  </form>
+  <div class="ok" role="status">
+    <h1>Recebemos seu contato!</h1>
+    <p>Nosso time vai falar com você em breve. Levando você ao site da Nexalytix...</p>
+  </div>
+</main>
+<script>
+(function(){
+  var DESTINO = "https://nexalytix.com.br/finops";
+  var f = document.getElementById("f"), err = document.getElementById("err"), b = document.getElementById("b");
+  var q = new URLSearchParams(location.search);
+  function pronto(){ document.getElementById("box").classList.add("done"); setTimeout(function(){ location.href = DESTINO; }, 4000); }
+  f.addEventListener("submit", async function(e){
+    e.preventDefault(); err.textContent = "";
+    var d = Object.fromEntries(new FormData(f).entries());
+    if(!d.nome || !d.empresa){ err.textContent = "Preencha seu nome e o nome da empresa."; return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email || "")){ err.textContent = "Informe um e-mail válido."; return; }
+    if((d.whatsapp || "").replace(/\D/g, "").length < 10){ err.textContent = "Informe o WhatsApp com DDD."; return; }
+    if(!d.finops){ err.textContent = "Marque o interesse no contato sobre FinOps."; return; }
+    var lead = {
+      nome: d.nome, empresa: d.empresa, email: d.email, whatsapp: d.whatsapp, website: d.website || "",
+      consentimento_lgpd: true, assunto: "servico", origem: "linkedin-finops-conta-nuvem",
+      mensagem: "Tem interesse em contato sobre o serviço de FinOps (post LinkedIn: conta da nuvem)." +
+        (q.get("utm_campaign") ? " UTM: " + [q.get("utm_source"), q.get("utm_medium"), q.get("utm_campaign")].join(" / ") : ""),
+      pagina: location.pathname + location.search, criado_em: new Date().toISOString()
+    };
+    // Fora do site (prévia), não envia nada.
+    if(!/(^|\.)nexalytix\.com\.br$/.test(location.hostname)){ pronto(); return; }
+    b.disabled = true; b.textContent = "Enviando...";
+    try{
+      var r = await fetch("/api/lead", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(lead) });
+      var res = await r.json().catch(function(){ return {}; });
+      if(r.ok && res.ok){ pronto(); return; }
+      throw 0;
+    }catch(_){
+      err.textContent = "Não conseguimos enviar agora. Escreva para contato@nexalytix.com.br.";
+      b.disabled = false; b.textContent = "Enviar";
+    }
+  });
+})();
+</script>
+</body>
+</html>
